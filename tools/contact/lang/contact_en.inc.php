@@ -82,7 +82,7 @@ return [
     'AB_mailinglist_action_description' => 'Action to register or unsubscribe massively emails to a newsletter',
     'CONTACT_SENDMAIL_ERROR' => 'The period has not been filled or has no standard value (month, week or day).',
     'CONTACT_DAILY_REPORT' => 'daily report of the',
-    'CONTACT_WEEKLY_REPORT' => 'weekly report',
+    'CONTACT_WEEKLY_REPORT' => 'For this action to work you need to check certain parameters on your server. See documents on https://yeswiki.net/?MailPeriod',
     'CONTACT_MONTHLY_REPORT' => 'monthly report',
     'CONTACT_ENTRY_ADDED' => 'new plug adds',
     'AB_deabonnement_action_label' => 'Unsubscribe from a discussion list',

@@ -343,6 +343,10 @@ pdfjs-editor-stamp-add-image-button-label = Resim ekle
 pdfjs-editor-free-highlight-thickness-input = Kalınlık
 pdfjs-editor-free-highlight-thickness-title =
     .title = Metin dışındaki öğeleri vurgularken kalınlığı değiştir
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Metin düzenleyicisi
+    .default-content = Yazmaya başlayın…
 pdfjs-free-text =
     .aria-label = Metin düzenleyicisi
 pdfjs-free-text-default-content = Yazmaya başlayın…
@@ -353,8 +357,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alternatif metin
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Alternatif metni düzenle
 pdfjs-editor-alt-text-edit-button-label = Alternatif metni düzenle
 pdfjs-editor-alt-text-dialog-label = Bir seçenek seçin
 pdfjs-editor-alt-text-dialog-description = Alternatif metin, insanlar resmi göremediğinde veya resim yüklenmediğinde işe yarar.
@@ -368,6 +373,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Dekoratif olarak işaretlendi
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Örneğin, “Genç bir adam yemek yemek için masaya oturuyor”
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alternatif metin
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -380,6 +388,22 @@ pdfjs-editor-resizer-label-bottom-right = Sağ alt köşe — yeniden boyutland�
 pdfjs-editor-resizer-label-bottom-middle = Alt orta — yeniden boyutlandır
 pdfjs-editor-resizer-label-bottom-left = Sol alt köşe — yeniden boyutlandır
 pdfjs-editor-resizer-label-middle-left = Orta sol — yeniden boyutlandır
+pdfjs-editor-resizer-top-left =
+    .aria-label = Sol üst köşe — yeniden boyutlandır
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Üst orta — yeniden boyutlandır
+pdfjs-editor-resizer-top-right =
+    .aria-label = Sağ üst köşe — yeniden boyutlandır
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Orta sağ — yeniden boyutlandır
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Sağ alt köşe — yeniden boyutlandır
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Alt orta — yeniden boyutlandır
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Sol alt köşe — yeniden boyutlandır
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Orta sol — yeniden boyutlandır
 
 ## Color picker
 
@@ -433,10 +457,16 @@ pdfjs-editor-new-alt-text-error-close-button = Kapat
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Alt metin yapay zekâ modeli indiriliyor ({ $downloadedSize } / { $totalSize } MB)
     .aria-valuetext = Alt metin yapay zekâ modeli indiriliyor ({ $downloadedSize } / { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alternatif metin eklendi
 pdfjs-editor-new-alt-text-added-button-label = Alt metin eklendi
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Alternatif metin eksik
 pdfjs-editor-new-alt-text-missing-button-label = Alt metin eksik
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Alternatif metni incele
 pdfjs-editor-new-alt-text-to-review-button-label = Alt metni incele
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:

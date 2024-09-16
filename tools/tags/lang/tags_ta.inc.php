@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TAGS_TAGS' => 'மோட்ச் க்ளெச்',
     'TAGS_ACTION_ADMINTAGS' => 'செயல் {{admintags ...}}',
@@ -25,10 +24,10 @@ return [
     'TAGS_DATE_FORMAT' => 'லே என் & அக்ரேவ்; எச்: நான்: எச்',
     'TAGS_WRITE_YOUR_COMMENT_HERE' => 'எக்ரைர் வோட்ரே வர்ணனை ஐசிஐ ...',
     'TAGS_ADD_YOUR_COMMENT' => 'அசூட்டர் வோட்ரே வர்ணனை',
-    'TAGS_ACTION_FILTERTAGS' => 'செயல் {{filterTags ...}}',
+    'TAGS_ACTION_FILTERTAGS' => 'செயல் {{filtertags ...}}',
     'TAGS_NO_FILTERS' => 'பாச் டி பரம் & எக்ரேவ்; ட்ரே "வடிகட்டி 1" ட்ரூவ் & ஈகூட்;',
     'TAGS_ONLY_ONE_DOUBLEPOINT' => 'il ne peut ஒய் avoir qu\'une fois le இரட்டை புள்ளி (:) இண்டிகர் லே லேபிளை ஊற்றவும், பிளச்யூர்ச் ட்ரூவ் & eacute; கள்.',
-    'TAGS_ACTION_INCLUDEPAGES' => 'செயல் {{inclowAges ...}}',
+    'TAGS_ACTION_INCLUDEPAGES' => 'செயல் {{includepages ...}}',
     'TAGS_NO_PARAM_PAGES' => 'பாச் டி பரம் & எக்ரேவ்; ட்ரே "பக்கங்கள்" ட்ரூவ் & ஈகூட்;',
     'TAGS_NO_RESULTS' => 'பாச் டி ஆர் & ஈகூட்; சுல்டாட்ச் அவெக் செச் மோட்ச் சி.எல் & ஈகூட்; கள்.',
     'TAGS_RESULTS' => 'ஆர் & ஈகூட்; சுல்தாட்கள்',

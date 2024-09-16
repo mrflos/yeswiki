@@ -105,6 +105,14 @@ pdfjs-document-properties-button-label = Vlastnosti dokumentu…
 pdfjs-document-properties-file-name = Názov súboru:
 pdfjs-document-properties-file-size = Veľkosť súboru:
 # Variables:
+#   $kb (Number) - the PDF file size in kilobytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } kB ({ $b } bajtov)
+# Variables:
+#   $mb (Number) - the PDF file size in megabytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } bajtov)
+# Variables:
 #   $size_kb (Number) - the PDF file size in kilobytes
 #   $size_b (Number) - the PDF file size in bytes
 pdfjs-document-properties-kb = { $size_kb } kB ({ $size_b } bajtov)
@@ -118,6 +126,9 @@ pdfjs-document-properties-subject = Predmet:
 pdfjs-document-properties-keywords = Kľúčové slová:
 pdfjs-document-properties-creation-date = Dátum vytvorenia:
 pdfjs-document-properties-modification-date = Dátum úpravy:
+# Variables:
+#   $dateObj (Date) - the creation/modification date and time of the PDF file
+pdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 # Variables:
 #   $date (Date) - the creation/modification date of the PDF file
 #   $time (Time) - the creation/modification time of the PDF file
@@ -279,6 +290,9 @@ pdfjs-annotation-date-string = { $date }, { $time }
 # Some common types are e.g.: "Check", "Text", "Comment", "Note"
 pdfjs-text-annotation-type =
     .alt = [Anotácia typu { $type }]
+# Variables:
+#   $dateObj (Date) - the modification date and time of the annotation
+pdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 
 ## Password
 
@@ -333,6 +347,10 @@ pdfjs-editor-stamp-add-image-button-label = Pridať obrázok
 pdfjs-editor-free-highlight-thickness-input = Hrúbka
 pdfjs-editor-free-highlight-thickness-title =
     .title = Zmeňte hrúbku pre zvýrazňovanie iných položiek ako textu
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Textový editor
+    .default-content = Začnite písať…
 pdfjs-free-text =
     .aria-label = Textový editor
 pdfjs-free-text-default-content = Začnite písať…
@@ -343,8 +361,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alternatívny text
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Upraviť alternatívny text
 pdfjs-editor-alt-text-edit-button-label = Upraviť alternatívny text
 pdfjs-editor-alt-text-dialog-label = Vyberte možnosť
 pdfjs-editor-alt-text-dialog-description = Alternatívny text (alt text) pomáha, keď ľudia obrázok nevidia alebo sa nenačítava.
@@ -358,6 +377,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Označený ako dekoratívny
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Napríklad: „Mladý muž si sadá za stôl, aby sa najedol“
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alternatívny text
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -370,6 +392,22 @@ pdfjs-editor-resizer-label-bottom-right = Pravý dolný roh – zmena veľkosti
 pdfjs-editor-resizer-label-bottom-middle = Stred dole – zmena veľkosti
 pdfjs-editor-resizer-label-bottom-left = Ľavý dolný roh – zmena veľkosti
 pdfjs-editor-resizer-label-middle-left = Vľavo uprostred – zmena veľkosti
+pdfjs-editor-resizer-top-left =
+    .aria-label = Ľavý horný roh – zmena veľkosti
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Horný stred – zmena veľkosti
+pdfjs-editor-resizer-top-right =
+    .aria-label = Pravý horný roh – zmena veľkosti
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Vpravo uprostred – zmena veľkosti
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Pravý dolný roh – zmena veľkosti
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Stred dole – zmena veľkosti
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Ľavý dolný roh – zmena veľkosti
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Vľavo uprostred – zmena veľkosti
 
 ## Color picker
 
@@ -410,8 +448,6 @@ pdfjs-editor-new-alt-text-textarea =
 pdfjs-editor-new-alt-text-description = Krátky popis pre ľudí, ktorí nevidia obrázok alebo ak sa obrázok nenačíta.
 # This is a required legal disclaimer that refers to the automatically created text inside the alt text box above this text. It disappears if the text is edited by a human.
 pdfjs-editor-new-alt-text-disclaimer1 = Tento alternatívny text bol vytvorený automaticky a môže byť nepresný.
-# This is a required legal disclaimer that refers to the automatically created text inside the alt text box above this text. It disappears if the text is edited by a human.
-pdfjs-editor-new-alt-text-disclaimer = Tento alternatívny text bol vytvorený automaticky.
 pdfjs-editor-new-alt-text-disclaimer-learn-more-url = Ďalšie informácie
 pdfjs-editor-new-alt-text-create-automatically-button-label = Automaticky vytvoriť alternatívny text
 pdfjs-editor-new-alt-text-not-now-button = Teraz nie
@@ -425,10 +461,16 @@ pdfjs-editor-new-alt-text-error-close-button = Zavrieť
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Sťahuje sa model AI pre alternatívne texty ({ $downloadedSize } z { $totalSize } MB)
     .aria-valuetext = Sťahuje sa model AI pre alternatívne texty ({ $downloadedSize } z { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alternatívny text bol pridaný
 pdfjs-editor-new-alt-text-added-button-label = Alternatívny text bol pridaný
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Chýbajúci alternatívny text
 pdfjs-editor-new-alt-text-missing-button-label = Chýbajúci alternatívny text
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Skontrolovať alternatívny text
 pdfjs-editor-new-alt-text-to-review-button-label = Skontrolovať alternatívny text
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:

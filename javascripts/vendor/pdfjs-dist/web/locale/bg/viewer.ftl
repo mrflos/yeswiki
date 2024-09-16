@@ -369,6 +369,22 @@ pdfjs-editor-resizer-label-bottom-right = Долен десен ъгъл — п�
 pdfjs-editor-resizer-label-bottom-middle = Долу в средата — преоразмеряване
 pdfjs-editor-resizer-label-bottom-left = Долен ляв ъгъл — преоразмеряване
 pdfjs-editor-resizer-label-middle-left = Ляво в средата — преоразмеряване
+pdfjs-editor-resizer-top-left =
+    .aria-label = Горен ляв ъгъл — преоразмеряване
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Горе в средата — преоразмеряване
+pdfjs-editor-resizer-top-right =
+    .aria-label = Горен десен ъгъл — преоразмеряване
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Дясно в средата — преоразмеряване
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Долен десен ъгъл — преоразмеряване
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Долу в средата — преоразмеряване
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Долен ляв ъгъл — преоразмеряване
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Ляво в средата — преоразмеряване
 
 ## Color picker
 
@@ -396,6 +412,7 @@ pdfjs-editor-colorpicker-red =
 ## New alt-text dialog
 ## Group note for entire feature: Alternative text (alt text) helps when people can't see the image. This feature includes a tool to create alt text automatically using an AI model that works locally on the user's device to preserve privacy.
 
+pdfjs-editor-new-alt-text-not-now-button = Не сега
 
 ## Image alt-text settings
 

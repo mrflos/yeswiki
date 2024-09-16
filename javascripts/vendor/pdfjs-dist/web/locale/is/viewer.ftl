@@ -105,6 +105,14 @@ pdfjs-document-properties-button-label = Eiginleikar skjals…
 pdfjs-document-properties-file-name = Skráarnafn:
 pdfjs-document-properties-file-size = Skrárstærð:
 # Variables:
+#   $kb (Number) - the PDF file size in kilobytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } KB ({ $b } bæti)
+# Variables:
+#   $mb (Number) - the PDF file size in megabytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } bæti)
+# Variables:
 #   $size_kb (Number) - the PDF file size in kilobytes
 #   $size_b (Number) - the PDF file size in bytes
 pdfjs-document-properties-kb = { $size_kb } KB ({ $size_b } bytes)
@@ -118,6 +126,9 @@ pdfjs-document-properties-subject = Efni:
 pdfjs-document-properties-keywords = Stikkorð:
 pdfjs-document-properties-creation-date = Búið til:
 pdfjs-document-properties-modification-date = Dags breytingar:
+# Variables:
+#   $dateObj (Date) - the creation/modification date and time of the PDF file
+pdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 # Variables:
 #   $date (Date) - the creation/modification date of the PDF file
 #   $time (Time) - the creation/modification time of the PDF file
@@ -275,6 +286,9 @@ pdfjs-annotation-date-string = { $date }, { $time }
 # Some common types are e.g.: "Check", "Text", "Comment", "Note"
 pdfjs-text-annotation-type =
     .alt = [{ $type } Skýring]
+# Variables:
+#   $dateObj (Date) - the modification date and time of the annotation
+pdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 
 ## Password
 
@@ -329,6 +343,10 @@ pdfjs-editor-stamp-add-image-button-label = Bæta við mynd
 pdfjs-editor-free-highlight-thickness-input = Þykkt
 pdfjs-editor-free-highlight-thickness-title =
     .title = Breyta þykkt við áherslulitun annarra atriða en texta
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Textaritill
+    .default-content = Byrjaðu að skrifa…
 pdfjs-free-text =
     .aria-label = Textaritill
 pdfjs-free-text-default-content = Byrjaðu að skrifa…
@@ -339,8 +357,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alt-varatexti
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Breyta alt-myndatexta
 pdfjs-editor-alt-text-edit-button-label = Breyta alt-varatexta
 pdfjs-editor-alt-text-dialog-label = Veldu valkost
 pdfjs-editor-alt-text-dialog-description = Alt-varatexti (auka-myndatexti) hjálpar þegar fólk getur ekki séð myndina eða þegar hún hleðst ekki inn.
@@ -354,6 +373,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Merkt sem skraut
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Til dæmis: „Ungur maður sest við borð til að snæða máltíð“
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alt-myndatexti
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -366,6 +388,22 @@ pdfjs-editor-resizer-label-bottom-right = Neðst í hægra horni - breyta stær�
 pdfjs-editor-resizer-label-bottom-middle = Neðst á miðju - breyta stærð
 pdfjs-editor-resizer-label-bottom-left = Neðst í vinstra horni - breyta stærð
 pdfjs-editor-resizer-label-middle-left = Miðja til vinstri - breyta stærð
+pdfjs-editor-resizer-top-left =
+    .aria-label = Efst í vinstra horni - breyta stærð
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Efst á miðju - breyta stærð
+pdfjs-editor-resizer-top-right =
+    .aria-label = Efst í hægra horni - breyta stærð
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Miðja til hægri - breyta stærð
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Neðst í hægra horni - breyta stærð
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Neðst á miðju - breyta stærð
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Neðst í vinstra horni - breyta stærð
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Miðja til vinstri - breyta stærð
 
 ## Color picker
 
@@ -419,10 +457,16 @@ pdfjs-editor-new-alt-text-error-close-button = Loka
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Sækir gervigreindarlíkan með alt-myndatextum ({ $downloadedSize } af { $totalSize } MB)
     .aria-valuetext = Sækir gervigreindarlíkan með alt-myndatextum ({ $downloadedSize } af { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alt-myndatexta bætt við
 pdfjs-editor-new-alt-text-added-button-label = Alt-myndatexta bætt við
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Vantar alt-myndatexta
 pdfjs-editor-new-alt-text-missing-button-label = Vantar alt-myndatexta
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Yfirfara alt-myndatexta
 pdfjs-editor-new-alt-text-to-review-button-label = Yfirfara myndatexta
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:

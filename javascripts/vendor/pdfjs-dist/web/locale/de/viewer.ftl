@@ -105,6 +105,14 @@ pdfjs-document-properties-button-label = Dokumenteigenschaften…
 pdfjs-document-properties-file-name = Dateiname:
 pdfjs-document-properties-file-size = Dateigröße:
 # Variables:
+#   $kb (Number) - the PDF file size in kilobytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } KB ({ $b } Bytes)
+# Variables:
+#   $mb (Number) - the PDF file size in megabytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } Bytes)
+# Variables:
 #   $size_kb (Number) - the PDF file size in kilobytes
 #   $size_b (Number) - the PDF file size in bytes
 pdfjs-document-properties-kb = { $size_kb } KB ({ $size_b } Bytes)
@@ -118,6 +126,9 @@ pdfjs-document-properties-subject = Thema:
 pdfjs-document-properties-keywords = Stichwörter:
 pdfjs-document-properties-creation-date = Erstelldatum:
 pdfjs-document-properties-modification-date = Bearbeitungsdatum:
+# Variables:
+#   $dateObj (Date) - the creation/modification date and time of the PDF file
+pdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 # Variables:
 #   $date (Date) - the creation/modification date of the PDF file
 #   $time (Time) - the creation/modification time of the PDF file
@@ -275,6 +286,9 @@ pdfjs-annotation-date-string = { $date }, { $time }
 # Some common types are e.g.: "Check", "Text", "Comment", "Note"
 pdfjs-text-annotation-type =
     .alt = [Anlage: { $type }]
+# Variables:
+#   $dateObj (Date) - the modification date and time of the annotation
+pdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 
 ## Password
 
@@ -329,6 +343,10 @@ pdfjs-editor-stamp-add-image-button-label = Grafik hinzufügen
 pdfjs-editor-free-highlight-thickness-input = Linienstärke
 pdfjs-editor-free-highlight-thickness-title =
     .title = Linienstärke beim Hervorheben anderer Elemente als Text ändern
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Texteditor
+    .default-content = Schreiben beginnen…
 pdfjs-free-text =
     .aria-label = Texteditor
 pdfjs-free-text-default-content = Schreiben beginnen…
@@ -339,8 +357,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alternativ-Text
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Alternativ-Text bearbeiten
 pdfjs-editor-alt-text-edit-button-label = Alternativ-Text bearbeiten
 pdfjs-editor-alt-text-dialog-label = Option wählen
 pdfjs-editor-alt-text-dialog-description = Alt-Text (Alternativtext) hilft, wenn Personen die Grafik nicht sehen können oder wenn sie nicht geladen wird.
@@ -354,6 +373,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Als dekorativ markiert
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Zum Beispiel: "Ein junger Mann setzt sich an einen Tisch, um zu essen."
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alternativ-Text
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -366,6 +388,22 @@ pdfjs-editor-resizer-label-bottom-right = Rechte untere Ecke - Größe ändern
 pdfjs-editor-resizer-label-bottom-middle = Unten mittig - Größe ändern
 pdfjs-editor-resizer-label-bottom-left = Linke untere Ecke - Größe ändern
 pdfjs-editor-resizer-label-middle-left = Mitte links - Größe ändern
+pdfjs-editor-resizer-top-left =
+    .aria-label = Linke obere Ecke - Größe ändern
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Oben mittig - Größe ändern
+pdfjs-editor-resizer-top-right =
+    .aria-label = Rechts oben - Größe ändern
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Mitte rechts - Größe ändern
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Rechte untere Ecke - Größe ändern
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Unten mittig - Größe ändern
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Linke untere Ecke - Größe ändern
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Mitte links - Größe ändern
 
 ## Color picker
 
@@ -406,8 +444,6 @@ pdfjs-editor-new-alt-text-textarea =
 pdfjs-editor-new-alt-text-description = Kurze Beschreibung für Personen, die die Grafik nicht sehen können, oder wenn die Grafik nicht geladen wird.
 # This is a required legal disclaimer that refers to the automatically created text inside the alt text box above this text. It disappears if the text is edited by a human.
 pdfjs-editor-new-alt-text-disclaimer1 = Dieser Alternativ-Text wurde automatisch erstellt und könnte ungenau sein.
-# This is a required legal disclaimer that refers to the automatically created text inside the alt text box above this text. It disappears if the text is edited by a human.
-pdfjs-editor-new-alt-text-disclaimer = Dieser Alternativ-Text wurde automatisch erstellt.
 pdfjs-editor-new-alt-text-disclaimer-learn-more-url = Weitere Informationen
 pdfjs-editor-new-alt-text-create-automatically-button-label = Alternativ-Text automatisch erstellen
 pdfjs-editor-new-alt-text-not-now-button = Nicht jetzt
@@ -421,10 +457,16 @@ pdfjs-editor-new-alt-text-error-close-button = Schließen
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Alternativ-Text-KI-Modell wird heruntergeladen ({ $downloadedSize } von { $totalSize } MB)
     .aria-valuetext = Alternativ-Text-KI-Modell wird heruntergeladen ({ $downloadedSize } von { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alternativ-Text hinzugefügt
 pdfjs-editor-new-alt-text-added-button-label = Alternativ-Text hinzugefügt
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Fehlender Alternativ-Text
 pdfjs-editor-new-alt-text-missing-button-label = Fehlender Alternativ-Text
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Alternativ-Text überprüfen
 pdfjs-editor-new-alt-text-to-review-button-label = Alternativ-Text überprüfen
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:

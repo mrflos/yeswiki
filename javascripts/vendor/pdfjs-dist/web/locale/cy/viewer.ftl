@@ -105,6 +105,14 @@ pdfjs-document-properties-button-label = Priodweddau Dogfen…
 pdfjs-document-properties-file-name = Enw ffeil:
 pdfjs-document-properties-file-size = Maint ffeil:
 # Variables:
+#   $kb (Number) - the PDF file size in kilobytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } KB ({ $b } beit)
+# Variables:
+#   $mb (Number) - the PDF file size in megabytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } beit)
+# Variables:
 #   $size_kb (Number) - the PDF file size in kilobytes
 #   $size_b (Number) - the PDF file size in bytes
 pdfjs-document-properties-kb = { $size_kb } KB ({ $size_b } beit)
@@ -118,6 +126,9 @@ pdfjs-document-properties-subject = Pwnc:
 pdfjs-document-properties-keywords = Allweddair:
 pdfjs-document-properties-creation-date = Dyddiad Creu:
 pdfjs-document-properties-modification-date = Dyddiad Addasu:
+# Variables:
+#   $dateObj (Date) - the creation/modification date and time of the PDF file
+pdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 # Variables:
 #   $date (Date) - the creation/modification date of the PDF file
 #   $time (Time) - the creation/modification time of the PDF file
@@ -283,6 +294,9 @@ pdfjs-annotation-date-string = { $date }, { $time }
 # Some common types are e.g.: "Check", "Text", "Comment", "Note"
 pdfjs-text-annotation-type =
     .alt = [Anodiad { $type } ]
+# Variables:
+#   $dateObj (Date) - the modification date and time of the annotation
+pdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 
 ## Password
 
@@ -337,6 +351,10 @@ pdfjs-editor-stamp-add-image-button-label = Ychwanegu delwedd
 pdfjs-editor-free-highlight-thickness-input = Trwch
 pdfjs-editor-free-highlight-thickness-title =
     .title = Newid trwch wrth amlygu eitemau heblaw testun
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Golygydd Testun
+    .default-content = Cychwyn teipio…
 pdfjs-free-text =
     .aria-label = Golygydd Testun
 pdfjs-free-text-default-content = Cychwyn teipio…
@@ -347,8 +365,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Testun amgen (alt)
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Golygu testun amgen
 pdfjs-editor-alt-text-edit-button-label = Golygu testun amgen
 pdfjs-editor-alt-text-dialog-label = Dewisiadau
 pdfjs-editor-alt-text-dialog-description = Mae testun amgen (testun alt) yn helpu pan na all pobl weld y ddelwedd neu pan nad yw'n llwytho.
@@ -362,6 +381,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Marcio fel addurniadol
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Er enghraifft, “Mae dyn ifanc yn eistedd wrth fwrdd i fwyta pryd bwyd”
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Testun amgen (alt)
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -374,6 +396,22 @@ pdfjs-editor-resizer-label-bottom-right = Y gornel dde isaf — newid maint
 pdfjs-editor-resizer-label-bottom-middle = Canol gwaelod — newid maint
 pdfjs-editor-resizer-label-bottom-left = Y gornel chwith isaf — newid maint
 pdfjs-editor-resizer-label-middle-left = Chwith canol — newid maint
+pdfjs-editor-resizer-top-left =
+    .aria-label = Y gornel chwith uchaf — newid maint
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Canol uchaf - newid maint
+pdfjs-editor-resizer-top-right =
+    .aria-label = Y gornel dde uchaf - newid maint
+pdfjs-editor-resizer-middle-right =
+    .aria-label = De canol - newid maint
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Y gornel dde isaf — newid maint
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Canol gwaelod — newid maint
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Y gornel chwith isaf — newid maint
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Chwith canol — newid maint
 
 ## Color picker
 
@@ -427,10 +465,16 @@ pdfjs-editor-new-alt-text-error-close-button = Cau
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Wrthi'n llwytho i lawr model AI testun amgen ( { $downloadedSize } o { $totalSize } MB)
     .aria-valuetext = Wrthi'n llwytho i lawr model AI testun amgen ( { $downloadedSize } o { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Ychwanegwyd testun amgen
 pdfjs-editor-new-alt-text-added-button-label = Ychwanegwyd testun amgen
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Testun amgen coll
 pdfjs-editor-new-alt-text-missing-button-label = Testun amgen coll
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Adolygu'r testun amgen
 pdfjs-editor-new-alt-text-to-review-button-label = Adolygu'r testun amgen
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:

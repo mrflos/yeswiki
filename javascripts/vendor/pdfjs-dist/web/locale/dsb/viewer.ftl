@@ -105,6 +105,14 @@ pdfjs-document-properties-button-label = Dokumentowe kakosći…
 pdfjs-document-properties-file-name = Mě dataje:
 pdfjs-document-properties-file-size = Wjelikosć dataje:
 # Variables:
+#   $kb (Number) - the PDF file size in kilobytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } KB ({ $b } bajtow)
+# Variables:
+#   $mb (Number) - the PDF file size in megabytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } bajtow)
+# Variables:
 #   $size_kb (Number) - the PDF file size in kilobytes
 #   $size_b (Number) - the PDF file size in bytes
 pdfjs-document-properties-kb = { $size_kb } KB ({ $size_b } bajtow)
@@ -118,6 +126,9 @@ pdfjs-document-properties-subject = Tema:
 pdfjs-document-properties-keywords = Klucowe słowa:
 pdfjs-document-properties-creation-date = Datum napóranja:
 pdfjs-document-properties-modification-date = Datum změny:
+# Variables:
+#   $dateObj (Date) - the creation/modification date and time of the PDF file
+pdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 # Variables:
 #   $date (Date) - the creation/modification date of the PDF file
 #   $time (Time) - the creation/modification time of the PDF file
@@ -279,6 +290,9 @@ pdfjs-annotation-date-string = { $date }, { $time }
 # Some common types are e.g.: "Check", "Text", "Comment", "Note"
 pdfjs-text-annotation-type =
     .alt = [Typ pśipiskow: { $type }]
+# Variables:
+#   $dateObj (Date) - the modification date and time of the annotation
+pdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 
 ## Password
 
@@ -333,6 +347,10 @@ pdfjs-editor-stamp-add-image-button-label = Wobraz pśidaś
 pdfjs-editor-free-highlight-thickness-input = Tłustosć
 pdfjs-editor-free-highlight-thickness-title =
     .title = Tłustosć změniś, gaž se zapiski wuzwiguju, kótarež tekst njejsu
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Tekstowy editor
+    .default-content = Zachopśo pisaś …
 pdfjs-free-text =
     .aria-label = Tekstowy editor
 pdfjs-free-text-default-content = Zachopśo pisaś…
@@ -343,8 +361,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alternatiwny tekst
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Alternatiwny tekst wobźěłaś
 pdfjs-editor-alt-text-edit-button-label = Alternatiwny tekst wobźěłaś
 pdfjs-editor-alt-text-dialog-label = Nastajenje wubraś
 pdfjs-editor-alt-text-dialog-description = Alternatiwny tekst pomaga, gaž luźe njamógu wobraz wiźeś abo gaž se wobraz njezacytajo.
@@ -358,6 +377,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Ako dekoratiwny markěrowany
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Na pśikład, „Młody muski za blidom sejźi, aby jěź jědł“
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alternatiwny tekst
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -370,6 +392,22 @@ pdfjs-editor-resizer-label-bottom-right = Dołojce napšawo – wjelikosć změn
 pdfjs-editor-resizer-label-bottom-middle = Dołojce wesrjejź – wjelikosć změniś
 pdfjs-editor-resizer-label-bottom-left = Dołojce nalěwo – wjelikosć změniś
 pdfjs-editor-resizer-label-middle-left = Wesrjejź nalěwo – wjelikosć změniś
+pdfjs-editor-resizer-top-left =
+    .aria-label = Górjejce nalěwo – wjelikosć změniś
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Górjejce wesrjejź – wjelikosć změniś
+pdfjs-editor-resizer-top-right =
+    .aria-label = Górjejce napšawo – wjelikosć změniś
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Wesrjejź napšawo – wjelikosć změniś
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Dołojce napšawo – wjelikosć změniś
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Dołojce wesrjejź – wjelikosć změniś
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Dołojce nalěwo – wjelikosć změniś
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Wesrjejź nalěwo – wjelikosć změniś
 
 ## Color picker
 
@@ -423,10 +461,16 @@ pdfjs-editor-new-alt-text-error-close-button = Zacyniś
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Model KI za alternatiwny tekst se ześěgujo ({ $downloadedSize } z { $totalSize } MB)
     .aria-valuetext = Model KI za alternatiwny tekst se ześěgujo ({ $downloadedSize } z { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alternatiwny tekst jo se pśidał
 pdfjs-editor-new-alt-text-added-button-label = Alternatiwny tekst jo se pśidał
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Alternatiwny tekst felujo
 pdfjs-editor-new-alt-text-missing-button-label = Alternatiwny tekst felujo
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Alternatiwny tekst pśeglědowaś
 pdfjs-editor-new-alt-text-to-review-button-label = Alternatiwny tekst pśeglědowaś
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:
