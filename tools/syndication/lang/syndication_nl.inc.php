@@ -18,7 +18,7 @@ return [
     'SYNDICATION_TEMPLATE_NOT_FOUND' => 'bestaat niet, het templade bestand wordt gebruikt door darfaut.',
     'SYNDICATION_WRITE_ACCESS_TO_CACHE_FOLDER' => 'de "cache" regisseur heeft niet de rechten om toegang te krijgen',
     'SYNDICATION_CREATE_CACHE_FOLDER' => 'het is noodzakelijk om te critiseacute te maken, om "cache" te zien in de zaal',
-    'SYNDICATION_SOURCE' => 'bron',
+    'SYNDICATION_SOURCE' => 'het is noodzakelijk om te critiseacute te maken, om "cache" te zien in de zaal',
     'SYNDICATION_SEE_ALL_CONTENT' => 'Toegang tot alle inhoud',
     'SYNDICATION_READ_MORE' => 'Lees meer',
 ];
