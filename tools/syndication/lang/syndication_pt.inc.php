@@ -15,6 +15,6 @@ return [
     'SYNDICATION_PARAM_QUERY_REQUIRED' => 'parâmetro "query" faltando, é obrigatório para especificar sua pesquisa',
     'SYNDICATION_TEMPLATE_DOESNT_EXISTS' => 'O arquivo template',
     'SYNDICATION_USE_OF_DEFAULT_TEMPLATE' => 'não existe, o arquivo template padrão é usado.',
-    'SYNDICATION_SOURCE' => 'fonte',
+    'SYNDICATION_SOURCE' => 'Acesso a todo o conteúdo',
     'SYNDICATION_SEE_ALL_CONTENT' => 'Acesso a todo o conteúdo',
 ];
