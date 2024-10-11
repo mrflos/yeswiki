@@ -355,7 +355,7 @@ return [
     'BAZ_AUTH_NEEDED' => 'Você deve ser identificado para editar ou excluir um formulário',
     'BAZ_IMPORT_LISTS_FROM_URL' => 'Importar as listas de outro simwiki',
     'BAZ_IMPORT_FORMS_FROM_URL' => 'Formulários de importação de outro simwiki',
-    'BAZ_ACTIONS' => 'Acções',
+    'BAZ_ACTIONS' => 'Ação',
     'BAZ_DATA_FORMAT' => 'Formatos de dados',
     'BAZ_CSV' => 'CSV',
     'BAZ_JSON_LD' => 'JSON-LD (semântica)',
