@@ -193,7 +193,7 @@ return [
     'ADMIN_BACKUPS_ARCHIVES_LIST' => 'Lista de copii de rezervă',
     'FAIL' => '',
     'DELETE_ALL' => 'Ștergeți toate',
-    'REVISION_BY' => '',
+    'REVISION_BY' => 'de',
     'ACTION' => 'Acțiune',
     // actions/redirect.php
     'ERROR_ACTION_REDIRECT' => '',
@@ -229,7 +229,7 @@ return [
     'USER_LISTGROUPMEMBERSHIPS_QUERY_FAILED' => '',
     'DOESNT_EXIST' => 'nu pare să existe',
     'CREATION_OF_TABLES' => '',
-    'DELETEPAGE_DELETE' => '',
+    'DELETEPAGE_DELETE' => 'Șterge',
     // actions/editgroups.class.php
     'DEFINITION_OF_THE_GROUP' => '',
     // actions/trail.php
@@ -360,7 +360,7 @@ return [
     'ERROR_WHILE_SAVING_GROUP' => '',
     // handlers/show
     'COMMENT_INFO' => '',
-    'USER_DISCONNECT' => '',
+    'USER_DISCONNECT' => 'Deconectare',
     'EXCLUDING_EXCLUSIONS' => 'excluzând excluderile',
     'EDIT_CONFIG_HINT_DEFAULT_COMMENT_AVATAR' => '',
     'COMMENT_USER' => '',
@@ -375,7 +375,7 @@ return [
     'INCORRECT_MYSQL_PASSWORD' => '',
     'MODIFY_ACCESS_RIGHTS_ON_ANY_PAGE' => '',
     'LIST_PAGES_BELONGING_TO' => 'Lista de pagini aparținând',
-    'NOT_AUTORIZED_TO_READ_PAGE' => '',
+    'NOT_AUTORIZED_TO_READ_PAGE' => 'Nu ești autorizat să citești această pagină',
     'EDIT_NO_WRITE_ACCESS' => '',
     // actions/UserCommentsAction.php
     'COMMENT_RESERVED_TO_CONNECTED' => 'Vă rugăm să vă autentificați pentru a utiliza acțiunea "{{usercomments}}" !',
@@ -483,7 +483,7 @@ return [
     'YOU_ARE_NOW_DISCONNECTED' => '',
     // gererdroits
     'ACLS_RESERVED_FOR_ADMINS' => '',
-    'REACTION_DELETE' => '',
+    'REACTION_DELETE' => 'Șterge',
     'USER_INCORRECT_PASSWORD_KEY' => '',
     'UPDATE_PAGE_NOT_FOUND_IN_DEFAULT_SQL' => '',
     'HTML_INSERTION_HELP_TEXT' => '',
