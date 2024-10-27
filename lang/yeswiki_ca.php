@@ -199,7 +199,7 @@ return [
     'GREETINGS' => 'Felicitacions',
     'YOUR_EMAIL_ADDRESS' => 'Correu electrònic',
     'DOUBLE_CLICK_TO_EDIT' => 'edició doble clic',
-    'SHOW_COMMENTS_BY_DEFAULT' => 'Per defecte, mostra els comentaris',
+    'SHOW_COMMENTS_BY_DEFAULT' => 'Drets de lectura predeterminats de pàgines (* per a tothom, + per a persones identificades, @admins per a grup d\'administració)',
     'MAX_NUMBER_OF_LASTEST_COMMENTS' => 'Nombre màxim de comentaris recents',
     'MAX_NUMBER_OF_VERSIONS' => 'Nombre màxim de versions',
     'YOUR_MOTTO' => 'El vostre àlies',
@@ -833,7 +833,7 @@ SuperCat (no es permet SuperCat)',
     'DELETEPAGE_NOT_OWNER' => 'No ets el propietari d\'aquesta pàgina.',
     'COMMENT_NEW_COMMENT_MESSAGE' => 'Un nou comentari va ser escrit per %{user} a la pàgina %{tag} al lloc [%{site}].',
     // ACLs
-    'DENY_READ' => 'No es pot llegir aquesta pàgina',
+    'DENY_READ' => 'Llistat de pàgines pertanyents a',
     'USER_CANT_DELETE_ONESELF' => 'No pots eliminar el teu compte',
     'EDIT_CONFIG_HINT_ALLOW_DOUBLECLIC' => 'Permet fer doble clic per editar menús i pàgines especials (veritable o fals)',
     // API
