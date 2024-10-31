@@ -204,7 +204,7 @@ class LostPasswordAction extends YesWikiAction
     {
         // Generate the password recovery key
         $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
-        $plainKey = $user['name'] . '_' . $user['email'] . random_int(0, 10000) . date('Y-m-d H:i:s');
+        $plainKey = $user['name'] . '_' . $user['email'] . random_bytes(16) . date('Y-m-d H:i:s');
         $hashedKey = $passwordHasher->hash($plainKey);
         // Erase the previous triples in the trible table
         $this->tripleStore->delete($user['name'], self::KEY_VOCABULARY, null, '', '') ;

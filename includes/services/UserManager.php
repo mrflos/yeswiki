@@ -212,7 +212,7 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     {
         // Generate the password recovery key
         $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
-        $plainKey = $user['name'] . '_' . $user['email'] . random_int(0, 10000) . date('Y-m-d H:i:s');
+        $plainKey = $user['name'] . '_' . $user['email'] . random_bytes(16) . date('Y-m-d H:i:s');
         $hashedKey = $passwordHasher->hash($plainKey);
         $tripleStore = $this->wiki->services->get(TripleStore::class);
         // Erase the previous triples in the trible table
@@ -270,7 +270,7 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     public function getLastUserLink(User $user): string
     {
         $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
-        $plainKey = $user['name'] . '_' . $user['email'] . random_int(0, 10000) . date('Y-m-d H:i:s');
+        $plainKey = $user['name'] . '_' . $user['email'] . random_bytes(16) . date('Y-m-d H:i:s');
         $hashedKey = $passwordHasher->hash($plainKey);
         $tripleStore = $this->wiki->services->get(TripleStore::class);
         $key = $tripleStore->getOne($user['name'], self::KEY_VOCABULARY, '', '');
