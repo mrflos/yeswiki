@@ -10,6 +10,7 @@ use YesWiki\Core\Service\TripleStore;
 use YesWiki\Core\Service\UserManager;
 use YesWiki\Core\YesWikiAction;
 use YesWiki\Security\Controller\SecurityController;
+use YesWiki\Core\Service\PasswordHasherFactory;
 
 if (!function_exists('send_mail')) {
     require_once('includes/email.inc.php');
@@ -17,13 +18,13 @@ if (!function_exists('send_mail')) {
 
 class LostPasswordAction extends YesWikiAction
 {
-    private const PW_SALT = 'FBcA';
     public const KEY_VOCABULARY = 'http://outils-reseaux.org/_vocabulary/key';
 
     protected $authController;
     protected $errorType;
     protected $typeOfRendering;
     protected $securityController;
+    protected $passwordHasherFactory;
     protected $tripleStore;
     protected $userManager;
 
@@ -34,6 +35,7 @@ class LostPasswordAction extends YesWikiAction
         $this->securityController = $this->getService(SecurityController::class);
         $this->tripleStore = $this->getService(TripleStore::class);
         $this->userManager = $this->getService(UserManager::class);
+        $this->passwordHasherFactory = $this->getService(PasswordHasherFactory::class);
 
         // init properties
         $this->errorType = null;
@@ -206,16 +208,18 @@ class LostPasswordAction extends YesWikiAction
     private function sendPasswordRecoveryEmail(User $user)
     {
         // Generate the password recovery key
-        $key = md5($user['name'] . '_' . $user['email'] . random_int(0, 10000) . date('Y-m-d H:i:s') . self::PW_SALT);
+        $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
+        $plainKey = $user['name'] . '_' . $user['email'] . random_int(0, 10000) . date('Y-m-d H:i:s');
+        $hashedKey = $passwordHasher->hash($plainKey);
         // Erase the previous triples in the trible table
         $this->tripleStore->delete($user['name'], self::KEY_VOCABULARY, null, '', '') ;
         // Store the (name, vocabulary, key) triple in triples table
-        $res = $this->tripleStore->create($user['name'], self::KEY_VOCABULARY, $key, '', '');
+        $res = $this->tripleStore->create($user['name'], self::KEY_VOCABULARY, $hashedKey, '', '');
 
         // Generate the recovery email
         $passwordLink = $this->wiki->Href('', '', [
             'a' => 'recover',
-            'email' => $key,
+            'email' => $hashedKey,
             'u' => base64_encode($user['name'])
         ], false);
         $pieces = parse_url($this->params->get('base_url'));

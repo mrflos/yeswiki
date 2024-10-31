@@ -34,6 +34,7 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     protected $passwordHasherFactory;
     protected $securityController;
     protected $params;
+    protected $userlink;
 
     private $getOneByNameCacheResults;
 
