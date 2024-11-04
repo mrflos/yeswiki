@@ -16,7 +16,7 @@ return [
     'DESPAM_FOR_X_HOURS' => 'por horas',
     'DESPAM_FOR_ONE_WEEK' => '1 semana',
     'DESPAM_FOR_TWO_WEEKS' => '2 semanas',
-    'DESPAM_FOR_ONE_MONTH' => '1 mês',
+    'DESPAM_FOR_ONE_MONTH' => 'por um mês',
     'DESPAM_CLEAN_SPAMMED_PAGES' => 'Limpeza de páginas vandalizadas de {x} hora(s)',
     'DESPAM_DELETED_PAGES' => 'Páginas excluídas',
     'DESPAM_RESTORE_FROM' => 'Restauração de {time} versão por {user}',
