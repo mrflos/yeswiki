@@ -254,7 +254,7 @@ return [
     'AB_templates_section_visible_label' => 'Visible per',
     'AB_templates_section_visible_admins' => 'Només administració',
     'AB_templates_section_visible_connected_user' => 'Usuari connectat',
-    'AB_templates_section_visible_owner' => 'Titular de la pàgina',
+    'AB_templates_section_visible_owner' => 'Atenció',
     'AB_templates_section_visible_no_container' => 'No posar un contenidor',
     'AB_templates_tabs_label' => 'Tabs amb parts de la pàgina',
     'AB_templates_tabs_titles_label' => "Títols de pestanyes",
