@@ -36,7 +36,7 @@ return [
     'THURSDAY' => 'வியாழக்கிழமை',
     'TUESDAY' => 'மார்டி',
     'WEDNESDAY' => 'புதன்கிழமை',
-    'YES' => 'Oui',
+    'YES' => 'ஆம்',
     // /javascripts/actions/admin-backups.js
     'ADMIN_BACKUPS_LOADING_LIST' => 'காப்பு பட்டியலை ஏற்றுகிறது',
     'ADMIN_BACKUPS_NOT_POSSIBLE_TO_LOAD_LIST' => 'காப்புப்பிரதிகளின் பட்டியலைப் புதுப்பிக்க இயலாது',
