@@ -1,5 +1,4 @@
 <?php
-
 return [
     /*
  * Fichier de traduction en francais de l'extension AutoUpdate
@@ -38,7 +37,7 @@ return [
     'AU_CHANGELOG' => 'பதிப்புகள் குறிப்புகள்',
     'AU_CHANGELOG_HINT' => 'யெவிகி புதுப்பிப்பில் சேர்க்கப்பட்டுள்ள அண்மைக் கால மாற்றங்களைக் கண்டறிய சொடுக்கு செய்க',
     'AU_YESWIKI_SECOND_TIME_UPDATE' => 'இதயத்தின் இரண்டாவது புதுப்பிப்பு yeswiki',
-    'AU_FILE_NOT_POSSIBLE_TO_UPDATE' => "'{{கோப்பு}}' கோப்பைப் புதுப்பிக்க முடியவில்லை! இது சிறிய செயலிழப்புகளுக்கு வழிவகுக்கும்.",
+    'AU_FILE_NOT_POSSIBLE_TO_UPDATE' => "'{{file}}' கோப்பைப் புதுப்பிக்க முடியவில்லை! இது சிறிய செயலிழப்புகளுக்கு வழிவகுக்கும்.",
     'AU_SECOND_UPDATE_NOT_POSSIBLE' => 'ஈச்விகி இதயத்தின் இரண்டாவது புதுப்பிப்பு தேவை, ஆனால் முதல் புதுப்பிப்பு சரியாக நடக்காத வரை அது சாத்தியமில்லை!',
     'AU_NAME' => 'நோம்',
     'AU_INSTALLED_REVISION' => 'நிறுவப்பட்ட பதிப்பு',
