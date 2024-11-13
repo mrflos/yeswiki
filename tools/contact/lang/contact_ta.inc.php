@@ -1,5 +1,4 @@
 <?php
-
 return [
     // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'செயல் {{abonnement ...}}',
@@ -113,4 +112,5 @@ return [
     // for edit config
     'EDIT_CONFIG_HINT_CONTACT_USE_LONG_WIKI_URLS_IN_EMAILS' => "அசூட்டர் 'விக்கி =' ஆக்ச் லீன்ச் வெர்சச் சி.இ விக்கி டான்ச் லெச் மின்னஞ்சல்கள்",
     'EDIT_CONFIG_GROUP_CONTACT' => 'Envoi des மின்னஞ்சல்கள்',
+    'EDIT_CONFIG_HINT_CONTACT_FROM' => 'மின்னஞ்சல் வழங்குநராக சுட்டிக்காட்டப்பட்ட பயனர் (ச்பேமைத் தவிர்ப்பது SMTP பயனரைப் போலவே இருக்க வேண்டும்)',
 ];
