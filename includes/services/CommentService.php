@@ -204,7 +204,7 @@ class CommentService implements EventSubscriberInterface
      *
      * @return array all comments and their corresponding properties
      */
-    public function loadComments($tag, bool $bypassAcls = false)
+    public function loadComments($tag, bool $bypassAcls = false, $username = null)
     {
         $query = 'SELECT * FROM ' . $this->wiki->config['table_prefix'] . 'pages ' . 'WHERE ';
         if (empty($tag)) {
