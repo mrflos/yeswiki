@@ -1,5 +1,4 @@
 <?php
-
 return [
     'BAZ_FORMULAIRE' => 'சூத்திரங்கள்',
     'BAZ_LISTES' => 'பட்டியல்கள்',
@@ -45,8 +44,8 @@ return [
     'BAZ_ACTIONS' => 'செயல்கள்',
     'BAZ_DATA_FORMAT' => 'வடிவங்கள் டி டோனீச்',
     'BAZ_WIDGET' => 'விட்செட்',
-    'BAZ_CSV' => 'சிஎச்வி',
-    'BAZ_JSON' => 'சேசன்',
+    'BAZ_CSV' => 'காபிம',
+    'BAZ_JSON' => 'சாதொபொகு',
     'BAZ_JSON_LD' => 'JSON-LD (சொற்பொருள்)',
     'BAZ_GEOJSON' => 'சியோச்சன்',
     'BAZ_ICAL' => 'Ical (calendrier)',
@@ -363,7 +362,7 @@ return [
     'SUM' => 'சோம்',
     'URL' => 'முகவரி',
     // templates/bazar/fields/date.twig
-    'EVENT_IS_RECURRENT' => 'இந்த நிகழ்வு மீண்டும் மீண்டும்: %{மறுபடியும் மறுபடியும்}',
+    'EVENT_IS_RECURRENT' => 'இந்த நிகழ்வு மீண்டும்: %{மறுபடியும் மறுபடியும்}',
     'EVENT_LIMIT_DATE' => '%{தேதி} வரை',
     'EVENT_REPETITION_FOR_DAYS' => 'அனைத்து %{x} நாட்கள்',
     'EVENT_REPETITION_FOR_MONTHS' => 'அனைத்து %{x} மாதம், %{monthrepetition}',
@@ -390,7 +389,7 @@ return [
     'EVENT_NO_REPETITION' => 'ஒத்திகை இல்லை',
     'EVENT_NTH_OF_MONTH' => 'மாதத்தின் ஒவ்வொரு மாதமும்',
     'EVENT_ON_MONTH' => 'இல்:',
-    'EVENT_RECURRENT' => 'மீண்டும் மீண்டும்',
+    'EVENT_RECURRENT' => 'மீண்டும்',
     'EVENT_REMOVE_CUSTOM' => 'கூடுதல் விருப்பங்களை மறைக்கிறது',
     'EVENTS_REPETITIONS' => 'ஒத்திகை',
     'EVENT_SECOND_Y_OF_MONTH' => 'மாதத்தின் இரண்டாவது ஒய்',
