@@ -49,7 +49,7 @@ return [
     'CONTACT_SUBSCRIBE' => 'Inschrijven',
     'CONTACT_UNSUBSCRIBE' => 'Uitschrijven',
     'CONTACT_FROM' => 'van',
-    'AB_abonnement_template_label' => 'vertaling:',
+    'AB_abonnement_template_label' => 'Sjabloon',
     'EDIT_CONFIG_HINT_CONTACT_MAIL_FUNC' => 'E-mail mode (smtp" of "mail"',
     'EDIT_CONFIG_HINT_CONTACT_DEBUG' => 'Verticale modus om (put 2 om informatie te krijgen)',
     'CONTACT_HANDLER_MAIL_FOR_CONNECTED' => 'E-mail wordt ingetrokken, geïdentificeerd.',
