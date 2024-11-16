@@ -622,4 +622,5 @@ return [
     'LAST_CHANGE' => 'ultima modificare',
     'NEW_ACL_SUCCESSFULLY_SAVED_FOR_HANDLER' => 'ACL nou înregistrat cu succes pentru handler',
     'USER_TRYING_TO_MODIFY_AN_INEXISTANT_USER' => '',
+    'USER_GOTOADMIN' => '',
 ];
