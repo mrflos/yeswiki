@@ -91,7 +91,7 @@ return [
     'EDIT_CONFIG_HINT_CONTACT_USE_LONG_WIKI_URLS_IN_EMAILS' => "Add 'wiki=' to the links to this wiki in e-mails",
     'EDIT_CONFIG_GROUP_CONTACT' => 'Send e-mails',
     'EDIT_CONFIG_HINT_CONTACT_DISABLE_EMAIL_FOR_PASSWORD' => 'Disable email to re-introduce a password (ex: LDAP, SSO)',
-    'AB_abonnement_template_label' => 'template',
+    'AB_abonnement_template_label' => 'Template',
     'EDIT_CONFIG_HINT_CONTACT_MAIL_FUNC' => 'Email mode ("smtp" or "mail")',
     'EDIT_CONFIG_HINT_CONTACT_SMTP_HOST' => 'SMTP server (ex: "smtp.mondomaine.ext")',
     'CONTACT_PERIOD' => 'Receive the content of this page by email in a way',
