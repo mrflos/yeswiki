@@ -116,7 +116,7 @@ return [
     'AB_tags_listpagestag_tri_label' => 'Ordinação',
     'TAGS_NO_PAGE' => 'Nenhuma página encontrada',
     'TAGS_WITH_KEYWORD' => 'com a palavra-chave.',
-    'AB_tags_listpagestag_template_label' => 'modelo',
+    'AB_tags_listpagestag_template_label' => 'Template',
     'TAGS_TAGS' => 'Palavras-chave',
     'TAGS_NO_TAG' => 'Sem palavras-chave usadas no momento',
     'TAGS_TOTAL_NB_PAGES' => 'Um total de %{nb_total} páginas a \'eacute;t ofacute; trouviyahacute;',
