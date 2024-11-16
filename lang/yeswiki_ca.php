@@ -265,7 +265,7 @@ return [
     'MYSQL_USERNAME' => 'Nom de l\'usuari MySQL',
     'MYSQL_USERNAME_INFOS' => 'Necessari per connectar-se a la vostra base de dades',
     'TABLE_PREFIX' => 'Prefix de les taules',
-    'TABLE_PREFIX_INFOS' => 'Permet l\'ús de diversos YesWiki a la mateixa base de dades: cada nou YesWiki instal·lat tindrà un prefix de diferents taules',
+    'TABLE_PREFIX_INFOS' => 'editar els drets del manipulador',
     'MYSQL_PASSWORD' => 'Contrasenya MySQL',
     'YESWIKI_WEBSITE_CONFIGURATION' => 'Configuració del lloc web YesWiki',
     'YOUR_WEBSITE_NAME' => 'Nom del vostre lloc web',
@@ -835,7 +835,7 @@ return [
     // ACLs
     'DENY_READ' => 'Llistat de pàgines pertanyents a',
     'USER_CANT_DELETE_ONESELF' => 'No pots eliminar el teu compte',
-    'EDIT_CONFIG_HINT_ALLOW_DOUBLECLIC' => 'Permet fer doble clic per editar menús i pàgines especials (veritable o fals)',
+    'EDIT_CONFIG_HINT_ALLOW_DOUBLECLIC' => 'No hi ha pàgina',
     // API
     'USERS' => 'Usuaris',
     'DELETEPAGE_CONFIRM' => 'Vulgueu-vos verdaderament suprimir definitivament la pàgina {tag}&nbsp;?',
