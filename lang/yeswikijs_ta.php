@@ -36,7 +36,7 @@ return [
     'THURSDAY' => 'வியாழக்கிழமை',
     'TUESDAY' => 'மார்டி',
     'WEDNESDAY' => 'புதன்கிழமை',
-    'YES' => 'Oui',
+    'YES' => 'ஆம்',
     // /javascripts/actions/admin-backups.js
     'ADMIN_BACKUPS_LOADING_LIST' => 'காப்பு பட்டியலை ஏற்றுகிறது',
     'ADMIN_BACKUPS_NOT_POSSIBLE_TO_LOAD_LIST' => 'காப்புப்பிரதிகளின் பட்டியலைப் புதுப்பிக்க இயலாது',
@@ -115,4 +115,5 @@ return [
     'REACTION_CONFIRM_DELETE_ALL' => 'இந்த வாக்குகளிலிருந்து அனைத்து எதிர்வினைகளையும் அகற்ற விரும்புகிறீர்களா?',
     // Doc
     'DOC_EDIT_THIS_PAGE_ON_GITHUB' => 'இந்த பக்கத்தை கிதுபில் மாற்றவும்',
+    'LINK_TO_CHANGE_PASSWORD' => "கடவுச்சொல்லை மாற்றுவதற்கான இணைப்பு",
 ];
