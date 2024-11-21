@@ -158,8 +158,8 @@ class BazarListeAction extends YesWikiAction
             // Champ du formulaire utilisé pour le tri
             'champ' => $champ,
             // les tris disponibles par le bouton "Trier par"
-            'sortfields' => $this->formatArray($_GET['sortfields'] ?? $arg['sortfields'] ?? null),
-            'sortfieldstitles' => $this->formatArray($_GET['sortfieldstitles'] ?? $arg['sortfieldstitles'] ?? null),
+            'sortfields' => $this->formatArray($_GET['sortfields'] ?? $arg['sortfields'] ?? ['bf_titre', 'date_maj_fiche']),
+            'sortfieldstitles' => $this->formatArray($_GET['sortfieldstitles'] ?? $arg['sortfieldstitles'] ?? [strtolower(_t('BAZ_TITLE')), strtolower(_t('COMMENT_DATE'))]),
             // Nombre maximal de résultats à afficher
             'nb' => $arg['nb'] ?? null,
             // get comments , reactions and metadatas with entry
