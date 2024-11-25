@@ -98,7 +98,7 @@ return [
     'ATTACH_FILENAME' => 'Nom del fitxer',
     'ATTACH_SIZE' => 'Cintura',
     'ATTACH_GET_CACHE_URLIMAGE_NO_FILE' => "Fitxer d'imatge inexistent",
-    'INVALID_REQUEST_METHOD' => 'Mètode de requète invàlid',
+    'INVALID_REQUEST_METHOD' => 'Versió del fitxer',
     'ERROR_MOVING_TEMPORARY_FILE' => 'Error durant el d✱;ubicació del fitxer temporal',
     'ERROR_NO_FILE_UPLOADED' => 'Cap fitxer no ha estat descarregat.',
     'ATTACH_TRASH' => 'Corbeille',
