@@ -49,7 +49,7 @@ return [
     'CONTACT_SUBSCRIBE' => 'Assinar',
     'CONTACT_UNSUBSCRIBE' => 'Cancelar inscrição',
     'CONTACT_FROM' => 'de',
-    'AB_abonnement_template_label' => 'Template',
+    'AB_abonnement_template_label' => 'modelo',
     'EDIT_CONFIG_HINT_CONTACT_MAIL_FUNC' => 'Modo de e-mail ("smtp" ou "mail")',
     'EDIT_CONFIG_HINT_CONTACT_SMTP_HOST' => 'Servidor SMTP (ex: "smtp.mondomaine.ext")',
     'EDIT_CONFIG_HINT_CONTACT_SMTP_PORT' => 'Porta SMTP (geralmente 465 ou 587)',
