@@ -3,7 +3,7 @@ return [
     // controllers/ApiController.php
     'ATTACH_GET_CACHE_URLIMAGE_NO_FILE' => 'பட கோப்பு இல்லை',
     // libs/attach.lib.php
-    'ATTACH_ACTION_ATTACH' => 'செயல் {{இணைக்க ...}}',
+    'ATTACH_ACTION_ATTACH' => 'செயல் {{attach ...}}',
     'ATTACH_PARAM_DESC_REQUIRED' => 'ஒரு படத்திற்கான அளவுரு "கட்டாய"',
     'ATTACH_PARAM_HEIGHT_NOT_NUMERIC' => '"உயரம்" என்ற அளவுரு, பிக்சல்களில், இசையமைப்பை மட்டுமே செய்ய வேண்டும் & éacute; முழு புள்ளிவிவரங்களின்',
     'ATTACH_PARAM_WIDTH_NOT_NUMERIC' => 'பிக்சல்களில் "அகலம்" அளவுரு, இசையமைப்பை மட்டுமே செய்ய வேண்டும் & eacute; முழு புள்ளிவிவரங்களின்',
@@ -25,11 +25,11 @@ return [
     'ATTACH_SIZE' => 'அளவு',
     'ATTACH_DATE_OF_MODIFICATION' => 'தேதி மாற்றியமைத்தல்',
     'ATTACH_RESTORE' => 'மீட்டமை',
-    'ATTACH_REAL_FILENAME' => 'கோப்பின் உண்மையான பெயர்: {கோப்பு}',
-    'ATTACH_DELETED_ON' => ' - நீக்கப்பட்டது: {தேதி}',
+    'ATTACH_REAL_FILENAME' => 'கோப்பின் உண்மையான பெயர்: {file}',
+    'ATTACH_DELETED_ON' => ' - நீக்கப்பட்டது: {date}',
     'ATTACH_EMPTY_TRASH' => 'குப்பையை அகற்றவும்',
     'ATTACH_EMPTY_TRASH_NOTICE' => 'கூடையிலிருந்து அழிக்கப்பட்ட கோப்புகள் நிச்சயமாக இருக்கும்.',
-    'ATTACH_FILE_MANAGEMENT_TITLE' => 'கோப்பு மேலாண்மை பக்கத்துடன் இணைக்கப்பட்டுள்ளது {குறிச்சொல்}',
+    'ATTACH_FILE_MANAGEMENT_TITLE' => 'கோப்பு மேலாண்மை பக்கத்துடன் இணைக்கப்பட்டுள்ளது {tag}',
     'ATTACH_FILE_MANAGEMENT_WARNING' => 'இந்த பக்கத்தில் அழிக்கப்பட்ட கோப்புகள் முடிந்தது',
     'ATTACH_PAGE_REVISION' => 'பக்க பதிப்பு',
     'ATTACH_FILE_REVISION' => 'கோப்பு பதிப்பு',
@@ -38,17 +38,17 @@ return [
     'ATTACH_NO_RIGHTS_TO_ACCESS_FILEMANAGER' => 'நீங்கள் குற்றம் சாட்டப்பட வேண்டும்; Eacute; இணைப்பின் மேலாளருக்கு துல்லியமான பக்கம் & eacute;',
     'FILEMANAGER_ACTION_NEED_ACCESS' => 'இந்த பக்கத்தின் உரிமையாளர் மட்டுமே இணைக்கப்பட்ட கோப்பு மேலாளரை அணுக முடியும்',
     // actions/backgroundimage.php
-    'ATTACH_ACTION_BACKGROUNDIMAGE' => 'செயல் {{பின்னணி உருவம் ...}}',
+    'ATTACH_ACTION_BACKGROUNDIMAGE' => 'செயல் {{backgroundimage ...}}',
     'ATTACH_PARAM_FILE_OR_BGCOLOR_NOT_FOUND' => 'நீங்கள் "கோப்பு" அளவுருவைக் கொண்ட ஒரு படத்தை அல்லது "BGColor" அளவுருவுடன் பின்னணி நிறத்தைக் குறிக்க வேண்டும்',
     // actions/player.php
-    'ATTACH_ACTION_PLAYER' => 'செயல் {{பிளேயர் ...}}',
+    'ATTACH_ACTION_PLAYER' => 'செயல் {{player ...}}',
     'ATTACH_DOWNLOAD_THE_FILE' => 'எல் & eacute கோப்பை ஏற்றவும்',
     'ATTACH_URL_NOT_VALID' => 'முகவரி செல்லுபடியாகாது அல்லது திறந்திருக்க முடியாது',
     'ATTACH_PARAM_URL_REQUIRED' => 'கட்டாய "முகவரி" அளவுரு',
     'ATTACH_PLAYER_CAN_ONLY_OPEN_FILES_LIKE' => 'பிளேயர் எம்பி 3, எஃப்.எல்.வி மற்றும் எம்.எம் கோப்புகள் மற்றும் உங்கள் முகவரி ஐ மட்டுமே படிக்க முடியும்',
     'ATTACH_NOT_LINKED_TO_GOOD_FILE_EXTENSION' => 'இந்த வகை கோப்புகளை சுட்டிக்காட்ட வேண்டாம்',
     // actions/pointimage.php
-    'ATTACH_ACTION_POINTIMAGE' => 'செயல் {{சுட்டிக்காட்டி ...}}',
+    'ATTACH_ACTION_POINTIMAGE' => 'செயல் {{pointimage ...}}',
     'ATTACH_PARAM_FILE_NOT_FOUND' => 'கட்டாய "கோப்பு" அளவுரு',
     'ATTACH_PARAM_FILE_MUST_BE_IMAGE' => 'அளவுரு "என்பது ஒரு படமாக இருக்க வேண்டும் (எச்.வி.சி, சி.ஐ.எஃப், சே.பி.சி, சே.பி.சி, பி.என்.சி)',
     'ATTACH_DEFAULT_MARKER' => 'புள்ளி டி & eacute;',
@@ -90,7 +90,7 @@ return [
     'ALTERNATIVE_TEXT' => 'மாற்று உரை',
     'NONE' => 'கீழே உரை',
     'LEFT' => 'க uch ச்சே',
-    'CENTER' => 'மையம்',
+    'CENTER' => 'நடுவண்',
     'RIGHT' => 'சரி',
     'FAILED' => '& Eacute;',
     // handler ajaxupload
