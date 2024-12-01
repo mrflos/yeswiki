@@ -1,5 +1,4 @@
 <?php
-
 return [
     'HASHCASH_ERROR_PAGE_UNSAVED' => '<strong> லா பேச் நெ பியூட் பாச் & எக்ர்க்; ட்ரே என்செக்ச்ட் & ஈகுட்; இ. சுர் லு பூட்டன் "சாவர்", நுழைவு 2 சாவெகார்ட்ச் கான்ச் & ஈகூட்; கட்சிவ்ச் டிராப் ராபோச் & ஈகூட்; எச், ஓ லைச் & ஈகூட்; லா பேச் ஓவர்டே என் பயன்முறை & eacute; dition trop longtemps. nouveau.',
     'HASHCASH_ANTISPAM_ACTIVATED' => 'பாதுகாப்பு எதிர்ப்பு ச்பேம் செயலில்',
@@ -20,7 +19,7 @@ return [
     'DESPAM_FOR_ONE_MONTH' => 'depuis 1 mois',
     'DESPAM_VALIDATE' => 'செல்லுபிற்கப்பட்டது',
     'DESPAM_CLEAN_SPAMMED_PAGES' => 'நெட்டோயேச் டெச் பக்கங்கள் Vandalisées depuis {x} heure (கள்)',
-    'DESPAM_RESTORE_FROM' => 'உணவக டெப்யூயிச் லா பதிப்பு டு {நேரம்} par {பயனர்}',
+    'DESPAM_RESTORE_FROM' => 'உணவக டெப்யூயிச் லா பதிப்பு டு {time} par {user}',
     'DESPAM_RESTORED_PAGES' => 'பக்கங்கள் உணவகங்கள்',
     'DESPAM_DELETED_PAGES' => 'பக்கங்கள்',
     'DESPAM_BACK_TO_PREVIOUS_FORM' => 'Ratour அயு fumlaire de départ',
