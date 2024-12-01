@@ -4,13 +4,13 @@ return [
     'CONTACT_ACTION_ABONNEMENT' => 'செயல் {{abonnement ...}}',
     'CONTACT_MAIL_REQUIRED' => 'லு பரம் & எக்ரேவ்; ட்ரே மெயில், டம்பிகடோயர், எச்ட் மேன்குவண்ட்.',
     // actions/contact.php
-    'CONTACT_ACTION_CONTACT' => 'செயல் {{தொடர்பு ...}}',
+    'CONTACT_ACTION_CONTACT' => 'செயல் {{contact ...}}',
     // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'செயல் {{desabonnement ...}}',
     // actions/listsubscription.php
-    'CONTACT_ACTION_LISTSUBSCRIPTION' => 'செயல் {{listSubscription ...}}',
+    'CONTACT_ACTION_LISTSUBSCRIPTION' => 'செயல் {{listsubscription ...}}',
     // actions/mailinglist.php
-    'CONTACT_ACTION_MAILINGLIST' => 'செயல் {{mailingList ...}}',
+    'CONTACT_ACTION_MAILINGLIST' => 'செயல் {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'PARAM & EGRAVE; TRE "LIST" DOFFIGATOIRE (il s\'agit de l\'adresse mail de la liste de diffusion)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'அஞ்சல்கள் & அக்ரேவ்; அசூட்டர் ஓ & அக்ராவ்; Supprimer de la liste',
     'CONTACT_SENT_TO_THE_LIST' => 'Envoi & agrave; லா பட்டியல்',
@@ -46,7 +46,7 @@ return [
     'CONTACT_UNSUBSCRIBE_ORDER_SENT' => 'Wots withe concant votre டி & eacute; sabonnement a bien & eacute; t & eacute; பரிசு என் compte. மெர்சி!',
     'CONTACT_HANDLER_MAIL_FOR_CONNECTED' => 'L\'envoi de mail est r & eacute; serv & eacute; ஆக்ச் பெர்சனென்ச் அடையாளங்காட்டிகள்.',
     'CONTACT_LOGIN_IF_CONNECTED' => 'Si vous avez un அடையாளம், வீலெச் வூச் அடையாளங்காட்டி.',
-    'CONTACT_SUBSCRIBE' => 'S\'abonner',
+    'CONTACT_SUBSCRIBE' => 'கீழே இறங்குங்கள்',
     'CONTACT_UNSUBSCRIBE' => '',
     'CONTACT_FROM' => 'டி',
     'CONTACT_TEMPLATE_NOT_FOUND' => 'Fichier de வார்ப்புரு அல்ல',
@@ -73,8 +73,8 @@ return [
     'CONTACT_WEEKLY_REPORT' => 'நல்ல எப்டோமாடேர் டு',
     'CONTACT_MONTHLY_REPORT' => 'நல்ல மென்சுவல் டு',
     // templates/notify-admins-email-subject.twig (no special chars)
-    'CONTACT_ENTRY_ADDED' => 'nouvelle fiche ajoutee',
-    'CONTACT_ENTRY_CHANGED' => 'fiche modifiee',
+    'CONTACT_ENTRY_ADDED' => 'புதிய சேர்க்கப்பட்ட தாள்',
+    'CONTACT_ENTRY_CHANGED' => 'மாற்றியமைக்கப்பட்ட தாள்',
     'CONTACT_IN_FORM' => 'டான்ச் லு ஃபார்முலேர்',
     // templates/notify-admins-list-deleted-email-subject.twig (no special chars)
     'CONTACT_DELETED_LIST' => 'SUPPRIMEE ஐ பட்டியலிடுங்கள்',
@@ -113,4 +113,12 @@ return [
     'EDIT_CONFIG_HINT_CONTACT_USE_LONG_WIKI_URLS_IN_EMAILS' => "அசூட்டர் 'விக்கி =' ஆக்ச் லீன்ச் வெர்சச் சி.இ விக்கி டான்ச் லெச் மின்னஞ்சல்கள்",
     'EDIT_CONFIG_GROUP_CONTACT' => 'Envoi des மின்னஞ்சல்கள்',
     'EDIT_CONFIG_HINT_CONTACT_FROM' => 'மின்னஞ்சல் வழங்குநராக சுட்டிக்காட்டப்பட்ட பயனர் (ச்பேமைத் தவிர்ப்பது SMTP பயனரைப் போலவே இருக்க வேண்டும்)',
+    'EDIT_CONFIG_HINT_CONTACT_MAIL_FUNC' => 'அஞ்சல் அனுப்பும் முறை ("SMTP" அல்லது "அஞ்சல்")',
+    'EDIT_CONFIG_HINT_CONTACT_SMTP_HOST' => 'Servur smtp (எ.கா: "smtp.mondomeaine.ext")',
+    'EDIT_CONFIG_HINT_CONTACT_SMTP_PORT' => 'SMTP துறைமுகம் (பொதுவாக 465 அல்லது 587)',
+    'EDIT_CONFIG_HINT_CONTACT_SMTP_USER' => 'SMTP பயனர் (பெரும்பாலும் மின்னஞ்சல்)',
+    'EDIT_CONFIG_HINT_CONTACT_SMTP_PASS' => 'SMTP கடவுச்சொல்',
+    'EDIT_CONFIG_HINT_CONTACT_REPLY_TO' => 'அஞ்சல் பதில் அனுப்பப்படும் பயனர்',
+    'EDIT_CONFIG_HINT_CONTACT_DEBUG' => 'தொடங்குவதற்கு வெர்போச் பயன்முறை (தகவல் பெற 2 வைக்கவும்)',
+    'EDIT_CONFIG_HINT_CONTACT_DISABLE_EMAIL_FOR_PASSWORD' => 'கடவுச்சொல்லை மீட்டமைக்க மின்னஞ்சல் அனுப்பும் முடக்கு (எ.கா: எல்.டி.ஏ.பி, எச்.எச்.ஓ)',
 ];
