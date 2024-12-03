@@ -273,7 +273,7 @@ class ApiController extends YesWikiController
     }
 
     /**
-     * @Route("api/groups/{group_name}/delete",methods={"POST"},options={"acl":{"public","@admin"}})
+     * @Route("api/groups/{group_name}/delete",methods={"POST"},options={"acl":{"public","@admins"}})
      */
     public function deleteGroup(string $group_name)
     {
