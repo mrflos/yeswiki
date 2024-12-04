@@ -42,7 +42,7 @@ return [
     'DESPAM_FOR_X_HOURS' => 'for hours',
     'DESPAM_FOR_ONE_WEEK' => '1 week',
     'DESPAM_FOR_TWO_WEEKS' => '2 weeks',
-    'DESPAM_FOR_ONE_MONTH' => 'for one month',
+    'DESPAM_FOR_ONE_MONTH' => '1 month',
     'DESPAM_CLEAN_SPAMMED_PAGES' => 'Cleaning vandalized pages from {x} hour(s)',
     'DESPAM_RESTORE_FROM' => 'Restoration from {time} version by {user}',
     'DESPAM_RESTORED_PAGES' => 'Restored pages',
