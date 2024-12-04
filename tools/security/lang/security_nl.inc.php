@@ -5,7 +5,7 @@ return [
     'HASHCASH_COMMENT_NOT_SAVED_MAYBE_YOU_ARE_A_ROBOT' => 'Uw commentaar werd niet geregistreerd. De wiki denkt dat u een robot bent.',
     'DESPAM_VALIDATE' => 'Bevestigen',
     'HASHCASH_GENERAL_PASSWORD' => 'Vertaling:;',
-    'HASHCASH_SEND' => 'Vertaling:',
+    'HASHCASH_SEND' => 'Er is geen kenteken van deze periode.',
     'CAPTCHA_ERROR_PAGE_UNSAVED' => 'De pagina is niet gered omdat je het verificatiewoord niet hebt teruggegeven.',
     'CAPTCHA_ERROR_WRONG_WORD' => 'De pagina is niet gered, want het chequewoord is niet correct.',
     'DESPAM_PAGES_SELECTION' => 'Vertaling:',
