@@ -163,7 +163,7 @@ return [
     'TEMPLATE_ELEM_ACORDION_NOT_CLOSED' => 'l\'acció {{accordion ...}} ha de ecirc;tre fermảeacute;e par une action {{end elem="accordion"}}',
     'TEMPLATE_ACTION_BUTTONDROPDOWN' => 'Acció {buttondropdown ..',
     'TEMPLATE_CONFIRM_DELETE_PAGE' => 'Estàs segur que vols eliminar aquesta pàgina de forma permanent?',
-    'TEMPLATE_ELEM_BUTTONDROPDOWN_NOT_CLOSED' => 'l\'acció {{buttondropdown ...}} ha d\'estar tancada per una acció {{end elem="buttondropdown"}}',
+    'TEMPLATE_ELEM_BUTTONDROPDOWN_NOT_CLOSED' => 'Secció',
     'TEMPLATE_LAST_MODIFIED' => 'Última modificació',
     'TEMPLATE_ACTIONS' => 'Accions',
     'TEMPLATE_SECONDARY_COLOR_1' => 'Color secundari 1',
