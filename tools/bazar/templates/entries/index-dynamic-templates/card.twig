@@ -18,7 +18,7 @@
   {% set firstTokenCrop = csrfToken("POST api/images/cache/#{imWidth}/#{imHeight}/fit") %}
   <div class="bazar-cards-container" v-if="ready" 
        :class="[{ready: ready}, `style-${params.style || 'vertical'}`, `nbcol-{{nbcol}}`]" 
-       :style="{'grid-template-columns': `repeat({{nbcol}}, 1fr)`}">
+       :style="{'grid-template-columns': `repeat({{nbcol}}, minmax(0, 1fr))`}">
     
     <div v-if="entriesToDisplay.length == 0" class="alert alert-info">
       {{ _t('BAZ_NO_RESULT') }}
