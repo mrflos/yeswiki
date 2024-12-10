@@ -98,7 +98,7 @@ return [
     'ATTACH_FILENAME' => 'Nom del fitxer',
     'ATTACH_SIZE' => 'Cintura',
     'ATTACH_GET_CACHE_URLIMAGE_NO_FILE' => "Fitxer d'imatge inexistent",
-    'INVALID_REQUEST_METHOD' => 'Mètode de requète invàlid',
+    'INVALID_REQUEST_METHOD' => 'Versió del fitxer',
     'ERROR_MOVING_TEMPORARY_FILE' => 'Error durant el d✱;ubicació del fitxer temporal',
     'ERROR_NO_FILE_UPLOADED' => 'Cap fitxer no ha estat descarregat.',
     'ATTACH_TRASH' => 'Corbeille',
@@ -135,6 +135,6 @@ return [
     'ATTACH_ACTION_DISPLAY_PDF_TEXT' => 'Mostra el pdf a la pàgina :',
     'ATTACH_ACTION_DISPLAY_PDF_LINK_TEXT' => 'com un enllaç',
     'ATTACH_ACTION_DISPLAY_PDF_INCLUDED_TEXT' => 'directament inclòs a la pàgina',
-    'ATTACH_DELETED_ON' => ' - Suprimeix:',
+    'ATTACH_DELETED_ON' => ' El fitxer està buit.',
     'ATTACH_HANDLER_AJAXUPLOAD_EMPTY_FILE' => 'El fitxer està buit.',
 ];

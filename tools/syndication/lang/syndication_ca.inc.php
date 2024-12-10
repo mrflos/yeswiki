@@ -19,6 +19,6 @@ return [
     'SYNDICATION_CREATE_CACHE_FOLDER' => 'cal critiseacute; fer un r♣eacute; veure "cache" al r♣eacute',
     'SYNDICATION_TEMPLATE_NOT_FOUND' => 'no existeix, el fitxer de plantilla és utilitzat per d✱acute;faut.',
     'SYNDICATION_READ_MORE' => 'Llegir més',
-    'SYNDICATION_SOURCE' => 'font',
+    'SYNDICATION_SOURCE' => 'cal critiseacute; fer un r♣eacute; veure "cache" al r♣eacute',
     'SYNDICATION_SEE_ALL_CONTENT' => 'Accés a tots els continguts',
 ];

@@ -1,5 +1,4 @@
 <?php
-
 return [
     'BAZ_FORMULAIRE' => 'சூத்திரங்கள்',
     'BAZ_LISTES' => 'பட்டியல்கள்',
@@ -7,7 +6,7 @@ return [
     'BAZ_DU' => 'of',
     'LONGITUDE' => 'லோன்',
     // fields/video.twig
-    'VIDEO_LINK_FIELD' => 'வீடியோவுக்கான இணைப்பு: %{இணைப்பு}',
+    'VIDEO_LINK_FIELD' => 'வீடியோவுக்கான இணைப்பு: %{link}',
     'EDIT_CONFIG_HINT_BAZARIGNOREACLS' => 'விக்கி எழுத்துப்பூர்வமாக (உண்மை அல்லது பொய்) மூடப்பட்டிருந்தாலும் தாள்களை உருவாக்க அனுமதிக்கவும்',
     'EDIT_CONFIG_GROUP_BAZAR' => 'தரவுத்தளம்',
     'BAZ_USER_FIELD_LABEL' => 'பயனர்',
@@ -26,8 +25,8 @@ return [
     'BAZ_INTRO_AJOUT_FORMULAIRE' => '<strong> பாச் டி ஃபார்முலேர் சி.ஆர் & ஈகூட்; & ஈகூட்; எல்\'இனடியை ஊற்றவும். //yeswiki.net/serveur).',
     'BAZ_FORMULAIRE_VIDE' => 'டூட்ச் லெச் ஃபிடச் டி சி ஃபார்முலேர் ஒன் பீன் எட் சூப்பிரிமீச்.',
     'BAZ_VIDER_FORMULAIRE' => 'வைடர் டூட்ச் லெச் டோனீச் டி சி ஃபார்முலேர்',
-    'BAZ_FORM_DELETE' => 'Supprimer le fumlulaire %{formid}:',
-    'BAZ_FORM_EMPTY' => 'Supprimer tootes les fiches du fummulaire %{formid}:',
+    'BAZ_FORM_DELETE' => 'Supprimer le fumlulaire %{formId}:',
+    'BAZ_FORM_EMPTY' => 'Supprimer tootes les fiches du fummulaire %{formId}:',
     'BAZ_CONFIRM_VIDER_FORMULAIRE' => 'கவனம்! டூட்ச் லெச் ஃபிசச் என்டெக்ச்ட் & ஈகூட்;',
     'BAZ_CONFIRM_SUPPRIMER_FORMULAIRE' => 'கவனம்! டூட்ச் லெச் டான் & ஈகூட்;',
     'BAZ_CONFIRM_SUPPRIMER_LISTE' => 'கவனம்! டூட்ச் லெச் டான் & eacute;',
@@ -45,8 +44,8 @@ return [
     'BAZ_ACTIONS' => 'செயல்கள்',
     'BAZ_DATA_FORMAT' => 'வடிவங்கள் டி டோனீச்',
     'BAZ_WIDGET' => 'விட்செட்',
-    'BAZ_CSV' => 'சிஎச்வி',
-    'BAZ_JSON' => 'சேசன்',
+    'BAZ_CSV' => 'காபிம',
+    'BAZ_JSON' => 'சாதொபொகு',
     'BAZ_JSON_LD' => 'JSON-LD (சொற்பொருள்)',
     'BAZ_GEOJSON' => 'சியோச்சன்',
     'BAZ_ICAL' => 'Ical (calendrier)',
@@ -170,7 +169,7 @@ return [
     'BAZ_RECHERCHER' => 'ஆராய்ச்சி செய்ய',
     'BAZ_MODIFIER_IMAGE' => 'மாற்றியமைக்கும் எல் படம்',
     'BAZ_SAISIR_UNE_NOUVELLE_FICHE' => 'புதிய தாளை உள்ளிடவும்',
-    'BAZ_FICHIER_IMAGE_INEXISTANT' => 'கோப்பு {கோப்பு} சேவையகத்தில் இல்லாதது, அடிப்படை அடிப்படை -தேதிக்கு மேலே இருக்கும். உங்கள் உலாவியைப் புதுப்பிக்கவும்.',
+    'BAZ_FICHIER_IMAGE_INEXISTANT' => 'கோப்பு {file} சேவையகத்தில் இல்லாதது, அடிப்படை அடிப்படை -தேதிக்கு மேலே இருக்கும். உங்கள் உலாவியைப் புதுப்பிக்கவும்.',
     'BAZ_CONFIRMATION_SUPPRESSION_FICHIER' => 'இந்த கோப்பை நீக்க விரும்புகிறீர்களா? (முன்னேற்றத்தில் உள்ள மற்ற மாற்றங்கள் சேமிக்கப்படாது)',
     'BAZ_SUPPRIMER_LA_FICHE' => 'தாளை நீக்கு',
     'BAZ_INVALIDER_LA_FICHE' => 'செல்லாதது',
@@ -218,7 +217,7 @@ return [
     'BAZ_TEXT' => 'உரை',
     'BAZ_BAD_IMAGE_FILE_EXTENSION' => 'படத்திற்கான மோசமான நீட்டிப்பு (.jpg அல்லது .png அல்லது .gif ஆக இருக்க வேண்டும்)',
     'BAZ_IMAGE_FILE_NOT_FOUND' => 'படக் கோப்பு கிடைக்கவில்லை & eacute;',
-    'BAZAR_ACTION_VALEUR' => 'செயல் {{மதிப்பு ...}}',
+    'BAZAR_ACTION_VALEUR' => 'செயல் {{valeur...}}',
     'BAZAR_PARAM_URL_REQUIRED' => '"முகவரி" அளவுரு கட்டாயமானது',
     'BAZAR_PARAM_CHAMP_REQUIRED' => '"புலம்" அளவுரு கட்டாயமானது',
     'BAZAR_SEMANTIC_TYPE_MISSING' => 'இந்த படிவத்தின் சொற்பொருள் வகை வரையறுக்கப்படவில்லை, எனவே அதை JSON-LD இல் காட்ட முடியாது',
@@ -274,13 +273,13 @@ return [
     // controllers/FormController.php
     'BAZ_ONLY_ONE_ENTRY_FOR_THIS_FORM' => 'ஒரு பயனருக்கு ஒரு தாள்களின் எண்ணிக்கையை கட்டுப்படுத்துங்கள்',
     'BAZ_MESSAGE_IF_OTHER_ENTRY_EXIST' => 'ஒரு தாள் ஏற்கனவே இருக்கும்போது காண்பிக்க செய்தி. இயல்புநிலை செய்தியை வைத்திருக்க காலியாக விடவும்.',
-    'BAZ_FORM_DEFAULT_MESSAGE_FOR_OTHER_ENTRY_IN_FORM' => '"{படிவம் பெயர்}" படிவத்திற்கு நீங்கள் ஏற்கனவே ஒரு தாளை உள்ளிட்டுள்ளீர்கள். இது கீழே காட்டப்பட்டுள்ளது.',
+    'BAZ_FORM_DEFAULT_MESSAGE_FOR_OTHER_ENTRY_IN_FORM' => '"{formName}" படிவத்திற்கு நீங்கள் ஏற்கனவே ஒரு தாளை உள்ளிட்டுள்ளீர்கள். இது கீழே காட்டப்பட்டுள்ளது.',
     'BAZ_USER_SHOULD_BE_CONNECTED_TO_ACCES_THIS_FORM' => 'இந்த படிவத்தை நிறைவு செய்ய இணைக்க வேண்டியது தேவை.',
     // fields/MapField.php
     'BAZ_GEOLOCATE' => 'எனது நிலைப்பாட்டிலிருந்து புவிசார்மயமாக்கல்',
     // fields/BookmarkletField.php
     'BAZ_CLOSE_THIS_WINDOW' => 'இந்த ஃபென் & குஞ்சு;',
-    'BAZ_BOOKMARKLET_LABEL' => 'ஒரு %{படிவம்} தாளை உருவாக்கவும்',
+    'BAZ_BOOKMARKLET_LABEL' => 'ஒரு %{form} தாளை உருவாக்கவும்',
     // fields/CommentsField.php
     'BAZ_ACTIVATE_COMMENTS' => 'இந்த தாளில் கருத்துகளைச் செயல்படுத்தவா?',
     'BAZ_ACTIVATE_COMMENTS_HINT' => 'கோப்பை பதிவு செய்யும் போது புதுப்பிக்கப்பட்ட உரிமைகள்',
@@ -292,10 +291,10 @@ return [
     // fields/FileField.php
     'BAZ_FILE_ALREADY_EXISTING' => 'ஏற்கனவே கோப்பு',
     'BAZ_NOT_AUTHORIZED_FILE' => 'அங்கீகரிக்கப்படாத கோப்பு',
-    'BAZ_FILEFIELD_FILE' => 'Fichier: {கோப்பு பெயர்}',
-    'BAZ_FILEFIELD_TOO_LARGE_FILE' => 'கோப்பு மிகப் பெரியது, அதிகபட்சம் %{FileMaxSize} OCETS',
+    'BAZ_FILEFIELD_FILE' => 'Fichier: {filename}',
+    'BAZ_FILEFIELD_TOO_LARGE_FILE' => 'கோப்பு மிகப் பெரியது, அதிகபட்சம் %{fileMaxSize} OCETS',
     // fields/ImageField.php
-    'BAZ_IMAGE_ALREADY_EXISTING' => 'படம் {கோப்பு பெயர்} இருந்தது, அது இல்லை & eacute; மாற்றப்பட்டது.',
+    'BAZ_IMAGE_ALREADY_EXISTING' => 'படம் {fileName} இருந்தது, அது இல்லை & eacute; மாற்றப்பட்டது.',
     'BAZ_NOT_AUTHORIZED_EXTENSION' => 'நீட்டிப்பு அல்லது ஆசிரியர் & eacute ;.',
     //================ Drag & Drop for Checkbox fiche =======================================
     'BAZ_DRAG_n_DROP_CHECKBOX_AVAILABLE_ITEM' => '& Eacute;',
@@ -343,13 +342,13 @@ return [
     'EDIT_CONFIG_HINT_BAZ_EXTERNAL_SERVICE[CACHE_TIME_TO_CHECK_DELETION]' => 'சாதொபொகு கோரிக்கைகளில் நீக்குதல்களை சரிபார்க்க தற்காலிக சேமிப்பின் இரண்டு புத்துணர்ச்சிகளுக்கு இடையில் நேரம் (கள்)',
     'EDIT_CONFIG_HINT_BAZ_EXTERNAL_SERVICE[CACHE_TIME_TO_REFRESH_FORMS]' => 'சாதொபொகு கோரிக்கைகளுக்கு தேவையான படிவங்களுக்கான தற்காலிக சேமிப்பின் இரண்டு புத்துணர்ச்சிகளுக்கு இடையில் நேரம் (கள்)',
     // USER FIELD
-    'BAZ_USER_FIELD_EXISTING_USER_BY_NAME' => 'அடையாளங்காட்டி "{தற்போதைய பெயர்}" ஏற்கனவே உள்ளது
- பெட்டியின் மாற்றீட்டை "{முன்மொழியப்பட்ட}" மூலம் உறுதிப்படுத்தவும் அல்லது கீழே உள்ள படிவத்தில் உங்கள் அடையாளங்காட்டியை மாற்றவும்.',
+    'BAZ_USER_FIELD_EXISTING_USER_BY_NAME' => 'அடையாளங்காட்டி "{proposedName}" ஏற்கனவே உள்ளது
+ பெட்டியின் மாற்றீட்டை "{currentName}" மூலம் உறுதிப்படுத்தவும் அல்லது கீழே உள்ள படிவத்தில் உங்கள் அடையாளங்காட்டியை மாற்றவும்.',
     'BAZ_USER_FIELD_EXISTING_USER_BY_EMAIL' => 'வழங்கப்பட்ட மின்னஞ்சல் ஏற்கனவே யோவிகி கணக்குடன் தொடர்புடையது! தயவுசெய்து மற்றொரு மின்னஞ்சல் முகவரியை உள்ளிடவும் அல்லது இந்த கணக்குடன் இணைக்கவும்.',
     'USER_PASSWORDS_NOT_IDENTICAL' => 'சரிபார்ப்புக்காக உள்ளிடப்பட்ட கடவுச்சொல் முதல் ஒத்ததாக இல்லை!',
-    'BAZ_USER_FIELD_ALREADY_CONNECTED' => 'நீங்கள் ஏற்கனவே "{விக்கினேம்}" மற்றும் "{மின்னஞ்சல்}" என்ற மின்னஞ்சலுடன் இணைக்கப்பட்டுள்ளீர்கள்
+    'BAZ_USER_FIELD_ALREADY_CONNECTED' => 'நீங்கள் ஏற்கனவே "{wikiname}" மற்றும் "{email}" என்ற மின்னஞ்சலுடன் இணைக்கப்பட்டுள்ளீர்கள்
  உருவாக்கப்பட்ட கோப்பு தானாகவே உங்கள் கணக்கில் இணைக்கப்படும். புதிய கணக்கை உருவாக்க தயவுசெய்து துண்டிக்கவும்!',
-    'BAZ_USER_FIELD_ALREADY_CONNECTED_AUTOUPDATE' => 'இந்த கணக்குடன் தொடர்புடைய மின்னஞ்சல் முகவரியை மாற்ற, "{மின்னஞ்சல்}" இலிருந்து வேறுபட்டது.',
+    'BAZ_USER_FIELD_ALREADY_CONNECTED_AUTOUPDATE' => 'இந்த கணக்குடன் தொடர்புடைய மின்னஞ்சல் முகவரியை மாற்ற, "{email}" இலிருந்து வேறுபட்டது.',
     'BAZ_USER_FIELD_FORCE_SAVE_ENTRY' => 'ஒரு நிர்வாகியாக, கொடுக்கப்பட்ட மின்னஞ்சலுக்கான கோப்பை உருவாக்க கட்டாயப்படுத்தவும் (மற்றும் ஒரு கணக்கை ஏற்கனவே இல்லையென்றால் மட்டுமே உருவாக்கவும்)',
     // presentation/templates/annuaire_alphabetique.tpl.html
     'BAZ_MEMBERS' => 'உறுப்பினர்கள்',
@@ -363,17 +362,17 @@ return [
     'SUM' => 'சோம்',
     'URL' => 'முகவரி',
     // templates/bazar/fields/date.twig
-    'EVENT_IS_RECURRENT' => 'இந்த நிகழ்வு மீண்டும் மீண்டும்: %{மறுபடியும் மறுபடியும்}',
-    'EVENT_LIMIT_DATE' => '%{தேதி} வரை',
+    'EVENT_IS_RECURRENT' => 'இந்த நிகழ்வு மீண்டும்: %{repetition}',
+    'EVENT_LIMIT_DATE' => '%{date} வரை',
     'EVENT_REPETITION_FOR_DAYS' => 'அனைத்து %{x} நாட்கள்',
-    'EVENT_REPETITION_FOR_MONTHS' => 'அனைத்து %{x} மாதம், %{monthrepetition}',
-    'EVENT_REPETITION_FOR_WEEKS' => 'அனைத்து %{x} வாரங்கள், %{நாட்கள்}',
-    'EVENT_REPETITION_FOR_YEAR' => 'ஒவ்வொரு ஆண்டும், %{montherpetition}',
-    'EVENT_REPETITION_FOR_YEARS' => 'அனைத்து %{x} ஆண்டுகள், %{monthrepetition}',
+    'EVENT_REPETITION_FOR_MONTHS' => 'அனைத்து %{x} மாதம், %{monthRepetition}',
+    'EVENT_REPETITION_FOR_WEEKS' => 'அனைத்து %{x} வாரங்கள், %{days}',
+    'EVENT_REPETITION_FOR_YEAR' => 'ஒவ்வொரு ஆண்டும், %{monthRepetition}',
+    'EVENT_REPETITION_FOR_YEARS' => 'அனைத்து %{x} ஆண்டுகள், %{monthRepetition}',
     'EVENT_REPETITION_NTH_OF_MONTH' => 'le %{nth} %{month}',
     'EVENT_REPETITION_NTH_OF_MONTH_ALONE' => 'le %{nth}',
     'EVENT_REPETITION_IN_MONTH' => 'ஒரு மாதம்}, ',
-    'EVENT_IS_LINKED_TO_RECURRENT' => 'இந்த நிகழ்வு %{இணைப்பு} தாளுடன் இணைக்கப்பட்ட தொடர்ச்சியான நிகழ்வு ஆகும்',
+    'EVENT_IS_LINKED_TO_RECURRENT' => 'இந்த நிகழ்வு %{link} தாளுடன் இணைக்கப்பட்ட தொடர்ச்சியான நிகழ்வு ஆகும்',
     // templates/bazar/inputs/date.twig
     'EVENT_ACTIVATE_CUSTOM' => 'கூடுதல் விருப்பங்களைக் காண்க',
     'EVENT_EVERY_DAYS' => 'தினமும்',
@@ -390,7 +389,7 @@ return [
     'EVENT_NO_REPETITION' => 'ஒத்திகை இல்லை',
     'EVENT_NTH_OF_MONTH' => 'மாதத்தின் ஒவ்வொரு மாதமும்',
     'EVENT_ON_MONTH' => 'இல்:',
-    'EVENT_RECURRENT' => 'மீண்டும் மீண்டும்',
+    'EVENT_RECURRENT' => 'மீண்டும்',
     'EVENT_REMOVE_CUSTOM' => 'கூடுதல் விருப்பங்களை மறைக்கிறது',
     'EVENTS_REPETITIONS' => 'ஒத்திகை',
     'EVENT_SECOND_Y_OF_MONTH' => 'மாதத்தின் இரண்டாவது ஒய்',

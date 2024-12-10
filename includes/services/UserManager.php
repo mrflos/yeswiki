@@ -39,7 +39,6 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
 
     private $getOneByNameCacheResults;
 
-    private const PW_SALT = 'FBcA';
     public const KEY_VOCABULARY = 'http://outils-reseaux.org/_vocabulary/key';
 
     public function __construct(
@@ -212,17 +211,19 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     protected function generateUserLink($user)
     {
         // Generate the password recovery key
-        $key = md5($user['name'] . '_' . $user['email'] . random_int(0, 10000) . date('Y-m-d H:i:s') . self::PW_SALT);
+        $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
+        $plainKey = $user['name'] . '_' . $user['email'] . random_bytes(16) . date('Y-m-d H:i:s');
+        $hashedKey = $passwordHasher->hash($plainKey);
         $tripleStore = $this->wiki->services->get(TripleStore::class);
         // Erase the previous triples in the trible table
         $tripleStore->delete($user['name'], self::KEY_VOCABULARY, null, '', '');
         // Store the (name, vocabulary, key) triple in triples table
-        $tripleStore->create($user['name'], self::KEY_VOCABULARY, $key, '', '');
+        $tripleStore->create($user['name'], self::KEY_VOCABULARY, $hashedKey, '', '');
 
         // Generate the recovery email
         $this->userlink = $this->wiki->Href('', 'MotDePassePerdu', [
             'a' => 'recover',
-            'email' => $key,
+            'email' => $hashedKey,
             'u' => base64_encode($user['name']),
         ], false);
     }
@@ -269,6 +270,9 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
      */
     public function getLastUserLink(User $user): string
     {
+        $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
+        $plainKey = $user['name'] . '_' . $user['email'] . random_bytes(16) . date('Y-m-d H:i:s');
+        $hashedKey = $passwordHasher->hash($plainKey);
         $tripleStore = $this->wiki->services->get(TripleStore::class);
         $key = $tripleStore->getOne($user['name'], self::KEY_VOCABULARY, '', '');
         if ($key != null) {
