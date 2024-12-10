@@ -19,6 +19,7 @@ use YesWiki\Core\Exception\UserNameDoesNotExistException;
 use YesWiki\Core\Service\AclService;
 use YesWiki\Core\Service\ArchiveService;
 use YesWiki\Core\Service\CommentService;
+use YesWiki\Core\Service\DbService;
 use YesWiki\Core\Service\DiffService;
 use YesWiki\Core\Service\DuplicationManager;
 use YesWiki\Core\Service\PageManager;
