@@ -93,6 +93,7 @@ class BazarListService
         } else {
             $entries = $this->entryManager->search(
                 [
+                    "regexp" => $options["regexp"]??"0", 
                     'queries' => $options['query'] ?? '',
                     'formsIds' => $options['idtypeannonce'] ?? [],
                     'keywords' => $_REQUEST['q'] ?? '',
