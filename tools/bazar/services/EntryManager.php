@@ -333,9 +333,17 @@ class EntryManager
                                 $requeteSQL .= ' NOT ';
                                 $nom = substr($nom, 0, -1);
                             }
-                            $requeteSQL .= '(body REGEXP \'"' . $nom . '":("' . $rawCriteron .
+
+                            if (($params["regexp"]??"0") == "1")
+                            {
+                            	$requeteSQL .= 'JSON_VALID(body) AND JSON_EXTRACT(body, "$.' . $nom . '") REGEXP "' . $val . '"';                                                      	
+	                        }
+	                        else
+	                        {                                
+                                $requeteSQL .= '(body REGEXP \'"' . $nom . '":("' . $rawCriteron .
                                 '"|"[^"]*,' . $rawCriteron . '"|"' . $rawCriteron . ',[^"]*"|"[^"]*,'
                                 . $rawCriteron . ',[^"]*")\')';
+                            }
                         }
                     }
                 } else {
