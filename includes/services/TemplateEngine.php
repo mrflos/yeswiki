@@ -101,6 +101,12 @@ class TemplateEngine
         $this->twig->addGlobal('isInIframe', testUrlInIframe());
 
         // Adds Helpers
+        $this->addTwigHelper('dump', function ($var) {
+            if (isset($this->wiki->config['debug_template']) && $this->wiki->config['debug_template'] == 'yes') {
+                return dump($var);
+            }
+            return '';
+        });
         $this->addTwigHelper('_t', function ($key, $params = []) {
             return html_entity_decode(_t($key, $params));
         });
