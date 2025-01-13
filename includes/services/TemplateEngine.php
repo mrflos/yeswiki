@@ -102,9 +102,10 @@ class TemplateEngine
 
         // Adds Helpers
         $this->addTwigHelper('dump', function ($var) {
-            if (isset($this->wiki->config['debug_template']) && $this->wiki->config['debug_template'] == 'yes') {
+            if (isset($this->wiki->config['debug']) && $this->wiki->config['debug'] == 'yes') {
                 return dump($var);
             }
+
             return '';
         });
         $this->addTwigHelper('_t', function ($key, $params = []) {
