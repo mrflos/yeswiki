@@ -490,10 +490,27 @@ class EntryController extends YesWikiController
             $html['id_fiche'] = $entry['id_fiche'];
             $html['semantic'] = $GLOBALS['wiki']->services->get(SemanticTransformer::class)->convertToSemanticData($form, $html, true);
         }
+        
+        $lists = $this->getService(ListManager::class)->getAll();
+        function extractTextInList($nodes) {
+            $texts = [];
+            foreach ($nodes as $option) {
+                $texts[$option['id']] = $option['label'];
+                if (isset($option['children'])) {
+                    $texts += extractTextInList($option['children']);
+                }
+            }
+
+            return $texts;
+        }
+        foreach ($lists as $list_name => $list) {
+            $lists[$list_name]['text'] = extractTextInList($list['nodes']);
+        }
 
         $values['html'] = $html;
         $values['fiche'] = $entry;
         $values['form'] = $form;
+        $values['lists'] = lists;
 
         return $values;
     }
