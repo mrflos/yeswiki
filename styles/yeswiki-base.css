@@ -1064,6 +1064,7 @@ td.users-table-break-word {
 }
 
 .panel button.panel-heading {
-	width: 100%;
-	text-align: left;
+  width: 100%;
+  text-align: left;
+  border: none;
 }
