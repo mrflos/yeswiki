@@ -508,7 +508,7 @@ return [
     'USER_DELETE' => 'Ștergeți utilizatorul',
     'YOUR_EMAIL_ADDRESS' => 'Adresa ta de e-mail',
     // Commons
-    'ARCHIVES' => 'Rezerve',
+    'ARCHIVES' => 'Backup-uri',
     'WARNING' => 'AVERTISMENT',
     'FILE_WRITE_PROTECTED' => 'fișierul de configurare este protejat împotriva scrierii',
     'YOUR_MOTTO' => 'Motto-ul tău',
