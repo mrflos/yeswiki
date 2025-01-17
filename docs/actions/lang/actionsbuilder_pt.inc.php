@@ -254,7 +254,6 @@ return [
     'AB_attach_video_peertubeinstance_label' => 'Instância do servidor PeerTube',
     'AB_attach_video_ratio_label' => 'Proporção do vídeo',
     'AB_attach_video_position_label' => 'Posição do vídeo',
-    'AB_attach_video_largement_max_label' => 'Largura máxima',
     'AB_attach_video_hauteur_max_label' => 'Altura máxima',
     //pdf
     'AB_attach_pdf_label' => 'Arquivo pdf integrado',
@@ -266,7 +265,6 @@ return [
     'AB_attach_pdf_ratio_option_paysage' => 'paisagem',
     'AB_attach_pdf_ratio_option_carre' => 'quadrado',
     'AB_attach_pdf_position_label' => 'Posição do pdf',
-    'AB_attach_pdf_largement_max_label' => 'Largura máxima',
     'AB_attach_pdf_hauteur_max_label' => 'Altura máxima',
     // management
     // "AB_management_label" => "Gestion du YesWiki",
