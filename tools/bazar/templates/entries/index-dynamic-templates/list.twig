@@ -28,7 +28,7 @@
           {% endblock %}
           
           {# TITLE AREA #}
-          {% block area_visual %}
+          {% block area_title %}
           <h4 div class="title-area panel-title">
             <span v-show="entry.color" class="pellet" :style="{'background-color': entry.color}"></span>
             <i v-show="entry.icon" :class="entry.icon"></i>
@@ -37,12 +37,12 @@
           {% endblock %}
 
           {# FLOATING AREA #}
-          {% block area_visual %}
+          {% block area_floating %}
           <entry-field :entry="entry" prop="floating" class="floating-area"></entry-field>
           {% endblock %}
 
           {# SUBTITLE AREA #}
-          {% block area_visual %}
+          {% block area_subtitle %}
           <entry-field :entry="entry" prop="subtitle" class="subtitle-area"></entry-field>
           {% endblock %}
         </div>
