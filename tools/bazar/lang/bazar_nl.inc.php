@@ -5,7 +5,6 @@ return [
     'BAZ_LISTES' => 'Lijsten',
     'BAZ_NOM_LISTE' => 'Naam van de lijst',
     'BAZ_VALEURS_LISTE' => 'Waarden van de lijst',
-    'BAZ_AJOUTER_LABEL_LISTE' => 'Een nieuwe waarde toevoegen aan de lijst',
     'BAZ_AJOUTER_CHAMPS_FORMULAIRE' => 'Een nieuw veld toevoegen aan het formulier',
     'BAZ_MODIFIER_FORMULAIRES' => 'Beheer van formulieren',
     'BAZ_GESTION_LISTES' => 'Beheer van lijsten',

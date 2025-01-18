@@ -5,7 +5,6 @@ return [
     'BAZ_LISTES' => 'Llistes',
     'BAZ_NOM_LISTE' => 'Nom de la llista',
     'BAZ_VALEURS_LISTE' => 'Valors de la llista',
-    'BAZ_AJOUTER_LABEL_LISTE' => 'Afegeix un valor nou a la llista',
     'BAZ_AJOUTER_CHAMPS_FORMULAIRE' => 'Afegeix camps nous al formulari',
     'BAZ_MODIFIER_FORMULAIRES' => 'Gestió de formularis',
     'BAZ_GESTION_LISTES' => 'Gestió de llistes',

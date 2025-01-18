@@ -5,7 +5,6 @@ return [
     'BAZ_LISTES' => 'Listas',
     'BAZ_NOM_LISTE' => 'Nome da lista',
     'BAZ_VALEURS_LISTE' => 'Itens da lista',
-    'BAZ_AJOUTER_LABEL_LISTE' => 'Adicionar um novo item na lista',
     'BAZ_AJOUTER_CHAMPS_FORMULAIRE' => 'Adicionar um novo campo ao formulário',
     'BAZ_MODIFIER_FORMULAIRES' => 'Gerenciamento dos formulários',
     'BAZ_GESTION_LISTES' => 'Gestão das listas',
