@@ -210,7 +210,6 @@ const load = (domElement) => {
       sortEntries(field, order) {
         this.changeSortButtonLabel(field, order)
         this.filteredEntries.sort((a, b) => {
-          console.log(a, b, a[field], b[field])
           // for extrafields field may contain dot notation object
           if (field.indexOf('.') > -1) {
             a[field] = dotIndex(a, field)
