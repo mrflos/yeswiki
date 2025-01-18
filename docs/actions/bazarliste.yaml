@@ -43,6 +43,36 @@ actions:
           - bazartableau
         type: checkbox
         advanced: true
+      champ:
+        label: _t(AB_bazar_commons2_champ_label)
+        type: form-field
+        extraFields:
+          - id_typeannonce
+          - date_creation_fiche
+          - date_maj_fiche
+        default:
+        advanced: true
+        showExceptFor:
+          - bazarcarto
+          - bazargogocarto
+          - bazartimeline
+          - bazarannuaire
+          - bazarcalendar
+          - bazarcarousel
+      ordre:
+        label: _t(AB_bazar_commons2_ordre_label)
+        type: list
+        default: asc
+        advanced: true
+        options:
+          asc: _t(AB_bazar_commons2_ordre_option_asc)
+          desc: _t(AB_bazar_commons2_ordre_option_desc)
+        showExceptFor:
+          - bazarcarto
+          - bazargogocarto
+          - bazartimeline
+          - bazarannuaire
+          - bazarcalendar
       pagination:
         label: _t(AB_bazar_commons_pagination_label)
         hint: _t(AB_bazar_commons_pagination_hint)
@@ -55,7 +85,11 @@ actions:
           - bazarcarousel
           - bazarcalendar
           - bazartableau
-
+      nb:
+        label: _t(AB_bazar_commons2_nb_label)
+        hint: _t(AB_bazar_commons2_nb_hint)
+        type: number
+        advanced: true
       colorfield:
         label: _t(AB_bazar_commons_colorfield_label)
         type: form-field
@@ -69,6 +103,7 @@ actions:
           - bazarcalendar
           - bazartableau
           - bazarcard
+        advanced: true
       colormapping:
         type: color-mapping
         showif: colorfield
@@ -80,6 +115,7 @@ actions:
           - bazarcalendar
           - bazartableau
           - bazarcard
+        advanced: true
         subproperties:
           id:
             label: _t(AB_bazar_commons_subproperty_id_label)
@@ -102,6 +138,7 @@ actions:
           - bazarcalendar
           - bazartableau
           - bazarcard
+        advanced: true
       iconmapping:
         type: icon-mapping
         showif: iconfield
@@ -113,6 +150,7 @@ actions:
           - bazarcalendar
           - bazartableau
           - bazarcard
+        advanced: true
         subproperties:
           id:
             label: _t(AB_bazar_commons_subproperty_id_label)
@@ -208,43 +246,8 @@ actions:
         type: checkbox
         advanced: true
         default: 'false'
-      champ:
-        label: _t(AB_bazar_commons2_champ_label)
-        hint: _t(AB_bazar_commons2_champ_hint)
-        doclink: https://yeswiki.net/?DocQuery
-        type: form-field
-        extraFields:
-          - id_typeannonce
-          - date_creation_fiche
-          - date_maj_fiche
-        default:
-        advanced: true
-        showExceptFor:
-          - bazarcarto
-          - bazargogocarto
-          - bazartimeline
-          - bazarannuaire
-          - bazarcalendar
-          - bazarcarousel
-      ordre:
-        label: _t(AB_bazar_commons2_ordre_label)
-        type: list
-        default: asc
-        advanced: true
-        options:
-          asc: _t(AB_bazar_commons2_ordre_option_asc)
-          desc: _t(AB_bazar_commons2_ordre_option_desc)
-        showExceptFor:
-          - bazarcarto
-          - bazargogocarto
-          - bazartimeline
-          - bazarannuaire
-          - bazarcalendar
-      nb:
-        label: _t(AB_bazar_commons2_nb_label)
-        hint: _t(AB_bazar_commons2_nb_hint)
-        type: number
-        advanced: true
+      
+      
       #      query:
       #        advanced: true
       #        label: _t(AB_bazar_commons2_query_label)
