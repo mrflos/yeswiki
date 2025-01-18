@@ -45,8 +45,6 @@ return [
     'CONTACT_MESSAGE_NOT_SENT' => 'Your message could not be sent... Please contact the webmaster of this website to solve the problem',
     'CONTACT_SUBSCRIBE_ORDER_SENT' => 'Subscribe order sent. Thank you!',
     'CONTACT_UNSUBSCRIBE_ORDER_SENT' => 'Unsubscribe order sent. Thank you!',
-    'CONTACT_HANDLER_MAIL_FOR_ADMINS' => 'Handler mail is only for admins group',
-    'CONTACT_LOGIN_IF_ADMIN' => 'Please login if you are admin',
     'CONTACT_SUBSCRIBE' => 'Subscribe',
     'CONTACT_UNSUBSCRIBE' => 'Unsubscribe',
     'CONTACT_FROM' => 'from',

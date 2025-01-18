@@ -45,8 +45,6 @@ return [
     'CONTACT_MESSAGE_NOT_SENT' => 'El missatge no s\'ha pogut enviar... potser és un problema de la configuració del servidor?',
     'CONTACT_SUBSCRIBE_ORDER_SENT' => 'La petició de registre ha estat enviada. Moltes gràcies!',
     'CONTACT_UNSUBSCRIBE_ORDER_SENT' => 'La petició de baixa ha estat enviada. Moltes gràcies!',
-    'CONTACT_HANDLER_MAIL_FOR_ADMINS' => 'El gestor de correu està reservat als administradors.',
-    'CONTACT_LOGIN_IF_ADMIN' => 'Si sou membre d\'aquest grup, identifiqueu-vos sisplau.',
     'CONTACT_SUBSCRIBE' => 'Registrar-se',
     'CONTACT_UNSUBSCRIBE' => 'Donar-se de baixa',
     'CONTACT_FROM' => 'De',

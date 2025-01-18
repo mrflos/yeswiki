@@ -45,8 +45,6 @@ return [
     'CONTACT_MESSAGE_NOT_SENT' => 'Het bericht kon niet worden verzonden... Probleem met de serverconfiguratie?',
     'CONTACT_SUBSCRIBE_ORDER_SENT' => 'We hebben uw vraag tot inschrijving goed ontvangen. Bedankt!',
     'CONTACT_UNSUBSCRIBE_ORDER_SENT' => 'We hebben uw vraag tot uitschrijving goed ontvangen. Bedankt!',
-    'CONTACT_HANDLER_MAIL_FOR_ADMINS' => 'De mail handler is voorbehouden aan de beheerdersgroep.',
-    'CONTACT_LOGIN_IF_ADMIN' => 'Meld u aan als u deel uitmaakt van deze groep.',
     'CONTACT_SUBSCRIBE' => 'Inschrijven',
     'CONTACT_UNSUBSCRIBE' => 'Uitschrijven',
     'CONTACT_FROM' => 'van',

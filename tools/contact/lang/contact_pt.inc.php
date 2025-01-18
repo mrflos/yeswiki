@@ -45,8 +45,6 @@ return [
     'CONTACT_MESSAGE_NOT_SENT' => 'A mensagem não pôde ser enviada... Problema do lado do servidor de configuração?',
     'CONTACT_SUBSCRIBE_ORDER_SENT' => 'O seu pedido de assinatura foi tido em conta. Obrigado!',
     'CONTACT_UNSUBSCRIBE_ORDER_SENT' => 'O seu pedido de cancelamento de inscrição foi tido em conta. Obrigado!',
-    'CONTACT_HANDLER_MAIL_FOR_ADMINS' => 'O handler mail é reservado para o grupo de administradores.',
-    'CONTACT_LOGIN_IF_ADMIN' => 'Se você está entre esse grupo, identifique-se.',
     'CONTACT_SUBSCRIBE' => 'Assinar',
     'CONTACT_UNSUBSCRIBE' => 'Cancelar inscrição',
     'CONTACT_FROM' => 'de',

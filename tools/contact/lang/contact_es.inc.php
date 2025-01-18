@@ -45,8 +45,6 @@ return [
     'CONTACT_MESSAGE_NOT_SENT' => 'Se ha producido un error al enviar el mensaje. Póngase en contacto con el administrador del sitio para que pueda resolver el problema.',
     'CONTACT_SUBSCRIBE_ORDER_SENT' => 'Tu petición de abono ha sido enviada. Gracias!',
     'CONTACT_UNSUBSCRIBE_ORDER_SENT' => 'Tu petición de desabono ha sido enviada. Gracias!',
-    'CONTACT_HANDLER_MAIL_FOR_ADMINS' => 'El handler /mail es reservado al grup de los administradores.',
-    'CONTACT_LOGIN_IF_ADMIN' => 'Si formas parte de este grupo, te tienes que identificar.',
     'CONTACT_SUBSCRIBE' => 'Suscribir',
     'CONTACT_UNSUBSCRIBE' => 'Desabonarse',
     'CONTACT_FROM' => 'de',
