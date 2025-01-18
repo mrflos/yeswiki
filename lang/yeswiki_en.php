@@ -220,7 +220,6 @@ return [
     'YOUR_MOTTO' => 'Your motto',
     'CHANGE_THE_PASSWORD' => 'Change the password',
     'YOUR_OLD_PASSWORD' => 'Your former password',
-    'NEW_PASSWORD' => 'New password',
     'CHANGE' => 'Change',
     'USERNAME_MUST_BE_WIKINAME' => 'Your username must not start with !,@,\,/,# and must have 3 characters minimum.',
     // 'YOU_MUST_SPECIFY_AN_EMAIL' => 'Vous devez sp&eacute;cifier une adresse de messagerie &eacute;lectronique',
