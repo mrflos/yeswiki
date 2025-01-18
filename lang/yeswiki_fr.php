@@ -643,5 +643,12 @@ return [
     'GROUP_CREATED' => 'groupe {group} créé avec succès',
     'GROUP_DELETED' => 'groupe {group} supprimé avec succès',
     'ERROR_WHILE_EDITING_GROUP' => 'error durant l\'action sur le groupe.',
-
+    'TO_ANOTHER_YESWIKI' => 'dans un autre YesWiki',
+    'WIKI_URL_RECENT' => 'Nécessite un YesWiki en version >= 4.5.0',
+    'WIKI_URL' => 'Url du YesWiki',
+    'VERIFY_WIKI' => 'Vérifier',
+    'PAGE_TAG_TO_DUPLICATE' => 'Nom de la page à dupliquer',
+    'DUPLICATE_AND_OPEN' => 'Dupliquer',
+    'VERIFY_PAGE_AVAILABILITY' => 'Vérifier la disponibilité de la page',
+    'DISTANT_LOGIN' => 'S\'identifier sur le YesWiki distant',
 ];
