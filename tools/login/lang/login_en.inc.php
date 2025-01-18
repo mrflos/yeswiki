@@ -39,7 +39,6 @@ return [
     'LOGIN_THE_TEAM' => 'The team from',
     'LOGIN_PASSWORD_FOR' => 'Password for',
     'LOGIN_PASSWORD_LOST_FOR' => 'Lost password for',
-    'LAST_LINK_TO_CHANGE_PASSWORD' => 'Last link to change password',
     // 'LOGIN_NO_SIGNUP_IN_THIS_PERIOD' => 'Il n\'y a pas d\'inscription pour cette période.',
     // actions/login.php
     // 'LOGIN_COOKIES_ERROR' => 'Vous devez accepter les cookies pour pouvoir vous connecter.',
