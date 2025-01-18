@@ -316,7 +316,7 @@ class ApiController extends YesWikiController
                 }
                 $result[] = $entry[$field] ?? null;
             }
-            if ($_GET['extrafields'] == true) {
+            if ($_GET['extrafields'] === "true") {
                 $result['extrafields'] = $this->getService(EntryManager::class)->getExtraFields($entry['id_fiche']);
             }
 
