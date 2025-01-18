@@ -10,10 +10,24 @@ import { recursivelyCalculateRelations } from './utils.js'
 
 Vue.component('FilterNode', FilterNode)
 
+function dotIndex(obj, is, value) {
+  if (obj === undefined) return ''
+  if (typeof is == 'string') return dotIndex(obj, is.split('.'), value)
+  if (is.length == 1 && value !== undefined) return (obj[is[0]] = value)
+  if (is.length == 0) return obj
+  return dotIndex(obj[is[0]], is.slice(1), value)
+}
+
 const load = (domElement) => {
   new Vue({
     el: domElement,
-    components: { Panel, ModalEntry, SpinnerLoader, EntryField, PopupEntryField },
+    components: {
+      Panel,
+      ModalEntry,
+      SpinnerLoader,
+      EntryField,
+      PopupEntryField
+    },
     mixins: [BazarSearch],
     data: {
       mounted: false, // when vue get initialized
@@ -34,6 +48,8 @@ const load = (domElement) => {
       imagesToProcess: [],
       processingImage: false,
       search: '',
+      sortButtonLabel: '',
+
       // wether to search for a particular form ID (only used when no
       // form id is defined for the bazar list action)
       searchFormId: null,
@@ -55,13 +71,17 @@ const load = (domElement) => {
       },
       pages() {
         if (this.pagination <= 0) return []
-        const pagesCount = Math.ceil(this.filteredEntries.length / parseInt(this.pagination, 10))
-        const start = 0; const
-          end = pagesCount - 1
+        const pagesCount = Math.ceil(
+          this.filteredEntries.length / parseInt(this.pagination, 10)
+        )
+        const start = 0
+        const end = pagesCount - 1
         let pages = [
-          this.currentPage - 2, this.currentPage - 1,
+          this.currentPage - 2,
+          this.currentPage - 1,
           this.currentPage,
-          this.currentPage + 1, this.currentPage + 2
+          this.currentPage + 1,
+          this.currentPage + 2
         ]
         pages = pages.filter((page) => page >= start && page <= end)
         if (!pages.includes(start)) {
@@ -76,26 +96,36 @@ const load = (domElement) => {
       }
     },
     watch: {
-      filteredEntriesCount() { this.currentPage = 0 },
+      filteredEntriesCount() {
+        this.currentPage = 0
+      },
       search() {
         clearTimeout(this.searchTimer)
         this.searchTimer = setTimeout(() => this.calculateBaseEntries(), 350)
         this.saveFiltersIntoHash()
       },
-      searchFormId() { this.calculateBaseEntries() },
+      searchFormId() {
+        this.calculateBaseEntries()
+      },
       computedFilters() {
         this.filterEntries()
         this.saveFiltersIntoHash()
       },
-      currentPage() { this.paginateEntries() },
-      searchedEntries() { this.calculateFiltersCount() }
+      currentPage() {
+        this.paginateEntries()
+      },
+      searchedEntries() {
+        this.calculateFiltersCount()
+      }
     },
     methods: {
       calculateBaseEntries() {
         let result = this.entries
         if (this.searchFormId) {
           // filter based on formId, when no form id is specified
-          result = result.filter((entry) => entry.id_typeannonce == this.searchFormId)
+          result = result.filter(
+            (entry) => entry.id_typeannonce == this.searchFormId
+          )
         }
         if (this.search && this.search.length > 2) {
           result = this.searchEntries(result, this.search)
@@ -112,7 +142,9 @@ const load = (domElement) => {
         Object.entries(this.computedFilters).forEach(([propName, filter]) => {
           result = result.filter((entry) => {
             if (!entry[propName] || typeof entry[propName] != 'string') return false
-            return entry[propName].split(',').some((value) => filter.includes(value))
+            return entry[propName]
+              .split(',')
+              .some((value) => filter.includes(value))
           })
         })
         this.filteredEntries = result
@@ -129,8 +161,16 @@ const load = (domElement) => {
       },
       formatEntries() {
         this.paginatedEntries.forEach((entry) => {
-          entry.color = this.colorIconValueFor(entry, this.params.colorfield, this.params.color)
-          entry.icon = this.colorIconValueFor(entry, this.params.iconfield, this.params.icon)
+          entry.color = this.colorIconValueFor(
+            entry,
+            this.params.colorfield,
+            this.params.color
+          )
+          entry.icon = this.colorIconValueFor(
+            entry,
+            this.params.iconfield,
+            this.params.icon
+          )
         })
         this.entriesToDisplay = this.paginatedEntries
       },
@@ -146,9 +186,65 @@ const load = (domElement) => {
           })
         })
       },
+      changeSortButtonLabel(field, order) {
+        let key = Object.keys(this.params.sortfields).find(
+          (key) => this.params.sortfields[key] === field
+        )
+        if (
+          key === undefined
+          && this.params.sortfieldstitles[key] === undefined
+        ) {
+          key = field
+          if (key === 'date_creation_fiche') {
+            this.params.sortfieldstitles[key] = 'date de création'
+          } else {
+            this.params.sortfieldstitles[key] = field
+          }
+        }
+        let sortIcon = '<i class="fas fa-arrow-up"></i>'
+        if (order === 'desc') {
+          sortIcon = '<i class="fas fa-arrow-down"></i>'
+        }
+        this.sortButtonLabel = `Trier par ${this.params.sortfieldstitles[key]} ${sortIcon}`
+      },
+      sortEntries(field, order) {
+        this.changeSortButtonLabel(field, order)
+        this.filteredEntries.sort((a, b) => {
+          console.log(a, b, a[field], b[field])
+          // for extrafields field may contain dot notation object
+          if (field.indexOf('.') > -1) {
+            a[field] = dotIndex(a, field)
+            b[field] = dotIndex(b, field)
+          }
+          if (typeof a[field] === 'number' && typeof b[field] === 'number') {
+            if (order === 'asc') {
+              return a[field] - b[field]
+            }
+            if (order === 'desc') {
+              return b[field] - a[field]
+            }
+          }
+          const nameA = String(a[field]).toLowerCase()
+          const nameB = String(b[field]).toLowerCase()
+          if (order === 'asc') {
+            return new Intl.Collator().compare(nameA, nameB)
+          }
+          if (order === 'desc') {
+            return new Intl.Collator().compare(nameB, nameA)
+          }
+        })
+        const url = new URL(document.location.href)
+        url.searchParams.set('champ', field)
+        url.searchParams.set('ordre', order)
+        history.pushState({}, '', url)
+        this.paginateEntries()
+        return false
+      },
       resetFilters() {
         this.filters.forEach((filter) => {
-          filter.flattenNodes.forEach((node) => { node.checked = false })
+          filter.flattenNodes.forEach((node) => {
+            node.checked = false
+          })
         })
         this.search = ''
       },
@@ -156,7 +252,9 @@ const load = (domElement) => {
         if (!this.ready) return
         const hashes = []
         for (const filterId in this.computedFilters) {
-          hashes.push(`${filterId}=${this.computedFilters[filterId].join(',')}`)
+          hashes.push(
+            `${filterId}=${this.computedFilters[filterId].join(',')}`
+          )
         }
         if (this.search) hashes.push(`q=${this.search}`)
         document.location.hash = hashes.length > 0 ? hashes.join('&') : null
@@ -166,7 +264,7 @@ const load = (domElement) => {
         hash.split('&').forEach((combinaison) => {
           const filterId = combinaison.split('=')[0]
           const filterValues = combinaison.split('=')[1]
-          const filter = this.filters.find((f) => f.propName == fieldId)
+          const filter = filters.find((f) => f.propName == filterId)
           if (filterId == 'q') {
             this.search = filterValues
           } else if (filterId && filterValues && filter) {
@@ -203,14 +301,17 @@ const load = (domElement) => {
           }
           const url = wiki.url(`?api/entries/html/${entry.id_fiche}`, {
             ...{ fields: 'html_output' },
-            ...(fieldsToExclude.length > 0 ? { excludeFields: fieldsToExclude } : {}),
-            ...(this.params.showmapinlistview ? { showmapinlistview: this.params.showmapinlistview } : {})
+            ...(fieldsToExclude.length > 0
+              ? { excludeFields: fieldsToExclude }
+              : {}),
+            ...(this.params.showmapinlistview
+              ? { showmapinlistview: this.params.showmapinlistview }
+              : {})
           })
-          this.setEntryFromUrl(entry, url)
-            .then((html) => {
-              this.loadBazarListDynamicIfNeeded(html)
-              initEntryMaps(this.$refs.entriesContainer)
-            })
+          this.setEntryFromUrl(entry, url).then((html) => {
+            this.loadBazarListDynamicIfNeeded(html)
+            initEntryMaps(this.$refs.entriesContainer)
+          })
         }
       },
       async setEntryFromUrl(entry, url) {
@@ -219,7 +320,8 @@ const load = (domElement) => {
             const html = data?.[entry.id_fiche]?.html_output ?? 'error'
             Vue.set(entry, 'html_render', html)
             return html
-          }).catch(() => 'error')// in case of error do nothing
+          })
+          .catch(() => 'error') // in case of error do nothing
       },
       async getJSON(url, options = {}) {
         return fetch(url, options)
@@ -238,7 +340,9 @@ const load = (domElement) => {
       },
       loadBazarListDynamicIfNeeded(html) {
         if (html.match(/<div class="bazar-list-dynamic-container/)) {
-          const unmounted = document.querySelectorAll('.bazar-list-dynamic-container:not(.mounted)')
+          const unmounted = document.querySelectorAll(
+            '.bazar-list-dynamic-container:not(.mounted)'
+          )
           unmounted.forEach((element) => {
             if (!('__vue__' in element)) load(element)
           })
@@ -261,7 +365,7 @@ const load = (domElement) => {
         return entry.url !== wiki.url(entry.id_fiche)
       },
       isInIframe() {
-        return (window != window.parent)
+        return window != window.parent
       },
       getExternalEntry(entry) {
         const url = `${entry.url}/iframe`
@@ -287,7 +391,7 @@ const load = (domElement) => {
         if (entry[fieldName]) {
           const fileName = entry[fieldName]
           if (!this.isExternalUrl(entry)) {
-          // currently not supporting api for external images (anti-csrf token not generated)
+            // currently not supporting api for external images (anti-csrf token not generated)
             if (this.tokenForImages === null) {
               this.tokenForImages = token
             }
@@ -300,7 +404,10 @@ const load = (domElement) => {
             })
             this.processNextImage()
           } else {
-            const baseUrl = entry.url.slice(0, -entry.id_fiche.length).replace(/\?$/, '').replace(/\/$/, '')
+            const baseUrl = entry.url
+              .slice(0, -entry.id_fiche.length)
+              .replace(/\?$/, '')
+              .replace(/\/$/, '')
             const previousUrl = $(node).prop('src')
             const newUrl = `${baseUrl}/files/${fileName}`
             if (newUrl != previousUrl) {
@@ -315,23 +422,29 @@ const load = (domElement) => {
         if (!entry[fieldName]) {
           return null
         }
-        let baseUrl = (this.isExternalUrl(entry))
+        let baseUrl = this.isExternalUrl(entry)
           ? entry.url.slice(0, -entry.id_fiche.length)
           : wiki.baseUrl
         baseUrl = baseUrl.replace(/\?$/, '').replace(/\/$/, '')
         const fileName = entry[fieldName]
         const field = this.fieldInfo(fieldName)
-        let regExp = new RegExp(`^(${entry.id_fiche}_${field.propertyname}_.*)_(\\d{14})_(\\d{14})\\.([^.]+)$`)
+        let regExp = new RegExp(
+          `^(${entry.id_fiche}_${field.propertyname}_.*)_(\\d{14})_(\\d{14})\\.([^.]+)$`
+        )
 
         if (regExp.test(fileName)) {
           return `${baseUrl}/cache/${fileName.replace(regExp, `$1_${mode == 'fit' ? 'vignette' : 'cropped'}_${width}_${height}_$2_$3.$4`)}`
         }
-        regExp = new RegExp(`^(${entry.id_fiche}_${field.propertyname}_.*)\\.([^.]+)$`)
+        regExp = new RegExp(
+          `^(${entry.id_fiche}_${field.propertyname}_.*)\\.([^.]+)$`
+        )
         if (regExp.test(fileName)) {
           return `${baseUrl}/cache/${fileName.replace(regExp, `$1_${mode == 'fit' ? 'vignette' : 'cropped'}_${width}_${height}.$2`)}`
         }
         // maybe from other entry
-        regExp = new RegExp(`^([A-Za-z0-9-_]+_${field.propertyname}_.*)_(\\d{14})_(\\d{14})\\.([^.]+)$`)
+        regExp = new RegExp(
+          `^([A-Za-z0-9-_]+_${field.propertyname}_.*)_(\\d{14})_(\\d{14})\\.([^.]+)$`
+        )
         if (regExp.test(fileName)) {
           return `${baseUrl}/cache/${fileName.replace(regExp, `$1_${mode == 'fit' ? 'vignette' : 'cropped'}_${width}_${height}_$2_$3.$4`)}`
         }
@@ -349,7 +462,9 @@ const load = (domElement) => {
           this.imagesToProcess = this.imagesToProcess.slice(1)
           const bazarListDynamicRoot = this
           $.ajax({
-            url: wiki.url(`?api/images/${newImageParams.fileName}/cache/${newImageParams.width}/${newImageParams.height}/${newImageParams.mode}`),
+            url: wiki.url(
+              `?api/images/${newImageParams.fileName}/cache/${newImageParams.width}/${newImageParams.height}/${newImageParams.mode}`
+            ),
             method: 'post',
             data: { csrftoken: this.tokenForImages },
             cache: false,
@@ -361,7 +476,11 @@ const load = (domElement) => {
                 const next = $(this).next('div.area.visual-area[style]')
                 if (next.length > 0) {
                   const backgoundImage = $(next).css('background-image')
-                  if (backgoundImage != undefined && typeof backgoundImage == 'string' && backgoundImage.length > 0) {
+                  if (
+                    backgoundImage != undefined
+                    && typeof backgoundImage == 'string'
+                    && backgoundImage.length > 0
+                  ) {
                     $(next).css('background-image', '') // reset to force update
                     $(next).css('background-image', `url("${srcFileName}")`)
                   }
@@ -369,7 +488,10 @@ const load = (domElement) => {
               })
             },
             complete(e) {
-              if (e.responseJSON != undefined && e.responseJSON.newToken != undefined) {
+              if (
+                e.responseJSON != undefined
+                && e.responseJSON.newToken != undefined
+              ) {
                 bazarListDynamicRoot.tokenForImages = e.responseJSON.newToken
               }
               bazarListDynamicRoot.processingImage = false
@@ -380,13 +502,11 @@ const load = (domElement) => {
       }
     },
     mounted() {
-      $(this.$el).on(
-        'dblclick',
-        (e) => false
-      )
+      $(this.$el).on('dblclick', (e) => false)
       const savedHash = document.location.hash // don't know how, but the hash get cleared after
       this.params = JSON.parse(this.$el.dataset.params)
       this.pagination = parseInt(this.params.pagination, 10)
+      this.changeSortButtonLabel(this.params.champ, this.params.ordre)
       this.mounted = true
       // Retrieve data asynchronoulsy
       $.getJSON(wiki.url('?api/entries/bazarlist'), this.params, (data) => {
@@ -418,9 +538,11 @@ const load = (domElement) => {
           Object.values(data.forms).forEach((formFields) => {
             Object.values(formFields).forEach((field) => {
               this.formFields[field.id] = field
-              Object.entries(this.params.displayfields).forEach(([fieldId, mappedField]) => {
-                if (mappedField == field.id) this.formFields[fieldId] = this.formFields[mappedField]
-              })
+              Object.entries(this.params.displayfields).forEach(
+                ([fieldId, mappedField]) => {
+                  if (mappedField == field.id) this.formFields[fieldId] = this.formFields[mappedField]
+                }
+              )
             })
           })
 
@@ -430,9 +552,11 @@ const load = (domElement) => {
             Object.entries(data.fieldMapping).forEach(([key, mapping]) => {
               entry[mapping] = entryAsArray[key]
             })
-            Object.entries(this.params.displayfields).forEach(([field, mappedField]) => {
-              if (mappedField) entry[field] = entry[mappedField]
-            })
+            Object.entries(this.params.displayfields).forEach(
+              ([field, mappedField]) => {
+                if (mappedField) entry[field] = entry[mappedField]
+              }
+            )
 
             // In case of Tree, if an entry have only one value down the tree then add all the parent :
             // filters for checkboxes: [{ value: "website", children: [ { value: "yeswiki" }] }]
@@ -443,7 +567,9 @@ const load = (domElement) => {
               if (entry[propName] && typeof entry[propName] == 'string') {
                 const entryValues = entry[propName].split(',')
                 entryValues.forEach((value) => {
-                  const correspondingNode = filter.flattenNodes.find((node) => node.value == value)
+                  const correspondingNode = filter.flattenNodes.find(
+                    (node) => node.value == value
+                  )
                   if (correspondingNode) {
                     correspondingNode.parents.forEach((parent) => {
                       if (!entryValues.includes(parent.value)) entryValues.push(parent.value)

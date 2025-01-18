@@ -97,9 +97,16 @@ class LinkedEntryField extends BazarField
 
     protected function getQueryForLinkedLabels($entry): ?string
     {
-        // get FormManager here and not in construct to prevent loop
-        $form = $this->services->get(FormManager::class)->getOne($this->name);
-
+        $formId = explode('|', $this->name);
+        $externalForm = false;
+        if (count($formId) == 2) {
+            $apiUrl = $formId[0] . '/?api/forms/' . $formId[1];
+            $externalForm = true;
+            $form = json_decode(file_get_contents($apiUrl), true);
+        } else {
+            // get FormManager here and not in construct to prevent loop
+            $form = $this->services->get(FormManager::class)->getOne($this->name);
+        }
         if (!is_array($form) || !is_array($form['prepared'])
                 || empty($entry['id_typeannonce'])
                 || empty($entry['id_fiche'])) {
@@ -109,19 +116,23 @@ class LinkedEntryField extends BazarField
         // find EnumEntryField with right name
         foreach ($form['prepared'] as $field) {
             if (
-                $field instanceof EnumField
-                && $field->isEnumEntryField()
-                && $field->getLinkedObjectName() == $entry['id_typeannonce']
-                &&
                 (
-                    empty($this->linkType)
-                    || strpos($field->getType(), $this->linkType) === 0 // checkboxfiche or listefiche
-                    || $field->getPropertyName() == $this->linkType // label
-                    || substr($field->getPropertyName(), strlen($field->getType() . trim($entry['id_typeannonce']))) == $this->linkType // label
-                )
-            ) {
+                    !$externalForm
+        && $field instanceof EnumField
+                        && $field->isEnumEntryField()
+        && ($field->getLinkedObjectName() == $entry['id_typeannonce']
+                            && (
+                                empty($this->linkType)
+                                || strpos($field->getType(), $this->linkType) === 0 // checkboxfiche or listefiche
+                                || $field->getPropertyName() == $this->linkType // label
+                                || substr($field->getPropertyName(), strlen($field->getType() . trim($entry['id_typeannonce']))) == $this->linkType // label
+                            ))
+                ) || (
+                    $externalForm
+        && strstr($field['propertyname'], '-api-forms-' . $entry['id_typeannonce'] ?? 'none')
+                )) {
                 $query .= (empty($query)) ? '' : '|';
-                $query .= $field->getPropertyName() . '=' . $entry['id_fiche'];
+                $query .= ($externalForm ? $field['propertyname'] : $field->getPropertyName()) . '=' . $entry['id_fiche'];
             }
         }
 

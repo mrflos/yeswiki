@@ -9,9 +9,11 @@ use YesWiki\Bazar\Field\BazarField;
 use YesWiki\Bazar\Field\TitleField;
 use YesWiki\Core\Controller\AuthController;
 use YesWiki\Core\Service\AclService;
+use YesWiki\Core\Service\CommentService;
 use YesWiki\Core\Service\DbService;
 use YesWiki\Core\Service\Mailer;
 use YesWiki\Core\Service\PageManager;
+use YesWiki\Core\Service\ReactionManager;
 use YesWiki\Core\Service\TripleStore;
 use YesWiki\Core\Service\UserManager;
 use YesWiki\Security\Controller\SecurityController;
@@ -96,6 +98,31 @@ class EntryManager
         }
 
         return $result;
+    }
+
+    /**
+     * return comments, reactions and metadatas for given entry tag.
+     */
+    public function getExtraFields($tag): array
+    {
+        $extraFields = [];
+        $extraFields['reactions'] = $this->wiki->services->get(ReactionManager::class)->getReactions($tag, [], '', true);
+        $extraFields['comments'] = $this->wiki->services->get(CommentService::class)->loadCommentsRecursive($tag);
+
+        $extraFields['nb_comments'] = $this->getNbComments($extraFields['comments']);
+        $extraFields['triples'] = $this->wiki->services->get(TripleStore::class)->getMatching($tag, null, null, '=');
+
+        return $extraFields;
+    }
+
+    public function getNbComments($comments)
+    {
+        $nb = count($comments);
+        foreach ($comments as $c) {
+            $nb += $this->getNbComments($c['comments']);
+        }
+
+        return $nb;
     }
 
     /**
@@ -542,7 +569,8 @@ class EntryManager
             $data['id_fiche'],
             json_encode($data),
             '',
-            $ignoreAcls // Ignore les ACLs
+            $ignoreAcls, // Ignore les ACLs
+            $data['date_maj_fiche']
         );
 
         // on cree un triple pour specifier que la page wiki creee est une fiche
@@ -792,13 +820,13 @@ class EntryManager
      * prepare la requete d'insertion ou de MAJ de la fiche en supprimant
      * de la valeur POST les valeurs inadequates et en formattant les champs.
      *
-     * @param $data
+     * @param $data current raw entry values
      *
-     * @return array
+     * @return array with extra calculated fields like id_fiche, and time, and handled fields with acls
      *
      * @throws Exception
      */
-    public function formatDataBeforeSave($data, bool $isCreation = false)
+    public function formatDataBeforeSave($data, bool $isCreation = false): array
     {
         // not possible to init the formManager in the constructor because of circular reference problem
         $form = $this->wiki->services->get(FormManager::class)->getOne($data['id_typeannonce']);
@@ -828,7 +856,7 @@ class EntryManager
 
         // Get creation date if it exists, initialize it otherwise
         $result = $this->dbService->loadSingle('SELECT MIN(time) as firsttime FROM ' . $this->dbService->prefixTable('pages') . "WHERE tag='" . $data['id_fiche'] . "'");
-        $data['date_creation_fiche'] = $result['firsttime'] ? $result['firsttime'] : date('Y-m-d H:i:s', time());
+        $data['date_creation_fiche'] = $data['date_creation_fiche'] ?? $result['firsttime'] ?? date('Y-m-d H:i:s', time());
 
         // Entry status
         if ($this->wiki->UserIsAdmin()) {
@@ -859,7 +887,7 @@ class EntryManager
             throw new Exception('$data[\'id_fiche\'] is empty !');
         }
 
-        $data['date_maj_fiche'] = date('Y-m-d H:i:s', time());
+        $data['date_maj_fiche'] = $data['date_maj_fiche'] ?? date('Y-m-d H:i:s', time());
 
         // on enleve les champs hidden pas necessaires a la fiche
         unset($data['valider']);
@@ -1187,5 +1215,13 @@ class EntryManager
         }
 
         return $entriesIds;
+    }
+
+    private function duplicate($sourceTag, $destinationTag): bool
+    {
+        $result = false;
+        $this->wiki->LogAdministrativeAction($this->authController->getLoggedUserName(), 'Duplication de la fiche ""' . $sourceTag . '"" vers la fiche ""' . $destinationTag . '""');
+
+        return $result;
     }
 }

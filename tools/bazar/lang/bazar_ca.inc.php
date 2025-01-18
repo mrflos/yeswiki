@@ -1,4 +1,5 @@
 <?php
+
 return [
     'BAZ_FORMULAIRE' => 'Formularis',
     'BAZ_LISTES' => 'Llistes',
@@ -475,8 +476,8 @@ Marqueu la cabanya per confirmar el seu reemplaçament per \"{proposedName}\" o 
     'BAZ_PREVIEW_DETAILS' => 'aquesta part és no cliquable, les paramêtres es canvien en la columna d\'esquerra',
     'BAZ_CORRESPONDANCE_ERROR' => 'acció bazarliste: parametre correspondència mal omplert: deu etre de la forma correspondència="identificant_1=identificador_2" o correspondència="identificant_1=identificador_2, identificant_3=identificador_4"',
     'BAZ_WIDGET_INSTRUCTION2' => 'Codi acció wiki té copiar enganxar en una pàgina d\'aquest lloc',
-    'BAZ_CORRESPONDANCE_ERROR2' => "acció bazarliste: el paràmetre correspondència està mal omplert.
-Ha de ser de la forma correspondència=\"identificant_1=identificador_2\" o correspondència=\"identificant_1=identificador_2, identificant_3=identificador_4\"",
+    'BAZ_CORRESPONDANCE_ERROR2' => 'acció bazarliste: el paràmetre correspondència està mal omplert.
+Ha de ser de la forma correspondència="identificant_1=identificador_2" o correspondència="identificant_1=identificador_2, identificant_3=identificador_4"',
     'BAZ_FILEFIELD_TOO_LARGE_FILE' => 'El fitxer és massa voluminós, màxim %{fileMaxSize} octets',
     'BAZ_IMAGE_ALREADY_EXISTING' => 'La imatge {fileName} existia déja, no ha estada reemplaçada.',
     'BAZ_DRAG_n_DROP_CHECKBOX_DELETE_ITEM' => 'Treure l\'element',

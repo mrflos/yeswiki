@@ -44,6 +44,11 @@ class ListManager
         $this->cachedLists = [];
     }
 
+    public function isList($id): bool
+    {
+        return boolval($this->tripleStore->exist($id, TripleStore::TYPE_URI, self::TRIPLES_LIST_ID, '', ''));
+    }
+
     public function getOne($id): ?array
     {
         if (isset($this->cachedLists[$id])) {
@@ -94,16 +99,15 @@ class ListManager
         return $result;
     }
 
-    public function create($title, $nodes)
+    public function create($title, $nodes, $id = null)
     {
         if ($this->securityController->isWikiHibernated()) {
             throw new \Exception(_t('WIKI_IN_HIBERNATION'));
         }
-
-        $id = genere_nom_wiki('List' . $title);
+        $id = $id ?? genere_nom_wiki('List' . $title);
         $this->pageManager->save($id, json_encode([
             'title' => $title,
-            'nodes' => $this->sanitizeHMTL($nodes),
+            'nodes' => $this->sanitizeHMTL($nodes ?? []),
         ]));
 
         $this->tripleStore->create($id, TripleStore::TYPE_URI, self::TRIPLES_LIST_ID, '', '');
@@ -119,7 +123,7 @@ class ListManager
 
         $this->pageManager->save($id, json_encode([
             'title' => $title,
-            'nodes' => $this->sanitizeHMTL($nodes),
+            'nodes' => $this->sanitizeHMTL($nodes ?? []),
         ]));
     }
 
@@ -145,7 +149,7 @@ class ListManager
     {
         return array_map(function ($node) {
             $node['label'] = $this->htmlPurifierService->cleanHTML($node['label']);
-            $node['children'] = $this->sanitizeHMTL($node['children']);
+            $node['children'] = $this->sanitizeHMTL($node['children'] ?? []);
 
             return $node;
         }, $nodes);

@@ -52,10 +52,14 @@ class BazarListService
         foreach ($options['idtypeannonce'] as $idtypeannonce) {
             $template = $forms[(int)$idtypeannonce]['template'] ?? [];
             $image_names = array_map(
-                function ($item) {return $item[1]; },
+                function ($item) {
+                    return $item[1];
+                },
                 array_filter(
                     $template,
-                    function ($item) { return $item[0] == 'image'; }
+                    function ($item) {
+                        return $item[0] == 'image';
+                    }
                 )
             );
             foreach ($image_names as $image_name) {
@@ -107,6 +111,13 @@ class BazarListService
         }
         $entries = $this->replaceDefaultImage($options, $forms, $entries);
 
+        // add extra informations (comments, reactions, metadatas)
+        if ($options['extrafields'] === true) {
+            foreach ($entries as $i => $entry) {
+                $entries[$i]['extrafields'] = $this->entryManager->getExtraFields($entry['id_fiche']);
+            }
+        }
+
         // filter entries on datefilter parameter
         if (!empty($options['datefilter'])) {
             $entries = $this->entryController->filterEntriesOnDate($entries, $options['datefilter']);
@@ -141,7 +152,9 @@ class BazarListService
         ], $options);
 
         $formIdsUsed = array_unique(array_column($entries, 'id_typeannonce'));
-        $formsUsed = array_map(function ($formId) use ($forms) { return $forms[$formId]; }, $formIdsUsed);
+        $formsUsed = array_map(function ($formId) use ($forms) {
+            return $forms[$formId];
+        }, $formIdsUsed);
         $allFields = array_merge(...array_column($formsUsed, 'prepared'));
 
         $propNames = $options['groups'];
@@ -150,7 +163,9 @@ class BazarListService
             $enumFields = array_filter($allFields, function ($field) {
                 return $field instanceof EnumField;
             });
-            $propNames = array_map(function ($field) { return $field->getPropertyName(); }, $enumFields);
+            $propNames = array_map(function ($field) {
+                return $field->getPropertyName();
+            }, $enumFields);
         }
 
         $filters = [];
@@ -193,7 +208,9 @@ class BazarListService
                 foreach ($formsUsed as $form) {
                     $filter['nodes'][] = $this->createFilterNode($form['bn_id_nature'], $form['bn_label_nature']);
                 }
-                usort($filter['nodes'], function ($a, $b) { return strcmp($a['label'], $b['label']); });
+                usort($filter['nodes'], function ($a, $b) {
+                    return strcmp($a['label'], $b['label']);
+                });
             } else {
                 // OTHER PROPNAME (for example a field that is not an Enum)
                 $filter['title'] = $propName == 'owner' ? _t('BAZ_CREATOR') : $propName;
@@ -222,7 +239,9 @@ class BazarListService
                 // Calculate the count for each filterNode
                 $entriesValues = array_column($entries, $propName);
                 // convert string values to array
-                $entriesValues = array_map(function ($val) { return explode(',', $val); }, $entriesValues);
+                $entriesValues = array_map(function ($val) {
+                    return explode(',', $val);
+                }, $entriesValues);
                 // flatten the array
                 $entriesValues = array_merge(...$entriesValues);
                 $countedValues = array_count_values($entriesValues);
@@ -291,23 +310,60 @@ class BazarListService
         return $result;
     }
 
+    private function getValueForArray($array, $key, $default = null)
+    {
+        if (!is_array($array)) {
+            return $default;
+        }
+        if (is_null($key)) {
+            return $array;
+        }
+        if (array_key_exists($key, $array)) {
+            return $array[$key];
+        }
+        if (strpos($key, '.') === false) {
+            return $array[$key] ?? $default;
+        }
+        foreach (explode('.', $key) as $segment) {
+            if (is_array($array) && array_key_exists($segment, $array)) {
+                $array = $array[$segment];
+            } else {
+                return $default;
+            }
+        }
+
+        return $array;
+    }
+
     private function buildFieldSorter($ordre, $champ): callable
     {
         return function ($a, $b) use ($ordre, $champ) {
-            if ($ordre == 'desc') {
-                $first = $b[$champ] ?? '';
-                $second = $a[$champ] ?? '';
+            if (strstr($champ, '.')) {
+                $val1 = $this->getValueForArray($a, $champ);
+                $val2 = $this->getValueForArray($b, $champ);
             } else {
-                $first = $a[$champ] ?? '';
-                $second = $b[$champ] ?? '';
+                $val1 = $a[$champ] ?? '';
+                $val2 = $b[$champ] ?? '';
             }
-            // compare insentive uppercase even for special chars
-            return strcmp($this->sanitizeStringForCompare($first), $this->sanitizeStringForCompare($second));
+            if ($ordre == 'desc') {
+                return strnatcmp(
+                    $this->sanitizeStringForCompare($val2),
+                    $this->sanitizeStringForCompare($val1)
+                );
+            } else {
+                return strnatcmp(
+                    $this->sanitizeStringForCompare($val1),
+                    $this->sanitizeStringForCompare($val2)
+                );
+            }
         };
     }
 
     private function sanitizeStringForCompare($value): string
     {
+        if ($value === null) {
+            $value = '';
+        }
         $value = is_scalar($value)
             ? strval($value)
             : json_encode($value);
