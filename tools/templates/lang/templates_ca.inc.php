@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'Acció',
     // 'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
@@ -144,7 +143,6 @@ return [
     'TEMPLATE_CLOSE_COMMENTS' => 'Comentaris',
     'TEMPLATE_FOR_CONNECTED_PEOPLE' => 'Per a persones connectades',
     'TEMPLATE_FOR_MEMBERS_OF_GROUP' => 'Per als membres del grup',
-    'TEMPLATES_SEE_ATTACHED_FILES' => 'Veure fitxers adjunts a la pàgina',
     'DIAPORAMA_PAGE_PARAM_MISSING' => 'Presentació de diapositives d\'acció: param marcatecirc;tre "pàgina" obligatòria.',
     'DIAPORAMA_TEMPLATE_PARAM_ERROR' => 'Acció diaporama: el paramêtre "template" punta sobre un fitxer inexistent o illegible. El template per defecte serà utilitzat.',
     'TEMPLATE_ACTION_END' => 'Acció {{end ...}}',

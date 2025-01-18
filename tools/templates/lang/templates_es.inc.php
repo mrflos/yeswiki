@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'Acción',
     // 'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
@@ -181,7 +180,6 @@ return [
     'TEMPLATE_OPEN_COMMENTS' => 'Comentarios abiertos',
     'TEMPLATE_CLOSE_COMMENTS' => 'Cerrar comentarios',
     'TEMPLATE_FOR_MEMBERS_OF_GROUP' => 'Para miembros del grupo',
-    'TEMPLATES_SEE_ATTACHED_FILES' => 'Ver archivos adjuntos a la página',
     'DIAPORAMA_PAGE_PARAM_MISSING' => 'Action slideshow: param markedecirc;tre "page" mandatory.',
     'TEMPLATE_ACTION_SECTION' => 'Acción {sección...}',
     'TEMPLATE_ELEM_SECTION_NOT_CLOSED' => 'la acción {{col ...}} tiene que ser cerrada por una acción {{end elem="col"}}',

@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'செயல்',
     'TEMPLATE_FILE_NOT_FOUND' => 'வார்ப்புரு அல்ல',
@@ -50,7 +49,6 @@ return [
     'TEMPLATE_CLOSE_COMMENTS' => 'ஃபெர்மர் லெச் கருத்துரை',
     'TEMPLATE_FOR_CONNECTED_PEOPLE' => 'லெச் பெர்சனென்ச் இணைப்புகளை ஊற்றவும்',
     'TEMPLATE_FOR_MEMBERS_OF_GROUP' => 'லெச் மெக்ச் டு குழுமத்தை ஊற்றவும்',
-    'TEMPLATES_SEE_ATTACHED_FILES' => 'Voir les fichiers Cansage’s à la பக்கம்',
     // action/diaporama
     'DIAPORAMA_PAGE_PARAM_MISSING' => 'அதிரடி டயபோராமா: பரம் & ஈசிஐசி;',
     'DIAPORAMA_TEMPLATE_PARAM_ERROR' => 'அதிரடி டயோபாராமா: லு பரம் & ஈசிஐசி; Le வார்ப்புரு par டி & eacute; faut சேரா utilis & eacute ;.',

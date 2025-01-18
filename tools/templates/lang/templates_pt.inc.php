@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'Ação',
     // 'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
@@ -152,7 +151,6 @@ return [
     'TEMPLATE_CLOSE_COMMENTS' => 'Fechar comentários',
     'TEMPLATE_FOR_CONNECTED_PEOPLE' => 'Para pessoas conectadas',
     'TEMPLATE_FOR_MEMBERS_OF_GROUP' => 'Para os membros do grupo',
-    'TEMPLATES_SEE_ATTACHED_FILES' => 'Veja os arquivos anexados à página',
     'DIAPORAMA_PAGE_PARAM_MISSING' => 'Slideshow de ação: param marcadoecirc; tre "página" obrigatória.',
     'TEMPLATE_MAIN_TEXT_SIZE' => 'Tamanho do texto',
     'TEMPLATE_SOFT_COLOR' => 'Cor neutra',

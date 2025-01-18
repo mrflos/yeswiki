@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'Actie',
     // 'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
@@ -273,7 +272,6 @@ return [
     'TEMPLATE_SEARCH_POINTS' => 'Opzoeken...',
     'AB_templates_section_pattern_diag' => 'Diagon',
     'TEMPLATE_DEFAULT_PRESET' => 'Preset default',
-    'TEMPLATES_SEE_ATTACHED_FILES' => 'Bestanden gehecht aan de pagina',
     'DIAPORAMA_PAGE_PARAM_MISSING' => 'Param Markedecirc, \'page\' verplicht.',
     'TEMPLATE_ELEM_GRID_NOT_CLOSED' => 'de actie moet ecirc zijn',
     'TEMPLATE_MAIN_TEXT_SIZE' => 'Text maat',
