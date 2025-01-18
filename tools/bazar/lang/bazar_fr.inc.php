@@ -221,6 +221,8 @@ return [
     'BAZ_UNKNOWN_USER' => 'Utilisateur inconnu',
     'BAZ_RADIO_REFRESH' => 'Rafraîchir les informations de la liste',
     'BAZ_NOT_CATEGORIZED' => 'Non catégorisé',
+    'BAZ_SORT_BY' => 'Trier par',
+    'BAZ_SORTED_BY' => 'Tri',
 
     //================ Calendrier Bazar =======================================
     'BAZ_AFFICHE_TITRES_COMPLETS' => 'Afficher les titres complets des événements',

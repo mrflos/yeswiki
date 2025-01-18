@@ -6,6 +6,7 @@
 
   <div class="filters no-dblclick {{ params.filterposition }}">
     <div class="results-info text-info">
+      {# Filter Result Count #}
       <template v-if="filters.length > 0 && params.filtersresultnb">
         <span class="nb-results">{{"{{ filteredEntriesCount }}"}}</span>
         <span class="result-label">
@@ -14,6 +15,7 @@
         </span>
       </template>
 
+      {# Reset filters #}
       <template v-if="filters.length > 0 && params.resetfiltersbutton">
         <span class="btn btn-xs btn-info reset-filters pull-right" @click="resetFilters()"
               :class="{'btn-block': params.filtercolsize < 4}">
@@ -23,25 +25,31 @@
       </template>
     </div>
 
-    <div class="btn-group btn-block" v-if="params.sortfields">
-      <button type="button" class="btn btn-sortby btn-default dropdown-toggle" data-toggle="dropdown" 
-              aria-haspopup="true" aria-expanded="false" 
-              style="width:100%; text-align:left; margin-bottom:1em;border:3px solid var(--primary-color);color:var(--primary-color);border-radius:var(--btn-border-radius);font-size: .9em;">
-        <span v-html="sortButtonLabel"></span>
+    {# Sort button #}
+    <div class="input-group dropdown sort-by" v-if="params.sortfields">
+      <span class="input-group-addon addon-icon">
+        {{ _t('BAZ_SORTED_BY') }}
+      </span>
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
+              aria-haspopup="true" aria-expanded="false" >
+        <span v-html="currentSort.label"></span>
+        <i v-if="currentSort.asc" class="fas fa-arrow-down"></i>
+        <i v-else class="fas fa-arrow-up"></i>
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li v-for="(field, i) in params.sortfields">
-          <a :href="'{{ url({params:{'ordre': 'asc'}}) }}&champ='+field" @click.prevent="sortEntries(field, 'asc')">
-          <span v-html="'Trier par '+params.sortfieldstitles[i]"></span> <i class="fas fa-arrow-up"></i>
-          </a>
-          <a :href="'{{ url({params:{'ordre': 'desc'}}) }}&champ='+field" @click.prevent="sortEntries(field, 'desc')">
-            <span v-html="'Trier par '+params.sortfieldstitles[i]"></span> <i class="fas fa-arrow-down"></i> 
+        <li v-for="sort in sortOptions">
+          <a href="#" @click.prevent="currentSort = sort">
+            {{ _t('BAZ_SORT_BY') }}
+            <span v-html="sort.label"></span> 
+            <i v-if="sort.asc" class="fas fa-arrow-down"></i>
+            <i v-else class="fas fa-arrow-up"></i>
           </a>
         </li>
       </ul>
     </div>
 
+    {# Filters = Facettes #}
     <div class="results-container">
       <Panel class="filter-box" v-for="filter, key in filters" :collapsed.sync="filter.collapsed" :key="key">
         <template #header>

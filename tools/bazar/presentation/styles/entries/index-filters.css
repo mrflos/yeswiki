@@ -71,6 +71,23 @@
 }
 
 /* -------------------------------------------- */
+/*                     Sort                     */
+/* -------------------------------------------- */
+.sort-by {
+  margin-bottom: 1em;
+}
+.sort-by button {
+  width: 100%;
+  text-align: left;
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: var(--btn-border-radius);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 0.9em;
+}
+
+/* -------------------------------------------- */
 /*    Filter Nodes (for Bazar List Dynamic)     */
 /* -------------------------------------------- */
 .filter-box .filter-nodes {
