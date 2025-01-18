@@ -8,24 +8,11 @@ An example of how a custom folder look like can be found at https://github.com/Y
 
 > (Advanced) You can clone this example in your wiki by manually deleting the custom folder, and then running the command `git clone https://github.com/YesWiki/yeswiki-custom-code-example.git custom`
 
-### Custom templates
+### Custom template to render an entry
 
-The folder `custom/templates` is for your own custom templates.
+If you have created a bazar form, you can customize how to render each entry created from this form.
 
-#### bazarliste templates
-
-add the file `custom/templates/bazar/my-template.tpl.html`
-Then you can use it from a bazar action `{{bazarliste id="1" template="my-template.tpl.html"}}`
-You can also overide an existing template : `custom/templates/bazar/liste_accordeon.tpl.html`
-
-Custom template will appear in the bazarliste component with default name : "Template custom : filename"
-
-If you need to personnalize the name add a translation in file /custom/lang/custom_fr.inc.php
-example : 'AB_filename_label' => 'Template custom annuaire',
-
-#### bazar single entry template
-
-uses the convention `fiche-FORM_ID.tpl.html`
+We use the convention `fiche-FORM_ID.tpl.html`
 If you have a bazar form with id 5, then you can create `custom/templates/bazar/fiche-5.tpl.html`
 Available variables inside the template are
 
@@ -35,154 +22,151 @@ Available variables inside the template are
 | `$values['html']`  | Pre-rendered fields                            | `$values['html']['bf_titre'] => "<h1>My title</h1>"` |
 | `$values['form']`  | Informations about the form : id, fields etc.. |
 
-#### **Dynamic** bazarlist templates
+### Custom template to render bazar entries (Bazarliste)
 
-It is possible to customize for `{{bazarliste dynamic="true"}}`. But for that, the previous `my-template.tpl.html` can not be used even if using `my-template.twig`.
+You can either create an "old school template" or a more recent dynamic template (VueJs).
 
-**Explanation**:
+Old school templates might be easier to write, but dynamic templates will provide better performance and use latest features form yeswiki
 
-1.  a bazarlist dynamic template is run into `javascript` via [VueJs](https://v2.vuejs.org/v2/guide) library
-2.  a not dynamic bazarlist template is run into `php`
+#### **Old schoold** bazarlist templates
 
-```
-------------
-|   twig   |      extract
-| template |      template
-------------     from html
-    | USE        ========>
-    v           /         \
---------    --------    ---------
-|  PHP | => | html | => | VueJs |
---------    --------    ---------
-                            |
-                            v
--------------------     -------------
-| manipulate      | <=  | javascript |
-| DOM dynamically |     | functions  |
--------------------     --------------
-```
-
-_Diagram of process for dynamic templates_
-
-**Process**:
-
-- create a `twig` template that extends [`@bazar/entries/index-dynamic.twig`](tools/bazar/templates/entries/index-dynamic.twig ':ignore') into `custom/templates/bazar/entries/index-dynamic-templates/` with this code for example:
-
-  ```twig
-  {% extends "@bazar/entries/index-dynamic.twig" %}
-
-  {% block display_entries %}
-  {% endblock %}
-  ```
-
-- it is possible to use this template with `yeswiki` code (do not add `.twig` example) :
-  ```yeswiki
-  {{bazarliste id=".." template="my-file-name" dynamic="true"}}
-  ```
-- modify the block `display_entries` to add a `VueJs` template
-- it is possible to inspire from [`@bazar/entries/index-dynamic-templates/list.twig`](tools/bazar/templates/entries/index-dynamic-templates/list.twig ':ignore') template
-- first example:
-
-  ```twig
-  {% extends "@bazar/entries/index-dynamic.twig" %}
-
-  {% block display_entries %}
-    <div class="my-class-name no-dblclick" v-if="ready">
-       My first message
-    </div>
-  {% endblock %}
-  ```
-
-- **BE CAREFUL**, a `vuejs` template **IS NOT** a twig template. The syntax is different.
-- if you need to add `css` or `javascripts` into the template, you can rewrite the block `assets`
-
-  ```twig
-  {% extends "@bazar/entries/index-dynamic.twig" %}
-
-  {% block assets %}
-     {{ include_css('custom/path/to/file.css') }}
-     {{ include_javascript('custom/path/to/file.js') }}
-  {% endblock %}
-
-  {% block display_entries %}
-    {# ... #}
-  {% endblock %}
-  ```
-
-- dynamic `bazarlist` does not import all data from the entry. To define needed fields for the template, you need to add this line :
-
-  ```twig
-  {% extends "@bazar/entries/index-dynamic.twig" %}
-
-  {% set necessary_fields = ['bf_field1', 'bf_field2','url'] %}
-
-  {% block assets %}
-    {# ... #}
-  {% endblock %}
-
-  {% block display_entries %}
-    {# ... #}
-  {% endblock %}
-  ```
-
-**Example with only titles**:
+Create a file inside `custom/templates/bazar`, either a `.twig` file or a `.tpl.html`
 
 ```twig
-   {% extends "@bazar/entries/index-dynamic.twig" %}
-
-   {% set necessary_fields = ['bf_titre', 'url'] %}
-
-   {% block display_entries %}
-     <div class="my-class-name no-dblclick" v-if="ready">
-        <div v-if="entriesToDisplay.length == 0" class="alert alert-info">
-          {{ _t('BAZ_NO_RESULT') }}
-        </div>
-        <ul v-else>
-            <li v-for="entry in entriesToDisplay"><span v-html="entry.bf_titre || entry.id_fiche"></span></li>
-        </ul>
-     </div>
-   {% endblock %}
+<!-- custom/templates/bazar/my-template.twig -->
+{% for fiche in fiches %}
+  <div>{{ fiche.bf_titre }}</div>
+{% endfor %}
 ```
 
-**Particularity for the rendering shortcut `{{ }}`**:
-
-The shortcut `{{ }}` is used by `twig` and `vuejs`.
-So the first time that shortcut `{{ }}` is used this is for `twig`.
-
-In `VueJs`, the shortcut `{{ }}` means `<span v-html=""></span>`.
-
-It is advised to use `<span v-html=""></span>` but you can find in existing templates `{{ "{{ entry.bf_titre }}" }}`.
-
-**Advise to render a dynamic string**:
-
-Use
-
-```
-<span v-html="`${entry.bf_titre} (${entry.id_fiche})`"></span>
+```php
+<!-- custom/templates/bazar/my-template.tpl.html -->
+<?php foreach($fiches as $fiche): ?>
+  <h2><?php echo $fiche['bf_titre'];?></h2>
+<?php endforeach; ?>
 ```
 
-using the back-quoted string into `javascript` with `${...}` to generate interpolation from `javascript`.
+Then you use it with `{{ bazarliste id="1" template="my-template.twig" }}` or `{{ bazarliste id="1" template="my-template.tpl.html" }}`
 
-the previous example is similar to (the `+` is used to concatenate strings):
+You can also overide an existing template : `custom/templates/bazar/liste_accordeon.tpl.html`
 
+Custom template will appear in the bazarliste component with default name : "Template custom : filename"
+
+If you need to personnalize the name add a translation in file /custom/lang/custom_fr.inc.php
+example : 'AB_filename_label' => 'Template custom annuaire',
+
+#### **Dynamic** bazarlist templates
+
+Create a file inside `custom/templates/bazar/entries/index-dynamic-templates/`
+
+```twig
+<!-- custom/templates/bazar/entries/index-dynamic-templates/my-template.twig  -->
+{% extends "@bazar/entries/index-dynamic.twig" %}
+
+{% block display_entries %}
+  <div v-for="entry in entriesToDisplay">
+    <a :href="entry.url" v-html="entry.bf_titre"></a>
+  </div>
+{% endblock %}
 ```
-<span v-html="''+entry.bf_titre+' ('+entry.id_fiche+')'"></span>
+
+Then use it with `{{ bazarliste id=".." template="my-template" dynamic="true" }}`
+
+Check [this file](https://github.com/YesWiki/yeswiki/blob/doryphore-dev/tools/bazar/presentation/javascripts/entries-index-dynamic.js) to know what data is available inside the template.
+Have also a look to [existing templates](https://github.com/YesWiki/yeswiki/tree/doryphore-dev/tools/bazar/templates/entries/index-dynamic-templates), although some of them might be overcomplicated...
+
+##### VueJs Template
+
+The content inside block display_entries is a `VueJs` template, check Vue documentation.
+
+Because the syntax `{{ }}` is used by both `twig` and `vuejs`, when you need to display content in VueJs should do either `<span v-html="entry.bf_titre"></span>` or `{{ "{{ entry.bf_titre }}" }}`
+
+You should istall VueJS browser extensions (the legacy version because we are using Vue 2), it will help you for debugging
+
+##### Configure the data to be loaded
+
+In order to optimize the request, dynamic bazalist loads by default only the minimal amount of data for each entry. You can add more data with `necessary_fields`
+
+```twig
+{% extends "@bazar/entries/index-dynamic.twig" %}
+
+{% set necessary_fields = ['bf_titre', 'bf_description'] %}
+
+{% block display_entries %}
+  <div v-for="entry in entriesToDisplay">
+    <h2 v-html="entry.bf_titre"></h2>
+    <span v-html="entry.bf_description"></span>
+  </div>
+{% endblock %}
 ```
 
-**Example of link to entry**:
+##### Override existing template
 
-```vuejs
-<a :href="entry.url" :title="entry.title || entry.bf_titre">Lire plus (<span v-html="entry.id_fiche"></span>)</a>
+Existing yeswiki templates contains block declaration so you can easily override specific parts, for example
+
+```twig
+<!-- custom/templates/bazar/entries/index-dynamic-templates/my-template.twig  -->
+{% extends "@bazar/entries/index-dynamic-templates/card.twig" %}
+
+{% block area_footer %}
+  My custom card footer
+  {{ parent() }}
+{% endblock %}
+
+{% block extra %}
+  Something more
+{% endblock %}
 ```
 
-**If you need a component**:
+See the code of [existing templates](https://github.com/YesWiki/yeswiki/tree/doryphore-dev/tools/bazar/templates/entries/index-dynamic-templates)
 
-Sometimes, it is not possible to do all things only with html to define the [`VueJs`](https://v2.vuejs.org/v2/guide/components.html) template : a component is needed.
+##### More complex templates
 
-An example is the [`@bazar/entries/index-dynamic-templates/map.twig`](tools/bazar/templates/entries/index-dynamic-templates/map.twig ':ignore') template.
+You can also include dedicated Vue components, in order to introduce your own VueJs javascript code.
 
-1.  define a component into a `.js` file inspiring from [`tools/bazar/presentation/javascripts/components/BazarMap.js`](tools/bazar/presentation/javascripts/components/BazarMap.js ':ignore') respecting [`VueJs v2`](https://v2.vuejs.org/v2/guide/components.html) syntaxe
-2.  use this component into the `html`
+```twig
+<!-- custom/templates/bazar/entries/index-dynamic-templates/my-template.twig  -->
+{% extends "@bazar/entries/index-dynamic.twig" %}
+
+{% block assets %}
+  {{ include_javascript('custom/javascripts/bazar/DemoComponent.js', false, true) }}
+{% endblock %}
+
+{% block display_entries %}
+  <Demo-Component v-for="entry in entries" :entry="entry"/>
+{% endblock %}
+```
+
+```js
+<!-- custom/javascripts/bazar/DemoComponent.js  -->
+Vue.component('DemoComponent', {
+  props: ['entry'],
+  computed: {
+    title() {
+      // this.$root will let you access all properties from index-dynamic-templates.js
+      if (this.$root.params.greeting = "yes") return `Hello ${this.entry.given_name}`
+      return this.entry.bf_titre
+    }
+  }
+  template: `
+    <div>
+      {{ title }}
+    </div>
+  `
+})
+```
+
+### Customize any templates from the codebase
+
+You can override any template used in yeswiki by mimicking the same folder structure inside `custom/templates`
+
+**Examples**:
+
+| File to overwrite                                | File to create inside `custom` folder             |
+| ------------------------------------------------ | ------------------------------------------------- |
+| `templates/comment.twig`                         | `custom/templates/core/comment.twig`              |
+| `tools/login/templates/user-signup-form.twig`    | `custom/templates/login/user-signup-form.twig`    |
+| `tools/contact/templates/notify-email-text.twig` | `custom/templates/contact/notify-email-text.twig` |
 
 ### Custom Javascript
 
