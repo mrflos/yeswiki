@@ -128,6 +128,7 @@ actions:
       iconfield:
         label: _t(AB_bazar_commons_iconfield_label)
         type: form-field
+        advanced: true
         extraFields: id_typeannonce
         only: lists # ce champ doit être de type checkboxListe, listeListe ...
         showOnlyFor:
@@ -138,9 +139,9 @@ actions:
           - bazarcalendar
           - bazartableau
           - bazarcard
-        advanced: true
       iconmapping:
         type: icon-mapping
+        advanced: true
         showif: iconfield
         showOnlyFor:
           - bazarcarto
@@ -150,7 +151,6 @@ actions:
           - bazarcalendar
           - bazartableau
           - bazarcard
-        advanced: true
         subproperties:
           id:
             label: _t(AB_bazar_commons_subproperty_id_label)
@@ -471,7 +471,7 @@ actions:
         advanced: true
         label: _t(AB_bazarcarto_height_label)
         type: text
-        default: 300px
+        default: 700px
       entrydisplay:
         label: _t(AB_bazarcarto_entrydisplay_label)
         type: list
