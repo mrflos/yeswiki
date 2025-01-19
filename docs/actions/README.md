@@ -60,6 +60,8 @@ actions:
     description: Une description courte
     hint: Le champ XX doit être présent... # Information importante à savoir si on utilise cette action
     isWrapper: true # rajouter cette ligne pour les actions qui doivent se fermer avec un {{end elem="action"}}
+    onlyAdd: true # rajouter cette ligne pour les actions qui n'ont pas vocation à être éditées avec l'action-builder
+    onlyEdit: true # rajouter cette ligne pour les actions qui n'ont pas vocation à être ajouter via l'action-builder
     wrappedContentExample: 'Teeest' # si l'action est un wrapper, le texte à inclure dans l'action à titre d'exemple
     properties:
       # La liste des paramètres de l'action.
