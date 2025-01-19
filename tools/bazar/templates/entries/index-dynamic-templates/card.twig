@@ -8,7 +8,7 @@
   {% set nbcol = params.nbcol %}
   {% set isModal = (params.entrydisplay == 'modal' or params.entrydisplay is empty or params.entrydisplay not in ['modal','direct','newtab']) %}
   {% set isLink = isModal or (params.entrydisplay == 'direct') %}
-  
+
   {# Restrict number of columns for horizontal card #}
   {% if nbcol > 2 and params.displayfields.visual and params.style == "horizontal" %}
     {% set nbcol =  2 %}
@@ -19,19 +19,20 @@
   {% set imHeight = params.style == "square" ? imWidth : (params.style == "horizontal" ? imWidth*23//27 : imWidth*2//3 ) %}
   {% set firstTokenCrop = csrfToken("POST api/images/cache/#{imWidth}/#{imHeight}/fit") %}
 
-  <div class="bazar-cards-container" v-if="ready" 
-       :class="[{ready: ready}, `style-${params.style || 'vertical'}`, `nbcol-{{nbcol}}`]" 
+  <div class="bazar-cards-container" v-if="ready"
+       :class="[{ready: ready}, `style-${params.style || 'vertical'}`, `nbcol-{{nbcol}}`]"
        :style="{'grid-template-columns': `repeat({{nbcol}}, minmax(0, 1fr))`}">
-    
+
     {% block no_result %}
     <div v-if="entriesToDisplay.length == 0" class="alert alert-info">
         {{ _t('BAZ_NO_RESULT') }}
     </div>
     {% endblock %}
 
-    {% if isLink %}<a{% else %}<div{% endif %} v-for="entry in entriesToDisplay" :key="entry.id_fiche" 
+    {% block iter_start %}
+    {% if isLink %}<a{% else %}<div{% endif %} v-for="entry in entriesToDisplay" :key="entry.id_fiche"
         class="bazar-entry bazar-card{{ isModal ? ' modalbox' : ''}}"
-        {% if not isLink %}@click="openEntry(entry)"{% endif %} 
+        {% if not isLink %}@click="openEntry(entry)"{% endif %}
         :class="{'with-image': Object.keys(entry).includes('visual')}"
         {% if isModal %}
           data-size="modal-lg" data-header="false" data-iframe="1"
@@ -41,26 +42,27 @@
           :title="entry.title"
         {% endif %}
         >
-      
+    {% endblock %}
+
       {# VISUAL AREA #}
       {% block area_visual %}
       <template v-if="Object.keys(entry).includes('visual')">
         <template v-if="entry.visual">
-          <img 
+          <img
             loading="lazy" alt=""
             :style="{width:((params.style == 'square')? false : '0px'),height:((params.style == 'square')? false : '0px'),'object-fit':params.imgstyle}"
-            class="area visual-area" 
+            class="area visual-area"
             :src="urlImage(entry,'visual',{{ imWidth }},{{ imHeight }},'fit')"
             @error="urlImageResizedOnError(entry,'visual',{{ imWidth }},{{ imHeight }},'fit',{{ firstTokenCrop|json_encode }})"></img>
-          <div v-if="params.style != 'square'" class="area visual-area" 
+          <div v-if="params.style != 'square'" class="area visual-area"
             :style="{color:'blue','background-size':params.imgstyle ,'background-image': `url('${urlImage(entry,'visual',{{ imWidth }},{{ imHeight }},'fit')}')`}">
           </div>
-        
+
         </template>
         <div v-else class="area area visual-area placeholder"></div>
       </template>
       {% endblock %}
-      
+
       <div class="content">
         {# TITLE AREA #}
         {% block area_title %}
@@ -68,12 +70,12 @@
           <span v-show="entry.color" class="pellet" :style="{'background-color': entry.color}"></span>
           <i v-show="entry.icon" :class="entry.icon"></i>
           <entry-field :entry="entry" prop="title" class="title"></entry-field>
-        </h4>  
+        </h4>
         {% endblock %}
 
         {# SUBTITLE AREA #}
         {% block area_subtitle %}
-          <entry-field :entry="entry" prop="subtitle" class="area subtitle-area line-clamp" :style="{'webkit-line-clamp': params.nblines}"></entry-field>  
+          <entry-field :entry="entry" prop="subtitle" class="area subtitle-area line-clamp" :style="{'webkit-line-clamp': params.nblines}"></entry-field>
         {% endblock %}
 
         {# TEXT AREA #}
@@ -85,13 +87,16 @@
         {% block area_footer %}
           <entry-field :entry="entry" prop="footer" class="area footer-area"></entry-field>
         {% endblock %}
-        
+
         {# FLOATING AREA #}
         {% block area_floating %}
           <entry-field :entry="entry" prop="floating" class="area floating-area"></entry-field>
         {% endblock %}
       </div>
+
+    {% block iter_end %}
     {% if isLink %}</a>{% else %}</div>{% endif %}
+    {% endblock %}
 
     <spinner-loader v-if="isLoading" class="overlay"></spinner-loader>
   </div>

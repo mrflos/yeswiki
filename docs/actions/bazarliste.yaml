@@ -345,7 +345,7 @@ actions:
   bazarcard:
     label: _t(AB_bazarcard_label)
     description: _t(AB_bazarcard_description)
-    properties:
+    properties: &bazarcard
       template:
         value: 'card'
       nbcol:
@@ -559,22 +559,6 @@ actions:
         default: '0'
         checkedvalue: '1'
         uncheckedvalue: '0'
-      # spider:
-      #   advanced: true
-      #   label: _t(AB_bazarcarto_spider_label)
-      #   hint: _t(AB_bazarcarto_spider_hint)
-      #   type: checkbox
-      #   default: "false"
-      # barregestion:
-      #   advanced: true
-      #   label: _t(AB_bazarcarto_barregestion_label)
-      #   type: checkbox
-      #   default: "false"
-      # navigation:
-      #   advanced: true
-      #   label: _t(AB_bazarcarto_navigation_label)
-      #   type: checkbox
-      #   default: "true"
       zoommolette:
         advanced: true
         label: _t(AB_bazarcarto_zoommolette_label)
@@ -679,6 +663,11 @@ actions:
     description: _t(AB_bazartimeline_description)
     hint: _t(AB_bazartimeline_hint)
     properties:
+      <<: *bazarcard
+      nbcol:
+        showif: false
+      style:
+        showif: false
       template:
         value: timeline
       correspondance:
@@ -729,22 +718,6 @@ actions:
             label: _t(AB_bazarcarousel_bf_titre_label)
             default: ''
 
-  # bazargaleriephoto:
-  #   label: _t(AB_bazargaleriephoto_label)
-  #   description: _t(AB_bazargaleriephoto_description)
-  #   hint: _t(AB_bazargaleriephoto_hint)
-  #   properties:
-  #     template:
-  #       value: galerie_photos
-
-  # bazarlistegalerie:
-  #   label: _t(AB_bazarlistegalerie_label)
-  #   description: _t(AB_bazarlistegalerie_description)
-  #   hint: _t(AB_bazarlistegalerie_hint)
-  #   properties:
-  #     template:
-  #       value: liste_galerie
-
   bazarlistephotobox:
     label: _t(AB_bazarlistephotobox_label)
     description: _t(AB_bazarlistephotobox_description)
@@ -759,21 +732,6 @@ actions:
     properties:
       template:
         value: liste_liens
-
-  #  bazarlisteliensdates:
-  #    label: _t(AB_bazarlisteliensdates_label)
-  #    description: _t(AB_bazarlisteliensdates_description)
-  #    properties:
-  #      template:
-  #        value: liste_liens_date
-
-  # bazarmail:
-  #   label: _t(AB_bazarmail_label)
-  #   description: _t(AB_bazarmail_description)
-  #   hint: _t(AB_bazarmail_hint)
-  #   properties:
-  #     template:
-  #       value: liste_mails_seuls
 
   bazarblog:
     label: _t(AB_bazarblog_label)
@@ -1092,22 +1050,6 @@ actions:
         default: '0'
         checkedvalue: '1'
         uncheckedvalue: '0'
-      # spider:
-      #   advanced: true
-      #   label: _t(AB_bazarcarto_spider_label)
-      #   hint: _t(AB_bazarcarto_spider_hint)
-      #   type: checkbox
-      #   default: "false"
-      # barregestion:
-      #   advanced: true
-      #   label: _t(AB_bazarcarto_barregestion_label)
-      #   type: checkbox
-      #   default: "false"
-      # navigation:
-      #   advanced: true
-      #   label: _t(AB_bazarcarto_navigation_label)
-      #   type: checkbox
-      #   default: "true"
       zoommolette:
         advanced: true
         label: _t(AB_bazarcarto_zoommolette_label)

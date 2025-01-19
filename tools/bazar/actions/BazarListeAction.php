@@ -92,7 +92,7 @@ class BazarListeAction extends YesWikiAction
             }
         }
 
-        if (in_array($template, ['list', 'card', 'map-and-table', 'table'])) {
+        if (in_array($template, ['list', 'card', 'map-and-table', 'table', 'timeline'])) {
             $dynamic = true;
         }
         if ($dynamic && $template == 'liste_accordeon') {
