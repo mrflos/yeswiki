@@ -284,6 +284,7 @@ return [
     'AB_templates_tabs_btncolor_secondary_1' => 'Secondary 1',
     'AB_templates_tabs_btncolor_secondary_2' => 'Secondary 2',
     'AB_templates_tabs_selectedtab_label' => 'Selected tab',
+    'AB_templates_tabs_wrappedcontentexample' => "{{tab}}\nTab \"{tabName}\" content\n{{end elem=\"tab\"}}",
     // gererdroits
     'ACLS_SELECT_PAGES_FILTER' => 'Filter :',
     'ACLS_SELECT_PAGES_FILTER_ON_PAGES' => 'only pages',

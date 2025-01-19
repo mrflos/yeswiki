@@ -299,6 +299,7 @@ return [
     'AB_templates_tabs_btncolor_secondary_1' => 'Secondaire 1',
     'AB_templates_tabs_btncolor_secondary_2' => 'Secondaire 2',
     'AB_templates_tabs_selectedtab_label' => 'Onglet sélectionné',
+    'AB_templates_tabs_wrappedcontentexample' => "{{tab}}\nContenu de l'onglet \"{tabName}\"\n{{end elem=\"tab\"}}",
     // gererdroits
     'ACLS_SELECT_PAGES_FILTER' => 'Filtrer :',
     'ACLS_SELECT_PAGES_FILTER_ON_PAGES' => 'les pages uniquement',

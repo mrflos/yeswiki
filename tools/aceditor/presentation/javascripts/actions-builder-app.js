@@ -116,7 +116,7 @@ export const app = {
       this.configPanels.forEach((panel) => { result = { ...result, ...panel.params.properties } })
       return result
     },
-    wikiCodeBase() {
+    wikiCodeStart() {
       let actionId = this.selectedActionId
       if (this.isBazarListeAction) actionId = 'bazarliste'
       let result = `{{${actionId}`
@@ -126,18 +126,32 @@ export const app = {
       result += ' }}'
       return result
     },
+    wikiCodeDefaultContent() {
+      let content = this.selectedAction.wrappedContentExample
+      if (this.selectedActionId === 'tabs' && this.actionParams.titles) {
+        content = this.actionParams.titles.split(',')
+          .map((tabName) => this.selectedAction.wrappedContentExample.replace('{tabName}', tabName))
+          .join('\n')
+      }
+      if (this.selectedActionId !== 'label') content = `\n${content}\n`
+      return content
+    },
+    wikiCodeEnd() {
+      return `{{end elem="${this.selectedActionId}"}}`
+    },
     wikiCode() {
-      let result = this.wikiCodeBase
+      let result = this.wikiCodeStart
       if (this.selectedAction.isWrapper && !this.isEditingExistingAction) {
-        result += `\n${this.selectedAction.wrappedContentExample}{{end elem="${this.selectedActionId}"}}`
+        result += this.wikiCodeDefaultContent
+        result += this.wikiCodeEnd
       }
       return result
     },
     wikiCodeForIframe() {
-      let result = this.wikiCodeBase
+      let result = this.wikiCodeStart
       if (this.selectedAction.isWrapper && result) {
-        result += `${this.selectedAction.wrappedContentExample}\n`
-        result += `{{end elem="${this.selectedActionId}"}}`
+        result += this.wikiCodeDefaultContent
+        result += this.wikiCodeEnd
       }
       return result
     }
@@ -159,7 +173,9 @@ export const app = {
         // use a fake dom to parse wiki code attributes
         const fakeDom = $(`<${this.currentSelectedAction}/>`)[0]
 
-        for (const attribute of fakeDom.attributes) Vue.set(this.values, attribute.name, attribute.value)
+        for (const attribute of fakeDom.attributes) {
+          Vue.set(this.values, attribute.name, attribute.value)
+        }
 
         const newActionId = fakeDom.tagName.toLowerCase()
         this.selectedActionId = newActionId

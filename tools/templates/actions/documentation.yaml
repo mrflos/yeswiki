@@ -25,6 +25,7 @@ actions:
   tabs:
     label: _t(AB_templates_tabs_label)
     isWrapper: true
+    onlyAdd: true
     wrappedContentExample: _t(AB_templates_tabs_wrappedcontentexample)
     description: _t(AB_templates_tabs_description)
     hint: _t(AB_templates_tabs_hint)
