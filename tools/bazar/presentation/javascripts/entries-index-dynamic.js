@@ -427,6 +427,9 @@ const load = (domElement) => {
         baseUrl = baseUrl.replace(/\?$/, '').replace(/\/$/, '')
         const fileName = entry[fieldName]
         const field = this.fieldInfo(fieldName)
+
+        if (fileName.endsWith('.svg')) return `${baseUrl}/files/${fileName}`
+
         let regExp = new RegExp(
           `^(${entry.id_fiche}_${field.propertyname}_.*)_(\\d{14})_(\\d{14})\\.([^.]+)$`
         )
