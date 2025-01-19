@@ -2,6 +2,7 @@ import InputHelper from './components/InputHelper.js'
 import InputHidden from './components/InputHidden.js'
 import InputText from './components/InputText.js'
 import InputPageList from './components/InputPageList.js'
+import InputNavLinks from './components/InputNavLinks.js'
 import InputCheckbox from './components/InputCheckbox.js'
 import InputList from './components/InputList.js'
 import InputDivider from './components/InputDivider.js'
@@ -35,6 +36,7 @@ const components = {
   InputReaction,
   InputIconMapping,
   InputColorMapping,
+  InputNavLinks,
   InputGeo,
   InputClass,
   InputCorrespondance,

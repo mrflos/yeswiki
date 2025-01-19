@@ -79,16 +79,16 @@ actions:
     description: _t(AB_templates_nav_description)
     hint: _t(AB_templates_nav_hint)
     properties:
-      links:
-        label: _t(AB_templates_nav_links_label)
-        type: text
-        value: _t(AB_templates_nav_links_default)
-        hint: _t(AB_templates_nav_links_hint)
-      titles:
-        label: _t(AB_templates_nav_titles_label)
-        value: _t(AB_templates_nav_titles_default)
-        hint: _t(AB_templates_nav_titles_hint)
-        type: text
+      nav-links:
+        type: nav-links
+        btn-label-add: _t(AB_templates_nav_add_tag)
+        subproperties:
+          link:
+            label: _t(AB_templates_nav_link)
+            type: page-list
+          title:
+            label: _t(AB_templates_nav_title)
+            type: text
       class:
         type: class
         subproperties:
