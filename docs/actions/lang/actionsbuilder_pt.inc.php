@@ -1,5 +1,4 @@
 <?php
-
 return [
     // AB stands for ActionsBuilder
     // Commons
