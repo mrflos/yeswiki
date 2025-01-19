@@ -93,8 +93,8 @@ return [
     // /javascripts/yeswiki-base.js
     'DATATABLES_PROCESSING' => 'Procesare în curs...',
     'DATATABLES_SEARCH' => 'Cercetător&nbsp;:',
-    'DATATABLES_LENGTHMENU' => '',
-    'DATATABLES_INFO' => "",
+    'DATATABLES_LENGTHMENU' => 'Afișează _MENU_ elemente',
+    'DATATABLES_INFO' => "Afișarea elementului _START_ la _END_ pe elementele _TOTAL_",
     'DATATABLES_INFOEMPTY' => "Se afișează 0 la 0 pe 0 element",
     'DATATABLES_INFOFILTERED' => '(filtrat de _MAX_ elemente totale)',
     'DATATABLES_LOADINGRECORDS' => 'Încărcare în curs...',
@@ -118,4 +118,12 @@ return [
     'DOC_EDIT_THIS_PAGE_ON_GITHUB' => 'Editează această pagină pe Github',
     'NOT_VALID_URL' => 'Url nevalid: {url}',
     'PAGE_AVAILABLE' => 'Pagina {tag} este disponibilă pe destinația YesWiki',
+    'PAGE_NOT_AVAILABLE' => 'Pagina {tag} nu este disponibilă pe destinația YesWiki',
+    'CONNECTED_AS_ADMIN' => 'Utilizatorul este {user} bine conectat.e pe destinația YesWiki, cu drepturi administrative.',
+    'NOT_WIKI_OR_OLD_WIKI' => 'Site-ul afișat nu pare a fi YesWiki sau versiunea sa este mai veche de 4.5.0',
+    'FORM_ID_AVAILABLE' => 'Formularul cu identificatorul {id} nu există încă pe url-ul indicat, va fi creat.',
+    'FORM_ID_NOT_AVAILABLE' => 'Formularul cu identificatorul {id} nu mai este disponibil pe url-ul indicat, trebuie să vă modificați identificatorul.',
+    'CONNECTED_BUT_NOT_ADMIN' => 'Utilizatorul este {user} bine conectat.e pe destinația YesWiki, dar nu are drepturi de administrare. Vă rugăm să vă conectați cu un cont de administrator.',
+    'FORM_ID_IS_COMPATIBLE' => 'Un formular cu același identificator ({id}) există pe url-ul dat și pare să aibă cel puțin aceleași câmpuri obligatorii. Acesta va fi utilizat pentru duplicare.',
+    'NOT_CONNECTED' => 'Trebuie să vă conectați la destinație YesWiki cu un cont care are drepturi administrative.',
 ];
