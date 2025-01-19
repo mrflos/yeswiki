@@ -659,7 +659,8 @@ if (!class_exists('attach')) {
          */
         public function showFileNotExits()
         {
-            echo '<a href="' . $this->wiki->href('upload', $this->wiki->GetPageTag(), "file=$this->file") . '" class="btn btn-primary"><i class="fa fa-upload icon-upload icon-white"></i> ' . _t('UPLOAD_FILE') . ' ' . $this->file . '</a>';
+            $filename = htmlspecialchars($this->file);
+            echo '<a href="' . $this->wiki->href('upload', $this->wiki->GetPageTag(), "file=$filename") . '" class="btn btn-primary"><i class="fa fa-upload icon-upload icon-white"></i> ' . _t('UPLOAD_FILE') . ' ' . $this->file . '</a>';
         }
 
         /**
