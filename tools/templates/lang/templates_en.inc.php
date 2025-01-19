@@ -163,27 +163,17 @@ return [
     'AB_template_actions_warning' => 'Warning',
     'AB_template_actions_danger' => 'Danger',
     'AB_template_action_accordion_label' => 'Display panels in accordion',
-    // 'AB_template_action_accordion_example' => "{{panel title=\"Titre 1\"}}\nTexte du panneau 1 à changer par la suite\n{{end elem=\"panel\"}}\n"
-    // ."{{panel title=\"Titre 2\"}}\nTexte du panneau 2 à changer par la suite\n{{end elem=\"panel\"}}\n",
+    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}\nPanel content\n{{end elem=\"panel\"}}",
     // 'AB_template_action_ariane_label' => 'Fil d\'ariane',
     'AB_template_action_col_label' => 'Column',
     // 'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
     'AB_template_col_size_label' => 'Column width',
     'AB_template_action_grid_label' => 'Display several columns',
-    // 'AB_template_action_grid_example' => "{{col size=\"3\"}}\nTexte de la colonne 1 à changer par la suite\n{{end elem=\"col\"}}\n"
-    // ."{{col size=\"3\"}}\nTexte de la colonne 2 à changer par la suite\n{{end elem=\"col\"}}\n"
-    // ."{{col size=\"3\"}}\nTexte de la colonne 3 à changer par la suite\n{{end elem=\"col\"}}\n"
-    // ."{{col size=\"3\"}}\nTexte de la colonne 4 à changer par la suite\n{{end elem=\"col\"}}\n",
     'AB_templates_nav_label' => 'Navigation bar',
     'AB_templates_nav_description' => 'Generate a menu',
-    // 'AB_templates_nav_hint' => 'LeNomDeVotrePage doit être le nom de la page dans laquelle vous mettrez cette action. Pensez à coller le code obtenu dans chacune des pages des onglets.',
-    'AB_templates_nav_links_label' => 'Links to your wiki pages',
-    // 'AB_templates_nav_links_default' => 'LeNomDeVotrePage, LaSecondePage, LaTroisiemePage', // no special chars !!
-    // 'AB_templates_nav_links_hint' => 'Nom des pages wiki séparées par des virgules',
-    // 'AB_templates_nav_titles_label' => 'Intitulés de vos pages',
-    // 'AB_templates_nav_titles_default' => 'Première page, Seconde page, Troisième page',
-    // 'AB_templates_nav_titles_hint' => 'Textes de chaque onglet séparés par des virgules',
-    'AB_templates_nav_class_label' => 'Display',
+    'AB_templates_nav_link' => 'Page',
+    'AB_templates_nav_add_tag' => 'Add tab',
+    'AB_templates_nav_title' => "Tab label",
     // 'AB_templates_nav_class_tabs' => 'Horizontal souligné',
     // 'AB_templates_nav_class_pills' => 'Horizontal sobre',
     // 'AB_templates_nav_class_justified' => 'Horizontal justifié',
@@ -284,6 +274,7 @@ return [
     'AB_templates_tabs_btncolor_secondary_1' => 'Secondary 1',
     'AB_templates_tabs_btncolor_secondary_2' => 'Secondary 2',
     'AB_templates_tabs_selectedtab_label' => 'Selected tab',
+    'AB_templates_tabs_wrappedcontentexample' => "{{tab}}\nTab \"{tabName}\" content\n{{end elem=\"tab\"}}",
     // gererdroits
     'ACLS_SELECT_PAGES_FILTER' => 'Filter :',
     'ACLS_SELECT_PAGES_FILTER_ON_PAGES' => 'only pages',
@@ -399,7 +390,7 @@ return [
     'DIAPORAMA_TEMPLATE_PARAM_ERROR' => 'Slideshow action: the param markedecirc;tre "template" points to a non-existent or illegible file. The template by d♣eacute;faut will be used ateacute.',
     'TEMPLATE_PRESET_ERROR' => "You can't apply this preset, there's a mistake!",
     'AB_template_action_label_example' => 'Text your label to change later',
-    'AB_templates_nav_hint' => 'TheName ofYourPage must be the name of the page in which you will put this action. Remember to paste the code obtained in each page of the tabs.',
+    'AB_templates_nav_hint' => 'Remember to paste the code obtained in each page of the tabs.',
     'AB_templates_nav_class_tabs' => 'Horizontal emphasized',
     'AB_templates_nav_class_pills' => 'Horizontal sobre',
     'AB_templates_nav_class_justified' => 'Justified horizontal',

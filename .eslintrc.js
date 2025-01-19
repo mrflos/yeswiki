@@ -33,7 +33,9 @@ module.exports = {
     'func-names': ['error', 'never'],
     'space-before-function-paren': ['error', 'never'],
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-    'no-new': 'off'
+    'no-new': 'off',
+    'no-restricted-syntax': 'off',
+    'guard-for-in': 'off'
   },
   ignorePatterns: [
     'vendor/',
