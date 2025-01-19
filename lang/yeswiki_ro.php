@@ -263,7 +263,7 @@ return [
     'ADMIN_BACKUPS_MESSAGE_HIBERNATION' => 'wiki este în hibernare.',
     'TRY_CHANGE_ACCESS_RIGHTS_OR_FTP_TRANSFERT' => 'Vă rugăm să vă asigurați că serverul dumneavoastră are acces la acest fișier. Dacă din anumite motive nu puteți face acest lucru, trebuie să copiați următoarele informații într-un fișier și să le transferați prin intermediul unui software de transfer de fișiere (ftp) pe serverul dintr-un fișier ',
     'INSERTION_OF_USER_IN_ADMIN_GROUP' => 'Inserarea utilizatorului specificat în grupul de administrare',
-    'SAVE' => 'înregistra',
+    'SAVE' => 'Înregistra',
     'ADMIN_BACKUPS_ARCHIVE_FILENAME' => 'Nume fișier',
     'LATEST_COMMENTS_ON' => 'Ultimele comentarii privind',
     'USER_UPDATE_QUERY_FAILED' => 'Cererea de actualizare a utilizatorului din baza de date a eșuat',
