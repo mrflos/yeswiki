@@ -43,36 +43,6 @@ actions:
           - bazartableau
         type: checkbox
         advanced: true
-      champ:
-        label: _t(AB_bazar_commons2_champ_label)
-        type: form-field
-        extraFields:
-          - id_typeannonce
-          - date_creation_fiche
-          - date_maj_fiche
-        default:
-        advanced: true
-        showExceptFor:
-          - bazarcarto
-          - bazargogocarto
-          - bazartimeline
-          - bazarannuaire
-          - bazarcalendar
-          - bazarcarousel
-      ordre:
-        label: _t(AB_bazar_commons2_ordre_label)
-        type: list
-        default: asc
-        advanced: true
-        options:
-          asc: _t(AB_bazar_commons2_ordre_option_asc)
-          desc: _t(AB_bazar_commons2_ordre_option_desc)
-        showExceptFor:
-          - bazarcarto
-          - bazargogocarto
-          - bazartimeline
-          - bazarannuaire
-          - bazarcalendar
       pagination:
         label: _t(AB_bazar_commons_pagination_label)
         hint: _t(AB_bazar_commons_pagination_hint)
@@ -246,12 +216,6 @@ actions:
         type: checkbox
         advanced: true
         default: 'false'
-      
-      
-      #      query:
-      #        advanced: true
-      #        label: _t(AB_bazar_commons2_query_label)
-      #        type: text
       datefilter:
         label: _t(AB_bazar_commons2_filter_on_date)
         type: list
@@ -282,6 +246,59 @@ actions:
         showif: facettes
         showExceptFor:
           - bazargogocarto
+      champ:
+        intro: <h3>_t(AB_bazar_sort)</h3>
+        label: _t(AB_bazar_facettes_field_label)
+        type: form-field
+        extraFields:
+          - id_typeannonce
+          - date_creation_fiche
+          - date_maj_fiche
+        default:
+        advanced: true
+        showExceptFor:
+          - bazarcarto
+          - bazargogocarto
+          - bazartimeline
+          - bazarannuaire
+          - bazarcalendar
+          - bazarcarousel
+      ordre:
+        label: _t(AB_bazar_commons2_ordre_label)
+        type: list
+        default: asc
+        advanced: true
+        options:
+          asc: _t(AB_bazar_commons2_ordre_option_asc)
+          desc: _t(AB_bazar_commons2_ordre_option_desc)
+        showExceptFor:
+          - bazarcarto
+          - bazargogocarto
+          - bazartimeline
+          - bazarannuaire
+          - bazarcalendar
+      sortfields:
+        advanced: true
+        intro: <center><h4>_t(AB_bazar_sort_dynamique)</h4></center>
+        type: sort-fields
+        btn-label-add: _t(AB_bazar_sort_add_field)
+        subproperties:
+          field:
+            label: _t(AB_bazar_facettes_field_label)
+            type: form-field
+            extraFields:
+              - date_creation_fiche
+              - date_maj_fiche
+          title:
+            label: _t(AB_bazar_facettes_title_label)
+            type: text
+        showExceptFor:
+          - bazarcarto
+          - bazargogocarto
+          - bazartimeline
+          - bazarannuaire
+          - bazarcalendar
+          - bazarcarousel
 
   # -----------------
   # Liste des Actions

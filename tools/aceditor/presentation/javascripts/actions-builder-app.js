@@ -10,6 +10,7 @@ import InputIcon from './components/InputIcon.js'
 import InputColor from './components/InputColor.js'
 import InputFormField from './components/InputFormField.js'
 import InputFacette from './components/InputFacette.js'
+import InputSortFields from './components/InputSortFields.js'
 import InputReaction from './components/InputReaction.js'
 import InputIconMapping from './components/InputIconMapping.js'
 import InputColorMapping from './components/InputColorMapping.js'
@@ -33,6 +34,7 @@ const components = {
   InputHidden,
   InputDivider,
   InputFacette,
+  InputSortFields,
   InputReaction,
   InputIconMapping,
   InputColorMapping,
