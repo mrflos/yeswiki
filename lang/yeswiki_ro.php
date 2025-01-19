@@ -224,7 +224,7 @@ return [
     'DATABASE_DOESNT_EXIST_YOU_MUST_CREATE_IT' => 'Baza de date pe care ați ales-o nu există, trebuie să o creați înainte de a instala YesWiki',
     'TRYING_TO_CREATE_DATABASE' => 'Încercați să creați o bază de date',
     'EDIT_CONFIG_HINT_DEFAULT_READ_ACL' => 'Drepturile de citire implicite ale paginilor (* pentru toți, + pentru persoanele identificate, @admins pentru grupul de administrare)',
-    'MODIFY' => 'Modifică',
+    'MODIFY' => 'Modifica',
     'USER_SHOW_COMMENTS_BY_DEFAULT' => 'În mod implicit, afișați comentarii',
     'USER_LISTGROUPMEMBERSHIPS_QUERY_FAILED' => 'Solicitarea de a lista grupurile din care face parte utilizatorul a eșuat',
     'DOESNT_EXIST' => 'nu pare să existe',
