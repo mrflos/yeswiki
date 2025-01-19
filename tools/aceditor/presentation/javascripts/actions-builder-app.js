@@ -141,7 +141,14 @@ export const app = {
           content += `${this.selectedAction.wrappedContentExample}\n`
         }
       }
-      if (!['label', 'accordion'].includes(this.selectedActionId)) content = `\n${content}\n`
+      if (this.selectedActionId === 'grid') {
+        content = '\n'
+        const size = 12 / this.values.nb
+        for (let i = 0; i < this.values.nb; i++) {
+          content += `${this.selectedAction.wrappedContentExample.replace('{size}', size)}\n`
+        }
+      }
+      if (!['label', 'accordion', 'grid'].includes(this.selectedActionId)) content = `\n${content}\n`
       return content
     },
     wikiCodeEnd() {

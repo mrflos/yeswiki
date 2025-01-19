@@ -169,10 +169,6 @@ return [
     // 'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
     'AB_template_col_size_label' => 'Column width',
     'AB_template_action_grid_label' => 'Display several columns',
-    // 'AB_template_action_grid_example' => "{{col size=\"3\"}}\nTexte de la colonne 1 à changer par la suite\n{{end elem=\"col\"}}\n"
-    // ."{{col size=\"3\"}}\nTexte de la colonne 2 à changer par la suite\n{{end elem=\"col\"}}\n"
-    // ."{{col size=\"3\"}}\nTexte de la colonne 3 à changer par la suite\n{{end elem=\"col\"}}\n"
-    // ."{{col size=\"3\"}}\nTexte de la colonne 4 à changer par la suite\n{{end elem=\"col\"}}\n",
     'AB_templates_nav_label' => 'Navigation bar',
     'AB_templates_nav_description' => 'Generate a menu',
     'AB_templates_nav_link' => 'Page',

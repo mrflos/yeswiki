@@ -363,15 +363,19 @@ Mise en forme propose 6 possibilités :
     - `type="collapsible` : permet de laisser ouvert le panel lorque la page sera chargé.
 
 - **Afficher plusieurs colonnes** : permet de créer plusieurs colonnes dans une page ou une partie de page, très utile pour des mises en page avancées.
-  - cette action ne bénificie pas encore d'aide au codage. Pour ajouter ou supprimer des colonnes à votre tableau, il suffira d'ajouter ou supprimer le code suivant) avant {{end elem="grid"}}.
 
-```yeswiki
-{{col size="3"}}
-Texte de la colonne à changer par la suite
-{{end elem="col"}}
-```
+  ```yeswiki
+  {{grid}}
+  {{col size="3"}}
+  Texte de la colonne à changer par la suite
+  {{end elem="col"}}
+  {{col size="9"}}
+  Texte de la colonne à changer par la suite
+  {{end elem="col"}}
+  {{end elem="grid"}}
+  ```
 
-!> important : la somme des size (largeur) de vos colonnes doit être égal à 12, cela veut dire que vous pouvez faire 12 colonnes de size 1 ou 3 colonnes de size 4 et bien sur mixer les possibilités (une de 6 et deux de 3)
+  !> important : la somme des size (largeur) de vos colonnes doit être égal à 12, cela veut dire que vous pouvez faire 12 colonnes de size 1 ou 3 colonnes de size 4 et bien sur mixer les possibilités (une de 6 et deux de 3)
 
 ### Syndication / Flux RSS
 

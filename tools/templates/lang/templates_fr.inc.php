@@ -178,15 +178,12 @@ return [
     'AB_template_action_ariane_label' => "Fil d'ariane",
     'AB_template_action_col_label' => 'Colonne',
     'AB_template_action_col_size_total' => 'Vous avez 12 colonnes virtuelles à répartir',
-    'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
     'AB_template_col_size_label' => 'Largeur de la colonne',
     'AB_template_action_grid_label' => 'Afficher plusieurs colonnes',
-    'AB_template_action_ariane_label' => 'Fil d\'ariane',
     'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
-    'AB_template_action_grid_example' => "{{col size=\"3\"}}\nTexte de la colonne 1 à changer par la suite\n{{end elem=\"col\"}}\n"
-        . "{{col size=\"3\"}}\nTexte de la colonne 2 à changer par la suite\n{{end elem=\"col\"}}\n"
-        . "{{col size=\"3\"}}\nTexte de la colonne 3 à changer par la suite\n{{end elem=\"col\"}}\n"
-        . "{{col size=\"3\"}}\nTexte de la colonne 4 à changer par la suite\n{{end elem=\"col\"}}\n",
+    'AB_template_action_grid_example' => "{{col size=\"{size}\"}}\nTexte de la colonne à changer par la suite\n{{end elem=\"col\"}}",
+    'AB_template_action_grid_nb' => "Nombre de colonnes",
+    'AB_template_action_grid_nb_hint' => "Vous pouvez ajuster la taille de chaque colonne via l'attribut 'size'. Le total des 'size' doit être égal à 12. Exemple : {{col size=3}} + {{col size=9}}",
     'AB_templates_nav_label' => 'Onglets avec des pages différentes',
     'AB_templates_nav_description' => 'Générer un menu',
     'AB_templates_nav_hint' => 'Pensez à coller le code obtenu dans chacune des pages des onglets.',
