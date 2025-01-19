@@ -33,8 +33,10 @@
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
               aria-haspopup="true" aria-expanded="false" >
         <span v-html="currentSort.label"></span>
-        <i v-if="currentSort.asc" class="fas fa-arrow-down"></i>
-        <i v-else class="fas fa-arrow-up"></i>
+        <template v-if="currentSort.label">
+          <i v-if="currentSort.asc" class="fas fa-arrow-down"></i>
+          <i v-else class="fas fa-arrow-up"></i>
+        </template>
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
