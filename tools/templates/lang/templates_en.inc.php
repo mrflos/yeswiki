@@ -161,7 +161,9 @@ return [
     'AB_template_actions_warning' => 'Warning',
     'AB_template_actions_danger' => 'Danger',
     'AB_template_action_accordion_label' => 'Display panels in accordion',
-    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}\nPanel content\n{{end elem=\"panel\"}}",
+    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}
+Panel content
+{{end elem=\"panel\"}}",
     // 'AB_template_action_ariane_label' => 'Fil d\'ariane',
     'AB_template_action_col_label' => 'Column',
     // 'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
@@ -272,7 +274,9 @@ return [
     'AB_templates_tabs_btncolor_secondary_1' => 'Secondary 1',
     'AB_templates_tabs_btncolor_secondary_2' => 'Secondary 2',
     'AB_templates_tabs_selectedtab_label' => 'Selected tab',
-    'AB_templates_tabs_wrappedcontentexample' => "{{tab}}\nTab \"{tabName}\" content\n{{end elem=\"tab\"}}",
+    'AB_templates_tabs_wrappedcontentexample' => "{{tab}}
+Tab \"{tabName}\" content
+{{end elem=\"tab\"}}",
     // gererdroits
     'ACLS_SELECT_PAGES_FILTER' => 'Filter :',
     'ACLS_SELECT_PAGES_FILTER_ON_PAGES' => 'only pages',
@@ -291,8 +295,6 @@ return [
     'AB_templates_section_file_label' => 'Background image',
     'TEMPLATE_TITLE_PARAMETER_REQUIRED' => 'Title parameter is mandatory',
     'TEMPLATE_ELEM_BUTTONDROPDOWN_NOT_CLOSED' => 'action {{buttondropdown ...}} must be closed by an action {{end elem="buttondropdown"}}',
-    'AB_templates_nav_titles_default' => 'First page, Second page, Third page',
-    'AB_templates_nav_titles_hint' => 'Text for each tab separated by commas',
     'AB_templates_section_shape_circ' => 'circle',
     'AB_templates_section_shape_blob2' => 'Blob 2',
     'AB_templates_section_shape_blob3' => 'Blob 3',
@@ -316,7 +318,6 @@ return [
     'TEMPLATE_ELEM_ACORDION_NOT_CLOSED' => 'action {{accordion ...}} must be closed by an action {{end elem="accordion"}}',
     'TEMPLATE_CONFIRM_DELETE_PAGE' => 'Are you sure you want to delete this page permanently ?',
     'TEMPLATE_ACTION_FOR_ADMINS_ONLY' => 'action for admins only',
-    'AB_templates_nav_links_default' => 'NameOfYourPage, SecondPage, ThirdPage',
     'AB_templates_section_height_label' => 'Height (in pixels)',
     'AB_templates_section_shape_blob4' => 'Blob 4',
     'AB_templates_section_shape_blob5' => 'Blob 5',
@@ -336,7 +337,6 @@ return [
     'AB_templates_section_shape_blob1' => 'Blob 1',
     'AB_templates_section_textalign_right' => 'Align right',
     'AB_templates_section_textalign_center' => 'Centered',
-    'AB_templates_nav_links_hint' => 'Names of wiki page name separated by commas',
     'AB_templates_panel_wrappedcontentexample' => 'Text of your box to be modified later',
     'AB_templates_section_pattern_cross' => 'Aligned Cross',
     'AB_templates_section_pattern_cross_not_aligned' => 'Cross shifted',
@@ -354,7 +354,6 @@ return [
     'AB_template_action_ariane_label' => 'Arane yarn',
     'AB_template_action_col_size_total' => 'You have 12 virtual columns to be distributed',
     'AB_template_action_col_example' => 'Text of your column to be changed later',
-    'AB_templates_nav_titles_label' => 'Title of your pages',
     'AB_templates_panel_title_default' => 'Title of my box',
     'AB_templates_panel_type_default' => 'Simple frame',
     'AB_templates_panel_type_collapsed' => 'Closed accord',

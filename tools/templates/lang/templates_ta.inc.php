@@ -174,13 +174,6 @@ return [
     'AB_templates_nav_label' => 'ONGLETS AVEC DES பக்கங்கள் வேறுபடுகின்றன',
     'AB_templates_nav_description' => 'Générer un பட்டியல்',
     'AB_templates_nav_hint' => 'Lenomdevotrepage doit être le nom de la page dans laquelle vous mettrez cete action. பென்செச் à கொலர் லு கோட் ஒப்டெனு டான்ச் சாக்யூன் டெச் பக்கங்கள் டெச் ஓன்கெட்ச்.',
-    'AB_templates_nav_links_label' => 'லீன்ச் வெர்சச் வோச் பக்கங்கள் விக்கி',
-    'AB_templates_nav_links_default' => 'Lenomdevotrepage, lasecondepage, latroisiemepage',
-    // no special chars !!
-    'AB_templates_nav_links_hint' => 'நோம் டெச் பக்கங்கள் விக்கி செபரீச் பார் டெச் கன்னி',
-    'AB_templates_nav_titles_label' => 'இன்ட்யூல்ச் டி வோச் பக்கங்கள்',
-    'AB_templates_nav_titles_default' => 'பிரீமியர் பக்கம், இரண்டாம் பக்கம், ட்ரோயிசிமே பக்கம்',
-    'AB_templates_nav_titles_hint' => 'டெக்ச்டெச் டி சாக் ஓங்க்லெட் செபரின் பார் டெச் கன்னி',
     'AB_templates_nav_class_label' => 'அஃபிசேச்',
     'AB_templates_nav_class_tabs' => 'கிடைமட்ட சோல்',
     'AB_templates_nav_class_pills' => 'கிடைமட்ட சோப்ரே',
