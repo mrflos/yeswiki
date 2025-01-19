@@ -135,7 +135,13 @@ export const app = {
           .map((tabName) => this.selectedAction.wrappedContentExample.replace('{tabName}', tabName))
           .join('\n')
       }
-      if (this.selectedActionId !== 'label') content = `\n${content}\n`
+      if (this.selectedActionId === 'accordion') {
+        content = '\n'
+        for (let i = 0; i < this.values.nb; i++) {
+          content += `${this.selectedAction.wrappedContentExample}\n`
+        }
+      }
+      if (!['label', 'accordion'].includes(this.selectedActionId)) content = `\n${content}\n`
       return content
     },
     wikiCodeEnd() {
@@ -337,7 +343,8 @@ export const app = {
         const config = this.selectedActionAllConfigs[key]
         const value = this.values[key]
         if (result.hasOwnProperty(key) || value === undefined || config && config.default && `${value}` == `${config.default}`
-            || typeof value == 'object' || config && !this.checkConfigDisplay(config)) { continue }
+            || typeof value == 'object' || config && config.mapped === false
+            || config && !this.checkConfigDisplay(config)) { continue }
         result[key] = value
       }
       // Adds values from special components

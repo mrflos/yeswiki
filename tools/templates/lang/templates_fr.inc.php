@@ -174,14 +174,13 @@ return [
     'AB_template_actions_warning' => 'Attention',
     'AB_template_actions_danger' => 'Danger',
     'AB_template_action_accordion_label' => 'Afficher des encadrés en accordéon',
+    'AB_template_action_accordion_example' => "{{panel title=\"Titre de mon encadré\" }}\nTexte de votre encadré\n{{end elem=\"panel\"}}",
     'AB_template_action_ariane_label' => "Fil d'ariane",
     'AB_template_action_col_label' => 'Colonne',
     'AB_template_action_col_size_total' => 'Vous avez 12 colonnes virtuelles à répartir',
     'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
     'AB_template_col_size_label' => 'Largeur de la colonne',
     'AB_template_action_grid_label' => 'Afficher plusieurs colonnes',
-    'AB_template_action_accordion_example' => "{{panel title=\"Titre 1\"}}\nTexte du panneau 1 à changer par la suite\n{{end elem=\"panel\"}}\n"
-        . "{{panel title=\"Titre 2\"}}\nTexte du panneau 2 à changer par la suite\n{{end elem=\"panel\"}}\n",
     'AB_template_action_ariane_label' => 'Fil d\'ariane',
     'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
     'AB_template_action_grid_example' => "{{col size=\"3\"}}\nTexte de la colonne 1 à changer par la suite\n{{end elem=\"col\"}}\n"

@@ -79,6 +79,7 @@ advanced: true # sera masqué tant que l'utilisateur ne coche pas la case "param
 hint: Mon Texte # Indications
 icon: leaf # nom d'une icone fantwesome
 doclink: https://... # Lien vers une documentation en ligne
+mapped: false # Utilisé uniquement pour générer d'autres options, ne pas reporter ce param dans le code généré
 showif: colorfield # Ce paramètre sera visible uniquement lorsque le paramètre colorfield n'est pas vide
 showif:
   format: portrait # Uniquement visible quand le paramètre "format" est égal à "portait"

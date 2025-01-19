@@ -163,6 +163,7 @@ return [
     'AB_template_actions_warning' => 'Warning',
     'AB_template_actions_danger' => 'Danger',
     'AB_template_action_accordion_label' => 'Display panels in accordion',
+    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}\nPanel content\n{{end elem=\"panel\"}}",
     // 'AB_template_action_ariane_label' => 'Fil d\'ariane',
     'AB_template_action_col_label' => 'Column',
     // 'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
