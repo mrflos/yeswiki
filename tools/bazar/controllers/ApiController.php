@@ -7,6 +7,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use YesWiki\Bazar\Service\BazarListService;
+use YesWiki\Bazar\Service\EntryExtraFieldsService;
 use YesWiki\Bazar\Service\EntryManager;
 use YesWiki\Bazar\Service\FormManager;
 use YesWiki\Bazar\Service\SemanticTransformer;
@@ -235,14 +236,12 @@ class ApiController extends YesWikiController
     public function getBazarListData()
     {
         $bazarListService = $this->getService(BazarListService::class);
+
+        /* ------------------------------------ */
+        /*             Format Params            */
+        /* ------------------------------------ */
         $externalIds = $_GET['externalIds'] ?? null;
         $externalModeActivated = (is_array($externalIds) && isset($_GET['externalModeActivated'])) ? in_array($_GET['externalModeActivated'], [1, true, '1', 'true'], true) : false;
-        $forms = $bazarListService->getForms([
-            'externalModeActivated' => $externalModeActivated,
-            'externalIds' => $externalIds,
-            'refresh' => isset($_GET['refresh']) ? in_array($_GET['refresh'], [1, true, '1', 'true'], true) : false,
-        ]);
-
         $formattedGet = array_map(function ($value) {
             return ($value === 'true') ? true : (($value === 'false') ? false : $value);
         }, $_GET);
@@ -259,6 +258,17 @@ class ApiController extends YesWikiController
         $formattedGet['searchfields'] = $searchfields;
         $formattedGet['externalModeActivated'] = $externalModeActivated;
 
+        /* ------------------------------------ */
+        /*               Get Data               */
+        /* ------------------------------------ */
+        // All forms
+        $forms = $bazarListService->getForms([
+            'externalModeActivated' => $externalModeActivated,
+            'externalIds' => $externalIds,
+            'refresh' => isset($_GET['refresh']) ? in_array($_GET['refresh'], [1, true, '1', 'true'], true) : false,
+        ]);
+
+        // Entries
         $entries = $bazarListService->getEntries(
             $formattedGet + [
                 'user' => null,
@@ -272,62 +282,70 @@ class ApiController extends YesWikiController
             ],
             $forms
         );
+
+        // Filters
         $filters = $bazarListService->getFilters($formattedGet, $entries, $forms);
 
-        // Basic fields
-        $fieldList = ['id_fiche', 'bf_titre', 'date_maj_fiche', 'date_creation_fiche'];
-        // If no id, we need idtypeannonce (== formId) to filter
-        if (!isset($_GET['id'])) {
-            $fieldList[] = 'id_typeannonce';
-        }
-        // fields for colo / icon
-        $fieldList = array_merge($fieldList, [$_GET['colorfield'] ?? null, $_GET['iconfield'] ?? null]);
-        // Fields for filters
-        foreach ($filters as $filter) {
-            $fieldList[] = $filter['propName'];
-        }
-        // Fields used to search
-        foreach ($searchfields as $field) {
-            $fieldList[] = $field;
-        }
-        // Fields used by template
-        foreach ($_GET['displayfields'] ?? [] as $field) {
-            $fieldList[] = $field;
-        }
-        // Fields for external urls
-        if ($formattedGet['externalModeActivated']) {
-            $fieldList[] = 'url';
-        }
-        // extra fields required by template
-        $fieldList = array_merge($fieldList, $_GET['necessary_fields'] ?? []);
-        $fieldList = array_values(array_unique(array_filter($fieldList))); // array_values to have incremental keys
+        /* ------------------------------------ */
+        /*            Transform Data            */
+        /* ------------------------------------ */
 
-        $formIds = array_map(function ($entry) {
+        // Associated Forms
+        $formIds = array_unique(array_map(function ($entry) {
             return $entry['id_typeannonce'];
-        }, $entries);
-        $formIds = array_unique($formIds);
-        // Reduce the size of the data sent by transforming entries object into array
-        // we use the $fieldMapping to transform back the data when receiving data in the front end
-        $entries = array_map(function ($entry) use ($fieldList) {
-            $result = [];
-            foreach ($fieldList as $field) {
-                if (!empty($entry[$field]) && !empty($_GET['displayfields']['subtitle']) && $_GET['displayfields']['subtitle'] == $field) {
-                    $entry[$field] = $this->wiki->Format($entry[$field]);
-                }
-                $result[] = $entry[$field] ?? null;
-            }
-            if ($_GET['extrafields'] === "true") {
-                $result['extrafields'] = $this->getService(EntryManager::class)->getExtraFields($entry['id_fiche']);
-            }
-
-            return $result;
-        }, $entries);
+        }, $entries));
         $usedForms = array_filter($forms, function ($form) use ($formIds) {
             return in_array($form['bn_id_nature'], $formIds);
         });
         $usedForms = array_map(function ($f) {
             return $f['prepared'];
         }, $usedForms);
+
+        // Basic fields
+        $fieldList = ['id_fiche', 'bf_titre', 'url'];
+        // If no id, we need idtypeannonce (== formId) to filter
+        if (!isset($_GET['id'])) {
+            $fieldList[] = 'id_typeannonce';
+        }
+        // fields for color / icon
+        $fieldList = array_merge($fieldList, [$_GET['colorfield'] ?? null, $_GET['iconfield'] ?? null]);
+        // Fields used to search
+        $fieldList = array_merge($fieldList, $searchfields);
+        // Fields used to sort
+        $fieldList = array_merge($fieldList, $_GET['sortfields'] ?? []);
+        // Fields used by template
+        $fieldList = array_merge($fieldList, $_GET['displayfields'] ?? []);
+        // extra fields required by template
+        $fieldList = array_merge($fieldList, $_GET['necessary_fields'] ?? []);
+        // Fields for filters
+        foreach ($filters as $filter) {
+            $fieldList[] = $filter['propName'];
+        }
+
+        // filter blank values, remove duplicates, array_values to have incremental keys
+        $fieldList = array_values(array_unique(array_filter($fieldList)));
+
+        // Reduce the size of the data sent by transforming entries object into array
+        // we use the $fieldMapping to transform back the data when receiving data in the front end
+        $entryFieldsService = $this->getService(EntryExtraFieldsService::class);
+        $entries = array_map(function ($entry) use ($fieldList, $entryFieldsService) {
+            $entryFieldsService->setEntryId($entry['id_fiche']);
+            $result = [];
+            foreach ($fieldList as $field) {
+                // Format subtitle (why?)
+                if (!empty($entry[$field]) && !empty($_GET['displayfields']['subtitle']) && $_GET['displayfields']['subtitle'] == $field) {
+                    $entry[$field] = $this->wiki->Format($entry[$field]);
+                }
+                // handle specific fields like comments, reactions
+                if (empty($entry[$field])) {
+                    $entry[$field] = $entryFieldsService->get($field);
+                }
+                $result[] = $entry[$field] ?? null;
+            }
+
+            return $result;
+        }, $entries);
+
 
         return new ApiResponse(
             [

@@ -90,7 +90,7 @@ In order to optimize the request, dynamic bazalist loads by default only the min
 ```twig
 {% extends "@bazar/entries/index-dynamic.twig" %}
 
-{% set necessary_fields = ['bf_titre', 'bf_description'] %}
+{% set necessary_fields = ['bf_description'] %}
 
 {% block display_entries %}
   <div v-for="entry in entriesToDisplay">
@@ -99,6 +99,31 @@ In order to optimize the request, dynamic bazalist loads by default only the min
   </div>
 {% endblock %}
 ```
+
+| **Default Data Sent**            |
+| -------------------------------- |
+| `id_fiche`                       |
+| `bf_titre`                       |
+| `url`                            |
+| Alls fields needed for searching |
+| Alls fields needed for filtering |
+| Alls fields needed for sorting   |
+
+| **Available Fields**                                              |
+| ----------------------------------------------------------------- |
+| Alls fields configured in your form. For example `bf_description` |
+
+| **Available Metadata Fields** |
+| ----------------------------- |
+| `owner`                       |
+| `url`                         |
+| `date_creation_fiche`         |
+| `date_maj_fiche`              |
+| `comments`                    |
+| `comments_count`              |
+| `reactions`                   |
+| `reactions_count`             |
+| `triples`                     |
 
 ##### Override existing template
 

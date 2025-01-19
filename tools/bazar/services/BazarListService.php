@@ -34,7 +34,7 @@ class BazarListService
         // External mode activated ?
         if (($options['externalModeActivated'] ?? false) === true) {
             return $this->externalBazarService
-                        ->getFormsForBazarListe($options['externalIds'], $options['refresh']);
+                ->getFormsForBazarListe($options['externalIds'], $options['refresh']);
         } else {
             return $this->formManager->getAll();
         }
@@ -97,7 +97,7 @@ class BazarListService
         } else {
             $entries = $this->entryManager->search(
                 [
-                    "regexp" => $options["regexp"]??"0", 
+                    "regexp" => $options["regexp"] ?? "0",
                     'queries' => $options['query'] ?? '',
                     'formsIds' => $options['idtypeannonce'] ?? [],
                     'keywords' => $_REQUEST['q'] ?? '',
@@ -110,13 +110,6 @@ class BazarListService
             );
         }
         $entries = $this->replaceDefaultImage($options, $forms, $entries);
-
-        // add extra informations (comments, reactions, metadatas)
-        if ($options['extrafields'] === true) {
-            foreach ($entries as $i => $entry) {
-                $entries[$i]['extrafields'] = $this->entryManager->getExtraFields($entry['id_fiche']);
-            }
-        }
 
         // filter entries on datefilter parameter
         if (!empty($options['datefilter'])) {

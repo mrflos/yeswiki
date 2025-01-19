@@ -101,31 +101,6 @@ class EntryManager
     }
 
     /**
-     * return comments, reactions and metadatas for given entry tag.
-     */
-    public function getExtraFields($tag): array
-    {
-        $extraFields = [];
-        $extraFields['reactions'] = $this->wiki->services->get(ReactionManager::class)->getReactions($tag, [], '', true);
-        $extraFields['comments'] = $this->wiki->services->get(CommentService::class)->loadCommentsRecursive($tag);
-
-        $extraFields['nb_comments'] = $this->getNbComments($extraFields['comments']);
-        $extraFields['triples'] = $this->wiki->services->get(TripleStore::class)->getMatching($tag, null, null, '=');
-
-        return $extraFields;
-    }
-
-    public function getNbComments($comments)
-    {
-        $nb = count($comments);
-        foreach ($comments as $c) {
-            $nb += $this->getNbComments($c['comments']);
-        }
-
-        return $nb;
-    }
-
-    /**
      * Get one specified fiche.
      *
      * @param $tag
@@ -361,15 +336,12 @@ class EntryManager
                                 $nom = substr($nom, 0, -1);
                             }
 
-                            if (($params["regexp"]??"0") == "1")
-                            {
-                            	$requeteSQL .= 'JSON_VALID(body) AND JSON_EXTRACT(body, "$.' . $nom . '") REGEXP "' . $val . '"';                                                      	
-	                        }
-	                        else
-	                        {                                
+                            if (($params["regexp"] ?? "0") == "1") {
+                                $requeteSQL .= 'JSON_VALID(body) AND JSON_EXTRACT(body, "$.' . $nom . '") REGEXP "' . $val . '"';
+                            } else {
                                 $requeteSQL .= '(body REGEXP \'"' . $nom . '":("' . $rawCriteron .
-                                '"|"[^"]*,' . $rawCriteron . '"|"' . $rawCriteron . ',[^"]*"|"[^"]*,'
-                                . $rawCriteron . ',[^"]*")\')';
+                                    '"|"[^"]*,' . $rawCriteron . '"|"' . $rawCriteron . ',[^"]*"|"[^"]*,'
+                                    . $rawCriteron . ',[^"]*")\')';
                             }
                         }
                     }

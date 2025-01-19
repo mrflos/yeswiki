@@ -3,6 +3,7 @@
 use YesWiki\Bazar\Controller\EntryController;
 use YesWiki\Bazar\Exception\ParsingMultipleException;
 use YesWiki\Bazar\Service\BazarListService;
+use YesWiki\Bazar\Service\EntryExtraFieldsService;
 use YesWiki\Bazar\Service\EntryManager;
 use YesWiki\Core\Controller\AuthController;
 use YesWiki\Core\Exception\TemplateNotFound;
@@ -287,6 +288,17 @@ class BazarListeAction extends YesWikiAction
             }
             $GLOBALS['_BAZAR_']['nbbazarliste']++;
             $this->arguments['nbbazarliste'] = $GLOBALS['_BAZAR_']['nbbazarliste'];
+
+            // add extra informations (comments, reactions, metadatas)
+            $entryFieldsService = $this->getService(EntryExtraFieldsService::class);
+            if ($this->arguments['extrafields'] === true) {
+                foreach ($entries as $i => $entry) {
+                    $entryFieldsService->setEntryId($entry['id_fiche']);
+                    foreach (EntryExtraFieldsService::EXTRA_FIELDS as $field) {
+                        $entries[$i][$field] =  $entryFieldsService->get($field);
+                    }
+                }
+            }
 
             // TODO put in all bazar templates
             $this->wiki->AddJavascriptFile('tools/bazar/presentation/javascripts/bazar.js');

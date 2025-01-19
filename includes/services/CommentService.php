@@ -270,6 +270,14 @@ class CommentService implements EventSubscriberInterface
         return $this->wiki->render('@core/comment-list.twig', $com);
     }
 
+    public function getCommentsCount($tag)
+    {
+        return $this->dbService->count("
+            SELECT * FROM {$this->dbService->prefixTable('pages')} 
+            WHERE comment_on = '{$this->dbService->escape($tag)}' AND latest = 'Y'
+        ");
+    }
+
     private function setUserData(array $comment, string $key, array &$data)
     {
         if (in_array($key, ['user', 'owner'], true) && !empty($comment[$key])) {

@@ -105,6 +105,15 @@ class ReactionManager
         return $res;
     }
 
+    public function getReactionsCount($tag)
+    {
+        $type = self::TYPE_URI;
+        return $this->dbService->count("
+            SELECT * FROM {$this->dbService->prefixTable('triples')} 
+            WHERE resource = '{$this->dbService->escape($tag)}' AND property = '{$type}'
+        ");
+    }
+
     public function getActionParameters($page, $idReaction = null)
     {
         if ($this->entryManager->isEntry($page)) {
