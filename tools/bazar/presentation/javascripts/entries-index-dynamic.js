@@ -209,7 +209,7 @@ const load = (domElement) => {
           })
         })
         this.search = ''
-        this.currentSort = this.sortOptions[0]
+        if (this.sortOptions.length > 0) this.currentSort = this.sortOptions[0]
       },
       saveFiltersIntoHash() {
         if (!this.ready) return
@@ -371,7 +371,7 @@ const load = (domElement) => {
           this.sortOptions.push({ field, label, asc: true })
           this.sortOptions.push({ field, label, asc: false })
         })
-        this.currentSort = this.sortOptions[0]
+        if (this.sortOptions.length > 0) this.currentSort = this.sortOptions[0]
 
         // First display filters cause entries can be a bit long to load
         this.filters = this.initFiltersFromHash(filters, savedHash)

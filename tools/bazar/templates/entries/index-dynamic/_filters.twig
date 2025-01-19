@@ -26,7 +26,7 @@
     </div>
 
     {# Sort button #}
-    <div class="input-group dropdown sort-by" v-if="params.sortfields">
+    <div class="input-group dropdown sort-by" v-if="sortOptions.length > 0">
       <span class="input-group-addon addon-icon">
         {{ _t('BAZ_SORTED_BY') }}
       </span>
