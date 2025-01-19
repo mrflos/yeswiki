@@ -42,25 +42,25 @@ class ApiController extends YesWikiController
             '<h4>' . _t('LIST') . ' ' . _t('USERS') . '</h4>' . "\n" .
             '<p><code>GET ' . $urlUser . '</code></p>' . "\n" .
             '<h4>' . _t('GET') . ' ' . _t('USER') . '</h4>' . "\n" .
-            '<p><code>GET ' . $urlUser . '/{userId}' . '</code></p>' . "\n" . '<h4>' . _t('CREATE') . ' ' . _t('USER') . '</h4>' . "\n" .
+            '<p><code>GET ' . $urlUser . '/{userId}</code></p>' . "\n" . '<h4>' . _t('CREATE') . ' ' . _t('USER') . '</h4>' . "\n" .
             '<p><code>POST ' . $urlUser . '</code></p>' . "\n" .
-            '<p><code> ' . 'name=…&email=…' . '</code></p>' . "\n" .
+            '<p><code> name=…&email=…</code></p>' . "\n" .
             '<h4>' . _t('DELETE') . ' ' . _t('USER') . '</h4>' . "\n" .
-            '<p><code>POST ' . $urlUser . '/{userId}/delete' . '</code></p>' . "\n";
+            '<p><code>POST ' . $urlUser . '/{userId}/delete</code></p>' . "\n";
 
         $urlGroup = $this->wiki->Href('', 'api/groups');
         $output .= '<h2>' . _t('GROUPS') . '</h2>' . "\n" .
             '<h4>' . _t('LIST') . ' ' . _t('GROUPS') . '</h4>' . "\n" .
             '<p><code>GET ' . $urlGroup . '</code></p>' . "\n" .
             '<h4>' . _t('GET') . ' ' . _t('GROUP') . '</h4>' . "\n" .
-            '<p><code>GET ' . $urlGroup . '/{group_name}' . '</code></p>' . "\n" . '<h4>' . _t('CREATE') . ' ' . _t('GROUP') . '</h4>' . "\n" .
+            '<p><code>GET ' . $urlGroup . '/{group_name}</code></p>' . "\n" . '<h4>' . _t('CREATE') . ' ' . _t('GROUP') . '</h4>' . "\n" .
             '<p><code>POST ' . $urlGroup . '</code></p>' . "\n" .
-            '<p><code> ' . 'name=…&users[0]=…&users[1]' . '</code></p>' . "\n" .
+            '<p><code> name=…&users[0]=…&users[1]</code></p>' . "\n" .
             '<h4>' . _t('DELETE') . ' ' . _t('GROUP') . '</h4>' . "\n" .
-            '<p><code>POST ' . $urlGroup . '/{group_name}/delete' . '</code></p>' . "\n" .
+            '<p><code>POST ' . $urlGroup . '/{group_name}/delete</code></p>' . "\n" .
             '<h4>' . _t('UPDATE') . ' ' . _t('GROUP') . '</h4>' . "\n" .
-            '<p><code>POST ' . $urlGroup . '/{group_name}/update' . '</code></p>' . "\n" .
-            '<p><code> ' . 'users[0]=…&users[1]' . '</code></p>' . "\n";
+            '<p><code>POST ' . $urlGroup . '/{group_name}/update</code></p>' . "\n" .
+            '<p><code> users[0]=…&users[1]</code></p>' . "\n";
 
         $urlPages = $this->wiki->Href('', 'api/pages');
         $output .= '<h2>' . _t('PAGES') . '</h2>' . "\n" .

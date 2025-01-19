@@ -17,20 +17,20 @@
       <i class="fa fa-folder-open"></i>
     </a>
   {% endif %}
-  <span class="dropup">
+  {#<span class="dropup">#}
     <a
       title="{{ _t('TEMPLATE_DUPLICATE_PAGE') ~ ' ' ~ page }}"
-      title="{{ _t('TEMPLATE_DUPLICATE_PAGE') ~ ' ' ~ page }}"
-      class="link-duplicate dropdown-toggle"
+      class="link-duplicate {#dropdown-toggle#}"
       id="duplicate-dropup"
-      data-toggle="dropdown"
+      href="{{ linkduplicate }}"
+      {# data-toggle="dropdown"
       aria-haspopup="true"
-      aria-expanded="false"
+      aria-expanded="false" #}
     >
       <i class="fas fa-copy"></i><span>{{ _t('TEMPLATE_DUPLICATE') }}</span>
-      <span class="caret"></span>
+      {#<span class="caret"></span>#}
     </a>
-    <ul class="dropdown-menu" aria-labelledby="duplicate-dropup">
+    {#<ul class="dropdown-menu" aria-labelledby="duplicate-dropup">
       <li>
         <a
           href="{{ linkduplicate }}"
@@ -48,7 +48,7 @@
         </a>
       </li>
     </ul>
-  </span>
+  </span>#}
   {% if linkdeletepage is defined %}
     <a 
       href="{{ linkdeletepage }}"
