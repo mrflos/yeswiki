@@ -117,4 +117,5 @@ return [
     // Doc
     'DOC_EDIT_THIS_PAGE_ON_GITHUB' => 'Editează această pagină pe Github',
     'NOT_VALID_URL' => 'Url nevalid: {url}',
+    'PAGE_AVAILABLE' => 'Pagina {tag} este disponibilă pe destinația YesWiki',
 ];
