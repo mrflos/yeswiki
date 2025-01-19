@@ -33,7 +33,7 @@ Old school templates might be easier to write, but dynamic templates will provid
 Create a file inside `custom/templates/bazar`, either a `.twig` file or a `.tpl.html`
 
 ```twig
-<!-- custom/templates/bazar/my-template.twig -->
+{# custom/templates/bazar/my-template.twig #}
 {% for fiche in fiches %}
   <div>{{ fiche.bf_titre }}</div>
 {% endfor %}
@@ -60,7 +60,7 @@ example : 'AB_filename_label' => 'Template custom annuaire',
 Create a file inside `custom/templates/bazar/entries/index-dynamic-templates/`
 
 ```twig
-<!-- custom/templates/bazar/entries/index-dynamic-templates/my-template.twig  -->
+{# custom/templates/bazar/entries/index-dynamic-templates/my-template.twig #}
 {% extends "@bazar/entries/index-dynamic.twig" %}
 
 {% block display_entries %}
@@ -116,7 +116,6 @@ In order to optimize the request, dynamic bazalist loads by default only the min
 | **Available Metadata Fields** |
 | ----------------------------- |
 | `owner`                       |
-| `url`                         |
 | `date_creation_fiche`         |
 | `date_maj_fiche`              |
 | `comments`                    |
@@ -125,12 +124,26 @@ In order to optimize the request, dynamic bazalist loads by default only the min
 | `reactions_count`             |
 | `triples`                     |
 
+##### Debuging
+
+Tip: You can display the currently loaded data with `<pre v-html="entry"></pre>`
+
+```twig
+{% extends "@bazar/entries/index-dynamic.twig" %}
+
+{% block display_entries %}
+  <div v-for="entry in entriesToDisplay">
+    <pre v-html="entry"></pre>
+  </div>
+{% endblock %}
+```
+
 ##### Override existing template
 
 Existing yeswiki templates contains block declaration so you can easily override specific parts, for example
 
 ```twig
-<!-- custom/templates/bazar/entries/index-dynamic-templates/my-template.twig  -->
+{# custom/templates/bazar/entries/index-dynamic-templates/my-template.twig #}
 {% extends "@bazar/entries/index-dynamic-templates/card.twig" %}
 
 {% block area_footer %}
@@ -150,7 +163,7 @@ See the code of [existing templates](https://github.com/YesWiki/yeswiki/tree/dor
 You can also include dedicated Vue components, in order to introduce your own VueJs javascript code.
 
 ```twig
-<!-- custom/templates/bazar/entries/index-dynamic-templates/my-template.twig  -->
+{# custom/templates/bazar/entries/index-dynamic-templates/my-template.twig #}
 {% extends "@bazar/entries/index-dynamic.twig" %}
 
 {% block assets %}
@@ -163,7 +176,7 @@ You can also include dedicated Vue components, in order to introduce your own Vu
 ```
 
 ```js
-<!-- custom/javascripts/bazar/DemoComponent.js  -->
+// custom/javascripts/bazar/DemoComponent.js
 Vue.component('DemoComponent', {
   props: ['entry'],
   computed: {
