@@ -281,6 +281,7 @@ actions:
           - bazarcalendar
       sortfields:
         advanced: true
+        showif: dynamic
         intro: <center><h4>_t(AB_bazar_sort_dynamique)</h4></center>
         type: sort-fields
         btn-label-add: _t(AB_bazar_sort_add_field)
