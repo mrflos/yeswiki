@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TAGS_ACTION_ADMINTAGS' => 'Actie {{admintags ...}}',
     'TAGS_ACTION_ADMINTAGS_ONLY_FOR_ADMINS' => 'de actie is voorbehouden aan de beheerdersgroep',
