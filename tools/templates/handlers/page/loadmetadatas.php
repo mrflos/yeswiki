@@ -1,9 +1,10 @@
 <?php
+
 /**
-* Handler AJAX pour récupérer les meta-données.
-*/
+ * Handler AJAX pour récupérer les meta-données.
+ */
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 header('Content-type: application/json; charset=UTF-8');

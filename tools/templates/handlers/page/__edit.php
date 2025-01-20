@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 // Si une valeur de body est passee en paramétre GET (et pas POST) on l'ajoute en titre dans la nouvelle page vierge

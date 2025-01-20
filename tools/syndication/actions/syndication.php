@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 include_once 'tools/syndication/libs/syndication.lib.php';
@@ -11,11 +11,11 @@ require_once __DIR__ . '/../vendor/autoload.php';
 if (file_exists('cache')) {
     if (!is_writable('cache')) {
         echo '<p class="alert alert-error alert-danger">' . _t('SYNDICATION_ACTION_SYNDICATION') . ' : '
-             . _t('SYNDICATION_WRITE_ACCESS_TO_CACHE_FOLDER') . '.</p>' . "\n";
+            . _t('SYNDICATION_WRITE_ACCESS_TO_CACHE_FOLDER') . '.</p>' . "\n";
     }
 } else {
     echo '<p class="alert alert-error alert-danger">' . _t('SYNDICATION_ACTION_SYNDICATION') . ' : '
-         . _t('SYNDICATION_CREATE_CACHE_FOLDER') . '.</p>' . "\n";
+        . _t('SYNDICATION_CREATE_CACHE_FOLDER') . '.</p>' . "\n";
 }
 
 // recuperation des parametres
@@ -40,7 +40,7 @@ $template = $this->GetParameter('template');
 $path = empty($template) ? 'tools/syndication/templates/liste.tpl.html' : realpath('tools/syndication/templates/' . basename($template));
 if (empty($path) || !file_exists($path)) {
     echo '<p class="alert alert-error alert-danger">' . _t('SYNDICATION_ACTION_SYNDICATION') . ' : '
-             . htmlspecialchars($template) . ' ' . _t('SYNDICATION_TEMPLATE_NOT_FOUND') . '.</p>' . "\n";
+        . htmlspecialchars($template) . ' ' . _t('SYNDICATION_TEMPLATE_NOT_FOUND') . '.</p>' . "\n";
     $path = 'tools/syndication/templates/liste.tpl.html';
 }
 
@@ -113,8 +113,8 @@ if (!empty($urls)) {
                                 $aso_page['description'],
                                 $nbchar,
                                 '... <a class="lien_lire_suite" href="' . $aso_page['url']
-                                . '" ' . ($nouvellefenetre ? 'target="_blank" ' : '')
-                                . 'title="' . _t('SYNDICATION_READ_MORE') . '">' . _t('SYNDICATION_READ_MORE') . '</a>'
+                                    . '" ' . ($nouvellefenetre ? 'target="_blank" ' : '')
+                                    . 'title="' . _t('SYNDICATION_READ_MORE') . '">' . _t('SYNDICATION_READ_MORE') . '</a>'
                             );
                         }
                     }
@@ -156,5 +156,5 @@ if (!empty($urls)) {
     echo '</div>' . "\n";
 } else {
     echo '<div class="alert alert-danger"><strong>' . _t('SYNDICATION_ACTION_SYNDICATION') . '</strong> : '
-         . _t('SYNDICATION_PARAM_URL_REQUIRED') . '.</div>' . "\n";
+        . _t('SYNDICATION_PARAM_URL_REQUIRED') . '.</div>' . "\n";
 }

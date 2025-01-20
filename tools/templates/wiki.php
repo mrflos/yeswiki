@@ -4,7 +4,7 @@
  * Fichier de lancement et de configuration de l'extension Templates.
  */
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 // Theme par défaut

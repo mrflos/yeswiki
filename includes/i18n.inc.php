@@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 // Security check
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 /**
@@ -75,7 +75,7 @@ function _convert($text, $fromencoding, $database = false)
                     YW_CHARSET,
                     mb_detect_encoding($text, 'UTF-8, ISO-8859-1, ISO-8859-15', true)
                 );
-            // return \ForceUTF8\Encoding::toLatin1($text);
+                // return \ForceUTF8\Encoding::toLatin1($text);
             } else {
                 return $text;
             }

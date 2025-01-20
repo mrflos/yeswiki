@@ -7,7 +7,7 @@ return [
     'TEMPLATE_LINK_PARAMETER_REQUIRED' => 'param & egrave; tre "இணைப்பு" WOMPIGATOIRE',
     'TEMPLATE_RSS_LAST_CHANGES' => 'ஃப்ளக்ச் ஆர்எச்எச் டெச் டெர்னி & எக்ரேவ்; ரெச் பக்கங்கள் மோடிஃபி & ஈகூட்; எச்',
     'TEMPLATE_RSS_LAST_COMMENTS' => 'ஃப்ளக்ச் ஆர்எச்எச் டெச் டெர்னியர்ச் கருத்துரை',
-    'TEMPLATE_NO_DEFAULT_THEME' => 'Les fichiers du template par d&eacute;faut ont disparu, l\'utilisation des templates est impossible.<br />Veuillez r&eacute;installer le tools template ou contacter l\'administrateur du site',
+    'TEMPLATE_NO_DEFAULT_THEME' => 'Les fichiers du template par défaut ont disparu, l\'utilisation des templates est impossible.<br />Veuillez réinstaller le tools template ou contacter l\'administrateur du site',
     'TEMPLATE_CUSTOM_GRAPHICS' => 'தோற்றம் டி லா பக்கம்',
     'TEMPLATE_SAVE' => 'சாவர்',
     'TEMPLATE_REEDIT' => 'எடிட்டர் டி நோவியோ',

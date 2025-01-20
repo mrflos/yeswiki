@@ -34,7 +34,7 @@ function truncate($text, $length = 100, $ending = ' [..]', $exact = false, $cons
                 // if it's an "empty element" with or without xhtml-conform closing slash (f.e. <br/>)
                 if (preg_match(
                     '/^<(\s*.+?\/\s*|\s*(img|br|input|hr|area|base|basefont|col|frame|isindex|link|meta|param)'
-                    . '(\s.+?)?)>$/is',
+                        . '(\s.+?)?)>$/is',
                     $line_matchings[1]
                 )) {
                     // do nothing
@@ -154,7 +154,7 @@ function getRelativeDate($date)
         if ($time >= $after) {
             $relative = date('l', $date) . ' prochain';
         } elseif ($time >= $afterTomorrow) {
-            $relative = 'Apr&egrave;s demain';
+            $relative = 'Après demain';
         } elseif ($time >= $tomorrow) {
             $relative = 'Demain';
         } elseif ($time >= $today) {
@@ -172,7 +172,7 @@ function getRelativeDate($date)
     }
     // si l'heure est présente dans la date originale, on l'ajoute
     if (preg_match('/[0-9]{2}:[0-9]{2}/', $date)) {
-        $relative .= ' &agrave; ' . date('H:i', $time);
+        $relative .= ' à ' . date('H:i', $time);
     }
 
     return $relative;

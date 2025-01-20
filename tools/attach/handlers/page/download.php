@@ -6,7 +6,7 @@
 
 //vérification de sécurité
 if (!WIKINI_VERSION) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 if (!class_exists('attach')) {
     include 'tools/attach/libs/attach.lib.php';

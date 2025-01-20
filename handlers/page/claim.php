@@ -2,7 +2,7 @@
 
 // Vérification de sécurité
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 use YesWiki\Core\Service\AclService;

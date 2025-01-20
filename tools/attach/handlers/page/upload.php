@@ -6,20 +6,20 @@
 
 //vérification de sécurité
 if (!WIKINI_VERSION) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 ob_start();
 ?>
 <div class="page">
-<?php
+    <?php
 
-if (!class_exists('attach')) {
-    include 'tools/attach/libs/attach.lib.php';
-}
-$att = new attach($this);
-$att->doUpload();
-unset($att);
-?>
+    if (!class_exists('attach')) {
+        include 'tools/attach/libs/attach.lib.php';
+    }
+    $att = new attach($this);
+    $att->doUpload();
+    unset($att);
+    ?>
 </div>
 <?php
 $output = ob_get_contents();

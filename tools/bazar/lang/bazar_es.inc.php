@@ -224,7 +224,7 @@ return [
     'BAZ_DRAG_n_DROP_CHECKBOX_FROM_THE_LIST' => 'de la lista',
     'BAZ_DRAG_n_DROP_CHECKBOX_SEE_ITEM' => 'Ver el elemento',
     'BAZ_DRAG_n_DROP_CHECKBOX_YOUR' => 'Su',
-    'BAZ_DRAG_n_DROP_CHECKBOX_ORDER_ITEM_INFO' => 'Mover los elementos para ponerlos en el orden que tu gusta. Podria tambi&eacute;n moverlos de izquierda a derecha',
+    'BAZ_DRAG_n_DROP_CHECKBOX_ORDER_ITEM_INFO' => 'Mover los elementos para ponerlos en el orden que tu gusta. Podria también moverlos de izquierda a derecha',
     'BAZ_DRAG_n_DROP_CHECKBOX_LIST' => 'lista',
     'BAZ_DRAG_n_DROP_CHECKBOX_EMPTY_LIST' => 'Vac&iacute;a lista',
     'BAZ_DRAG_n_DROP_CHECKBOX_FILTER_TEXT' => 'N&uacute;mero de elementos : ',

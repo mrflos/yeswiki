@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 if (empty($_POST['config'])) {
@@ -129,8 +129,10 @@ if (!$result) {
     mysqli_rollback($dblink);
     foreach ($tablesNames as $tableName) {
         try {
-            if (mysqli_num_rows(mysqli_query($dblink, "SHOW TABLES LIKE \"{$config['table_prefix']}$tableName\";")) !== 0 // existing table
-                && mysqli_num_rows(mysqli_query($dblink, "SELECT * FROM `{$config['table_prefix']}$tableName`;")) === 0) { /* empty table */
+            if (
+                mysqli_num_rows(mysqli_query($dblink, "SHOW TABLES LIKE \"{$config['table_prefix']}$tableName\";")) !== 0 // existing table
+                && mysqli_num_rows(mysqli_query($dblink, "SELECT * FROM `{$config['table_prefix']}$tableName`;")) === 0
+            ) { /* empty table */
                 mysqli_query($dblink, "DROP TABLE IF EXISTS `{$config['table_prefix']}$tableName`;");
             }
         } catch (\Throwable $th) {
@@ -220,8 +222,9 @@ foreach (['allow_raw_html', 'rewrite_mode'] as $name) {
 ?>
 <br />
 <div class="alert alert-info"><?php echo _t('NEXT_STEP_WRITE_CONFIGURATION_FILE'); ?>
-<tt><?php echo $wakkaConfigLocation; ?></tt>.</br>
-<?php echo _t('VERIFY_YOU_HAVE_RIGHTS_TO_WRITE_FILE'); ?>.  </div>
+    <tt><?php echo $wakkaConfigLocation; ?></tt>.</br>
+    <?php echo _t('VERIFY_YOU_HAVE_RIGHTS_TO_WRITE_FILE'); ?>.
+</div>
 <?php
 $_POST['config'] = json_encode($config);
 require_once 'setup/writeconfig.php';

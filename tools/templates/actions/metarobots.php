@@ -7,7 +7,7 @@ use YesWiki\Templates\Service\Utils;
  */
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 if ($this->GetMethod() != 'show') {
@@ -15,7 +15,7 @@ if ($this->GetMethod() != 'show') {
 } else {
     if (isset($this->config['meta']['robots'])) {
         echo '<meta name="robots" content="'
-          . $this->config['meta']['robots'] . '">' . "\n";
+            . $this->config['meta']['robots'] . '">' . "\n";
     }
     // canonical url
     $url = $this->href('', $this->getPageTag());
@@ -24,7 +24,7 @@ if ($this->GetMethod() != 'show') {
     // opengraph
     echo "\n" . '  <!-- opengraph -->' . "\n";
     echo '  <meta property="og:site_name" content="'
-      . $this->config['wakka_name'] . '" />' . "\n";
+        . $this->config['wakka_name'] . '" />' . "\n";
     $utils = $this->services->get(\YesWiki\Templates\Service\Utils::class);
     $title = $utils->getTitleFromBody($this->page);
     echo '  <meta property="og:title" content="' . (!empty($title) ? $title : $GLOBALS['wiki']->config['wakka_name']) . '" />' . "\n";

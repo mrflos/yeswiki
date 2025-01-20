@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 //attributs du body
 $toastDuration = !empty($this->config['toast_duration']) ? $this->config['toast_duration'] : '3000';

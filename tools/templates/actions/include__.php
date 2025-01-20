@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 // si la page inclue n'existe pas, on propose de la créer
@@ -34,8 +34,10 @@ if (!empty($actif) && $actif == '1') {
 }
 
 // rajoute le javascript pour le double clic si la configuration l'autorise, si le parametre est activé et les droits en écriture existent
-if (!empty($this->config['allow_doubleclic']) && in_array($this->config['allow_doubleclic'], ['1', 'yes', true])
-    && !empty($dblclic) && $dblclic == '1' && $this->HasAccess('write', $incPageName)) {
+if (
+    !empty($this->config['allow_doubleclic']) && in_array($this->config['allow_doubleclic'], ['1', 'yes', true])
+    && !empty($dblclic) && $dblclic == '1' && $this->HasAccess('write', $incPageName)
+) {
     $actiondblclic = ' ondblclick="document.location=\'' . $this->Href('edit', $incPageName) . '\';"';
 } else {
     $actiondblclic = '';

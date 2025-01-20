@@ -2,7 +2,7 @@
 
 // Verification de securite
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 // on ne fait quelque chose uniquement dans le cas d'une requete jsonp
 if (isset($_GET['jsonp_callback'])) {

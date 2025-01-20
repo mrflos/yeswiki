@@ -7,7 +7,7 @@ use YesWiki\Core\Controller\PageController;
 
 // Vérification de sécurité
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 // get services
@@ -78,10 +78,12 @@ if ($this->UserIsOwner() || $this->UserIsAdmin()) {
             }
         }
     } else {
-        if (isset($_GET['eraselink'])
+        if (
+            isset($_GET['eraselink'])
             && $_GET['eraselink'] === 'oui'
             && isset($_GET['confirme'])
-            && ($_GET['confirme'] === 'oui')) {
+            && ($_GET['confirme'] === 'oui')
+        ) {
             // a trouble occured, invald token ?
             try {
                 $csrfTokenController->checkToken('main', 'POST', 'csrf-token', false);

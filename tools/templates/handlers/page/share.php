@@ -2,7 +2,7 @@
 
 // Vérification de sécurité
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+  exit('accès direct interdit');
 }
 
 $html = '<a href="http://www.facebook.com/sharer.php?u=' . urlencode($this->Href()) . '&amp;t=' . urlencode($this->GetPageTag()) . '" title="' . _t('TEMPLATE_SHARE_FACEBOOK') . '" class="bouton_share"><img loading="lazy" src="tools/templates/presentation/images/facebook.png" width="32" height="32" alt="' . _t('TEMPLATE_SHARE_FACEBOOK') . '" /></a>' . "\n";
@@ -31,9 +31,9 @@ $html .= '
 
 // si l'on est dans une requete ajax, pas besoin de titre, et pas besoin de charger tout le html
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    echo mb_convert_encoding('<div class="page">' . "\n" . $html . "\n" . '<div>', 'UTF-8', 'ISO-8859-1');
+  echo mb_convert_encoding('<div class="page">' . "\n" . $html . "\n" . '<div>', 'UTF-8', 'ISO-8859-1');
 } else {
-    echo $this->Header();
-    echo "<div class=\"page\">\n<h2>" . _t('TEMPLATE_SEE_SHARING_OPTIONS') . ' ' . $this->GetPageTag() . "</h2>\n$html\n<hr class=\"hr_clear\" />\n</div>\n";
-    echo $this->Footer();
+  echo $this->Header();
+  echo "<div class=\"page\">\n<h2>" . _t('TEMPLATE_SEE_SHARING_OPTIONS') . ' ' . $this->GetPageTag() . "</h2>\n$html\n<hr class=\"hr_clear\" />\n</div>\n";
+  echo $this->Footer();
 }

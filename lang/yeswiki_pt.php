@@ -4,7 +4,7 @@ return [
     'BY' => 'por',
     'TRIPLES' => 'Triplos',
     'UNKNOWN' => 'Desconhecido',
-    'INVALID_ACTION' => 'A&ccedil;&atilde;o inv&aacute;lida',
+    'INVALID_ACTION' => 'Ação inválida',
     'ERROR_NO_ACCESS' => 'Erro: você não tem acesso a essa ação',
     'NO_REQUEST_FOUND' => 'Não encontrado. Wakka requer PHP 4.1.0 ou mais recente!',
     'SITE_BEING_UPDATED' => 'Este site está sendo atualizado. Por favor, tente mais tarde.',

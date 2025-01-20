@@ -4,7 +4,7 @@ use Symfony\Component\Security\Csrf\CsrfTokenManager;
 use YesWiki\Core\Service\ThemeManager;
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 $themeManager = $this->services->get(ThemeManager::class);

@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'HASHCASH_ERROR_PAGE_UNSAVED' => '<strong>La page ne peut pas &ecirc;tre enregistr&eacute;e.</strong><br />Vous avez peut-&ecirc;tre double cliqu&eacute; sur le bouton "Sauver", entrainant 2 sauvegardes cons&eacute;cutives trop rapproch&eacute;es, ou laiss&eacute; la page ouverte en mode &eacute;dition trop longtemps.<br />Pour enregistrer vos modifications, veuillez copier le contenu, rafraichir la page et coller votre page modifi&eacute;e &agrave; nouveau.',
+    'HASHCASH_ERROR_PAGE_UNSAVED' => '<strong>La page ne peut pas être enregistrée.</strong><br />Vous avez peut-être double cliqué sur le bouton "Sauver", entrainant 2 sauvegardes consécutives trop rapprochées, ou laissé la page ouverte en mode édition trop longtemps.<br />Pour enregistrer vos modifications, veuillez copier le contenu, rafraichir la page et coller votre page modifiée à nouveau.',
     'HASHCASH_ANTISPAM_ACTIVATED' => 'Protection anti-spam active',
-    'HASHCASH_COMMENT_NOT_SAVED_MAYBE_YOU_ARE_A_ROBOT' => 'Votre commentaire n\'a pas &eacute;t&eacute; enregistr&eacute;, le wiki pense que vous êtes un robot.',
+    'HASHCASH_COMMENT_NOT_SAVED_MAYBE_YOU_ARE_A_ROBOT' => 'Votre commentaire n\'a pas été enregistré, le wiki pense que vous êtes un robot.',
     'HASHCASH_GENERAL_PASSWORD' => 'Réponse&nbsp;:&nbsp;',
     'HASHCASH_SEND' => 'Envoyer',
     'CAPTCHA_ERROR_PAGE_UNSAVED' => 'La page n\'a pas été enregistrée car vous n\'avez pas rentré le mot de vérification.',
     'CAPTCHA_ERROR_WRONG_WORD' => 'La page n\'a pas été enregistrée car le mot de vérification rentré n\'est pas correct.',
-    'CAPTCHA_VERIFICATION' => 'V&eacute;rification pour sauver la page',
+    'CAPTCHA_VERIFICATION' => 'Vérification pour sauver la page',
     'CAPTCHA_WRITE' => 'Ecrire ici le mot présent dans l\'image',
-    'DESPAM_PAGES_SELECTION' => 'S&eacute;lection des pages',
+    'DESPAM_PAGES_SELECTION' => 'Sélection des pages',
     'DESPAM_ALL_CHANGES_FROM' => 'Toutes les modifications depuis',
     'DESPAM_FOR_ONE_HOUR' => 'depuis 1 heure',
     'DESPAM_FOR_X_HOURS' => 'depuis {x} heures',

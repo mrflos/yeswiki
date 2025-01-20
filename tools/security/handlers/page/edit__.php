@@ -4,7 +4,7 @@ use YesWiki\Security\Controller\SecurityController;
 use YesWiki\Security\Service\HashCashService;
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 if ($this->HasAccess('write') && $this->HasAccess('read')) {

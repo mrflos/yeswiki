@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Handler 'css' to render a page with a CSS header.
  *
@@ -10,7 +11,7 @@
  * @see     https://yeswiki.net
  */
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 header('Content-Type: text/css');

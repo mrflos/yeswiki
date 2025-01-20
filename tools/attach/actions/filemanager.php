@@ -6,7 +6,7 @@
 
 //vérification de sécurité
 if (!WIKINI_VERSION) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 if ($this->HasAccess('write')) {

@@ -8,7 +8,7 @@
 *******************************************************************************/
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 return;

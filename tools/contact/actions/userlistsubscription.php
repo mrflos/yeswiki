@@ -1,11 +1,12 @@
 <?php
+
 /**
-* listsubscription.php.
-*
-* Description : action permettant l'envoi par mail d'une demande d'inscription ou desinscription a une liste
-*/
+ * listsubscription.php.
+ *
+ * Description : action permettant l'envoi par mail d'une demande d'inscription ou desinscription a une liste
+ */
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 // valable que pour les utilisateurs connectes

@@ -3,7 +3,7 @@
 use YesWiki\Core\Service\ThemeManager;
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 $themeManager = $this->services->get(ThemeManager::class);
@@ -47,8 +47,9 @@ if ($favoriteStyle != 'none') {
 
 // on ajoute le preset css selectionne du theme
 if (($favoriteStyle != 'none')
-        && $presetsActivated
-        && substr($favoritePreset, -4, 4) == '.css') {
+    && $presetsActivated
+    && substr($favoritePreset, -4, 4) == '.css'
+) {
     echo $this->LinkCSSFile($presetFile);
 }
 

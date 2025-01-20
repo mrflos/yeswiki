@@ -8,7 +8,7 @@ return [
     'HASHCASH_SEND' => 'Send',
     'CAPTCHA_ERROR_PAGE_UNSAVED' => 'This page was not saved because you didn\'t enter the verification word.',
     'CAPTCHA_ERROR_WRONG_WORD' => 'This page was not saved because the verification word was wrong...',
-    'CAPTCHA_VERIFICATION' => 'V&eacute;rification for saving page',
+    'CAPTCHA_VERIFICATION' => 'Vérification for saving page',
     'CAPTCHA_WRITE' => 'Type the word written in the picture',
     'EDIT_CONFIG_HINT_USE_CAPTCHA' => 'Activate usage of captcha before save (true or false)',
     'EDIT_CONFIG_HINT_USE_HASHCASH' => 'Activate wiki antispam hashcash (activated by default)',

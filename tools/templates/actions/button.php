@@ -3,7 +3,7 @@
 use YesWiki\Core\Service\LinkTracker;
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 // adresse vers quoi le bouton pointe

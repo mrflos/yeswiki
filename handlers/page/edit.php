@@ -6,7 +6,7 @@ use YesWiki\Security\Controller\SecurityController;
 
 // Vérification de sécurité
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 // on initialise la sortie:

@@ -8,7 +8,7 @@ use YesWiki\Core\Service\LinkTracker;
 use YesWiki\Security\Controller\SecurityController;
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 
 if (!class_exists('attach')) {
@@ -90,7 +90,7 @@ if (!class_exists('attach')) {
         }
 
         /**
-         * Cr&eacute;ation d'une suite de r&eacute;pertoires r&eacute;cursivement.
+         * Création d'une suite de répertoires récursivement.
          */
         public function mkdir_recursif($dir)
         {
@@ -161,33 +161,33 @@ if (!class_exists('attach')) {
         }
 
         /**
-         * Calcule le nom complet du fichier attach&eacute; en fonction du safe_mode, du nom et de la date de
+         * Calcule le nom complet du fichier attaché en fonction du safe_mode, du nom et de la date de
          * revision la page courante.
          * Le nom du fichier "mon fichier.ext" attache ? la page "LaPageWiki"sera :
          *  mon_fichier_datepage_update.ext
          *     update : date de derniere mise a jour du fichier
-         *     datepage : date de revision de la page ? laquelle le fichier a ete li&eacute;/mis a jour
+         *     datepage : date de revision de la page ? laquelle le fichier a ete lié/mis a jour
          *  Si le fichier n'est pas une image un '_' est ajoute : mon_fichier_datepage_update.ext_
          *  Selon la valeur de safe_mode :
          *  safe_mode = on :     LaPageWiki_mon_fichier_datepage_update.ext_
-         *  safe_mode = off:     LaPageWiki/mon_fichier_datepage_update.ext_ avec "LaPageWiki" un sous-repertoire du r&eacute;pertoire upload.
+         *  safe_mode = off:     LaPageWiki/mon_fichier_datepage_update.ext_ avec "LaPageWiki" un sous-repertoire du répertoire upload.
          */
         public function GetFullFilename($newName = false)
         {
             // use current date if page has no date that could arrive when using page 'root' via Actions Builder
             $pagedate = $this->convertDate(
                 isset($this->wiki->page['time'])
-                ? $this->wiki->page['time']
-                : (
-                    $this->wiki->tag == 'root'
-                    ? date('Y-m-d H:i:s')
-                    : null // error
-                )
+                    ? $this->wiki->page['time']
+                    : (
+                        $this->wiki->tag == 'root'
+                        ? date('Y-m-d H:i:s')
+                        : null // error
+                    )
             );
 
             // decompose le nom du fichier en nom+extension ou en page/nom+extension
             if (preg_match('`^((.+)/)?(.*)\.(.*)$`', str_replace(' ', '_', $this->file), $match)) {
-                list(, , $file['page'], $file['name'], $file['ext']) = $match;
+                list(,, $file['page'], $file['name'], $file['ext']) = $match;
                 if (!$this->isPicture() && !$this->isAudio() && !$this->isVideo() && !$this->isFreeMindMindMap() && !$this->isWma() && !$this->isFlashvideo()) {
                     $file['ext'] .= '_';
                 }
@@ -433,7 +433,7 @@ if (!class_exists('attach')) {
             $this->displayPDF = $this->wiki->GetParameter('displaypdf');
             $this->data = $this->wiki->services->get(YesWiki\Templates\Service\Utils::class)->getDataParameter();
 
-            // test de validit&eacute; des parametres
+            // test de validité des parametres
             if (empty($this->file)) {
                 $this->attachErr = '<div class="alert alert-danger"><strong>' . _t('ATTACH_ACTION_ATTACH') . '</strong> : ' . _t('ATTACH_PARAM_FILE_NOT_FOUND') . '.</div>' . "\n";
             }
@@ -480,7 +480,7 @@ if (!class_exists('attach')) {
         }
 
         /**
-         * Affiche le fichier li&eacute; comme une image.
+         * Affiche le fichier lié comme une image.
          */
         public function showAsImage($fullFilename)
         {
@@ -512,7 +512,7 @@ if (!class_exists('attach')) {
 
             // c'est une image : balise <IMG..../>
             $img = '<img loading="lazy" class="img-responsive" src="' . $this->GetScriptPath() . $img_name . '" ' .
-            'alt="' . $this->desc . ($this->link ? "\nLien vers: $this->link" : '') . '" width="' . $width . '" height="' . $height . '" />';
+                'alt="' . $this->desc . ($this->link ? "\nLien vers: $this->link" : '') . '" width="' . $width . '" height="' . $height . '" />';
             // test si c'est une image sensible
             $classDataForLinks =
                 strstr($this->classes, 'new-window')
@@ -557,7 +557,7 @@ if (!class_exists('attach')) {
         }
 
         /**
-         * Affiche le fichier li&eacute; comme un lien.
+         * Affiche le fichier lié comme un lien.
          */
         public function showAsLink($fullFilename)
         {
@@ -571,8 +571,8 @@ if (!class_exists('attach')) {
         {
             $output = $this->wiki->format(
                 '{{player url="' . $this->wiki->getBaseUrl() . '/' . $fullFilename . '" type="video" ' .
-                'height="' . (!empty($height) ? $height : '300px') . '" ' .
-                'width="' . (!empty($width) ? $width : '400px') . '"}}'
+                    'height="' . (!empty($height) ? $height : '300px') . '" ' .
+                    'width="' . (!empty($width) ? $width : '400px') . '"}}'
             );
             echo $output;
             $this->showUpdateLink();
@@ -591,17 +591,15 @@ if (!class_exists('attach')) {
         {
             $output = $this->wiki->format(
                 '{{player url="' . $this->wiki->getBaseUrl() . '/' . $fullFilename . '" ' .
-                'height="' . (!empty($height) ? $height : '650px') . '" ' .
-                'width="' . (!empty($width) ? $width : '100%') . '"}}'
+                    'height="' . (!empty($height) ? $height : '650px') . '" ' .
+                    'width="' . (!empty($width) ? $width : '100%') . '"}}'
             );
             echo $output;
             $this->showUpdateLink();
         }
 
         // Affiche le fichier liee comme un fichier mind map  freemind
-        public function showAsWma($fullFilename)
-        {
-        }
+        public function showAsWma($fullFilename) {}
 
         // End Paste
 
@@ -650,8 +648,8 @@ if (!class_exists('attach')) {
         public function showUpdateLink()
         {
             echo ' <a href="' .
-            $this->wiki->href('upload', $this->wiki->GetPageTag(), "file=$this->file") .
-            "\" title='Mise &agrave; jour'>" . $this->attachConfig['update_symbole'] . '</a>';
+                $this->wiki->href('upload', $this->wiki->GetPageTag(), "file=$this->file") .
+                "\" title='Mise à jour'>" . $this->attachConfig['update_symbole'] . '</a>';
         }
 
         /**
@@ -733,11 +731,11 @@ if (!class_exists('attach')) {
             $this->file = $_GET['file'];
             echo '<h3>' . _t('ATTACH_UPLOAD_FORM_FOR_FILE') . ' ' . $this->file . "</h3>\n";
             echo '<form enctype="multipart/form-data" name="frmUpload" method="POST" action="' . $this->wiki->href('upload', $this->wiki->GetPageTag()) . "\">\n"
-            . '	<input type="hidden" name="wiki" value="' . $this->wiki->GetPageTag() . "/upload\" />\n"
-            . '	<input type="hidden" name="MAX_FILE_SIZE" value="' . $this->attachConfig['max_file_size'] . "\" />\n"
-            . "	<input type=\"hidden\" name=\"file\" value=\"$this->file\" />\n"
-            . "	<input type=\"file\" name=\"upFile\" size=\"50\" /><br />\n"
-            . '	<input class="btn btn-primary" type="submit" value="' . _t('ATTACH_SAVE') . "\" />\n"
+                . '	<input type="hidden" name="wiki" value="' . $this->wiki->GetPageTag() . "/upload\" />\n"
+                . '	<input type="hidden" name="MAX_FILE_SIZE" value="' . $this->attachConfig['max_file_size'] . "\" />\n"
+                . "	<input type=\"hidden\" name=\"file\" value=\"$this->file\" />\n"
+                . "	<input type=\"file\" name=\"upFile\" size=\"50\" /><br />\n"
+                . '	<input class="btn btn-primary" type="submit" value="' . _t('ATTACH_SAVE') . "\" />\n"
                 . "</form>\n";
         }
 
@@ -953,11 +951,11 @@ if (!class_exists('attach')) {
             echo $this->wiki->render($isAction
                 ? '@attach/attach-filemanager.twig'
                 : '@attach/attach-filemanager-handler.twig', [
-                    'tag' => $this->wiki->tag,
-                    'method' => ($this->wiki->GetMethod() != 'show' ? $this->wiki->GetMethod() : ''),
-                    'trash' => $trash,
-                    'files' => $files,
-                ]);
+                'tag' => $this->wiki->tag,
+                'method' => ($this->wiki->GetMethod() != 'show' ? $this->wiki->GetMethod() : ''),
+                'trash' => $trash,
+                'files' => $files,
+            ]);
         }
 
         /**
@@ -1187,7 +1185,7 @@ if (!class_exists('attach')) {
             if (!$result) {
                 // in case of error, show error code
                 return $imgTrans->error;
-            // if there were no errors
+                // if there were no errors
             } else {
                 return $imgTrans->target_path;
             }

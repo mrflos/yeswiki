@@ -378,5 +378,5 @@ return [
     'EDIT_CONFIG_HINT_BAZ_ADRESSE_MAIL_ADMIN' => 'Adreça correu de l\'expedidor de les modificacions de les fitxes basar',
     'BAZ_MEMBERS' => 'membres',
     'BAZ_CARD_NBCOL_TOO_HIGH' => 'El paràmetre `nbcol` no pot ser tingut en compte amb `estil="horitzontal"` i continua limitat a 2!',
-    'BAZ_INTRO_AJOUT_FORMULAIRE' => '<strong> formulari cr&eacute;&eacute; ara per ara.</strong><br />Podeu cr&eacute;er un nou formulari manualment (cliqueu sobre el botó amb un signe més),<br />o importar els formularis d\'un YesWiki existint (com a https://yeswiki.net/servidor).',
+    'BAZ_INTRO_AJOUT_FORMULAIRE' => '<strong> formulari créé ara per ara.</strong><br />Podeu créer un nou formulari manualment (cliqueu sobre el botó amb un signe més),<br />o importar els formularis d\'un YesWiki existint (com a https://yeswiki.net/servidor).',
 ];

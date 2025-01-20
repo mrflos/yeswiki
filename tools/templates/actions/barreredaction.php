@@ -7,7 +7,7 @@ use YesWiki\Core\Service\FavoritesManager;
 use YesWiki\Security\Controller\SecurityController;
 
 if (!defined('WIKINI_VERSION')) {
-    exit('acc&egrave;s direct interdit');
+    exit('accès direct interdit');
 }
 $user = $this->services->get(AuthController::class)->getLoggedUser();
 if ((!empty($user) || $this->HasAccess('write')) && $this->method != 'revisions') {
