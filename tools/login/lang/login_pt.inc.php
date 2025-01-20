@@ -1,5 +1,4 @@
 <?php
-
 return [
     'LOGIN_SIGNUP' => 'Registrar',
     'LOGIN_LOGIN' => 'Entrar',
