@@ -18,7 +18,7 @@ export default {
     },
     getValues() {
       return {
-        links: this.elements.map((g) => g.link).filter((e) => e != '').join(','),
+        links: this.elements.map((g) => g.link.replace(/\s+/g, '-')).filter((e) => e != '').join(','),
         titles: this.elements.map((g) => g.title).filter((e) => e != '').join(',')
       }
     }
