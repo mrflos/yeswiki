@@ -180,7 +180,6 @@ return [
     'BAZ_FORM_EDIT_INSCRIPTIONLISTE_EMAIL_LABEL' => 'Email pour s\'inscrire',
     'BAZ_FORM_EDIT_INSCRIPTIONLISTE_EMAIL_FIELDID' => 'Champ du formulaire fournissant l\'email à inscire',
     'BAZ_FORM_EDIT_INSCRIPTIONLISTE_MAILINGLIST' => 'Type de service de diffusion',
-    'BAZ_FORM_EDIT_CUSTOM_HTML_LABEL' => 'Custom HTML',
     'BAZ_FORM_EDIT_EDIT_CONTENT_LABEL' => 'Contenu lors de la saisie',
     'BAZ_FORM_EDIT_VIEW_CONTENT_LABEL' => 'Contenu lors de l\'affichage d\'une fiche',
     'BAZ_FORM_EDIT_LISTEFICHES_FORMID_LABEL' => 'id du formulaire lié',

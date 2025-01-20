@@ -22,7 +22,6 @@ return [
     'TEMPLATE_EDIT_THIS_PAGE' => 'Editar la página',
     'TEMPLATE_CLICK_TO_SEE_REVISIONS' => 'Las última modificaciones de la página',
     'TEMPLATE_LAST_UPDATE' => 'Modificado el',
-    'TEMPLATE_OWNER' => 'Proprietario',
     'TEMPLATE_YOU' => 'tu',
     'TEMPLATE_NO_OWNER' => 'No proprietario',
     'TEMPLATE_CLAIM' => 'Apropriación',

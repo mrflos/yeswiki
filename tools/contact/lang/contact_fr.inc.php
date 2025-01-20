@@ -48,7 +48,6 @@ return [
     'CONTACT_LOGIN_IF_CONNECTED' => 'Si vous avez un identifiant, veuillez vous identifier.',
 
     'CONTACT_SUBSCRIBE' => 'S\'abonner',
-    'CONTACT_UNSUBSCRIBE' => 'Se d&eacute;sabonner',
 
     'CONTACT_FROM' => 'de',
     'CONTACT_TEMPLATE_NOT_FOUND' => 'Fichier de template non trouvé',

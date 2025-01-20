@@ -357,7 +357,6 @@ return [
     'EVENT_EVERY_X_WEEKS' => 'Toutes les X semaines',
     'EVENT_EVERY_MONTHS' => 'Tous les mois',
     'EVENT_EVERY_X_MONTHS' => 'Tous les X mois',
-    'EVENT_EVERY_X_MONTHS' => 'Tous les X mois',
     'EVENT_EVERY_YEARS' => 'Tous les ans',
     'EVENT_EVERY_X_YEARS' => 'Toutes les X années',
     'EVENT_EXCEPT_LABEL' => 'Sauf',

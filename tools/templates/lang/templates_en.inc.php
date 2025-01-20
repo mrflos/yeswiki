@@ -27,7 +27,6 @@ return [
     'TEMPLATE_WIKINAME_IS_NOT_A_PAGE' => 'This WikiWord is not a page',
     'TEMPLATE_CLICK_TO_SEE_REVISIONS' => 'Last changes on this page',
     'TEMPLATE_LAST_UPDATE' => 'Modified on :',
-    'TEMPLATE_OWNER' => 'Owner',
     'TEMPLATE_YOU' => 'you',
     'TEMPLATE_NO_OWNER' => 'No owner',
     'TEMPLATE_CLAIM' => 'Claim',
