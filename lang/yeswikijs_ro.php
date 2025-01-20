@@ -1,7 +1,5 @@
 <?php
-
 return [
-    'APRIL' => 'Aprilie',
     'AUGUST' => 'August',
     'CANCEL' => 'Anula',
     'COPY' => 'Copia',
