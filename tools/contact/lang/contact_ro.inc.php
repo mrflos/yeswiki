@@ -1,16 +1,16 @@
 <?php
 return [
     // actions/abonnement.php
-    'CONTACT_ACTION_ABONNEMENT' => '',
+    'CONTACT_ACTION_ABONNEMENT' => 'Acțiune {{subscripție ..}}',
     'CONTACT_MAIL_REQUIRED' => 'parametrul de mail, necesar, lipsește.',
     // actions/contact.php
-    'CONTACT_ACTION_CONTACT' => '',
+    'CONTACT_ACTION_CONTACT' => 'Acțiune {{contact ..}}',
     // actions/desabonnement.php
-    'CONTACT_ACTION_DESABONNEMENT' => '',
+    'CONTACT_ACTION_DESABONNEMENT' => 'Acțiune {{unsubscribe ..}}',
     // actions/listsubscription.php
-    'CONTACT_ACTION_LISTSUBSCRIPTION' => '',
+    'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Acțiune {{listsubscription ..}}',
     // actions/mailinglist.php
-    'CONTACT_ACTION_MAILINGLIST' => '',
+    'CONTACT_ACTION_MAILINGLIST' => 'Acțiune {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'parametrul "listă" necesar (aceasta este adresa de e-mail a listei de corespondență)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'Mesaje pentru a adăuga sau elimina din listă',
     'CONTACT_SENT_TO_THE_LIST' => 'Trimite în listă',
@@ -31,7 +31,7 @@ return [
     'CONTACT_SUBJECT' => 'Subiectul mesajului',
     'CONTACT_YOUR_MESSAGE' => 'Mesajul tău',
     'CONTACT_SEND_MESSAGE' => 'Trimite mesajul',
-    'CONTACT_LISTSUBSCRIBE_REQUIRED' => '',
+    'CONTACT_LISTSUBSCRIBE_REQUIRED' => 'parametrul "list", care conține adresa de e-mail a listei, de tip nomelys@domaine.ext, este necesar',
     'CONTACT_USER_NOT_LOGGED_IN' => 'Trebuie să fiți identificat pentru a accesa acțiunile posibile.',
     'CONTACT_USER_NO_EMAIL' => 'Trebuie să fiți identificat pentru a accesa acțiunile posibile.',
     'CONTACT_ENTER_NAME' => 'Trebuie să introduceți un nume.',
@@ -104,7 +104,7 @@ return [
     'AB_contact_action_template_label' => 'Șablon personalizat',
     'AB_contact_action_template_hint' => 'Ex.: complete-contact-form.tpl.html',
     'AB_contact_action_class_label' => 'clasa css',
-    'AB_listsubscription_action_label' => '',
+    'AB_listsubscription_action_label' => 'listsubscription',
     'AB_mailperiod_action_label' => "Abonează-te pentru a primi periodic conținutul unei pagini prin e-mail",
     'AB_mailperiod_action_hint' => 'Pentru ca această acțiune să funcționeze, trebuie să verificați unele setări de pe server. Vezi documentaţia despre https://yeswiki.net/?MailPeriod',
     'AB_mailinglist_action_label' => 'Abonează-te masiv la un newsletter',
