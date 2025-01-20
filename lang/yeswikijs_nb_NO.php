@@ -1,7 +1,5 @@
 <?php
-
 return [
-    'APRIL' => '',
     'AUGUST' => '',
     'CANCEL' => '',
     'COPY' => '',
