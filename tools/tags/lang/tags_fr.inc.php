@@ -28,10 +28,8 @@ return [
     'TAGS_ACTION_FILTERTAGS' => 'Action {{filtertags ...}}',
     'TAGS_NO_FILTERS' => 'pas de param&egrave;tre "filter1" trouv&eacute;, alors qu\'il est obligatoire.',
     'TAGS_ONLY_ONE_DOUBLEPOINT' => 'il ne peut y avoir qu\'une fois le double point (:) pour indiquer le label, plusieurs trouv&eacute;s.',
-
     'TAGS_ACTION_INCLUDEPAGES' => 'Action {{includepages ...}}',
     'TAGS_NO_PARAM_PAGES' => 'pas de param&egrave;tre "pages" trouv&eacute;, alors qu\'il est obligatoire.',
-
     'TAGS_NO_RESULTS' => 'Pas de r&eacute;sultats avec ces mots cl&eacute;s.',
     'TAGS_RESULTS' => 'r&eacute;sultats',
     'TAGS_FILTER' => 'Filtrer',

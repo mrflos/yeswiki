@@ -22,8 +22,7 @@ return [
     'TAGS_SEE_ALL_PAGES_WITH_THIS_TAGS' => 'See all the pages with this keyword',
     'TAGS_ALERT_PAGE_ALREADY_MODIFIED' => 'ALERT : Someone else modified this page while you were editing it.<br />Please copy your changes and paste the in edition after refreshing the page.',
     'TAGS_ANSWER_THIS_COMMENT' => 'Answer this comment',
-    'TAGS_DATE_FORMAT' => "o
- d.m.Y a\t H:i:s",
+    'TAGS_DATE_FORMAT' => "o d.m.Y a\t H:i:s",
     'TAGS_WRITE_YOUR_COMMENT_HERE' => 'Write your comment here...',
     'TAGS_ADD_YOUR_COMMENT' => 'Add your comment',
     'TAGS_ACTION_FILTERTAGS' => 'Action {{filtertags ...}}',

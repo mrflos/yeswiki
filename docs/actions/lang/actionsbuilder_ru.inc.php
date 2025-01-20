@@ -1,11 +1,8 @@
 <?php
 return [
-    // AB stands for ActionsBuilder
-    // Commons
     'AB_LEFT' => 'Левый',
     'AB_RIGHT' => 'Прямо сейчас',
     'AB_advanced' => 'Расширенный',
-    // BAZAR
     'AB_bazar_label' => 'Просмотр данных из формы',
     'AB_bazar_commons_colorfield_label' => 'Поле для цвета',
     'AB_bazar_commons_colormapping_color_label' => 'Цвет',
@@ -56,7 +53,6 @@ return [
     'AB_bazar_facettes_title_label' => 'Название',
     'AB_bazar_bf_date_debut_evenement_label' => 'Поле для начала',
     'AB_bazar_bf_date_fin_evenement_label' => 'Пол для конечного срока',
-    // Bazarcarto
     'AB_bazarcarto_label' => 'Картография',
     'AB_bazarcarto_description' => 'Карты будут в виде маркера.',
     'AB_bazarcarto_hint' => 'Поле геолокации должно присутствовать в вашем виде',
@@ -86,12 +82,10 @@ return [
     'AB_bazarcarto_barregestion_label' => 'Динамический выход',
     'AB_bazarcarto_navigation_label' => 'Кнопки управления Zoom',
     'AB_bazarcarto_zoommolette_label' => 'Чтобы увеличить колесо мыши',
-    // BazarAgenda
     'AB_bazaragenda_label' => 'Повестка дня',
     'AB_bazaragenda_description' => 'Файлы будут в виде события в повестке дня.',
     'AB_bazaragenda_nbcol_label' => 'Число столбцов',
     'AB_bazaragenda_modal_label' => 'Отображается модальное окно при нажатии',
-    // BazarCalendar
     'AB_bazarcalendar' => 'Календарь',
     'AB_bazarcalendar_description' => 'Факторы будут в виде события в календаре.',
     'AB_bazarcalendar_showlist_label' => 'Посмотреть кнопку \'запланировать "',
@@ -104,7 +98,6 @@ return [
     'AB_bazarcalendar_initialview_day' => 'День',
     'AB_bazarcalendar_initialview_list' => 'Планирование',
     'AB_bazarcarto_showicalbutton_label' => 'Показать дружественную кнопку экспорта',
-    // BazarListe
     'AB_bazarliste_label' => 'Список',
     'AB_bazarliste_description' => 'Карты будут в виде аккордеонов',
     'AB_bazarliste_displayfields_title' => 'Отбор полей для включения',
@@ -113,7 +106,6 @@ return [
     'AB_bazarliste_displayfields_text_label' => 'Текстовая область',
     'AB_bazarliste_displayfields_floating_label' => 'Площадка',
     'AB_bazarliste_displayfields_visual_label' => 'Визуальная область',
-    // BazarCard
     'AB_bazarcard_label' => 'Блоки (повестка дня, актус, тромбиноскоп, еще хуже...)',
     'AB_bazarcard_description' => 'Карты будут в виде карт',
     'AB_bazarliste_displayfields_footer_label' => 'Zone footer',
@@ -125,17 +117,14 @@ return [
     'AB_bazarcard_imgstyle_contain' => 'Полная фотография',
     'AB_bazarcard_imgstyle_cover' => 'Покрыть площадь / Рогнер',
     'AB_bazarcard_nblines_label' => 'Количество строк для субтитров',
-    // BazarTable
     'AB_BAZAR_MAP_AND_TABLE_LABEL' => 'Карта и таблица',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_LABEL' => 'Таблица, содержащая все листы',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ALL' => 'с геолокацией или без нее',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ONLY_GEOLOC' => 'только с геолокацией',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_NO_GEOLOC' => 'только без геолокации',
-    // BazarTrombi
     'AB_bazartrombi_label' => 'Тромбиноскоп',
     'AB_bazartrombi_description' => 'Карты будут в виде Trombinoscope.',
     'AB_bazartrombi_hint' => 'Требуется поле bf_image.',
-    // BazarMaterialCard
     'AB_bazarmaterialcard_label' => 'Материальная карта',
     'AB_bazarmaterialcard_description' => 'Карты будут в виде модальной коробки.',
     'AB_bazarmaterialcard_hint' => 'Требуется поле bf_image',
@@ -143,10 +132,8 @@ return [
     'AB_bazarmaterialcard_type_label' => 'Дисплей без эффекта',
     'AB_bazarmaterialcard_modal_label' => 'Отображается модальное окно при нажатии',
     'AB_bazarmaterialcard_bf_baseline_label' => 'Поле для субтитров',
-    // BazarAnnuaire
     'AB_bazarannuaire_label' => 'Каталог',
     'AB_bazarannuaire_description' => 'Отображает листы как алфавитный каталог',
-    // BazarDamier
     'AB_bazardamier_label' => 'Damier',
     'AB_bazardamier_description' => 'Отображает листы в виде параметрируемого демпфера',
     'AB_bazardamier_hint' => 'Bf_debut, bf_fin, bf_lieu, bf_image, bf_lien, bf_fichier, bf_bouton используются',
@@ -154,11 +141,9 @@ return [
     'AB_bazardamier_couleur_label' => 'Цвет плотины',
     'AB_bazardamier_correpondance_hint' => 'Этот шаблон очень настраиваемый',
     'AB_bazardamier_bf_description_label' => 'Поле для описания',
-    // BazarTimeLine
     'AB_bazartimeline_label' => 'Время',
     'AB_bazartimeline_description' => 'Показывает листы в строке времени.',
     'AB_bazartimeline_hint' => 'Требуется поле bf_image.',
-    // BazarCarousel
     'AB_bazarcarousel_label' => 'Carousel',
     'AB_bazarcarousel_description' => 'Отображает изображения карт в виде каруселя',
     'AB_bazarcarousel_hint' => 'Требуется поле bf_image.',
@@ -167,29 +152,22 @@ return [
     'AB_bazarcarousel_avecpage_hint' => 'PageDessusSlider',
     'AB_bazarcarousel_showlinkinsteadofurl_label' => 'Показать ссылку bf_link вместо ссылки на страницу',
     'AB_bazarcarousel_bf_titre_label' => 'Поле для отображения текста',
-    // bazargaleriephoto
     'AB_bazargaleriephoto_label' => 'Галерея изображений',
     'AB_bazargaleriephoto_description' => 'Показывает фотографии листов как фотогалерею.',
     'AB_bazargaleriephoto_hint' => 'Требуется поле bf_image.',
-    // bazarlistegalerie
     'AB_bazarlistegalerie_label' => 'Фотогалерея',
     'AB_bazarlistegalerie_description' => 'Показывает фотографии листов как фотогалерею.',
     'AB_bazarlistegalerie_hint' => 'Требуется поле bf_image.',
-    // bazarlistephotobox
     'AB_bazarlistephotobox_label' => 'Фотобокс',
     'AB_bazarlistephotobox_description' => 'Показывает фотографии листов как фотогалерею.',
     'AB_bazarlistephotobox_hint' => 'Требуется поле bf_image.',
-    // bazarlisteliens
     'AB_bazarlisteliens_label' => 'Список ссылок',
     'AB_bazarlisteliens_description' => 'Отображает ссылки на карты как список чипов.',
-    // bazarlisteliensdates
     'AB_bazarlisteliensdates_label' => 'Список ссылок с датами',
     'AB_bazarlisteliensdates_description' => 'Отображает ссылки на листы в виде списка с датами создания.',
-    // bazarmail
     'AB_bazarmail_label' => 'Написать всем',
     'AB_bazarmail_description' => 'Отображает только список почтовых отправлений, найденных в виде',
     'AB_bazarmail_hint' => 'Требуется поле bf_mail.',
-    // bazarblog
     'AB_bazarblog_label' => 'Блог',
     'AB_bazarblog_description' => 'Просты будут в виде блога.',
     'AB_bazarblog_hint' => 'A bf_image field is possible',
@@ -197,16 +175,13 @@ return [
     'AB_bazarblog_show_author_label' => 'Отобразить автора, автора',
     'AB_bazarblog_show_date_label' => 'только с геолокацией',
     'AB_bazarblog_date_creation_fiche_label' => 'Дата публикации',
-    // bazargogocarto
     'AB_bazargogocarto_label' => 'Картография 2 - GoGocarto',
     'AB_bazargogocarto_description' => 'Карты будут в виде маркера.',
     'AB_bazargogocarto_height_label' => 'Высота карты',
     'AB_bazargogocarto_width_label' => 'Ширина',
-    // BazarAction
     'AB_bazar_action_label' => 'Показать форму для создания файла',
     'AB_bazar_action_description' => 'Позволяет отображать форму для создания файла.',
     'AB_bazar_action_redirecturl_label' => 'Имя страницы этого вики или полный URL для отображения после создания листа',
-    // attach
     'AB_attach_commons_title' => 'Для изображений',
     'AB_attach_link_label' => 'Ссылка веб, связанный с нажатием',
     'AB_attach_caption_label' => 'Текст опубликован на лету',
@@ -248,7 +223,6 @@ return [
     'AB_attach_file_hint' => 'Календарь',
     'AB_attach_desc_label' => 'Описание',
     'AB_attach_displaypdf_label' => 'Просмотр файла PDF',
-    //video
     'AB_attach_video_label' => 'Комплексное видео',
     'AB_attach_video_description' => 'Интеграция видео YouTube, vimeo или peertube.',
     'AB_attach_video_hint' => 'Идентификатор видео соответствует числам или буквам в конце URL',
@@ -259,7 +233,6 @@ return [
     'AB_attach_video_position_label' => 'Позиция видео',
     'AB_attach_video_largeur_max_label' => 'Текст выше',
     'AB_attach_video_hauteur_max_label' => 'Максимальная высота',
-    //pdf
     'AB_attach_pdf_label' => 'Интегрированный файл PDF',
     'AB_attach_pdf_description' => 'Интеграция PDF-файла этого сайта.',
     'AB_attach_pdf_hint' => 'Показать как ссылку',
@@ -271,7 +244,6 @@ return [
     'AB_attach_pdf_position_label' => 'Позиция pdf',
     'AB_attach_pdf_largeur_max_label' => 'Текст выше',
     'AB_attach_pdf_hauteur_max_label' => 'Максимальная высота',
-    // management
     'AB_management_label' => 'Управление YesWiki',
     'AB_management_editactionsacls_label' => 'Изменение прав доступа к действиям',
     'AB_management_edithandlersacls_label' => 'Права доступа редактеров',
@@ -289,7 +261,6 @@ return [
     'AB_management_adminbackups_label' => 'Управление резервами',
     'AB_management_commentstable_label' => 'Таблица замечаний',
     'AB_management_usercomments_label' => 'Мои комментарии',
-    // advanced actions
     'AB_advanced_actions_label' => 'Дополнительные действия',
     'AB_advanced_action_backlinks_label' => 'Показать страницы, которые имеют ссылку на текущую страницу',
     'AB_advanced_action_backlinks_page_label' => 'Базовая страница',
@@ -365,9 +336,7 @@ return [
     'AB_advanced_action_login_loggedinurl_hint' => 'Wiki или URL-страница (используйте \'incomingurl\', если пустой или в случае ошибки)',
     'AB_advanced_action_login_loggedouturl_label' => 'Перенаправленный URL после отключения',
     'AB_advanced_action_login_loggedouturl_hint' => 'Темный эффект',
-    // col
     'AB_template_col_size_hint' => 'Будьте осторожны, сумма ширины всех колонн не будет превышать 12!',
-    // button
     'AB_buttons_label' => 'Buttons',
     'AB_buttons_action_button_label' => 'Баттон',
     'AB_buttons_action_button_description' => 'Создать нажатую кнопку',
@@ -404,7 +373,6 @@ return [
     'AB_buttons_action_button_new_window_yes' => 'да',
     'AB_buttons_action_button_hideifnoaccess_label' => 'Скрыть, если пользователь не имеет доступа к связанной странице',
     'AB_buttons_action_button_nobtn_label' => 'Показать как ссылку',
-    // reactions
     'AB_REACTION_GROUP_LABEL' => 'Реакции / Голоса',
     'AB_REACTION_TITLE_LABEL' => 'Название голоса',
     'AB_REACTION_LABEL' => 'Реакции и голоса',
@@ -423,7 +391,6 @@ return [
     'AB_MYFAVORITES_TEMPLATE_LINKS_WITH_TITLES' => 'Ссылки с названиями',
     'AB_MYFAVORITES_TEMPLATE_TILES' => 'Виньетки',
     'AB_MYFAVORITES_TEMPLATE_TABLE' => 'Таблица 1',
-    // syndication
     'AB_syndication_main_label' => 'Соединение / RSS-каналы',
     'AB_syndication_action_label' => 'Союз',
     'AB_syndication_action_description' => 'Синхронизация RSS-канала стороннего сайта',
@@ -443,7 +410,6 @@ return [
     'AB_syndication_action_formatdate_option_jma' => 'День Месяц',
     'AB_syndication_action_formatdate_option_jmh' => 'Месячный час',
     'AB_syndication_action_formatdate_option_jmah' => 'День месяца',
-    // tableau
     'AB_bazartableau_label' => 'Таблица 1',
     'AB_bazartableau_description' => 'Показать как стол',
     'AB_bazartableau_columnfieldsids_label' => 'Поля для отображения',

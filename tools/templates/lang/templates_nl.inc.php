@@ -1,11 +1,12 @@
 <?php
+
 return [
     'TEMPLATE_ACTION' => 'Actie',
     'TEMPLATE_ACTION_BUTTON' => 'Actie {{button ...}}',
     'TEMPLATE_LINK_PARAMETER_REQUIRED' => 'parameter "link" verplicht',
     'TEMPLATE_RSS_LAST_CHANGES' => 'RSS-feed van laatst gewijzigde pagina’s',
     'TEMPLATE_RSS_LAST_COMMENTS' => 'RSS-feed van laatste commentaren',
-    'TEMPLATE_NO_DEFAULT_THEME' => 'De bestanden van het standaardsjabloon zijn verdwenen, de sjablonen kunnen niet gebruikt worden. <br/>Herinstalleer het tools-sjablooon of neem contact op met de beheerder van de site',
+    'TEMPLATE_NO_DEFAULT_THEME' => 'De bestanden van het standaardsjabloon zijn verdwenen, de sjablonen kunnen niet gebruikt worden. <br />Herinstalleer het tools-sjablooon of neem contact op met de beheerder van de site',
     'TEMPLATE_CUSTOM_GRAPHICS' => 'Uitzicht van de pagina',
     'TEMPLATE_SAVE' => 'Opslaan',
     'TEMPLATE_APPLY' => 'Toepassen',

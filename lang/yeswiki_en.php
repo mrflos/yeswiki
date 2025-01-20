@@ -381,7 +381,7 @@ return [
     'ACLS_READ' => 'Read rights',
     'ACLS_WRITE' => 'Write rights',
     'THEME_MANAGER_THEME_FOLDER' => 'The theme\'s folder ',
-    'THEME_MANAGER_SQUELETTE_FILE' => 'The 	skeleton\'s file ',
+    'THEME_MANAGER_SQUELETTE_FILE' => 'The skeleton\'s file ',
     'THEME_MANAGER_NOT_FOUND' => ' is not found.',
     'THEME_MANAGER_ERROR_GETTING_FILE' => 'An error occured while loading the file : ',
     'THEME_MANAGER_CLICK_TO_INSTALL' => 'Click to install the theme ',

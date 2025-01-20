@@ -233,7 +233,6 @@ return [
     'BAZ_VENDREDI' => 'Vendredi',
     'BAZ_SAMEDI' => 'Samedi',
     'BAZ_DIMANCHE' => 'Dimanche',
-
     'BAZ_LUNDI_COURT' => 'Lun',
     'BAZ_MARDI_COURT' => 'Mar',
     'BAZ_MERCREDI_COURT' => 'Mer',
@@ -241,7 +240,6 @@ return [
     'BAZ_VENDREDI_COURT' => 'Ven',
     'BAZ_SAMEDI_COURT' => 'Sam',
     'BAZ_DIMANCHE_COURT' => 'Dim',
-
     'BAZ_JANVIER' => 'Janvier',
     'BAZ_FEVRIER' => 'Février',
     'BAZ_MARS' => 'Mars',
@@ -254,15 +252,12 @@ return [
     'BAZ_OCTOBRE' => 'Octobre',
     'BAZ_NOVEMBRE' => 'Novembre',
     'BAZ_DECEMBRE' => 'Décembre',
-
     'BAZ_TODAY' => 'Aujourd\'hui',
     'BAZ_MONTH' => 'Mois',
     'BAZ_WEEK' => 'Semaine',
     'BAZ_DAY' => 'Jour',
-
     'BAZ_ALL_DAY' => 'Toute la journ&eacute;e',
     'BAZ_ENTER_HOUR' => 'Entrer l\'heure',
-
     'BAZ_RESET_FILTERS' => 'Réinitialiser les filtres',
     'BAZ_ONLY_ONE_ENTRY_FOR_THIS_FORM' => 'Restreindre le nombre de fiche à une seule par utilisateur',
     'BAZ_MESSAGE_IF_OTHER_ENTRY_EXIST' => 'Message à afficher quand une fiche existe déjà. Laisser vide pour garder le message par défaut.',
@@ -277,7 +272,7 @@ return [
     'BAZ_COMMENTS_INFO_HUMHUB_EMBEDDED' => 'Les commentaires sont gérés par la plateforme sociale HumHub (Humhub intégré par YesWiki)',
     'BAZ_COMMENTS_INFO_HUMHUB_EXTERNAL' => 'Les commentaires sont gérés par la plateforme sociale HumHub (YesWiki intégré par Humhub)',
     'BAZ_COMMENTS_INFO_UNKNOWN' => 'Les commentaires ne sont pas gérés car le type de réglage des commentaires est inconnu',
-    'BAZ_COMMENTS_NOT_ACTIVATED' => 'Les commentaires sont gérés par YesWiki mais ceux-ci ne sont pas activés.<br/>Se rendre sur la page GererConfig pour activer les commentaires (paramètre `comments_activated`)',
+    'BAZ_COMMENTS_NOT_ACTIVATED' => 'Les commentaires sont gérés par YesWiki mais ceux-ci ne sont pas activés.<br />Se rendre sur la page GererConfig pour activer les commentaires (paramètre `comments_activated`)',
     'BAZ_FILE_ALREADY_EXISTING' => 'fichier déja existant',
     'BAZ_NOT_AUTHORIZED_FILE' => 'fichier non autorise',
     'BAZ_FILEFIELD_FILE' => 'Fichier : {filename}',
@@ -362,7 +357,7 @@ return [
     'EVENT_EXCEPT_LABEL' => 'Sauf',
     'EVENT_FIRST_Y_OF_MONTH' => 'Le premier Y du mois',
     'EVENT_FORTH_Y_OF_MONTH' => 'Le quatrième Y du mois',
-    'EVENT_IS_LINKED_TO_RECURRENT_EDIT' => 'Cette évènement est un évènement récurrent lié à la fiche %{link}.<br/>Toute modification de cette fiche cassera le lien avec l\'évènement de base !',
+    'EVENT_IS_LINKED_TO_RECURRENT_EDIT' => 'Cette évènement est un évènement récurrent lié à la fiche %{link}.<br />Toute modification de cette fiche cassera le lien avec l\'évènement de base !',
     'EVENT_LAST_Y_OF_MONTH' => 'Le dernier Y du mois',
     'EVENT_LIMIT_DATE_UPDATE_FORCED' => 'La date de fin a été forcée pour réduire le nombre de répétitions à 600 !',
     'EVENT_NO_REPETITION' => 'Pas de répétition',

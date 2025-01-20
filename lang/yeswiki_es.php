@@ -492,13 +492,6 @@ return [
     'DELETE' => 'BORRAR',
     'EDIT_CONFIG_HINT_HTMLPURIFIERACTIVATED' => 'Activar la limpieza HTML antes de la copia de seguridad. ¡Advertencia, cambia el contenido a la copia de seguridad! (verdad o falso)',
     'EDIT_CONFIG_GROUP_EMAIL' => 'Emails',
-    'ACLS_HELPER' => 'Separar cada entrada de coma, por ejemplo:
-(todos los usuarios)
-(usuarios registrados)
-" Se impuso " .
-(grupo del usuario, ex: @admins)
-(nombre YesWiki de un usuario)
-SuperCat identificado/b impuesto (negación, SuperCat no está permitido)',
     'REACTION_ON_ENTRY' => 'Reacción en una hoja',
     'FORM_RETURN' => 'Volver a la forma',
     'USER_YOU_MUST_SPECIFY_YES_OR_NO' => 'Se requiere un valor de «Y» o «N» para %{name}.',

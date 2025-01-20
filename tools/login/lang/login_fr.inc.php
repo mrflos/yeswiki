@@ -55,5 +55,4 @@ return [
         "Pour éviter les attaques par enregistrement de vos touches, assurez-vous que l'url du site commence bien par {baseUrl}.\n" .
         "Au moindre doute, ouvrez ce formulaire dans une page dédiée en cliquant sur ce lien {link}.",
     'USERSETTINGS_NAME_NOT_FOUND' => 'L\'identifiant "{currentName}" n\'existe pas !',
-
 ];

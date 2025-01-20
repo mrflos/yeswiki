@@ -1,5 +1,4 @@
 <?php
-
 $GLOBALS['translations'] = array_merge($GLOBALS['translations'], [
     'ACTION_BUILDER_CHOOSE_FORM' => 'Pick a form',
     'ACTION_BUILDER_CHOOSE_TEMPLATE' => 'How do you want to display the data',
@@ -11,7 +10,6 @@ $GLOBALS['translations'] = array_merge($GLOBALS['translations'], [
     'ACTION_BUILDER_ADVANCED_PARAMETERS' => 'Advanced parameters',
     'EDIT_CONFIG_HINT_ACTIONBUILDER_TEXTAREA_NAME' => 'Textarea field\'s name for which components should be activated',
     'EDIT_CONFIG_GROUP_ACEDITOR' => 'Edit bar for pages and text fields',
-
     'ACEDITOR_SAVE' => 'Save',
     'ACEDITOR_FORMAT' => 'Format',
     'ACEDITOR_TITLE1' => 'Huge title',

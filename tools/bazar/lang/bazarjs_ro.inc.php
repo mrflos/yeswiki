@@ -1,4 +1,5 @@
 <?php
+
 return [
     'BAZ_FORM_EDIT_CALC_LABEL' => 'Calculele',
     'BAZ_FORM_EDIT_DISPLAYTEXT_LABEL' => 'Afișează textul',

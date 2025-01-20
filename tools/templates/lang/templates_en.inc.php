@@ -1,4 +1,5 @@
 <?php
+
 return [
     'TEMPLATE_ACTION' => 'Action',
     'TEMPLATE_FILE_NOT_FOUND' => 'Template not found',
@@ -113,9 +114,7 @@ return [
     'AB_template_actions_warning' => 'Warning',
     'AB_template_actions_danger' => 'Danger',
     'AB_template_action_accordion_label' => 'Display panels in accordion',
-    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}
-Panel content
-{{end elem=\"panel\"}}",
+    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}\nPanel content\n{{end elem=\"panel\"}}",
     'AB_template_action_col_label' => 'Column',
     'AB_template_col_size_label' => 'Column width',
     'AB_template_action_grid_label' => 'Display several columns',
@@ -154,8 +153,8 @@ Panel content
     'AB_templates_tabs_btncolor_secondary_2' => 'Secondary 2',
     'AB_templates_tabs_selectedtab_label' => 'Selected tab',
     'AB_templates_tabs_wrappedcontentexample' => "{{tab}}
-Tab \"{tabName}\" content
-{{end elem=\"tab\"}}",
+    Tab \"{tabName}\" content
+    {{end elem=\"tab\"}}",
     'ACLS_SELECT_PAGES_FILTER' => 'Filter :',
     'ACLS_SELECT_PAGES_FILTER_ON_PAGES' => 'only pages',
     'ACLS_SELECT_PAGES_FILTER_ON_SPECIALPAGES' => 'special pages only',

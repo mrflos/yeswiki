@@ -1,4 +1,5 @@
 <?php
+
 return [
     'CONTACT_ACTION_ABONNEMENT' => 'Acțiune {{subscripție ..}}',
     'CONTACT_MAIL_REQUIRED' => 'parametrul de mail, necesar, lipsește.',

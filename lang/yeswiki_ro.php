@@ -1,4 +1,5 @@
 <?php
+
 return [
     'YOUR_SYSTEM' => 'Sistemul dvs',
     'USER_YOU_MUST_SPECIFY_A_NAME' => 'Vă rugăm să introduceți un nume pentru utilizator',
@@ -21,14 +22,12 @@ return [
     'EDIT_NO_CHANGE_MSG' => 'Această pagină nu a fost salvată deoarece nu a suferit modificări.',
     'COMMENT_NOT_ENOUGH_RIGHTS' => 'Nu ai dreptul să comentezi.',
     'USER_LOAD_BY_EMAIL_QUERY_FAILED' => 'Cererea utilizatorului de a-și încărca e-mailul din baza de date a eșuat',
-    // include/services/ThemeManager.php
     'THEME_MANAGER_THEME_FOLDER' => 'Dosarul tematic ',
     'USER_WRONG_PASSWORD' => 'Parolă incorectă',
     'IN_THIS_WIKI' => 'în acest wiki',
     'ACLS_PAGE' => 'Pagină',
     'EDIT_PREVIEW' => 'Aăzut',
     'COMMENT_CONTENT' => 'Comentariu',
-    // actions/nextextsearch.php
     'NEWTEXTSEARCH_HINT' => 'Un caracter necunoscut poate fi înlocuit cu „?” sau cu „*”',
     'CIRCULAR_REDIRECTION_FROM_PAGE' => 'redirecționarea circulară de la pagină',
     'VERIFY_YOU_HAVE_RIGHTS_TO_WRITE_FILE' => 'Asigurați-vă că serverul web are dreptul de a scrie în acest fișier, altfel va trebui să îl modificați manual',
@@ -52,9 +51,7 @@ return [
     'ERROR_CODE' => 'cod de eroare',
     'EDIT_ARCHIVED_REVISION' => 'Reedită această versiune arhivată',
     'INVERT' => 'Reverse',
-    // templates/actions/my-favorites-table.twig
     'FAVORITES_TITLE' => 'Titlu',
-    // actions/wantedpages.php
     'NO_PAGE_TO_CREATE' => 'Nici o pagină de creat',
     'THEME_MANAGER_ERROR_GETTING_FILE' => 'O eroare a apărut la încărcarea acestui fișier: ',
     'LINK_TO_REFERRERS_SITES_NO_GLOBAL' => 'Domenii referitoare la {tag}{since} ({beginLink}vezi lista de pagini externe{endLink}):',
@@ -69,7 +66,6 @@ return [
     'NO_SELECTED_COMMENTS_TO_ERASE' => 'Nu au fost selectate comentarii pentru ștergere',
     'REFERRERS_SITES_SINCE' => 'de atunci {time}',
     'TITLE_ENTRY_HISTORY' => 'Istoria foii',
-    // handlers/page/acls.php
     'YW_ACLS_LIST' => 'Lista drepturilor de acces pentru pagina',
     'EMAIL_ADDRESS' => 'Adresa de e-mail',
     'LINK_TO_REFERRERS_ALL_DOMAINS' => 'Vezi toate domeniile de referință',
@@ -79,7 +75,6 @@ return [
     'MAX_NUMBER_OF_VERSIONS' => 'Numărul maxim de versiuni',
     'USER_PASSWORD_CONFIRMATION' => 'Confirmarea parolei',
     'YOU_ARE_UPDATING_YESWIKI_TO_VERSION' => 'Sunteți pe cale să actualizați YesWiki pentru versiunea',
-    // fives chars max.
     'EMAIL' => 'E-mail',
     'DEL' => 'Ștergere.',
     'FINISHED_CONGRATULATIONS' => 'Iată-l, este, felicitări',
@@ -91,12 +86,10 @@ return [
     'ACLS_LIST_OF_ACLS' => 'Lista de drepturi separate prin virgulă',
     'DEFINE' => 'Defini',
     'UPDATE_ADMIN_PAGES_HINT' => 'Actualizați paginile de gestionare cu cele mai recente caracteristici. Acest lucru este reversibil.',
-    // handlers/page/claim.php
     'YW_YOU_ARE_NOW_OWNER_OF_PAGE' => 'Acum sunteți proprietarul acestei pagini',
     'HAS_PARTICIPATED' => 'a participat',
     'ADVANCED_CONFIGURATION' => '+ Configurație avansată',
     'LINK_TO_REFERRERS_NO_GLOBAL' => 'Pagini externe referitoare la {tag}{since} ({beginLink}vezi lista de domenii{endLink}):',
-    // actions/testtriples.php
     'END_OF_EXEC' => 'Încheierea',
     'INCLUDED_PAGE' => 'Pagina include',
     'ACLS_AUTHENTIFICATED_USERS' => 'Utilizatorii conectați',
@@ -104,7 +97,6 @@ return [
     'USER_DELETED' => 'utilizator șters',
     'COMMENT_NEW_COMMENT_MESSAGE_TAG' => 'Ați fost citat într-un comentariu nou scris de %{user} pe pagina %{tag} pe site [%{site}].',
     'FILL_THE_NEXT_FIELDS_IF_YOU_LOGGIN_FOR_THE_FIRST_TIME_AND_REGISTER' => 'Următoarele câmpuri trebuie completate dacă vă conectați pentru prima dată (vă veți crea un cont)',
-    // setup/writeconfig.php
     'WRITING_CONFIGURATION_FILE' => 'scrierea fişierului de configurare',
     'EDIT_CONFIG_HINT_DEFAULT_LANGUAGE' => 'Limba implicită (fr sau en sau .. auto = browser language)',
     'CONFIGURATION_FILE' => 'fişierul de configurare',
@@ -112,9 +104,7 @@ return [
     'YESWIKI_WEBSITE_CONFIGURATION' => 'Configurarea site-ului dvs YesWiki',
     'DENY_COMMENT' => 'Nu ești autorizat să comentați pe această pagină',
     'PAGE_LIST_WHERE' => 'Lista de pagini la care',
-    // actions/usersettings.php
     'USER_SETTINGS' => 'Setări Utilizator',
-    // Comments
     'COMMENT_EMPTY_NOT_SAVED' => 'Comentariu gol, fără backup.',
     'YW_WRITE_COMMENT_HERE' => 'Scrie comentariul tău aici...',
     'THIS_COULD_BE_UNSECURE' => 'poate fi un defect de securitate',
@@ -129,7 +119,6 @@ return [
     'ERROR_WHILE_SAVING_ACL' => 'O eroare a apărut în timpul înregistrării ACL pentru acțiune',
     'NO_RECENT_COMMENTS_ON_PAGES' => 'Nicio pagină nu a fost comentată recent',
     'LINK_TO_REFERRERS_ALL_REFS' => 'Vezi toate referinţele',
-    // actions/userstable.php
     'USERSTABLE_USER_DELETED' => 'Utilizatorul "{username}" a fost șters.',
     'NEW_ACL_SUCCESSFULLY_SAVED_FOR_THE_GROUP' => 'Noul ACL înregistrat cu succes pentru grup',
     'USER_CHANGE' => 'Schimba',
@@ -150,7 +139,6 @@ return [
     'REDIRECTION_SHOULD_BE_ACTIVE_ONLY_IF_USED_IN_YESWIKI' => 'ATENŢIE: a se activa numai dacă nginx sau apache sunt configurate pentru a rescrie URL-uri fără semnul întrebării',
     'USER_PASSWORD_UPDATE_FAILED' => 'Schimbarea parolei a eșuat',
     'FAVORITES_REMOVE' => 'Eliminați din favorite',
-    // setup/default.php
     'INSTALLATION_OF_YESWIKI' => 'Instalarea YesWiki',
     'REACTION_VOTE' => 'Vot',
     'DISPLAY_WIKI_CODE' => 'Vezi codul Wiki',
@@ -158,7 +146,6 @@ return [
     'REACTION_BAD_IMAGE_FORMAT' => 'Format imagine rău: trebuie să fie un fișier, pictograma utf8 sau clasa Fontawesome',
     'RETURN_TO_EXTENSION_LIST' => 'Reveniți la lista de extensii active',
     'USER_UPDATE' => 'Actualizare',
-    // actions/edithandlersacls.class.php
     'HANDLER_RIGHTS' => 'Drepturile handler',
     'MUST_BE_WIKINAME' => 'Trebuie să fie un NumeWiki',
     'ALREADY_DONE' => 'Făcut deja? Hmm!',
@@ -170,7 +157,6 @@ return [
     'BY' => 'de',
     'REACTION_DATE' => 'Dată',
     'TRY_AGAIN' => 'Încerca din nou',
-    // YesWiki\User class
     'USER_CONFIRM_DELETE' => 'Sunteți sigur că doriți să ștergeți utilizatorul ?',
     'ADMIN_PASSWORD_ARE_DIFFERENT' => 'Parolele Administratorului sunt diferite',
     'YW_CANCEL' => 'Anula',
@@ -184,9 +170,6 @@ return [
     'MYSQL_PASSWORD' => 'Parola MySQL',
     'DONT_CHANGE_YESWIKI_VERSION_MANUALLY' => 'Nu schimbați manual yeswiki_version',
     'NEW_ACL_FOR_ACTION' => 'ACL nou pentru acțiune',
-    // actions/footer.php ignoree, car le tools templates court circuite
-    // actions/header.php ignoree, car le tools templates court circuite
-    // actions/include.php
     'ERROR' => 'eroare',
     'NAVIGATOR_LANGUAGE' => 'Limba browser-ului',
     'REACTION_LOGIN_TO_REACT' => 'Pentru a reacționa, conectați-vă!',
@@ -195,7 +178,6 @@ return [
     'DELETE_ALL' => 'Ștergeți toate',
     'REVISION_BY' => 'de',
     'ACTION' => 'Acțiune',
-    // actions/redirect.php
     'ERROR_ACTION_REDIRECT' => 'Eroare de acțiune {{redirect ...}}',
     'USER_NOT_LOGGED_IN_CANT_LOG_OUT' => 'Nu se poate deconecta pentru că nimeni nu este conectat',
     'INCLUSIONS_CHAIN' => 'Lanț de incluziuni',
@@ -205,7 +187,6 @@ return [
     'USER_NO_SPACES_IN_PASSWORD' => 'Spațiile nu sunt permise într-o parolă',
     'DELETEPAGE_CONFIRM_WHEN_BACKLINKS' => 'Chiar doriți să ștergeți definitiv pagina {tag} în ciuda prezenței legăturilor?',
     'THEME_MANAGER_SQUELETTE_FILE' => 'Dosarul scheletului ',
-    // handlers/update
     'UPDATE_ADMIN_PAGES' => 'Actualizați paginile de gestionare',
     'MAX_NUMBER_OF_LASTEST_COMMENTS' => 'Numărul maxim de comentarii',
     'USER_THIS_IS_NOT_A_VALID_EMAIL' => 'Acesta nu este un e-mail valid',
@@ -213,7 +194,6 @@ return [
     'GROUPS' => 'Grupuri',
     'EXISTENT_SYSTEM_RECOGNISED_AS_VERSION' => 'existenta a fost recunoscuta ca versiune',
     'THEME_MANAGER_CLICK_TO_INSTALL' => 'Faceți clic pentru a instala tema ',
-    // handlers/edit
     'EDIT_ALERT_ALREADY_SAVED_BY_ANOTHER_USER' => 'Această pagină a fost editată de altcineva în timp ce o editați.\nCopiați modificările și reeditați această pagină.',
     'NO_REQUEST_FOUND' => '$_REQUEST[] nu a fost găsit. Wakka necesită PHP 4.1.0 sau mai nou!',
     'DOUBLE_CLICK_TO_EDIT' => 'faceți dublu clic pe editare',
@@ -230,13 +210,10 @@ return [
     'DOESNT_EXIST' => 'nu pare să existe',
     'CREATION_OF_TABLES' => 'Crearea tabelelor, administratorilor de administrator și de grup',
     'DELETEPAGE_DELETE' => 'Șterge',
-    // actions/editgroups.class.php
     'DEFINITION_OF_THE_GROUP' => 'Definiția grupului',
-    // actions/trail.php
     'ERROR_ACTION_TRAIL' => 'Eroare de acțiune {{trail ...}}',
     'REACTION_YOU_VOTED' => 'Ai votat',
     'EDIT_GROUP' => 'editați grupul',
-    // setup/header.php
     'OK' => 'Ok',
     'ADMIN_BACKUPS_STOP_BACKUP' => 'Opriți copia de rezervă',
     'CURRENT_VERSION' => 'Versiunea actuală',
@@ -248,7 +225,6 @@ return [
     'USER_THIS_EMAIL_IS_ALLREADY_USED_ON_THIS_WIKI' => 'E-mailul introdus este deja utilizat pe acest wiki',
     'EDIT_CONFIG_HINT_ROOT_PAGE' => 'Numele paginii de pornire',
     'ONLY_ADMINS_CAN_CHANGE_MEMBERS' => 'Nu puteți modifica membrii grupului de administratori deoarece nu sunteți administrator',
-    // actions/erasespamedcomments.class.php
     'ERASED_COMMENTS' => 'Comentariu(uri) șters(e)',
     'FAVORITES_NOT_CONNECTED' => 'Utilizarea preferințelor este posibilă numai pentru persoanele conectate.',
     'THEME_MANAGER_NOT_FOUND' => ' nu a fost găsit.',
@@ -268,14 +244,12 @@ return [
     'LATEST_COMMENTS_ON' => 'Ultimele comentarii privind',
     'USER_UPDATE_QUERY_FAILED' => 'Cererea de actualizare a utilizatorului din baza de date a eșuat',
     'FAVORITES_LINK' => 'Link',
-    // actions/recentlycommented.php
     'LAST COMMENT' => 'Ultimul comentariu',
     'EDIT_CONFIG_HINT_WAKKA_NAME' => 'Titlul wiki-ului tău',
     'IS_THE_OWNER' => 'este proprietarul',
     'MORE_OPTIONS' => 'Opțiuni suplimentare',
     'ACLS_FOR_SELECTED_PAGES' => 'Acțiuni pentru paginile verificate mai sus',
     'YOU_ARENT_LOGGED_IN' => 'Nu sunteți logat',
-    // templates/preupdate-backups.twig
     'ADMIN_BACKUPS_CREATING' => 'Crearea unui backup',
     'ADMIN_BACKUPS_CREATE' => 'Creați o copie de rezervă',
     'CHECKING_ROOT_PAGE_NAME' => 'Verificarea numelui paginii de pornire',
@@ -306,7 +280,6 @@ return [
     'ACLS_REPLACE_SELECTED_PAGES' => 'Înlocuire (Drepturile curente vor fi eliminate)',
     'COMMENT_ON_PAGE' => 'Pagina părinte',
     'SEARCH_RESULTS' => 'Rezultatele căutării',
-    // templates/actions/my-favorites.twig
     'FAVORITES_DELETE_ALL' => 'Ștergeți toate favoritele mele',
     'REACTION_ANGRY' => 'Fazet',
     'REACTION_LIKE' => 'Aprob',
@@ -318,7 +291,6 @@ return [
     'BELONGING_TO' => 'aparținând',
     'REACTION_TO_ALLOW_REACTION' => 'Pentru a vă permite să reacționați',
     'DELETE_EXISTING_GROUP' => 'Ștergerea unui grup existent',
-    // actions/recentchangesrss.php
     'TO_OBTAIN_RSS_FEED_TO_GO_THIS_ADDRESS' => 'Pentru a obține fluxul RSS pentru cele mai recente modificări, utilizați următoarea adresă',
     'NO_TOOL_AVAILABLE' => 'Nu există instrumente disponibile sau active',
     'REACTION_USER' => 'Utilizator',
@@ -338,7 +310,6 @@ return [
     'HOMEPAGE_INFOS' => 'Pagina de pornire a YesWiki. Trebuie să fie un NumeWiki',
     'CREATE_NEW_GROUP' => 'Sau creați un grup nou',
     'COMMENT_NEW_COMMENT_TAG' => 'Ai fost citat într-un comentariu pe pagina %{tag}',
-    // javascripts/favorites.js
     'FAVORITES_ADD' => 'Adauga la favorite',
     'INDEX_HELP_TEXT' => 'Indică în meta date html și în fișierul robots.txt dacă site-ul tău ar trebui să fie indexat de motoarele de căutare sau nu',
     'EDIT_RIGHTS_FOR_HANDLER' => 'modificați drepturile handler',
@@ -352,13 +323,11 @@ return [
     'PASSWORDS_NOT_IDENTICAL' => 'Parolele nu erau la fel',
     'YOUR_MODIFIED_PAGES_ORDERED_BY_NAME' => 'Lista paginilor pe care le-ați modificat, sortate alfabetic',
     'YW_ACLS_WRITE' => 'Drepturi de scriere (* pentru toți, + persoane identificate, @admins group admin)',
-    // handlers/revisions
     'SUCCESS_RESTORE_REVISION' => 'Versiunea a fost restaurată',
     'INCORRECT_ROOT_PAGE_NAME' => 'Numele paginii de pornire ar trebui să conțină numai litere, numere și litere neaccentuate, \'_\', \'-\' sau \'.\'',
     'CONFIGURATION_FILE_NOT_CREATED' => 'nu se poate crea',
     'READING_OF_INCLUDED_PAGE' => 'Citirea paginii a inclus',
     'ERROR_WHILE_SAVING_GROUP' => 'O eroare a apărut în timpul înregistrării grupului',
-    // handlers/show
     'COMMENT_INFO' => 'Acesta este un comentariu la {tag} postat de {user} la {time}',
     'USER_DISCONNECT' => 'Deconectare',
     'EXCLUDING_EXCLUSIONS' => 'excluzând excluderile',
@@ -368,7 +337,6 @@ return [
     'YW_CANNOT_CHANGE_ACLS' => 'Nu puteți gestiona permisiunile acestei pagini',
     'INDICATE_THE_PARAMETER_TOC' => 'Specificați numele rezumatului paginii, parametru "toc"',
     'CSRF_TOKEN_FAIL_ERROR' => 'Este posibil ca această pagină să fi fost deschisă a doua oară. Vă rugăm să reaplicați din această fereastră (jetonul de securitate internă nu a fost bun).',
-    // handlers/deletepage
     'DELETEPAGE_CANCEL' => 'Anula',
     'IT_IS_RECOMMANDED_TO_REMOVE_WRITE_ACCESS_TO_CONFIG_FILE' => 'Este recomandabil să eliminați accesul la scriere la fișier',
     'WRITING_CONFIGURATION_FILE_WIP' => 'Crearea fişierului de configurare curent',
@@ -377,22 +345,18 @@ return [
     'LIST_PAGES_BELONGING_TO' => 'Lista de pagini aparținând',
     'NOT_AUTORIZED_TO_READ_PAGE' => 'Nu aveți voie să citiți această pagină',
     'EDIT_NO_WRITE_ACCESS' => 'Nu ai acces la această pagină!',
-    // actions/UserCommentsAction.php
     'COMMENT_RESERVED_TO_CONNECTED' => 'Vă rugăm să vă autentificați pentru a utiliza acțiunea "{{usercomments}}" !',
     'ACLS_READ' => 'Drepturile de lectură',
     'COMMENT_REMOVED' => 'Comentariul a fost șters.',
     'MYSQL_DATABASE' => 'Baza de date MySQL',
-    // actions/textsearch.php
     'WHAT_YOU_SEARCH' => 'Ce vrei să cauți',
     'MYSQL_USERNAME_INFOS' => 'Este necesar să vă conectați la baza de date',
-    // actions/EditConfigAction.php
     'EDIT_CONFIG_TITLE' => 'Editarea fişierului de configurare',
     'NO_PERMISSIONS_TO_EXECUTE_THIS_ACTION' => 'nu aveți permisiunile necesare pentru a efectua această acțiune',
     'EDIT_CONFIG_HINT_PREVIEW_BEFORE_SAVE' => 'Activați previzualizarea înainte de backup (true sau false)',
     'DELETEPAGE_MESSAGE' => 'Pagina {tag} a fost ștearsă definitiv',
     'PARAMETERS_SAVED' => 'Setări salvate',
     'DELETEPAGE_NOT_DELETED' => 'Pagina nu a fost ștearsă.',
-    // YesWiki\Database class
     'DATABASE_QUERY_FAILED' => 'Cererea a eșuat {\YesWiki\Database}',
     'COMMENT_NEW_COMMENT_ANSWER_MESSAGE' => 'Un nou răspuns a fost scris de %{user} la comentariul dumneavoastră pe pagina %{tag} pe site [%{site}].',
     'CHANGE' => 'Schimba',
@@ -411,18 +375,14 @@ return [
     'REACTION_NO_IMAGE' => 'Imagine lipsă',
     'DENY_WRITE' => 'Nu ești autorizat să scrii pe această pagină',
     'TABLE_PREFIX' => 'Prefixul tabelului',
-    // templates/multidelete-macro.twig
     'NUMBER_OF_ELEMENTS' => 'Numărul de elemente selectate',
     'DEFAULT_LANGUAGE_INFOS' => 'Limba utilizată în mod implicit pentru interfața YesWiki, va fi întotdeauna posibilă schimbarea limbii pentru fiecare dintre paginile create',
     'CHECK_EXISTING_TABLE_PREFIX' => 'Verificarea existenței prefixului tabelului',
     'YOU_MUST_SPECIFY_AN_EMAIL' => 'Trebuie să specificați o adresă de e-mail',
     'REACTION_PLEASE_LOGIN' => 'se identifice',
-    // reactions
     'REACTION_EMPTY_ID' => 'parametrul "id" trebuie completat',
     'USERSTABLE_USER_NOT_DELETED' => 'Utilizatorul "{username}" nu a fost șters.',
-    // actions/listpages.php
     'THE_PAGE' => 'Pagina',
-    // includes/controllers/CsrfController.php
     'NO_CSRF_TOKEN_ERROR' => 'Eroare de proiectare a site-ului: Formularul de depunere nu conține tokenul unic de identificare necesar pentru mecanismele de securitate internă.',
     'KEYWORDS' => 'Cuvinte cheie',
     'ACLS_SELECT_PAGES_TO_MODIFY' => 'Verificați paginile pe care doriți să le editați și alegeți o acțiune în partea de jos a paginii',
@@ -436,7 +396,6 @@ return [
     'LOGGED_USERS_ONLY_ACTION' => 'Trebuie să fiți conectat pentru a efectua această acțiune',
     'SEARCH' => 'Lua',
     'USER_PARAMETERS_SAVED' => 'Setări salvate',
-    // actions/resetpassword.php
     'ACTION_RESETPASSWORD' => 'Acțiune {{resetpassword ...}}',
     'PASSWORD_TOO_SHORT' => 'Parola prea scurtă',
     'ONLY_FOR_ADMINS' => 'Numai pentru administratori',
@@ -450,9 +409,7 @@ return [
     'REACTION_LOGIN_TO_SEE_YOUR_REACTION' => 'Conectează-te pentru a vedea reacțiile tale.',
     'YW_PROBLEM_WITH_ACLS_LIST' => 'Nu există un grup valid de indicate pentru a deschide comentarii',
     'ADMIN_BACKUPS_FORCE_UPDATE' => 'Forțarea unei actualizări fără o copie de rezervă',
-    // actions/orphanedpages.php
     'NO_ORPHAN_PAGES' => 'Nu există pagini orfane',
-    // handlers/page/show + handlers/page/iframe
     'NOT_FOUND_PAGE' => 'Această pagină nu există încă, vrei să creezi {beginLink}create{endLink}?',
     'GENERATE_GROUPS' => 'Gestionați grupuri, adăugați/eliminați utilizatori în grupul de administratori (având aceleași drepturi ca și acesta)',
     'USER_NO_USER_WITH_THAT_NAME' => 'Nu există utilizatori cu acest nume',
@@ -487,7 +444,6 @@ return [
     'EDIT_CONFIG_HINT_COMMENTS_HANDLER' => 'Tipul de comentarii utilizate (\'\'/embedded_humhub/external_humhub/yeswiki)',
     'EDIT_CONFIG_GROUP_ACCESS' => 'Dreptul de acces',
     'YOU_ARE_NOW_DISCONNECTED' => 'Acum ești deconectat',
-    // gererdroits
     'ACLS_RESERVED_FOR_ADMINS' => 'Această acțiune este rezervată administratorilor',
     'REACTION_DELETE' => 'Șterge',
     'USER_INCORRECT_PASSWORD_KEY' => 'Cheia de validare a parolei este incorectă',
@@ -500,14 +456,12 @@ return [
     'NEW_ACL_FOR_GROUP' => 'Un nou ACL pentru grup',
     'BASE_URL' => 'URL de bază',
     'OBLIGE_TO_PREVIEW_BEFORE_SAVING_PAGE' => 'Solicitați să examinați înainte de a salva o pagină',
-    // actions/recentchanges.php
     'HISTORY' => 'istorie',
     'REMEMBER_ME' => 'Aminteşte-ţi de mine',
     'USER_MUST_ACCEPT_COOKIES_TO_GET_CONNECTED' => 'Trebuie să acceptați cookie-uri pentru a vă putea conecta',
     'THIS_USER_HAS_NO_PAGE' => 'Acest utilizator nu are pagină',
     'USER_DELETE' => 'Ștergeți utilizatorul',
     'YOUR_EMAIL_ADDRESS' => 'Adresa ta de e-mail',
-    // Commons
     'ARCHIVES' => 'Backup-uri',
     'WARNING' => 'AVERTISMENT',
     'FILE_WRITE_PROTECTED' => 'fișierul de configurare este protejat împotriva scrierii',
@@ -515,18 +469,14 @@ return [
     'ACTIVATE_REDIRECTION_MODE' => 'Activarea modului "redirecționare automată"',
     'NEXT_STEP_WRITE_CONFIGURATION_FILE' => 'În pasul următor, instalatorul va încerca să scrie fișierul de configurare ',
     'YW_ACLS_UPDATED' => 'Drepturi de acces actualizate',
-    // actions/backlinks.php
     'PAGES_WITH_LINK' => 'Pagini cu un link către',
     'IMPOSSIBLE_FOR_THIS_PAGE' => 'Imposibil pentru pagină',
     'PRESENCE_OF_REDIRECTION_TO' => 'Prezența unei redirecționări către',
     'IF_YOU_ARE_REGISTERED_LOGGIN_HERE' => 'Dacă sunteți deja înregistrat, vă rugăm să vă conectați aici',
     'PAGENAME_WILL_BE_ADDED_AFTER_CHANGE_JUST_FOR_REDIRECTION' => 'Numele paginilor vor fi adăugate direct la adresa URL de bază a site-ului YesWiki. Ștergeți "?" numai dacă utilizați redirecționarea (vezi mai jos)',
     'CLICK_HERE_TO_EDIT' => 'click aici pentru a edita',
-    // handlers/referrers_sites.php
     'LINK_TO_REFERRERS_DOMAINS' => 'Domenii care se referă la acest wiki ({beginLink}vezi lista de pagini externe{endLink}):',
-    // wakka.php
     'INVALID_ACTION' => 'Acțiune invalidă',
-    // actions/recentcommentsrss.php
     'TO_OBTAIN_COMMENTS_RSS_FEED_TO_GO_THIS_ADDRESS' => 'Pentru a obține fluxul RSS al celor mai recente comentarii, utilizați următoarea adresă',
     'ERROR_RECURSIVE_GROUP' => 'Eroare: nu puteți defini un grup recursiv',
     'INSERTION_OF_PAGES' => 'Inserarea implicită a paginii',
@@ -539,9 +489,7 @@ return [
     'DELETEPAGE_NOT_OWNER' => 'Nu sunteți proprietarul acestei pagini.',
     'COMMENT_NEW_COMMENT_MESSAGE' => 'Un nou comentariu a fost scris de %{user} pe pagina %{tag} pe site [%{site}].',
     'NO_DATABASE_FOUND_TRY_TO_CREATE' => 'Baza de date selectată nu există. Vom încerca să o creăm',
-    // tools.php
     'YESWIKI_TOOLS_CONFIG' => 'Configurarea extensiei (extensiilor) YesWiki',
-    // ACLs
     'DENY_READ' => 'Nu ești autorizat să citești această pagină',
     'NO_PAGES_WITH_LINK_TO' => 'Nicio pagină nu are un link către',
     'EDIT_RIGHTS_FOR_ACTION' => 'editați drepturile acțiunii',
@@ -549,11 +497,9 @@ return [
     'NO_PAGE_FOUND' => 'Nici o pagină găsită',
     'EDIT_CONFIG_HINT_ALLOW_DOUBLECLIC' => 'Permiteți dubluclic pentru a edita meniuri și pagini speciale (adevărate sau false)',
     'LIST_OF_ACTIVE_TOOLS' => 'Listă de extensii active',
-    // API
     'USERS' => 'Utilizatorii',
     'YOUR_WEBSITE_NAME' => 'Numele site-ului dvs',
     'DELETEPAGE_CONFIRM' => 'Chiar doriți să ștergeți definitiv pagina {tag}&nbsp;?',
-    // actions/mychanges.php
     'YOUR_MODIFIED_PAGES_ORDERED_BY_MODIFICATION_DATE' => 'Lista paginilor pe care le-ați modificat, sortate după data modificării',
     'REACTION_FROM_PAGE' => 'de la pagina',
     'EDIT_CONFIG_HINT_FAVICON' => 'Pictograma site-ului (emoji sau URL-ul unei imagini PNG)',
@@ -561,7 +507,6 @@ return [
     'NEW_ACL_SUCCESSFULLY_SAVED_FOR_ACTION' => 'Noul ACL înregistrat cu succes pentru acțiune',
     'COMMENT_NEW_COMMENT_ANSWER_MESSAGE_TAG' => 'Ați fost citat într-un răspuns scris de %{user} la un comentariu pe pagina %{tag} pe [%{site}].',
     'NO_SPACES_IN_PASSWORD' => 'Spațiile nu sunt permise în parole',
-    // templates/comments/notify-email-*.twig
     'COMMENT_NEW_COMMENT' => 'Comentariu nou pe pagina %{tag}',
     'ACLS_NO_SELECTED_PAGE' => 'Nu a fost selectată nicio pagină.',
     'REACTION_TITLE_PARAM_NEEDED' => 'Este necesar parametrul \'title\'',
@@ -579,7 +524,6 @@ return [
     'NOT_FOUND' => 'Nu există',
     'COMMENT_PUBLISHED' => 'Comentariu postat!',
     'REACTION_CONNECT_AS_ADMIN' => 'Vă rugăm să vă conectați ca administrator pentru a administra reacțiile.',
-    // actions/editactionsacls.class.php
     'ACTION_RIGHTS' => 'Drepturile acţiunii',
     'MYSQL_DATABASE_INFOS' => 'Această bază de date trebuie să existe deja înainte de a putea continua',
     'USERSTABLE_CREATE_USER_HINT' => 'Parola generată aleatoriu',
@@ -589,13 +533,11 @@ return [
     'PAGES_WITH_LINK_TO_CURRENT_PAGE' => 'Pagini cu un link către pagina curentă',
     'YW_COMMENTS_ARE_NOW_OPEN' => 'Comentariile au fost deschise pe această pagină',
     'REFERRERS_SITES_24_HOURS' => '24 ore',
-    // actions/AdminBackupsAction.php
     'ADMIN_BACKUPS_TITLE' => 'Gestionarea salvării',
     'AUTHORIZE_INDEX_BY_ROBOTS' => 'Permite indexarea de către motoarele de căutare',
     'COMMENT_NEW_COMMENT_ANSWER_TAG' => 'Ai fost citat ca răspuns la un comentariu pe pagină %{tag}',
     'ACLS_COMMENTS_CLOSED' => 'Comentarii oprite',
     'ADMIN_BACKUPS_START' => 'Începeți backup-ul',
-    // sans accents car commande systeme
     'INCORRECT_PAGENAME' => 'Numele paginii este incorect.',
     'CONTINUE' => 'Continua',
     'USER_THIS_IS_NOT_A_VALID_NAME' => 'Acesta nu este un nume de utilizator valid',
@@ -607,12 +549,10 @@ return [
     'LINK_TO_REFERRERS_SITES' => 'Site-uri care fac referire la acest wiki ({beginLink}vezi lista de domenii{endLink}):',
     'USER_USERSTABLE_MISTAKEN_ARGUMENT' => 'l\'action usertable a rencu un argument non autorise',
     'TEST_MYSQL_CONNECTION' => 'Testați conexiunea MySQL',
-    // actions/changestyle.php
     'STYLE_SHEET' => 'Fișă de stil',
     'EDIT_CONFIG_HINT_COMMENTS_ACTIVATED' => 'Comentarii activate (true sau false)',
     'USER_NO_USER_WITH_THAT_EMAIL' => 'Nu există niciun utilizator cu acest e-mail',
     'REACTION_NB_REACTIONS_LEFT' => 'alegerea posibilă',
-    // setup/install.php
     'PROBLEM_WHILE_INSTALLING' => 'Probleme în procedura de instalare',
     'EDIT_CONFIG_SAVE' => 'Configurație salvată',
     'FILL_THE_FORM_BELOW' => 'Vă rugăm să completați formularul următor',

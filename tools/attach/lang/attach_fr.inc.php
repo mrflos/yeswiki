@@ -19,7 +19,6 @@ return [
     'ERROR_NO_FILE_UPLOADED' => 'Aucun fichier n\'a &eacute;t&eacute; t&eacute;l&eacute;charg&eacute;.',
     'ERROR_NOT_AUTHORIZED_EXTENSION' => 'Le fichier n\'a pas une extension autorisée, voici celles que la configuration autorise : ',
     'ATTACH_ACTION_FULLIMAGELINK_TEXT' => "Permettre de cliquer sur l'image pour l'afficher en grand",
-
     'ATTACH_FILE_MANAGEMENT' => 'Gestion des fichiers',
     'ATTACH_TRASH' => 'Corbeille',
     'ATTACH_NO_ATTACHED_FILES' => 'Pas de fichiers attachés à la page {tag} pour l\'instant.',

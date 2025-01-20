@@ -1,11 +1,9 @@
 <?php
+
 return [
-    // AB stands for ActionsBuilder
-    // Commons
     'AB_LEFT' => 'க uch ச்சே',
     'AB_RIGHT' => 'டிராயிட்',
     'AB_advanced' => 'அவான்சே',
-    // BAZAR
     'AB_bazar_label' => "Afficher les données d'Un fumlaire",
     'AB_bazar_commons_colorfield_label' => 'சாம்ப் லா கூலூர்',
     'AB_bazar_commons_colormapping_color_label' => 'கூலூர்',
@@ -56,7 +54,6 @@ return [
     'AB_bazar_facettes_title_label' => 'டைட்ரே',
     'AB_bazar_bf_date_debut_evenement_label' => 'சாம்பியன் போர் லா தேதி டி டெபட்',
     'AB_bazar_bf_date_fin_evenement_label' => 'சாம்பியன் போர் லா தேதி டி ஃபின்',
-    // Bazarcarto
     'AB_bazarcarto_label' => 'கார்டோகிராஃபி',
     'AB_bazarcarto_description' => 'லெச் ஃபிடச் செரண்ட் ச ous ச் ஃபார்ம் டி மார்குவூர்.',
     'AB_bazarcarto_hint' => 'லு சேம்ப் சியோலோகலைசேசன் டொயிட் être présent டான்ச் வோட்ரே தேற்றம்',
@@ -86,12 +83,10 @@ return [
     'AB_bazarcarto_barregestion_label' => 'பாரே டி கெச்டியன் டெச் ஃபிடச்',
     'AB_bazarcarto_navigation_label' => 'பூட்டன்ச் டி கான்ட்ரெல் டு சூம்',
     'AB_bazarcarto_zoommolette_label' => 'ப ou வோர் சூமர் அவெக் லா மோலெட் டி லா சவுரிச்',
-    // BazarAgenda
     'AB_bazaragenda_label' => 'நிகழ்ச்சி நிரல்',
     'AB_bazaragenda_description' => "லெச் ஃபிடச் செரண்ட் ச ous ச் ஃபார்ம் டி'வெனெமென்ட் டான்ச் அன் நிகழ்ச்சி நிரல்.",
     'AB_bazaragenda_nbcol_label' => 'நோம்ப்ரே டி கோர்ன்ச்',
     'AB_bazaragenda_modal_label' => "Affichage d'une fentretre modale lors du clic",
-    // BazarCalendar
     'AB_bazarcalendar' => 'காலெண்ட்ரியர்',
     'AB_bazarcalendar_description' => "Les fiches seront sous forme d'vénement dans un calendrier.",
     'AB_bazarcalendar_showlist_label' => "Afficher le bouton 'திட்டமிடல்'",
@@ -104,7 +99,6 @@ return [
     'AB_bazarcalendar_initialview_day' => 'சர்',
     'AB_bazarcalendar_initialview_list' => 'திட்டமிடல்',
     'AB_bazarcarto_showicalbutton_label' => "மாண்ட்ரர் லு பூட்டன் டி'ச் ஏற்றுமதி ical",
-    // BazarListe
     'AB_bazarliste_label' => 'பட்டியல்',
     'AB_bazarliste_description' => "லெச் ஃபிடச் செரண்ட் ச ous ச் ஃபார்ம் டி'லேடியோன்கள்",
     'AB_bazarliste_displayfields_title' => 'Coix des samps à insture',
@@ -113,7 +107,6 @@ return [
     'AB_bazarliste_displayfields_text_label' => 'மண்டல டி டெக்ச்டே',
     'AB_bazarliste_displayfields_floating_label' => 'மண்டல ஃப்ளோடான்ட்',
     'AB_bazarliste_displayfields_visual_label' => 'மண்டல விசுவல்',
-    // BazarCard
     'AB_bazarcard_label' => 'பிளாக்ச் (நிகழ்ச்சி நிரல், ஆக்டச், டிராம்பினோச்கோப், டாமியர்…)',
     'AB_bazarcard_description' => 'லெச் ஃபிடச் செரண்ட் ச ous ச் ஃபார்ம் டி கார்ட்ச்',
     'AB_bazarliste_displayfields_footer_label' => 'மண்டல அடிக்குறிப்பு',
@@ -125,17 +118,14 @@ return [
     'AB_bazarcard_imgstyle_contain' => 'படம் என்டியர்',
     'AB_bazarcard_imgstyle_cover' => 'COUVRIR LA மண்டலம் / ROGNER',
     'AB_bazarcard_nblines_label' => 'நோம்ப்ரே டி லிக்னெச் லு ச ous ச்-டிட்ரேவை ஊற்றுகிறார்',
-    // BazarTable
     'AB_BAZAR_MAP_AND_TABLE_LABEL' => 'கார்டே மற்றும் அட்டவணை',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_LABEL' => 'அட்டவணை கான்டெனன்ட் டூட்ச் லெச் ஃபைச்',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ALL' => 'அவெக் ஓ சான்ச் புவிசார்மயமாக்கல்',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ONLY_GEOLOC' => 'சியுலேமென்ட் அவெக் புவிசார்மயமாக்கல்',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_NO_GEOLOC' => 'சீலெமென்ட் சான்ச் புவிசார்மயமாக்கல்',
-    // BazarTrombi
     'AB_bazartrombi_label' => 'டிராம்பினோச்கோப்',
     'AB_bazartrombi_description' => 'லெச் ஃபிடச் செரண்ட் ச ous ச் ஃபார்ம் டி டிராம்பினோச்கோப்.',
     'AB_bazartrombi_hint' => 'அன் சேம்ப் டி வகை bf_image est nécessaire.',
-    // BazarMaterialCard
     'AB_bazarmaterialcard_label' => 'பொருள் அட்டை',
     'AB_bazarmaterialcard_description' => 'Les fiches seront sous forme de boite modale.',
     'AB_bazarmaterialcard_hint' => 'அன் சேம்ப் டி வகை bf_image est nécessaire',
@@ -143,10 +133,8 @@ return [
     'AB_bazarmaterialcard_type_label' => 'Affichage sans effet',
     'AB_bazarmaterialcard_modal_label' => "Affichage d'une fentretre modale lors du clic",
     'AB_bazarmaterialcard_bf_baseline_label' => 'சாம்பியன் போர் லு ச ous ச் டைட்ரே',
-    // BazarAnnuaire
     'AB_bazarannuaire_label' => 'Annuaire',
     'AB_bazarannuaire_description' => "Affiche les fiches sous forme d'annuaire abarabétique",
-    // BazarDamier
     'AB_bazardamier_label' => 'டாமியர்',
     'AB_bazardamier_description' => 'Affiche les fiches sous forme de tamier paramétrable',
     'AB_bazardamier_hint' => 'UN SAMP DE வகை BF_DEBUT, BF_FIN, BF_LIEU, BF_IMAGE, BF_LIEN, BF_FICHIER, BF_BOUTON SONT UTILISES',
@@ -154,11 +142,9 @@ return [
     'AB_bazardamier_couleur_label' => 'கூலூர் டு டாமியர்',
     'AB_bazardamier_correpondance_hint' => 'CE வார்ப்புரு est FORTEMENT தனிப்பயனாக்கக்கூடியது',
     'AB_bazardamier_bf_description_label' => 'சாம்ப் லா விளக்கத்தை ஊற்றவும்',
-    // BazarTimeLine
     'AB_bazartimeline_label' => 'நேர வரி',
     'AB_bazartimeline_description' => 'Affiche les fichiers dans une காலவரிசை.',
     'AB_bazartimeline_hint' => 'அன் சேம்ப் டி வகை bf_image est nécessaire.',
-    // BazarCarousel
     'AB_bazarcarousel_label' => 'கொணர்வி',
     'AB_bazarcarousel_description' => 'Affiche les pices des fiches sous forme de கொணர்வி',
     'AB_bazarcarousel_hint' => 'அன் சேம்ப் டி வகை bf_image est nécessaire.',
@@ -167,29 +153,22 @@ return [
     'AB_bazarcarousel_avecpage_hint' => 'லா பேச் அஃபிச்சீ செரா நோம் பாகேச்டெசச்ச்லிடர்',
     'AB_bazarcarousel_showlinkinsteadofurl_label' => 'மாண்ட்ரர் லு லீன் பி.எஃப்_லியன் ஏ.யூ லியு டி செலுய் வெர்சச் லா ஃபிச்',
     'AB_bazarcarousel_bf_titre_label' => 'சாம்ப் லு டெக்ச்டே அஃபிச்',
-    // bazargaleriephoto
     'AB_bazargaleriephoto_label' => 'கேலரி புகைப்படம்',
     'AB_bazargaleriephoto_description' => 'Affiche les pices des fiches sous forme de calerie புகைப்படம்.',
     'AB_bazargaleriephoto_hint' => 'அன் சேம்ப் டி வகை bf_image est nécessaire.',
-    // bazarlistegalerie
     'AB_bazarlistegalerie_label' => 'பட்டியல் கேலரி புகைப்படம்',
     'AB_bazarlistegalerie_description' => 'Affiche les pices des fiches sous forme de calerie புகைப்படம்.',
     'AB_bazarlistegalerie_hint' => 'அன் சேம்ப் டி வகை bf_image est nécessaire.',
-    // bazarlistephotobox
     'AB_bazarlistephotobox_label' => 'ஃபோட்டோபாக்ச்',
     'AB_bazarlistephotobox_description' => 'Affiche les pices des fiches sous forme de calerie புகைப்படம்.',
     'AB_bazarlistephotobox_hint' => 'அன் சேம்ப் டி வகை bf_image est nécessaire.',
-    // bazarlisteliens
     'AB_bazarlisteliens_label' => 'பட்டியல் டெச் லீன்ச்',
     'AB_bazarlisteliens_description' => 'Affiche les leens vers les fiches sous forme de liste à puces.',
-    // bazarlisteliensdates
     'AB_bazarlisteliensdates_label' => 'லிச்டே டெச் லீன்ச் அவெக் தேதிகள்',
     'AB_bazarlisteliensdates_description' => 'Affiche les leens vers vers les fiches sous forme de liste avec les தேதிகள் டி க்ரேசன்.',
-    // bazarmail
     'AB_bazarmail_label' => 'Ecrire à tous',
     'AB_bazarmail_description' => 'Affiche Uniquement la liste des mails trowées dans le fumlaire',
     'AB_bazarmail_hint' => 'UN SAMP DE வகை BF_MAIL est Nécessaire.',
-    // bazarblog
     'AB_bazarblog_label' => 'வலைப்பதிவு',
     'AB_bazarblog_description' => 'லெச் ஃபிடச் செரண்ட் ச ous ச் ஃபார்ம் டி வலைப்பதிவு.',
     'AB_bazarblog_hint' => 'Un samp de வகை bf_image est சாத்தியம்',
@@ -197,16 +176,13 @@ return [
     'AB_bazarblog_show_author_label' => "Afficher l'auture, l'autrice",
     'AB_bazarblog_show_date_label' => 'Afficher la திகதி de creation',
     'AB_bazarblog_date_creation_fiche_label' => 'சாம்பியன் போர் லா தேதி டி வெளியீடு',
-    // bazargogocarto
     'AB_bazargogocarto_label' => 'கார்டோகிராஃபி 2 - கோகோகார்டோ',
     'AB_bazargogocarto_description' => 'லெச் ஃபிடச் செரண்ட் ச ous ச் ஃபார்ம் டி மார்குவூர்.',
     'AB_bazargogocarto_height_label' => 'ஆட்டூர் டி லா கார்டே',
     'AB_bazargogocarto_width_label' => 'லார்ச் டி லா கார்டே',
-    // BazarAction
     'AB_bazar_action_label' => 'Afficher un fummulaire de creation de fiche',
     'AB_bazar_action_description' => 'பெர்மெட் டி அஃபிச்சர் லு ஃபார்முலேர் பவுர் க்ரீயர் யூன் ஃபிச்.',
     'AB_bazar_action_redirecturl_label' => "Nom de page de ce wiki ou முகவரி follical à afficher aprers creation d'ne fiche",
-    // attach
     'AB_attach_commons_title' => 'லெச் படங்களை ஊற்றவும்',
     'AB_attach_link_label' => 'லீன் வெப் அசோசியே அயு CLIC',
     'AB_attach_caption_label' => 'டெக்ச்டே அஃபிச் ஆ சர்வர்',
@@ -248,7 +224,6 @@ return [
     'AB_attach_file_hint' => 'அஃபிச்சர் லு ஃபைச்சியர் டி யூன் ஆட்ரே பக்கத்தை ஊற்றவும், "NomePage/nomdefichier.ext"',
     'AB_attach_desc_label' => 'விவரம்',
     'AB_attach_displaypdf_label' => 'Afficher le fichier pdf',
-    //video
     'AB_attach_video_label' => 'விடோ இன்டெக்ரே',
     'AB_attach_video_description' => 'இன்டெக்ரேசன் டி யூன் விடோ யூடியூப், விமியோ ஓ பியர்டியூப்.',
     'AB_attach_video_hint' => "L'difiandifient de la vidéo cerse oness aux chiffres ou lettres à la இறகு de son முகவரி",
@@ -260,7 +235,6 @@ return [
     'AB_attach_video_position_label' => 'நிலை டி லா விடோ',
     'AB_attach_video_largeur_max_label' => 'பெரிய மாக்சிமேல்',
     'AB_attach_video_hauteur_max_label' => 'ஆட்டூர் மாக்சிமேல்',
-    //pdf
     'AB_attach_pdf_label' => 'Fichier pdf integre',
     'AB_attach_pdf_description' => 'இன்டெக்ரேசன் டி அன் ஃபைச்சியர் பி.டி.எஃப் டி சிஇ தளம்.',
     'AB_attach_pdf_hint' => 'அஃபிச்சர் வோட்ரே பி.டி.எஃப், டி.',
@@ -272,7 +246,6 @@ return [
     'AB_attach_pdf_position_label' => 'நிலை DU PDF',
     'AB_attach_pdf_largeur_max_label' => 'பெரிய மாக்சிமேல்',
     'AB_attach_pdf_hauteur_max_label' => 'ஆட்டூர் மாக்சிமேல்',
-    // management
     'AB_management_label' => 'கெச்டியன் டு யெச்விகி',
     'AB_management_editactionsacls_label' => 'எடிட்டர் லெச் ட்ரோய்ட்ச் டி அக்யச் ஆக்ச் செயல்கள்',
     'AB_management_edithandlersacls_label' => 'எடிட்டர் லெச் ட்ரோய்ட்ச் டி அக்ச் ஆக்ச் ஏண்ட்லர்கள்',
@@ -290,7 +263,6 @@ return [
     'AB_management_adminbackups_label' => 'கெச்டியன் டெச் சாவெகார்ட்ச்',
     'AB_management_commentstable_label' => 'டேபிள் டெச் கருத்துரு',
     'AB_management_usercomments_label' => 'Mes commpressaires',
-    // advanced actions
     'AB_advanced_actions_label' => 'செயல்கள் அவான்சச்',
     'AB_advanced_action_backlinks_label' => 'Afficher les பக்கங்கள் QUI ONT UN LIEN VERS LA PAGE CORANTE',
     'AB_advanced_action_backlinks_page_label' => 'பக்கம் டி அடிப்படை',
@@ -366,9 +338,7 @@ return [
     'AB_advanced_action_login_loggedinurl_hint' => "Page du wiki ou முகவரி ('UNCOMIMENURL' si vide o ou என் cas d'erreur ஐப் பயன்படுத்தவும்)",
     'AB_advanced_action_login_loggedouturl_label' => 'முகவரி DE REAIRECTION APRES Déconnexion',
     'AB_advanced_action_login_loggedouturl_hint' => "Page du wiki ou முகவரி ('UNCOMIMENURL' si vide ஐப் பயன்படுத்துங்கள்)",
-    // col
     'AB_template_col_size_hint' => 'கவனம், லா சோம் டெச் லாங்கர்ச் டி டூட்ச் லெச் கோர்ன்ச் நேவ் டெவ்ரா பாச் எக்செரேடர் 12!',
-    // button
     'AB_buttons_label' => 'பூட்டன்கள்',
     'AB_buttons_action_button_label' => 'பூட்டன்',
     'AB_buttons_action_button_description' => 'க்ரீயர் அன் பூட்டன் கிளிக்கபிள்',
@@ -405,7 +375,6 @@ return [
     'AB_buttons_action_button_new_window_yes' => 'oui',
     'AB_buttons_action_button_hideifnoaccess_label' => "முகமூடி si l'utilisateur n'a pas acces à la page leiee",
     'AB_buttons_action_button_nobtn_label' => 'Afficher sous forme de lien',
-    // reactions
     'AB_REACTION_GROUP_LABEL' => 'Reactions / வாக்குகள்',
     'AB_REACTION_TITLE_LABEL' => 'டைட்ரே டு வாக்கு',
     'AB_REACTION_LABEL' => 'Reactions et வாக்குகள்',
@@ -424,7 +393,6 @@ return [
     'AB_MYFAVORITES_TEMPLATE_LINKS_WITH_TITLES' => 'லீன்ச் அவெக் டைட்ரெச்',
     'AB_MYFAVORITES_TEMPLATE_TILES' => 'விக்னெட்டுகள்',
     'AB_MYFAVORITES_TEMPLATE_TABLE' => 'அட்டவணை',
-    // syndication
     'AB_syndication_main_label' => 'சிண்டிகேசன் / ஃப்ளக்ச் ஆர்.எச்.எச்',
     'AB_syndication_action_label' => 'சிண்டிகேசன்',
     'AB_syndication_action_description' => 'சிண்டிகர் லு ஃப்ளக்ச் ஆர்எச்எச் டி அன் தள அடுக்குகள்',
@@ -444,7 +412,6 @@ return [
     'AB_syndication_action_formatdate_option_jma' => 'அருமை மோயிச் அன்னே',
     'AB_syndication_action_formatdate_option_jmh' => 'அருமை மோயிச் இயூர்',
     'AB_syndication_action_formatdate_option_jmah' => 'அருமை மோயிச் அன்னே இயூர்',
-    // tableau
     'AB_bazartableau_label' => 'அட்டவணை',
     'AB_bazartableau_description' => 'Afficher sous forme de tableau',
     'AB_bazartableau_columnfieldsids_label' => 'சாம்ப்ச் afficher',

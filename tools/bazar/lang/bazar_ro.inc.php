@@ -1,4 +1,5 @@
 <?php
+
 return [
     'BAZ_LISTES' => 'Listele',
     'BAZ_NOM_LISTE' => 'Numele listei',
@@ -278,8 +279,7 @@ return [
     'EDIT_CONFIG_GROUP_BAZAR' => 'Baza de date',
     'BAZ_USER_FIELD_EXISTING_USER_BY_EMAIL' => 'E-mailul furnizat este deja asociat cu un cont YesWiki! Vă rugăm să introduceți o altă adresă de e-mail sau să vă conectați la acest cont.',
     'USER_PASSWORDS_NOT_IDENTICAL' => 'Parola introdusă pentru verificare nu este identică cu prima!',
-    'BAZ_USER_FIELD_ALREADY_CONNECTED' => "Sunteți deja conectat cu identificatorul \"{wikiname}\" și e-mailul \"{email}\".
-Cardul creat va fi conectat automat la contul dvs. Vă rugăm să vă deconectați pentru a crea un cont nou!",
+    'BAZ_USER_FIELD_ALREADY_CONNECTED' => "Sunteți deja conectat cu identificatorul \"{wikiname}\" și e-mailul \"{email}\". Cardul creat va fi conectat automat la contul dvs. Vă rugăm să vă deconectați pentru a crea un cont nou!",
     'BAZ_USER_FIELD_ALREADY_CONNECTED_AUTOUPDATE' => 'Pentru a modifica adresa de e-mail asociată cu acest cont, tastați altul decât "{email}".',
     'BAZ_MEMBERS' => 'membrii',
     'BAZ_MORE_INFOS' => 'Mai multe informații',
@@ -328,11 +328,10 @@ Cardul creat va fi conectat automat la contul dvs. Vă rugăm să vă deconecta�
     'BAZ_WIDGET_INSTRUCTION' => 'Încorporați codul pentru a copia pasta în site-ul dvs',
     'BAZ_WIDGET_INSTRUCTION2' => 'Cod acțiune wiki pentru a copia lipire într-o pagină a acestui site',
     'BAZ_CORRESPONDANCE_ERROR' => 'acțiunea Bazarliste: corespondența parametrului nu este completată corect: trebuie să fie de forma corespondentă="identifiant_1=identifiant_2" sau corespondent="identifiant_1=identifiant_2, identifiant_3=identifiant_4',
-    'BAZ_CORRESPONDANCE_ERROR2' => "acțiunea Bazarlist: parametrul de potrivire este umplut incorect.
-Trebuie să fie de forma corespondentă=\"identifiant_1=identifiant_2\" sau corespondent=\"identifiant_1=identifiant_2, identifiant_3=identifiant_4\"",
+    'BAZ_CORRESPONDANCE_ERROR2' => "acțiunea Bazarlist: parametrul de potrivire este umplut incorect. Trebuie să fie de forma corespondentă=\"identifiant_1=identifiant_2\" sau corespondent=\"identifiant_1=identifiant_2, identifiant_3=identifiant_4\"",
     'BAZ_CSV' => 'CSV',
     'BAZ_FORMULAIRE' => 'Formularele',
-    'BAZ_INTRO_MODIFIER_FORMULAIRE' => 'Pentru a edita un formular, faceți clic pe numele său sau pe pictograma creion. Pentru a șterge un formular, faceți clic pe pictograma coș de gunoi. <br/> Pentru a crea un formular nou, faceți clic pe linkul de sub această listă.',
+    'BAZ_INTRO_MODIFIER_FORMULAIRE' => 'Pentru a edita un formular, faceți clic pe numele său sau pe pictograma creion. Pentru a șterge un formular, faceți clic pe pictograma coș de gunoi. <br /> Pentru a crea un formular nou, faceți clic pe linkul de sub această listă.',
     'BAZ_INTRO_AJOUT_LISTE' => '<strong>No listă creată încă.</strong><br />Puteți crea manual o listă nouă (faceți clic pe butonul plus), în,<br />sau importați liste dintr-un YesWiki existent (cum ar fi https://yeswiki.net/server).',
     'BAZ_CONFIRM_VIDER_FORMULAIRE' => 'Atenție! Toate formularele salvate pentru acest formular vor fi pierdute, doar formularul gol va rămâne disponibil. Sunteți sigur că doriți să goliți această formă a foilor asociate',
     'BAZ_LOADING' => 'Încărcare',
@@ -353,10 +352,10 @@ Trebuie să fie de forma corespondentă=\"identifiant_1=identifiant_2\" sau core
     'EDIT_CONFIG_HINT_BAZ_ADRESSE_MAIL_ADMIN' => 'Adresa de e-mail a expeditorului modificărilor aduse foilor de bazar',
     'BAZ_USER_FIELD_LABEL' => 'Utilizator',
     'EVENT_EVERY_X_MONTHS' => 'La fiecare X luni',
-    'EVENT_IS_LINKED_TO_RECURRENT_EDIT' => 'Acest eveniment este un eveniment recurent legat de %{link} record. <br/>Orice modificare a acestui record va rupe legătura cu evenimentul de bază!',
+    'EVENT_IS_LINKED_TO_RECURRENT_EDIT' => 'Acest eveniment este un eveniment recurent legat de %{link} record. <br />Orice modificare a acestui record va rupe legătura cu evenimentul de bază!',
     'BAZ_VERIFIER_MON_ADRESSE' => 'Geolocalizare din adresa introdusă',
     'BAZ_ONLY_ONE_ENTRY_FOR_THIS_FORM' => 'Restricționați numărul de carduri la unul pentru fiecare utilizator',
-    'BAZ_COMMENTS_NOT_ACTIVATED' => 'Comentariile sunt gestionate de YesWiki, dar nu sunt activate. <br/>Go la pagina GererConfig pentru a activa comentariile (parametru `comments_activated`)',
+    'BAZ_COMMENTS_NOT_ACTIVATED' => 'Comentariile sunt gestionate de YesWiki, dar nu sunt activate. <br />Go la pagina GererConfig pentru a activa comentariile (parametru `comments_activated`)',
     'BAZ_DRAG_n_DROP_CHECKBOX_ORDER_ITEM_INFO' => 'Mutați elementele în ordinea pe care o doriți. De asemenea, le puteți muta de la stânga la dreapta',
     'BAZ_ENCODAGE_CSV' => 'Fișierul CSV trebuie să fie codificat în UTF-8, cu virgule (,) ca separatoare și ghilimele duble (") pentru diferitele valori. Câmpurile cu o stea (*) sunt obligatorii și trebuie să conțină date.',
     'BAZ_PAS_DE_FORM_AVEC_CET_ID' => 'Formularul pe care îl căutați nu există (a fost șters între timp?)',
@@ -375,8 +374,7 @@ Trebuie să fie de forma corespondentă=\"identifiant_1=identifiant_2\" sau core
     'BAZ_EXISTINGMESSAGE' => 'Această listă există deja, o va suprascrie pe cea existentă dacă o selectați.',
     'BAZ_EXISTINGMESSAGEREPLACEFORM' => 'Atenție, acest identificator și titlul acestui formular există deja, dacă îl selectați, acesta va fi suprascris.',
     'EDIT_CONFIG_HINT_BAZ_EXTERNAL_SERVICE[CACHE_TIME_TO_REFRESH_FORMS]' => 'Timp (e) între două reîmprospătări ale memoriei cache pentru formularele necesare pentru interogările JSON',
-    'BAZ_USER_FIELD_EXISTING_USER_BY_NAME' => "Identificatorul \"{currentName}\" există deja!
-Bifați caseta pentru a confirma înlocuirea acesteia cu \"{proposedName}\" sau schimbați numele de utilizator în formularul de mai jos.",
+    'BAZ_USER_FIELD_EXISTING_USER_BY_NAME' => "Identificatorul \"{currentName}\" există deja! Bifați caseta pentru a confirma înlocuirea acesteia cu \"{proposedName}\" sau schimbați numele de utilizator în formularul de mai jos.",
     'BAZ_SEM_USE_TEMPLATE_DESC' => 'Utilizați un template semantic dacă este disponibil pentru acest tip de obiect',
     'BAZ_PAS_D_ID_DE_FICHE_INDIQUEE' => 'ID-ul de înregistrare nu este specificat.',
     'BAZ_BAD_IMAGE_FILE_EXTENSION' => 'Extensie greșită pentru imagine (trebuie să fie .jpg sau .png sau .gif)',

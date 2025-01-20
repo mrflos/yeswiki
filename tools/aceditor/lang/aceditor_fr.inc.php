@@ -1,5 +1,4 @@
 <?php
-
 $GLOBALS['translations'] = array_merge($GLOBALS['translations'], [
     'ACTION_BUILDER_CHOOSE_FORM' => 'Choisissez un formulaire',
     'ACTION_BUILDER_CHOOSE_TEMPLATE' => 'Sous quelle forme voulez-vous afficher les données?',
@@ -11,7 +10,6 @@ $GLOBALS['translations'] = array_merge($GLOBALS['translations'], [
     'ACTION_BUILDER_ADVANCED_PARAMETERS' => 'Paramètres Avancés',
     'EDIT_CONFIG_HINT_ACTIONBUILDER_TEXTAREA_NAME' => 'Nom du champ bazar texte long pour lequel les composants doivent être visibles',
     'EDIT_CONFIG_GROUP_ACEDITOR' => 'Barre d\'édition pour les pages et les champs texte',
-
     'ACEDITOR_SAVE' => 'Sauver',
     'ACEDITOR_FORMAT' => 'Format',
     'ACEDITOR_TITLE1' => 'Titre 1',

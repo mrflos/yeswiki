@@ -22,7 +22,6 @@ return [
     'CONTACT_YOUR_EMAIL_LIST' => 'Votre liste d\'adresses mails',
     'CONTACT_EXTRACT_EMAILS_FROM_TEXT' => 'Extraire les mails de ce texte',
     'CONTACT_MUST_BE_ADMIN_TO_USE_THIS_ACTION' => 'il faut &ecirc;tre dans le groupe admins pour utiliser cette action',
-
     'CONTACT_YOUR_NAME' => 'Votre nom',
     'CONTACT_YOUR_MAIL' => 'Votre adresse mail',
     'CONTACT_SUBJECT' => 'Sujet du message',
@@ -31,28 +30,22 @@ return [
     'CONTACT_LISTSUBSCRIBE_REQUIRED' => 'le param&egrave;tre "list", contenant l\'adresse &eacute;lectronique de la liste, du type nomliste@domaine.ext, est obligatoire',
     'CONTACT_USER_NOT_LOGGED_IN' => 'il faut &ecirc;tre identifi&eacute; pour acc&eacute;der aux actions possibles.',
     'CONTACT_USER_NO_EMAIL' => 'il faut &ecirc;tre identifi&eacute; pour acc&eacute;der aux actions possibles.',
-
     'CONTACT_ENTER_NAME' => 'Vous devez entrer un nom.',
     'CONTACT_ENTER_SENDER_MAIL' => 'Vous devez entrer une adresse mail pour l\'exp&eacute;diteur.',
     'CONTACT_SENDER_MAIL_INVALID' => 'Vous devez entrer une adresse mail valide pour l\'exp&eacute;diteur.',
     'CONTACT_ENTER_RECEIVER_MAIL' => 'Vous devez entrer une adresse mail pour le destinataire.',
     'CONTACT_RECEIVER_MAIL_INVALID' => 'Vous devez entrer une adresse mail valide pour le destinataire.',
     'CONTACT_ENTER_MESSAGE' => 'Veuillez entrer un message. Il doit faire au minimum 10 caract&egrave;res.',
-
     'CONTACT_MESSAGE_SUCCESSFULLY_SENT' => 'Votre message a bien &eacute;t&eacute; envoy&eacute;. Merci!',
     'CONTACT_MESSAGE_NOT_SENT' => 'Une erreur s\'est produite lors de l\'envoi du message. Veuillez contacter l\'administrateur du site pour qu\'il puisse régler le problème.',
     'CONTACT_SUBSCRIBE_ORDER_SENT' => 'Votre demande concernant votre abonnement a bien &eacute;t&eacute; prise en compte. Merci!',
     'CONTACT_UNSUBSCRIBE_ORDER_SENT' => 'Votre demande concernant votre d&eacute;sabonnement a bien &eacute;t&eacute; prise en compte. Merci!',
-
     'CONTACT_HANDLER_MAIL_FOR_CONNECTED' => 'L\'envoi de mail est r&eacute;serv&eacute; aux personnes identifiées.',
     'CONTACT_LOGIN_IF_CONNECTED' => 'Si vous avez un identifiant, veuillez vous identifier.',
-
     'CONTACT_SUBSCRIBE' => 'S\'abonner',
-
     'CONTACT_FROM' => 'de',
     'CONTACT_TEMPLATE_NOT_FOUND' => 'Fichier de template non trouvé',
     'CONTACT_MESSAGE_SENT_FROM' => 'Message envoyé à partir de',
-
     'CONTACT_PERIOD' => 'Recevoir le contenu de cette page par email de manière',
     'CONTACT_DAILY' => 'Journalière',
     'CONTACT_WEEKLY' => 'Hebdomadaire',
@@ -60,7 +53,6 @@ return [
     'CONTACT_UNSUBSCRIBE' => 'Se désabonner',
     'CONTACT_SUCCESS_SUBSCRIBE' => 'Vous êtes maintenant abonné de manière ',
     'CONTACT_SUCCESS_UNSUBSCRIBE' => 'Vous avez bien été désabonné',
-
     'CONTACT_THIS_MESSAGE' => 'Ce message est envoyé par un visiteur depuis la fiche',
     'CONTACT_FROM_FORM' => 'du formulaire',
     'CONTACT_FROM_WEBSITE' => 'du site',

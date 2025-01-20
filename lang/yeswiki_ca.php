@@ -445,7 +445,7 @@ return [
     'YW_ACLS_WRITE' => 'Drets d\'escriptura (* per a tothom, + identificat pers, @admins grp admin)',
     'SUCCESS_RESTORE_REVISION' => 'La versió ha estat restaurada',
     'INCORRECT_ROOT_PAGE_NAME' => 'El nom de la pàgina principal només ha de contenir lletres no expressades, números, \'_\', \'-\' o \'. \'',
-    'COMMENT_INFO' => 'This  on  on  on  on  on  on  on  on',
+    'COMMENT_INFO' => 'This on on on on on on on on',
     'USER_DISCONNECT' => 'Desconnexió',
     'EDIT_CONFIG_HINT_DEFAULT_COMMENT_AVATAR' => 'Imatge d\'avatar predeterminat per comentaris (URL a una imatge)',
     'YW_CANNOT_CHANGE_ACLS' => 'No es poden gestionar permisos en aquesta pàgina',
@@ -494,13 +494,6 @@ return [
     'REDIRECTED_FROM' => 'Redirecció de {linkFrom}',
     'RESTORE_REVISION' => 'Restaurar aquesta versió',
     'DELETE' => 'Suprimeix',
-    'ACLS_HELPER' => 'Separar cada entrada de coma, per exemple,</brar
-<bover*</bover (tots els usuaris)</brating
-<bover+</bover (usuaris registrats)</bover
-<b imposa%</b imposat (creador de fulls/pàgina)</br elevat
-<b voltage@nom_du_group</b indicator (grup d\'usuaris, ex: @admins)</br raised
-<b untoJamesBond</b unto (nom YesWiki d\'un usuari)</br†
-SuperCat (no es permet SuperCat)',
     'REACTION_ON_ENTRY' => 'Reacció sobre un full',
     'FORM_RETURN' => 'Formulari de devolució',
     'USER_YOU_MUST_SPECIFY_YES_OR_NO' => 'Es necessita un valor \'Y\' o \'N\' per a %{name}.',
@@ -547,7 +540,7 @@ SuperCat (no es permet SuperCat)',
     'YW_COMMENTS_ARE_NOW_OPEN' => 'Comentaris publicats en aquesta pàgina',
     'REFERRERS_SITES_24_HOURS' => '24 hores',
     'AUTHORIZE_INDEX_BY_ROBOTS' => 'Permet la indexació per motors de cerca',
-    'COMMENT_NEW_COMMENT_ANSWER_TAG' => 'You  toية: EN _ BG _ CS _ DA _ EL _ ES _ FI _ HI _ HR _ HU _ ID _ IT _ JA _ LT _ LV _ NL _ PL _ PT _ RO _ SK _ SL _ SV _ TH _ VI',
+    'COMMENT_NEW_COMMENT_ANSWER_TAG' => 'You toية: EN _ BG _ CS _ DA _ EL _ ES _ FI _ HI _ HR _ HU _ ID _ IT _ JA _ LT _ LV _ NL _ PL _ PT _ RO _ SK _ SL _ SV _ TH _ VI',
     'ACLS_COMMENTS_CLOSED' => 'Comentaris tancats',
     'USER_THIS_IS_NOT_A_VALID_NAME' => 'No és un usuari vàlid',
     'USER_DELETE_LONE_MEMBER_OF_GROUP' => 'No es pot eliminar un usuari sol en almenys un grup',
