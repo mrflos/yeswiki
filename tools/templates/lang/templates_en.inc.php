@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'Action',
     'TEMPLATE_FILE_NOT_FOUND' => 'Template not found',
@@ -114,7 +113,9 @@ return [
     'AB_template_actions_warning' => 'Warning',
     'AB_template_actions_danger' => 'Danger',
     'AB_template_action_accordion_label' => 'Display panels in accordion',
-    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}\nPanel content\n{{end elem=\"panel\"}}",
+    'AB_template_action_accordion_example' => "{{panel title=\"Panel title\" }}
+Panel content
+{{end elem=\"panel\"}}",
     'AB_template_action_col_label' => 'Column',
     'AB_template_col_size_label' => 'Column width',
     'AB_template_action_grid_label' => 'Display several columns',
