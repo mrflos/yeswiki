@@ -371,9 +371,17 @@ const load = (domElement) => {
           this.sortOptions.push({ field, label, asc: true })
           this.sortOptions.push({ field, label, asc: false })
         })
-        // params "champ" is used to choose default sort (backend sort). If present
-        // we do not overwride this backend sort by the front end dynamic sort
-        if (this.sortOptions.length > 0 && !this.params.champ) this.currentSort = this.sortOptions[0]
+        if (this.sortOptions.length > 0) {
+          // params "champ" is used to choose default sort (backend sort). If present
+          // we do not overwride this backend sort by the front end dynamic sort
+          if (this.params.champ) {
+            const sort = this.sortOptions
+              .find((o) => o.field === this.params.champ && o.asc === (this.params.ordre === 'asc'))
+            if (sort) this.currentSort = sort
+          } else {
+            this.currentSort = this.sortOptions[0]
+          }
+        }
 
         // First display filters cause entries can be a bit long to load
         this.filters = this.initFiltersFromHash(filters, savedHash)
