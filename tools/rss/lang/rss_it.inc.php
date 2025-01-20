@@ -1,5 +1,4 @@
 <?php
-
 return [
     'RSS_CHANGE_OF' => 'Modifica di',
     'RSS_HISTORY' => 'cronologia',
