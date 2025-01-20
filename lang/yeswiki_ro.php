@@ -1,5 +1,4 @@
 <?php
-
 return [
     'YOUR_SYSTEM' => 'Sistemul dvs',
     'USER_YOU_MUST_SPECIFY_A_NAME' => 'Vă rugăm să introduceți un nume pentru utilizator',
