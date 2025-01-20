@@ -5,9 +5,6 @@ use YesWiki\Bazar\Service\EntryManager;
 use YesWiki\Core\Service\AclService;
 use YesWiki\Core\Service\ThemeManager;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 // inclusion de la bibliotheque de fonctions pour l'envoi des mails
 include_once 'includes/email.inc.php';

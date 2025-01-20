@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $content = $this->getParameter('content');
 switch ($content) {

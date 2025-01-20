@@ -1,10 +1,3 @@
-<?php
-
-if (!defined('WIKINI_VERSION')) {
-  exit('accès direct interdit');
-}
-?>
-
 <form class="form-horizontal form-yeswiki-install" action="<?php echo myLocation(); ?>?PagePrincipale&installAction=install" method="post">
 
   <div class="row">

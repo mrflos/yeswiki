@@ -1,9 +1,5 @@
 <?php
 
-// Vérification de sécurité
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 use YesWiki\Core\Service\CommentService;
 

@@ -10,9 +10,6 @@
  *
  * @see     https://yeswiki.net
  */
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 header('Content-Type: text/css');
 if ($this->HasAccess('read') && $this->page && isset($this->page['body'])) {

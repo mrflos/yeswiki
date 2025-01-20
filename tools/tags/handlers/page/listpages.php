@@ -2,9 +2,6 @@
 
 use YesWiki\Tags\Service\TagsManager;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 // fonctions a inclure
 include_once 'tools/tags/libs/tags.functions.php';

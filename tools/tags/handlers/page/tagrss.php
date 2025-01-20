@@ -2,10 +2,6 @@
 
 use YesWiki\Core\Service\AclService;
 
-// Vérification de sécurité
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 $oldpagetag = $this->GetPageTag();
 $oldpage = $this->LoadPage($oldpagetag);
 $tags = trim((isset($_GET['tags'])) ? $_GET['tags'] : '');

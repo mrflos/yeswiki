@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 //parametres wikini
 $pagetag = trim($this->GetParameter('page'));

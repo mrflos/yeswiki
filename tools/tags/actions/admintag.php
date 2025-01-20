@@ -2,9 +2,6 @@
 
 use YesWiki\Security\Controller\SecurityController;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $isAdmin = $this->UserIsAdmin();
 

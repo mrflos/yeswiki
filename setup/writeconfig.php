@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 if (empty($_POST['config'])) {
     header('Location: ' . myLocation());
     exit(_t('PROBLEM_WHILE_INSTALLING'));

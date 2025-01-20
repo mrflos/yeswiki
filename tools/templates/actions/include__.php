@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 // si la page inclue n'existe pas, on propose de la créer
 if (!$incPage = $this->LoadPage($incPageName)) {

@@ -5,9 +5,6 @@
  *
  * Description : action permettant d'inscrire ou d?sinscrire massivement des mails a une newsletter
  */
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 include_once 'includes/email.inc.php';
 

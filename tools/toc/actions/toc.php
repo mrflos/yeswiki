@@ -1,9 +1,5 @@
 <?php
 
-// Vérification de sécurité
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $GLOBALS['tocaction'] = 0;
 

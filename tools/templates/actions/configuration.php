@@ -2,9 +2,6 @@
 
 use YesWiki\Core\Service\ThemeManager;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $themeManager = $this->services->get(ThemeManager::class);
 

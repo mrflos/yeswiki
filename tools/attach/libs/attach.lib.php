@@ -7,9 +7,6 @@ use YesWiki\Core\Service\HtmlPurifierService;
 use YesWiki\Core\Service\LinkTracker;
 use YesWiki\Security\Controller\SecurityController;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 if (!class_exists('attach')) {
     class attach

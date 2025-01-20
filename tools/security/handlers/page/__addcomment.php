@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 if (isset($_POST['action']) && $_POST['action'] == 'addcomment') {
     if ($this->config['use_hashcash']) {

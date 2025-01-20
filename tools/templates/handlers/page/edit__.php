@@ -2,9 +2,6 @@
 
 use YesWiki\Core\Service\ThemeManager;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 // on enleve l'action template
 $plugin_output_new = preg_replace(
     '/' . '(\\{\\{template)' . '(.*?)' . '(\\}\\})' . '/is',

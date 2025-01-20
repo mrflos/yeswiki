@@ -2,9 +2,6 @@
 
 use YesWiki\Tags\Service\TagsManager;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $tagsManager = $this->services->get(TagsManager::class);
 

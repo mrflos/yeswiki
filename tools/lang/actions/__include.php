@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 // Affichage uniquement du contenu correspondant à la langue en cours
 $translation_found = false;

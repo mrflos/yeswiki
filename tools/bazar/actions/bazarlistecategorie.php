@@ -8,9 +8,6 @@
 use YesWiki\Bazar\Service\EntryManager;
 use YesWiki\Core\Service\TemplateEngine;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $entryManager = $this->services->get(EntryManager::class);
 

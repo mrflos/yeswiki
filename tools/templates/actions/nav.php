@@ -2,9 +2,6 @@
 
 use YesWiki\Core\Service\LinkTracker;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 // classe css supplémentaire
 $class = $this->GetParameter('class');

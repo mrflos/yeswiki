@@ -1,9 +1,6 @@
 <?php
 
 // stuff
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $charset = 'UTF-8';
 if (!defined('YW_CHARSET')) {

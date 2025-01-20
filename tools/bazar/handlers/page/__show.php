@@ -2,9 +2,6 @@
 
 use YesWiki\Bazar\Service\EntryManager;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $entryManager = $this->services->get(EntryManager::class);
 

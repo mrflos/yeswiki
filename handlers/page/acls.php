@@ -2,11 +2,6 @@
 
 use YesWiki\Security\Controller\SecurityController;
 
-// Vérification de sécurité
-if (!defined('WIKINI_VERSION')) {
-  exit('accès direct interdit');
-}
-
 ob_start();
 ?>
 <div class="page">

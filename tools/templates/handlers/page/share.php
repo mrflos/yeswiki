@@ -1,10 +1,5 @@
 <?php
 
-// Vérification de sécurité
-if (!defined('WIKINI_VERSION')) {
-  exit('accès direct interdit');
-}
-
 $html = '<a href="http://www.facebook.com/sharer.php?u=' . urlencode($this->Href()) . '&amp;t=' . urlencode($this->GetPageTag()) . '" title="' . _t('TEMPLATE_SHARE_FACEBOOK') . '" class="bouton_share"><img loading="lazy" src="tools/templates/presentation/images/facebook.png" width="32" height="32" alt="' . _t('TEMPLATE_SHARE_FACEBOOK') . '" /></a>' . "\n";
 $html .= '<a href="http://twitter.com/home?status=' . urlencode(_t('TEMPLATE_SHARE_MUST_READ') . $this->Href()) . '" title="' . _t('TEMPLATE_SHARE_TWITTER') . '" class="bouton_share"><img loading="lazy" src="tools/templates/presentation/images/twitter.png" width="32" height="32" alt="' . _t('TEMPLATE_SHARE_TWITTER') . '" /></a>' . "\n";
 $html .= '<a href="http://www.netvibes.com/share?title=' . urlencode($this->GetPageTag()) . '&amp;url=' . urlencode($this->Href()) . '" title="' . _t('TEMPLATE_SHARE_NETVIBES') . '" class="bouton_share"><img loading="lazy" src="tools/templates/presentation/images/netvibes.png" width="32" height="32" alt="' . _t('TEMPLATE_SHARE_NETVIBES') . '" /></a>' . "\n";

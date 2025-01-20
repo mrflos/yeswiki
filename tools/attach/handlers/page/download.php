@@ -4,10 +4,6 @@
 // Necessite le fichier actions/attach.php pour fonctionner
 // voir actions/attach.php ppour la documentation
 
-//vérification de sécurité
-if (!WIKINI_VERSION) {
-    exit('accès direct interdit');
-}
 if (!class_exists('attach')) {
     include 'tools/attach/libs/attach.lib.php';
 }

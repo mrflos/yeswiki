@@ -1,12 +1,8 @@
 <?php
 
-// Vérification de sécurité
 use YesWiki\Bazar\Controller\FormController;
 use YesWiki\Bazar\Service\FormManager;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 if (isset($_REQUEST['demand'])) {
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)) {

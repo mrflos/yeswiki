@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $oldpage = $this->GetPageTag();
 if (!empty($this->page['tag'])) {

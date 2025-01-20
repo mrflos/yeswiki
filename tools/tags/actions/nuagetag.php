@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 $this->AddJavascriptFile('tools/tags/libs/tag.js');
 

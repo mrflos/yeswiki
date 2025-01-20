@@ -2,10 +2,6 @@
 
 use YesWiki\Core\Controller\CsrfTokenController;
 
-// Vérification de sécurité
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 if (($this->UserIsOwner() || $this->UserIsAdmin())
     && isset($_GET['eraselink'])

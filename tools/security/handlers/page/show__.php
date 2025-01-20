@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 if ($this->config['use_nospam']) {
     if ($this->HasAccess('comment') && !$this->page['comment_on']) {

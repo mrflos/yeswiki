@@ -1,8 +1,4 @@
 <?php
-if (!defined('WIKINI_VERSION')) {
-  exit('accès direct interdit');
-}
-
 ob_end_flush();
 ?>
 </div>

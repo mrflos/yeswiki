@@ -2,9 +2,6 @@
 
 use YesWiki\Core\Service\AclService;
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 include_once 'tools/tags/libs/tags.functions.php';
 $nbcartrunc = 200;

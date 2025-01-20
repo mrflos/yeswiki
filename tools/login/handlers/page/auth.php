@@ -3,10 +3,6 @@
 use YesWIki\Core\Controller\AuthController;
 use YesWIki\Core\Service\UserManager;
 
-// Vérification de sécurité
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 header('Content-type: application/json; charset=UTF-8');
 header('Access-Control-Allow-Origin: *');

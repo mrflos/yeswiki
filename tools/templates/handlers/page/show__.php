@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 // on efface des événements javascript issus de wikini
 $plugin_output_new = str_replace('ondblclick="doubleClickEdit(event);"', '', $plugin_output_new);

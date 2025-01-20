@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 // texte genere a l'interieur du bouton
 $text = $this->GetParameter('text');

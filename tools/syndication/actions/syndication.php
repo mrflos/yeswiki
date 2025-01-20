@@ -1,8 +1,5 @@
 <?php
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 include_once 'tools/syndication/libs/syndication.lib.php';
 require_once __DIR__ . '/../vendor/autoload.php';

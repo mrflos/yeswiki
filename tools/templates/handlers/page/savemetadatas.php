@@ -3,9 +3,6 @@
 /**
  * Handler AJAX pour sauver les meta-données.
  */
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 header('Content-type: application/json; charset=UTF-8');
 

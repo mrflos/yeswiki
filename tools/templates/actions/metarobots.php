@@ -6,9 +6,6 @@ use YesWiki\Templates\Service\Utils;
  * Action to add usefull metas to html head
  */
 
-if (!defined('WIKINI_VERSION')) {
-    exit('accès direct interdit');
-}
 
 if ($this->GetMethod() != 'show') {
     echo '<meta name="robots" content="noindex, nofollow">' . "\n";
