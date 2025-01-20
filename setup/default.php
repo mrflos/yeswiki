@@ -253,9 +253,8 @@ echo '<option value="auto"' . ((isset($_GET['lang']) && $_GET['lang'] === 'auto'
                   <label>
                     <input type="hidden" name="config[rewrite_mode]" value="0" />
                     <input type="checkbox" name="config[rewrite_mode]" value="1" <?php
-              echo ($wakkaConfig['rewrite_mode'] ?? true) ? 'checked' : ''; ?> />
-                    <span></span>
-                    &nbsp;<?php echo _t('ACTIVATE_REDIRECTION_MODE'); ?>
+                           echo ($wakkaConfig['rewrite_mode'] ?? true) ? 'checked' : ''; ?> />
+                    <span>&nbsp;<?php echo _t('ACTIVATE_REDIRECTION_MODE'); ?></span>
                   </label>
                   <p class="help-block"><?php echo _t('REDIRECTION_SHOULD_BE_ACTIVE_ONLY_IF_USED_IN_YESWIKI'); ?>.</p>
                 </div>
@@ -264,8 +263,7 @@ echo '<option value="auto"' . ((isset($_GET['lang']) && $_GET['lang'] === 'auto'
                   <label>
                     <input type="checkbox" name="config[allow_raw_html]" value="1" <?php
               echo ($wakkaConfig['allow_raw_html'] ?? true) ? 'checked' : ''; ?> />
-                    <span></span>
-                    &nbsp;<?php echo _t('AUTHORIZE_HTML_INSERTION'); ?>
+                    <span>&nbsp;<?php echo _t('AUTHORIZE_HTML_INSERTION'); ?></span>
                   </label>
                   <p class="help-block"><?php echo _t('HTML_INSERTION_HELP_TEXT'); ?>.</p>
                 </div>
@@ -274,12 +272,10 @@ echo '<option value="auto"' . ((isset($_GET['lang']) && $_GET['lang'] === 'auto'
                   <label>
                     <input type="checkbox" name="config[allow_robots]" value="1" <?php
               echo ($wakkaConfig['allow_robots'] ?? true) ? 'checked' : ''; ?> />
-                    <span></span>
-                    &nbsp;<?php echo _t('AUTHORIZE_INDEX_BY_ROBOTS'); ?>
+                    <span>&nbsp;<?php echo _t('AUTHORIZE_INDEX_BY_ROBOTS'); ?></span>
                   </label>
                   <p class="help-block"><?php echo _t('INDEX_HELP_TEXT'); ?>.</p>
                 </div>
-
               </div>
             </div>
           </div>
