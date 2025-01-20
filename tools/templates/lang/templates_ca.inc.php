@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'Acció',
     'TEMPLATE_ACTION_BUTTON' => 'Acció {{button ...}}',

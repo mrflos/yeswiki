@@ -1,5 +1,4 @@
 <?php
-
 return [
     'CONTACT_ACTION_ABONNEMENT' => 'Acció {{abonnement ...}}',
     'CONTACT_MAIL_REQUIRED' => 'L\'adreça email de contacte és obligatòria.',
