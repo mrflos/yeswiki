@@ -100,6 +100,7 @@ return [
     'YOU_CANNOT_REMOVE_YOURSELF' => 'Vous ne pouvez pas vous retirer vous-même du groupe des administrateurs',
     'ERROR_RECURSIVE_GROUP' => 'Erreur: vous ne pouvez pas définir un groupe récursivement',
     'ERROR_WHILE_SAVING_GROUP' => 'Une erreur s\'est produite pendant l\'enregistrement du groupe',
+    'USER_CANNOT_REMOVE_THEIRSELF_FROM_ADMIN' => 'Vous ne pouvez vous supprimer vous-même du groupe admin',
     'NEW_ACL_FOR_GROUP' => 'Nouvelle ACL pour le groupe',
     'NEW_ACL_SUCCESSFULLY_SAVED_FOR_THE_GROUP' => 'Nouvelle ACL enrégistrée avec succès pour le groupe',
     'EDIT_GROUP' => 'éditer le groupe',
