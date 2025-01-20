@@ -63,7 +63,7 @@ return [
     'BAZ_DATEMIN_FRIDAY' => 'V',
     'BAZ_DATEMIN_SATURDAY' => 'S',
     'BAZ_DATEMIN_SUNDAY' => 'D',
-    'BAZ_DATESHORT_JANUARY' => '',
+    'BAZ_DATESHORT_JANUARY' => 'Ian',
     'BAZ_DATESHORT_FEBRUARY' => '',
     'BAZ_DATESHORT_MARCH' => '',
     'BAZ_DATESHORT_APRIL' => '',
