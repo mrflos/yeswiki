@@ -1,5 +1,4 @@
 <?php
-
 return [
     'BAZ_LISTES' => 'Listele',
     'BAZ_NOM_LISTE' => 'Numele listei',
