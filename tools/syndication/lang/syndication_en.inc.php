@@ -1,5 +1,4 @@
 <?php
-
 return [
     'SYNDICATION_ACTION_SYNDICATION' => 'Action {{syndication ...}}',
     'SYNDICATION_PARAM_URL_REQUIRED' => 'the parameter "url" is required for RSS feed',
