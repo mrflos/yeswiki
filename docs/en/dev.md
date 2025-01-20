@@ -12,15 +12,37 @@ An example of how a custom folder look like can be found at https://github.com/Y
 
 If you have created a bazar form, you can customize how to render each entry created from this form.
 
-We use the convention `fiche-FORM_ID.tpl.html`
-If you have a bazar form with id 5, then you can create `custom/templates/bazar/fiche-5.tpl.html`
-Available variables inside the template are
+Create a file `fiche-FORM_ID.twig` inside `custom/templates/bazar`
+Example: If you have a bazar form with id 5, create `custom/templates/bazar/fiche-5.twig`
 
-| Variable           | Description                                    | Example                                              |
-| ------------------ | ---------------------------------------------- | ---------------------------------------------------- |
-| `$values['fiche']` | Values of the current entry                    | `$values['fiche']['bf_titre'] => "My title"`         |
-| `$values['html']`  | Pre-rendered fields                            | `$values['html']['bf_titre'] => "<h1>My title</h1>"` |
-| `$values['form']`  | Informations about the form : id, fields etc.. |
+#### Available variables inside the template
+
+Use `{{ dump(_context) }}` to display all available variables.
+Some variables like `entry` and `fiche` are the same. We have rename old variable, but we keep them for backward compatibility
+
+#### Example
+
+```twig
+<!-- custom/templates/bazar/fiche-5.twig -->
+
+<!-- Use directly the entry data -->
+<h1>{{ entry.bf_titre }}</h1>
+
+<!-- Use formFields to access the config of a specific field -->
+<!-- For example you can get the list of options for a checkbox field -->
+<ul>
+  {% for foodId in entry.favorite_food|split(',') %}
+    <li>{{ formFields.favorite_food.options[foodId] }}</li>
+  {% endfor %}
+</ul>
+
+<!-- If you want to use the default rendering of a field, use renderedFields -->
+<!-- |raw is used to display html -->
+{{ renderedFields.bf_reactions|raw }}
+
+<!-- Debug all existing data -->
+{{ dump(_context) }}
+```
 
 ### Custom template to render bazar entries (Bazarliste)
 

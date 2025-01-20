@@ -495,6 +495,15 @@ class EntryController extends YesWikiController
         $values['fiche'] = $entry;
         $values['form'] = $form;
 
+        // Transform some data so it's easier to use
+        // Rename some varaibel (we keep old one for backward compatibility)
+        $values['entry'] = $entry;
+        $values['renderedFields'] = $html;
+        $values['formFields'] = [];
+        foreach ($values['form']['prepared'] as $config) {
+            $values['formFields'][$config->getName()] = $config;
+        }
+
         return $values;
     }
 
@@ -676,23 +685,20 @@ class EntryController extends YesWikiController
             case '<':
                 // start before date and whatever finish
                 return
-                    $date->diff($entryStartDate)->invert == 1
-                ;
+                    $date->diff($entryStartDate)->invert == 1;
                 break;
             case '>':
                 // start after date or (before date but and end should be after date, end is needed)
                 return
                     $date->diff($entryStartDate)->invert == 0
-                    || !$this->dateIsStrictlyBefore($entryEndDate, $date)
-                ;
+                    || !$this->dateIsStrictlyBefore($entryEndDate, $date);
                 break;
             case '=':
             default:
                 // start before next day midnight and should end after date midnigth
                 return
                     $nextDay->diff($entryStartDate)->invert == 1
-                    && !$this->dateIsStrictlyBefore($entryEndDate, $date)
-                ;
+                    && !$this->dateIsStrictlyBefore($entryEndDate, $date);
         }
     }
 
