@@ -1,5 +1,4 @@
 <?php
-
 return [
     'CONTACT_ACTION_ABONNEMENT' => 'Acción {{suscripción ...}}',
     'CONTACT_MAIL_REQUIRED' => 'el parámetro email es obligatorio.',
