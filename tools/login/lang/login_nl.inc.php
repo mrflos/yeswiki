@@ -1,5 +1,4 @@
 <?php
-
 return [
     'LOGIN_SIGNUP' => 'Inschrijven',
     'LOGIN_LOGIN' => 'Aanmelden',
