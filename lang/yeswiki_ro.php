@@ -641,4 +641,12 @@ return [
     'GROUP_CREATED' => 'grupul {group} a fost creat cu succes',
     'GROUP_DELETED' => 'grupul {group} a fost șters cu succes',
     'ERROR_WHILE_EDITING_GROUP' => 'eroare în timpul acțiunii asupra grupului.',
+    'WIKI_URL_RECENT' => 'Necesită o versiune YesWiki >= 4.5.0',
+    'WIKI_URL' => 'Url de YesWiki',
+    'VERIFY_WIKI' => 'Verifica',
+    'PAGE_TAG_TO_DUPLICATE' => 'Numele paginii de duplicat',
+    'DUPLICATE_AND_OPEN' => 'Duplica',
+    'TO_ANOTHER_YESWIKI' => 'în alt YesWiki',
+    'VERIFY_PAGE_AVAILABILITY' => 'Verifica disponibilitatea paginii',
+    'DISTANT_LOGIN' => 'Conectați-vă la telecomanda YesWiki',
 ];
