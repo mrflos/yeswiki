@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TAGS_ACTION_ADMINTAGS' => 'Acció {{admintags ...}}',
     'TAGS_ACTION_ADMINTAGS_ONLY_FOR_ADMINS' => 'l\'acció és exclusiva de l\'administrador',
