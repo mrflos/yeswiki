@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TEMPLATE_ACTION' => 'Action',
     'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
@@ -152,14 +151,18 @@ return [
     'AB_template_actions_warning' => 'Attention',
     'AB_template_actions_danger' => 'Danger',
     'AB_template_action_accordion_label' => 'Afficher des encadrés en accordéon',
-    'AB_template_action_accordion_example' => "{{panel title=\"Titre de mon encadré\" }}\nTexte de votre encadré\n{{end elem=\"panel\"}}",
+    'AB_template_action_accordion_example' => "{{panel title=\"Titre de mon encadré\" }}
+Texte de votre encadré
+{{end elem=\"panel\"}}",
     'AB_template_action_ariane_label' => "Fil d'ariane",
     'AB_template_action_col_label' => 'Colonne',
     'AB_template_action_col_size_total' => 'Vous avez 12 colonnes virtuelles à répartir',
     'AB_template_col_size_label' => 'Largeur de la colonne',
     'AB_template_action_grid_label' => 'Afficher plusieurs colonnes',
     'AB_template_action_col_example' => 'Texte de votre colonne à changer par la suite',
-    'AB_template_action_grid_example' => "{{col size=\"{size}\"}}\nTexte de la colonne à changer par la suite\n{{end elem=\"col\"}}",
+    'AB_template_action_grid_example' => "{{col size=\"{size}\"}}
+Texte de la colonne à changer par la suite
+{{end elem=\"col\"}}",
     'AB_template_action_grid_nb' => "Nombre de colonnes",
     'AB_template_action_grid_nb_hint' => "Vous pouvez ajuster la taille de chaque colonne via l'attribut 'size'. Le total des 'size' doit être égal à 12. Exemple : {{col size=3}} + {{col size=9}}",
     'AB_templates_nav_label' => 'Onglets avec des pages différentes',
@@ -268,7 +271,9 @@ return [
     'AB_templates_tabs_btncolor_secondary_1' => 'Secondaire 1',
     'AB_templates_tabs_btncolor_secondary_2' => 'Secondaire 2',
     'AB_templates_tabs_selectedtab_label' => 'Onglet sélectionné',
-    'AB_templates_tabs_wrappedcontentexample' => "{{tab}}\nContenu de l'onglet \"{tabName}\"\n{{end elem=\"tab\"}}",
+    'AB_templates_tabs_wrappedcontentexample' => "{{tab}}
+Contenu de l'onglet \"{tabName}\"
+{{end elem=\"tab\"}}",
     'ACLS_SELECT_PAGES_FILTER' => 'Filtrer :',
     'ACLS_SELECT_PAGES_FILTER_ON_PAGES' => 'les pages uniquement',
     'ACLS_SELECT_PAGES_FILTER_ON_SPECIALPAGES' => 'les pages spéciales uniquement',
