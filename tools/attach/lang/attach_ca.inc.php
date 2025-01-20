@@ -1,5 +1,4 @@
 <?php
-
 return [
     'ATTACH_ACTION_ATTACH' => 'Acció {{attach ...}}',
     'ATTACH_PARAM_DESC_REQUIRED' => 'El paràmetre "desc" és obligatori per una imatge',
