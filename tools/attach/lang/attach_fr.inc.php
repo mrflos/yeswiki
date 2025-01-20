@@ -1,12 +1,9 @@
 <?php
 
 return [
-    // controllers/ApiController.php
     'ATTACH_GET_URLIMAGE_CACHE_API_HELP' => "Fournit l'url du fichier de cache pour l'image voulue\n" .
         'Nécessite le passage du jeton anti-csrf !',
     'ATTACH_GET_CACHE_URLIMAGE_NO_FILE' => 'Fichier image inexistant',
-
-    // libs/attach.lib.php
     'ATTACH_ACTION_ATTACH' => 'Action {{attach ...}}',
     'ATTACH_PARAM_DESC_REQUIRED' => 'param&egrave;tre "desc" obligatoire pour une image',
     'ATTACH_PARAM_HEIGHT_NOT_NUMERIC' => 'le param&egrave;tre "height", en pixels, doit &ecirc;tre uniquement compos&eacute; de chiffres entiers',
@@ -39,24 +36,16 @@ return [
     'ATTACH_PAGE_REVISION' => 'Version de la page',
     'ATTACH_FILE_REVISION' => 'Version du fichier',
     'ATTACH_DELETION' => 'Suppression',
-
-    // actions/filemanager.php
     'ATTACH_NO_RIGHTS_TO_ACCESS_FILEMANAGER' => 'Il faut avoir acc&egrave; en &eacute;criture &agrave; la page pour acc&eacute;der au gestionnaire des fichiers attach&eacute;s',
     'FILEMANAGER_ACTION_NEED_ACCESS' => 'Seul le propriétaire de cette page peut accéder au gestionnaire des fichiers attaché',
-
-    // actions/backgroundimage.php
     'ATTACH_ACTION_BACKGROUNDIMAGE' => 'Action {{backgroundimage ...}}',
     'ATTACH_PARAM_FILE_OR_BGCOLOR_NOT_FOUND' => 'il faut indiquer soit une image avec le paramètre "file" ou une couleur de fond avec le paramètre "bgcolor"',
-
-    // actions/player.php
     'ATTACH_ACTION_PLAYER' => 'Action {{player ...}}',
     'ATTACH_DOWNLOAD_THE_FILE' => 'T&eacute;l&eacute;charger le fichier',
     'ATTACH_URL_NOT_VALID' => 'l\'URL n\'est pas valide ou ne peut pas &ecirc;tre ouverte',
     'ATTACH_PARAM_URL_REQUIRED' => 'param&egrave;tre "url" obligatoire',
     'ATTACH_PLAYER_CAN_ONLY_OPEN_FILES_LIKE' => 'le player ne peut que lire les fichiers mp3, flv et mm, et votre URL',
     'ATTACH_NOT_LINKED_TO_GOOD_FILE_EXTENSION' => 'ne pointe pas sur ces types de fichiers',
-
-    // actions/pointimage.php
     'ATTACH_ACTION_POINTIMAGE' => 'Action {{pointimage ...}}',
     'ATTACH_PARAM_FILE_NOT_FOUND' => 'param&egrave;tre "file" obligatoire',
     'ATTACH_PARAM_FILE_MUST_BE_IMAGE' => 'le param&egrave;tre "file" doit &ecirc;tre une image (svg,gif,jpg,jpeg,png)',
@@ -66,17 +55,11 @@ return [
     'ATTACH_DESCRIPTION' => 'Description',
     'ATTACH_CANCEL' => 'Annuler',
     'ATTACH_SAVE' => 'Sauver',
-
-    // actions/video.php
     'ATTACH_ACTION_VIDEO_PARAM_ERROR' => 'L\'action video doit être appelée avec les paramètres « id » et « serveur ». Pour « serveur », seules les valeurs « vimeo » ou « youtube » ou « peertube » sont acceptées.',
-
-    // actions/pdf.php
     'ATTACH_ACTION_PDF_PARAM_URL_ERROR' => 'L\'action pdf doit être appelée avec le paramètre « url » et l\'url renseignée doit provenir de la même origine que le wiki : c\'est à dire du même sous-domaine du serveur (par exemple \'xxx.yyy.com\'), du même schéma (par exemple \'https\') et du même port s\'il est spécifié (par exemple \'8080\').',
     'ATTACH_ACTION_DISPLAY_PDF_TEXT' => 'Afficher le pdf dans la page :',
     'ATTACH_ACTION_DISPLAY_PDF_LINK_TEXT' => 'sous forme de lien',
     'ATTACH_ACTION_DISPLAY_PDF_INCLUDED_TEXT' => 'directement inclus dans la page',
-
-    // handler edit
     'ACTIVATE_JS_TO_UPLOAD_FILES' => 'Activer JavaScript pour joindre des fichiers',
     'UPLOAD_A_FILE' => 'Joindre / Ins&eacute;rer un fichier',
     'UPLOAD_A_FILE_SHORT' => 'Fichier',
@@ -105,16 +88,12 @@ return [
     'CENTER' => 'Centre',
     'RIGHT' => 'Droite',
     'FAILED' => '&Eacute;chou&eacute;',
-
-    // handler ajaxupload
     'ATTACH_HANDLER_AJAXUPLOAD_FOLDER_NOT_READABLE' => 'Le dossier de téléchargement n\'est pas accessible en écriture.',
     'ATTACH_HANDLER_AJAXUPLOAD_NO_FILE' => 'Pas de fichiers envoyés.',
     'ATTACH_HANDLER_AJAXUPLOAD_EMPTY_FILE' => 'Le fichier est vide.',
     'ATTACH_HANDLER_AJAXUPLOAD_FILE_TOO_LARGE' => 'Le fichier est trop large.',
     'ATTACH_HANDLER_AJAXUPLOAD_AUTHORIZED_EXT' => 'Le fichier n\'a pas une extension autorisée, voici les autorisées : {ext}.',
     'ATTACH_HANDLER_AJAXUPLOAD_ERROR' => 'Impossible de sauver le fichier. L\'upload a été annulé ou le serveur a planté...',
-
-    // edit config action
     'EDIT_CONFIG_HINT_ATTACH-VIDEO-CONFIG[DEFAULT_VIDEO_SERVICE]' => 'Service de vidéo par défaut (peertube, youtube ou vimeo)',
     'EDIT_CONFIG_HINT_ATTACH-VIDEO-CONFIG[DEFAULT_PEERTUBE_INSTANCE]' => 'Adresse du serveur peertube par défaut',
     'EDIT_CONFIG_HINT_MAX_FILE_SIZE' => 'Taille maximum des fichiers téléversés - octets (ex: Taille maximum des fichiers téléversés (ex: 2097152, 2048k, 2m)',

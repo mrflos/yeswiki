@@ -1,16 +1,11 @@
 <?php
 
 return [
-    // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'Acció {{abonnement ...}}',
     'CONTACT_MAIL_REQUIRED' => 'L\'adreça email de contacte és obligatòria.',
-    // actions/contact.php
     'CONTACT_ACTION_CONTACT' => 'Acció {{contact ...}}',
-    // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'Acció {{desabonnement ...}}',
-    // actions/listsubscription.php
     'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Acció {{listsubscription ...}}',
-    // actions/mailinglist.php
     'CONTACT_ACTION_MAILINGLIST' => 'Acció {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'El paràmetre "list" és obligatori (és l\'adreça email de la llista de difusió)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'Correus que cal afegir o suprimir de la llista',

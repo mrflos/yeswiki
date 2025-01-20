@@ -1,8 +1,6 @@
 <?php
 return [
     'TEMPLATE_ACTION' => 'Ação',
-    // 'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
-    // actions/button.php
     'TEMPLATE_ACTION_BUTTON' => 'Ação {{button ...}}',
     'TEMPLATE_LINK_PARAMETER_REQUIRED' => 'parâmetro "link" obrigatório',
     'TEMPLATE_RSS_LAST_CHANGES' => 'RSS Feed para páginas recentemente modificados',
@@ -11,21 +9,16 @@ return [
     'TEMPLATE_CUSTOM_GRAPHICS' => 'Aspecto da página',
     'TEMPLATE_SAVE' => 'Salvar',
     'TEMPLATE_APPLY' => 'Aplicar',
-    // 'TEMPLATE_APPLY_ALL' => 'Appliquer pour tout le site',
     'TEMPLATE_CANCEL' => 'Cancelar',
     'TEMPLATE_THEME' => 'Tema',
     'TEMPLATE_SQUELETTE' => 'Esqueleto',
     'TEMPLATE_STYLE' => 'Estilo',
-    // 'TEMPLATE_PRESET' => 'Preset',
-    // 'TEMPLATE_DEFAULT_PRESET' => 'Preset par défaut',
     'TEMPLATE_BG_IMAGE' => 'Imagem de fundo',
     'TEMPLATE_ERROR_NO_DATA' => 'ERRO: nada a adicionar nos meta-dados.',
     'TEMPLATE_ERROR_NO_ACCESS' => 'ERRO: sem direitos de acesso',
-    // barre de redaction
     'TEMPLATE_VIEW_PAGE' => 'Ver a página',
     'TEMPLATE_EDIT' => 'Editar',
     'TEMPLATE_EDIT_THIS_PAGE' => 'Editar a página',
-    // 'TEMPLATE_WIKINAME_IS_NOT_A_PAGE' => 'Ce ChatMot n\'est pas une page',
     'TEMPLATE_CLICK_TO_SEE_REVISIONS' => 'As últimas alterações na página',
     'TEMPLATE_LAST_UPDATE' => 'Modificado em',
     'TEMPLATE_OWNER' => 'Proprietário',
@@ -40,24 +33,15 @@ return [
     'TEMPLATE_REFERENCES' => 'Referências',
     'TEMPLATE_SLIDESHOW_MODE' => 'Ver esta página em modo de apresentação de slides.',
     'TEMPLATE_SLIDESHOW' => 'Slideshow',
-    // 'TEMPLATE_DYNAMIC_SLIDESHOW' => 'Diaporama dynamique',
-    // 'TEMPLATE_CLASSIC_SLIDESHOW' => 'Diaporama classique',
     'TEMPLATE_SEE_SHARING_OPTIONS' => 'Compartilhar página',
     'TEMPLATE_SHARE' => 'Compartilhar',
-    // action/diaporama
-    // 'DIAPORAMA_PAGE_PARAM_MISSING' => 'Action diaporama : param&ecirc;tre "page" obligatoire.',
-    // 'DIAPORAMA_TEMPLATE_PARAM_ERROR' => 'Action diaporama : le param&ecirc;tre "template" pointe sur un fichier inexistant ou illisible. Le template par d&eacute;faut sera utilis&eacute;.',
-    // formatage des dates
     'TEMPLATE_DATE_FORMAT' => 'd M Y',
-    // recherche
     'TEMPLATE_SEARCH_INPUT_TITLE' => 'Pesquisar no YesWiki [alt-shift-C]',
     'TEMPLATE_SEARCH_BUTTON_TITLE' => 'Encontrar páginas com esse texto..',
     'TEMPLATE_SEARCH_PLACEHOLDER' => 'Procurar...',
     'TEMPLATE_SEARCH' => 'Procurar',
-    // handler widget
     'TEMPLATE_WIDGET_TITLE' => 'Widget : integrar o conteúdo desta página em outro lugar',
     'TEMPLATE_WIDGET_COPY_PASTE' => 'Copiar e pastar o código HTML acima para incorporar o conteúdo de tal forma que apareça abaixo.',
-    // handler share
     'TEMPLATE_SHARE_INCLUDE_CODE' => 'Código de integração de conteúdo numa página HTML',
     'TEMPLATE_SHARE_MUST_READ' => 'Leia-se: : ',
     'TEMPLATE_SHARE_FACEBOOK' => 'Share on Facebook',
@@ -68,11 +52,9 @@ return [
     'TEMPLATE_SHARE_MAIL' => 'Enviar o conteúdo desta página por e-mail',
     'TEMPLATE_ADD_SHARE_BUTTON' => 'Adicionar um botão de compartilhamento no topo direito da página',
     'TEMPLATE_ADD_EDIT_BAR' => 'Adicionar o menu de edição no rodapé',
-    // handler diaporama
     'TEMPLATE_NO_ACCESS_TO_PAGE' => 'Você não têm o direito de acesso nesta página.',
     'TEMPLATE_PAGE_DOESNT_EXIST' => 'Página inexistente',
     'PAGE_CANNOT_BE_SLIDESHOW' => 'A página não pode ser cortada em lâminas (sem título nível 2)',
-    // handler edit
     'TEMPLATE_CUSTOM_PAGE' => 'Preferências da página',
     'TEMPLATE_PAGE_PREFERENCES' => 'Definições da página',
     'PAGE_LANGUAGE' => 'Idioma da página',
@@ -84,42 +66,19 @@ return [
     'FOR_2_OR_3_COLUMN_THEMES' => 'Para temas 2 ou 3 colunas',
     'VERTICAL_MENU_PAGE' => 'o menu vertical',
     'RIGHT_COLUMN_PAGE' => 'coluna da direita',
-    // actions/yeswikiversion.php
     'RUNNING_WITH' => 'Galopa no',
-    // 'TEMPLATE_ACTION_SECTION' => 'Action {{section ...}}',
-    // 'TEMPLATE_ELEM_SECTION_NOT_CLOSED' => 'l\'action {{section ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="section"}}',
     'TEMPLATE_NO_THEME_FILES' => 'Alguns (ou todos) arquivos do template desapareceram',
     'TEMPLATE_DEFAULT_THEME_USED' => 'O template padrão esta utilisado',
-    // actions/end.php
     'TEMPLATE_ACTION_END' => 'Ação {{end ...}}',
     'TEMPLATE_ELEM_PARAMETER_REQUIRED' => 'parâmetro "elem" obrigatório',
-    // actions/col.php
     'TEMPLATE_ACTION_COL' => 'Ação {{col ...}}',
     'TEMPLATE_SIZE_PARAMETER_REQUIRED' => 'parâmetro "size" obrigatório',
     'TEMPLATE_SIZE_PARAMETER_MUST_BE_INTEGER_FROM_1_TO_12' => 'o parâmetro "size" deve ser um número inteiro entre 1 e 12',
     'TEMPLATE_ELEM_COL_NOT_CLOSED' => 'ação {{col ...}} deve ser fechada por ação {{elem end = "col"}}',
-    // actions/grid.php
     'TEMPLATE_ACTION_GRID' => 'Ação {{grid ...}}',
     'TEMPLATE_ELEM_GRID_NOT_CLOSED' => 'ação {{grid ...}} deve ser fechada por ação {{end elem="grid"}}',
-    // action/panel.php
-    // 'TEMPLATE_ACTION_PANEL' => 'Action {{panel ...}}',
-    // 'TEMPLATE_ELEM_PANEL_NOT_CLOSED' => 'l\'action {{panel ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="panel"}}',
-    // 'TEMPLATE_TITLE_PARAMETER_REQUIRED' => "Param&egrave;tre title obligatoire",
-    // action/accordion.php
-    // 'TEMPLATE_ACTION_ACCORDION' => 'Action {{accordion ...}}',
-    // 'TEMPLATE_ELEM_ACORDION_NOT_CLOSED' => 'l\'action {{accordion ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="accordion"}}',
-    // actions/buttondropdown.php
     'TEMPLATE_ACTION_BUTTONDROPDOWN' => 'Ação {{buttondropdown ...}}',
     'TEMPLATE_ELEM_BUTTONDROPDOWN_NOT_CLOSED' => 'ação {{buttondropdown ...}} deve ser fechada por ação {{end elem="buttondropdown"}}',
-    // actions/adminpages.php
-    // 'TEMPLATE_ACTION_FOR_ADMINS_ONLY' => 'action réservée aux administrateurs',
-    // 'TEMPLATE_CONFIRM_DELETE_PAGE' => 'Etes vous sûr(e) de vouloir supprimer définitivement cette page ?',
-    // 'TEMPLATE_PAGE' => 'Page',
-    // 'TEMPLATE_LAST_MODIFIED' => 'Dernière modification',
-    // 'TEMPLATE_OWNER' => 'Propriétaire',
-    // 'TEMPLATE_ACTIONS' => 'Actions',
-    // 'TEMPLATE_MODIFY' => 'Modifier',
-    // actions/setwikidefaultheme.php
     'TEMPLATE_FORCE_TEMPLATE' => 'Vigor para todo o wiki.',
     'TEMPLATE_PAGE' => 'Página',
     'TEMPLATE_MODIFY' => 'Alterar',

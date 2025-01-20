@@ -1,11 +1,6 @@
 <?php
 
 return [
-    /*
- * Fichier de traduction en francais de l'extension AutoUpdate.
- *
- *@author        Florestan Bredow <florestan.bredow@supagro.fr>
- */
     'AU_ACL' => 'Verificação dos direitos nos arquivos',
     'AU_REPO_ERROR' => 'Repositórios inacessíveis.',
     'AU_VERSION_WIKI' => 'Versão do Wiki',

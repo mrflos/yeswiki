@@ -1,16 +1,11 @@
 <?php
 
 return [
-    // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'Action {{abonnement ...}}',
     'CONTACT_MAIL_REQUIRED' => 'the email, required, is missing',
-    // actions/contact.php
     'CONTACT_ACTION_CONTACT' => 'Action {{contact ...}}',
-    // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'Action {{desabonnement ...}}',
-    // actions/listsubscription.php
     'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Action {{listsubscription ...}}',
-    // actions/mailinglist.php
     'CONTACT_ACTION_MAILINGLIST' => 'Action {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'parameter list required (list\'s email)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'emails to add or remove of the list',

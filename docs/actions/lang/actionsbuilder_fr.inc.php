@@ -1,12 +1,9 @@
 <?php
 
 return [
-    // AB stands for ActionsBuilder
-    // Commons
     'AB_LEFT' => 'Gauche',
     'AB_RIGHT' => 'Droite',
     'AB_advanced' => 'Avancé',
-    // BAZAR
     'AB_bazar_label' => "Afficher les données d'un formulaire",
     'AB_bazar_commons_colorfield_label' => 'Champ pour la couleur',
     'AB_bazar_commons_colormapping_color_label' => 'Couleur',
@@ -60,7 +57,6 @@ return [
     'AB_bazar_sort' => 'Trier les données',
     'AB_bazar_sort_dynamique' => "Tri dynamique",
     'AB_bazar_sort_add_field' => 'Ajouter un tri dynamique',
-    // Bazarcarto
     'AB_bazarcarto_label' => 'Cartographie',
     'AB_bazarcarto_description' => 'Les fiches seront sous forme de marqueur.',
     'AB_bazarcarto_hint' => 'Le champ géolocalisation doit être présent dans votre formulaire',
@@ -90,12 +86,10 @@ return [
     'AB_bazarcarto_barregestion_label' => 'Barre de gestion des fiches',
     'AB_bazarcarto_navigation_label' => 'Boutons de contrôle du zoom',
     'AB_bazarcarto_zoommolette_label' => 'Pouvoir zoomer avec la molette de la souris',
-    // BazarAgenda
     'AB_bazaragenda_label' => 'Agenda',
     'AB_bazaragenda_description' => "Les fiches seront sous forme d'événement dans un agenda.",
     'AB_bazaragenda_nbcol_label' => 'Nombre de colonnes',
     'AB_bazaragenda_modal_label' => "Affichage d'une fenêtre modale lors du clic",
-    // BazarCalendar
     'AB_bazarcalendar' => 'Calendrier',
     'AB_bazarcalendar_description' => "Les fiches seront sous forme d'événement dans un calendrier.",
     'AB_bazarcalendar_showlist_label' => "Afficher le bouton 'planning'",
@@ -108,7 +102,6 @@ return [
     'AB_bazarcalendar_initialview_day' => 'Jour',
     'AB_bazarcalendar_initialview_list' => 'Planning',
     'AB_bazarcarto_showicalbutton_label' => "Montrer le bouton d'export ical",
-    // BazarListe
     'AB_bazarliste_label' => 'Liste',
     'AB_bazarliste_description' => "Les fiches seront sous forme d'accordéons",
     'AB_bazarliste_displayfields_title' => 'Choix des champs à inclure',
@@ -117,7 +110,6 @@ return [
     'AB_bazarliste_displayfields_text_label' => 'Zone de texte',
     'AB_bazarliste_displayfields_floating_label' => 'Zone flottante',
     'AB_bazarliste_displayfields_visual_label' => 'Zone visuelle',
-    // BazarCard
     'AB_bazarcard_label' => 'Blocs (agenda, actus, trombinoscope, damier…)',
     'AB_bazarcard_description' => 'Les fiches seront sous forme de cartes',
     'AB_bazarliste_displayfields_footer_label' => 'Zone footer',
@@ -129,17 +121,14 @@ return [
     'AB_bazarcard_imgstyle_contain' => 'Image entière',
     'AB_bazarcard_imgstyle_cover' => 'Couvrir la zone / Rogner',
     'AB_bazarcard_nblines_label' => 'Nombre de lignes pour le sous-titre',
-    // BazarTable
     'AB_BAZAR_MAP_AND_TABLE_LABEL' => 'Carte et tableau',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_LABEL' => 'Tableau contenant toutes les fiches',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ALL' => 'avec ou sans geolocalisation',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ONLY_GEOLOC' => 'seulement avec geolocalisation',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_NO_GEOLOC' => 'seulement sans geolocalisation',
-    // BazarTrombi
     'AB_bazartrombi_label' => 'Trombinoscope',
     'AB_bazartrombi_description' => 'Les fiches seront sous forme de Trombinoscope.',
     'AB_bazartrombi_hint' => 'Un champ de type bf_image est nécessaire.',
-    // BazarMaterialCard
     'AB_bazarmaterialcard_label' => 'Material card',
     'AB_bazarmaterialcard_description' => 'Les fiches seront sous forme de boite modale.',
     'AB_bazarmaterialcard_hint' => 'Un champ de type bf_image est nécessaire',
@@ -147,10 +136,8 @@ return [
     'AB_bazarmaterialcard_type_label' => 'Affichage sans effet',
     'AB_bazarmaterialcard_modal_label' => "Affichage d'une fenêtre modale lors du clic",
     'AB_bazarmaterialcard_bf_baseline_label' => 'Champ pour le sous titre',
-    // BazarAnnuaire
     'AB_bazarannuaire_label' => 'Annuaire',
     'AB_bazarannuaire_description' => "Affiche les fiches sous forme d'annuaire alphabétique",
-    // BazarDamier
     'AB_bazardamier_label' => 'Damier',
     'AB_bazardamier_description' => 'Affiche les fiches sous forme de damier paramétrable',
     'AB_bazardamier_hint' => 'Un champ de type bf_debut, bf_fin, bf_lieu, bf_image, bf_lien, bf_fichier, bf_bouton sont utilisés',
@@ -158,11 +145,9 @@ return [
     'AB_bazardamier_couleur_label' => 'Couleur du damier',
     'AB_bazardamier_correpondance_hint' => 'Ce template est fortement customisable',
     'AB_bazardamier_bf_description_label' => 'Champ pour la description',
-    // BazarTimeLine
     'AB_bazartimeline_label' => 'Time line',
     'AB_bazartimeline_description' => 'Affiche les fiches dans une time line.',
     'AB_bazartimeline_hint' => 'Un champ de type bf_image est nécessaire.',
-    // BazarCarousel
     'AB_bazarcarousel_label' => 'Carousel',
     'AB_bazarcarousel_description' => 'Affiche les images des fiches sous forme de carousel',
     'AB_bazarcarousel_hint' => 'Un champ de type bf_image est nécessaire.',
@@ -171,29 +156,22 @@ return [
     'AB_bazarcarousel_avecpage_hint' => 'La page affichée sera nommée PageDessusSlider',
     'AB_bazarcarousel_showlinkinsteadofurl_label' => 'Montrer le lien bf_lien au lieu de celui vers la fiche',
     'AB_bazarcarousel_bf_titre_label' => 'Champ pour le texte affiché',
-    // bazargaleriephoto
     'AB_bazargaleriephoto_label' => 'Galerie photo',
     'AB_bazargaleriephoto_description' => 'Affiche les images des fiches sous forme de galerie photo.',
     'AB_bazargaleriephoto_hint' => 'Un champ de type bf_image est nécessaire.',
-    // bazarlistegalerie
     'AB_bazarlistegalerie_label' => 'Liste Galerie photo',
     'AB_bazarlistegalerie_description' => 'Affiche les images des fiches sous forme de galerie photo.',
     'AB_bazarlistegalerie_hint' => 'Un champ de type bf_image est nécessaire.',
-    // bazarlistephotobox
     'AB_bazarlistephotobox_label' => 'Photobox',
     'AB_bazarlistephotobox_description' => 'Affiche les images des fiches sous forme de galerie photo.',
     'AB_bazarlistephotobox_hint' => 'Un champ de type bf_image est nécessaire.',
-    // bazarlisteliens
     'AB_bazarlisteliens_label' => 'Liste des liens',
     'AB_bazarlisteliens_description' => 'Affiche les liens vers les fiches sous forme de liste à puces.',
-    // bazarlisteliensdates
     'AB_bazarlisteliensdates_label' => 'Liste des liens avec dates',
     'AB_bazarlisteliensdates_description' => 'Affiche les liens vers les fiches sous forme de liste avec les dates de création.',
-    // bazarmail
     'AB_bazarmail_label' => 'Ecrire à tous',
     'AB_bazarmail_description' => 'Affiche uniquement la liste des mails trouvées dans le formulaire',
     'AB_bazarmail_hint' => 'Un champ de type bf_mail est nécessaire.',
-    // bazarblog
     'AB_bazarblog_label' => 'Blog',
     'AB_bazarblog_description' => 'Les fiches seront sous forme de blog.',
     'AB_bazarblog_hint' => 'Un champ de type bf_image est possible',
@@ -201,18 +179,15 @@ return [
     'AB_bazarblog_show_author_label' => "Afficher l'auteur, l'autrice",
     'AB_bazarblog_show_date_label' => 'Afficher la date de création',
     'AB_bazarblog_date_creation_fiche_label' => 'Champ pour la date de publication',
-    // bazargogocarto
     'AB_bazargogocarto_label' => 'Cartographie 2 - GoGocarto',
     'AB_bazargogocarto_description' => 'Les fiches seront sous forme de marqueur.',
     'AB_bazargogocarto_hint' => "Le champ géolocalisation doit être présent dans votre formulaire. \n" .
         "Pensez aussi à choisir un champ pour l'icone et la couleur des marqueurs",
     'AB_bazargogocarto_height_label' => 'Hauteur de la carte',
     'AB_bazargogocarto_width_label' => 'Largeur de la carte',
-    // BazarAction
     'AB_bazar_action_label' => 'Afficher un formulaire de création de fiche',
     'AB_bazar_action_description' => "Permet d'afficher le formulaire pour créer une fiche.",
     'AB_bazar_action_redirecturl_label' => "Nom de page de ce wiki ou URL complet à afficher après création d'une fiche",
-    // attach
     'AB_attach_commons_title' => 'Pour les images',
     'AB_attach_link_label' => 'Lien web associé au clic',
     'AB_attach_caption_label' => 'Texte affiché au survol',
@@ -254,7 +229,6 @@ return [
     'AB_attach_file_hint' => "Pour afficher le fichier d'une autre page, taper \"NomDePage/NomDeFichier.ext\"",
     'AB_attach_desc_label' => 'Description',
     'AB_attach_displaypdf_label' => 'Afficher le fichier PDF',
-    //video
     'AB_attach_video_label' => 'Vidéo intégrée',
     'AB_attach_video_description' => "Intégration d'une vidéo youtube, vimeo ou peertube.",
     'AB_attach_video_hint' => "L'identifiant de la vidéo correspond aux chiffres ou lettres à la fin de son URL",
@@ -266,7 +240,6 @@ return [
     'AB_attach_video_position_label' => 'Position de la vidéo',
     'AB_attach_video_largeur_max_label' => 'Largeur maximale',
     'AB_attach_video_hauteur_max_label' => 'Hauteur maximale',
-    //pdf
     'AB_attach_pdf_label' => 'Fichier pdf intégré',
     'AB_attach_pdf_description' => "Intégration d'un fichier pdf de ce site.",
     'AB_attach_pdf_hint' => "Pour afficher votre PDF, d'abord le charger dans une page de ce wiki et en copier le lien ici.",
@@ -278,7 +251,6 @@ return [
     'AB_attach_pdf_position_label' => 'Position du pdf',
     'AB_attach_pdf_largeur_max_label' => 'Largeur maximale',
     'AB_attach_pdf_hauteur_max_label' => 'Hauteur maximale',
-    // management
     'AB_management_label' => 'Gestion du YesWiki',
     'AB_management_editactionsacls_label' => "Éditer les droits d'accès aux actions",
     'AB_management_edithandlersacls_label' => "Éditer les droits d'accès aux handlers",
@@ -298,8 +270,6 @@ return [
     'AB_management_adminbackups_label' => 'Gestion des sauvegardes',
     'AB_management_commentstable_label' => 'Table des commentaires',
     'AB_management_usercomments_label' => 'Mes commentaires',
-
-    // advanced actions
     'AB_advanced_actions_label' => 'Actions avancées',
     'AB_advanced_action_backlinks_label' => 'Afficher les pages qui ont un lien vers la page courante',
     'AB_advanced_action_backlinks_page_label' => 'Page de base',
@@ -375,9 +345,7 @@ return [
     'AB_advanced_action_login_loggedinurl_hint' => "Page du wiki ou url (utilise 'incomingurl' si vide ou en cas d'erreur)",
     'AB_advanced_action_login_loggedouturl_label' => 'Url de redirection après déconnexion',
     'AB_advanced_action_login_loggedouturl_hint' => "Page du wiki ou url (utilise 'incomingurl' si vide)",
-    // col
     'AB_template_col_size_hint' => 'Attention, la somme des largeurs de toutes les colonnes ne devra pas excéder 12 !',
-    // button
     'AB_buttons_label' => 'Boutons',
     'AB_buttons_action_button_label' => 'Bouton',
     'AB_buttons_action_button_description' => 'Créer un bouton cliquable',
@@ -414,7 +382,6 @@ return [
     'AB_buttons_action_button_new_window_yes' => 'oui',
     'AB_buttons_action_button_hideifnoaccess_label' => "Masquer si l'utilisateur n'a pas accès à la page liée",
     'AB_buttons_action_button_nobtn_label' => 'Afficher sous forme de lien',
-    // reactions
     'AB_REACTION_GROUP_LABEL' => 'Réactions / Votes',
     'AB_REACTION_TITLE_LABEL' => 'Titre du vote',
     'AB_REACTION_LABEL' => 'Réactions et votes',
@@ -433,7 +400,6 @@ return [
     'AB_MYFAVORITES_TEMPLATE_LINKS_WITH_TITLES' => 'Liens avec titres',
     'AB_MYFAVORITES_TEMPLATE_TILES' => 'Vignettes',
     'AB_MYFAVORITES_TEMPLATE_TABLE' => 'Tableau',
-    // syndication
     'AB_syndication_main_label' => 'Syndication / Flux RSS',
     'AB_syndication_action_label' => 'Syndication',
     'AB_syndication_action_description' => "Syndiquer le flux RSS d'un site tiers",
@@ -453,7 +419,6 @@ return [
     'AB_syndication_action_formatdate_option_jma' => 'Jour Mois année',
     'AB_syndication_action_formatdate_option_jmh' => 'Jour mois heure',
     'AB_syndication_action_formatdate_option_jmah' => 'Jour mois année heure',
-    // tableau
     'AB_bazartableau_label' => 'Tableau',
     'AB_bazartableau_description' => 'Afficher sous forme de tableau',
     'AB_bazartableau_columnfieldsids_label' => 'Champs à afficher',

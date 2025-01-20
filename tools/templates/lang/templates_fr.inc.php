@@ -3,7 +3,6 @@
 return [
     'TEMPLATE_ACTION' => 'Action',
     'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
-    // actions/button.php
     'TEMPLATE_ACTION_BUTTON' => 'Action {{button ...}}',
     'TEMPLATE_LINK_PARAMETER_REQUIRED' => 'param&egrave;tre "link" obligatoire',
     'TEMPLATE_RSS_LAST_CHANGES' => 'Flux RSS des derni&egrave;res pages modifi&eacute;es',
@@ -23,7 +22,6 @@ return [
     'TEMPLATE_BG_IMAGE' => 'Image de fond',
     'TEMPLATE_ERROR_NO_DATA' => 'ERREUR : rien &agrave; ajouter dans les meta-donn&eacute;es.',
     'TEMPLATE_ERROR_NO_ACCESS' => 'ERREUR : pas les droits d\'acc&eacute;s.',
-    // barre de redaction
     'TEMPLATE_VIEW_PAGE' => 'Voir la page',
     'TEMPLATE_EDIT' => '&Eacute;diter',
     'TEMPLATE_EDIT_THIS_PAGE' => '&Eacute;diter la page',
@@ -57,21 +55,15 @@ return [
     'TEMPLATE_DUPLICATE_ENTRY' => 'Dupliquer la fiche',
     'TEMPLATE_DUPLICATE_LOCALLY' => 'Dans ce YesWiki',
     'TEMPLATE_DUPLICATE_IN_ANOTHER_WIKI' => 'Dans un autre YesWiki',
-
-    // action/diaporama
     'DIAPORAMA_PAGE_PARAM_MISSING' => 'Action diaporama : param&ecirc;tre "page" obligatoire.',
     'DIAPORAMA_TEMPLATE_PARAM_ERROR' => 'Action diaporama : le param&ecirc;tre "template" pointe sur un fichier inexistant ou illisible. Le template par d&eacute;faut sera utilis&eacute;.',
-    // formatage des dates
     'TEMPLATE_DATE_FORMAT' => 'd M Y',
-    // recherche
     'TEMPLATE_SEARCH_INPUT_TITLE' => 'Rechercher dans YesWiki [alt-shift-C]',
     'TEMPLATE_SEARCH_BUTTON_TITLE' => 'Rechercher les pages comportant ce texte.',
     'TEMPLATE_SEARCH_PLACEHOLDER' => 'Rechercher...',
     'TEMPLATE_SEARCH' => 'Rechercher',
-    // handler widget
     'TEMPLATE_WIDGET_TITLE' => 'Widget : int&eacute;grer le contenu de cette page ailleurs',
     'TEMPLATE_WIDGET_COPY_PASTE' => 'Copier-collez le code HTML ci-dessus pour int&eacute;grer le contenu tel qu\'il apparait ci dessous.',
-    // handler share
     'TEMPLATE_SHARE_INCLUDE_CODE' => 'Code d\'int&eacute;gration de contenu dans une page HTML',
     'TEMPLATE_SHARE_MUST_READ' => 'A lire : ',
     'TEMPLATE_SHARE_FACEBOOK' => 'Partager sur Facebook',
@@ -82,11 +74,9 @@ return [
     'TEMPLATE_SHARE_MAIL' => 'Envoyer le contenu de cette page par mail',
     'TEMPLATE_ADD_SHARE_BUTTON' => 'Ajouter un bouton de partage en haut &agrave; droite de la page',
     'TEMPLATE_ADD_EDIT_BAR' => 'Ajouter la barre d\'&eacute;dition en bas de page',
-    // handler diaporama
     'TEMPLATE_NO_ACCESS_TO_PAGE' => 'Vous n\'avez pas le droit d\'acc&eacute;der &agrave; cette page.',
     'TEMPLATE_PAGE_DOESNT_EXIST' => 'Page non existante',
     'PAGE_CANNOT_BE_SLIDESHOW' => 'La page ne peut pas &ecirc;tre d&eacute;coup&eacute;e en diapositives (pas de titres niveau 2)',
-    // handler edit
     'TEMPLATE_CUSTOM_PAGE' => 'Pr&eacute;f&eacute;rences de la page',
     'TEMPLATE_PAGE_PREFERENCES' => 'Param&egrave;tres de la page',
     'PAGE_LANGUAGE' => 'Langue de la page',
@@ -98,34 +88,26 @@ return [
     'FOR_2_OR_3_COLUMN_THEMES' => 'Pour les th&egrave;mes &agrave; 2 ou 3 colonnes',
     'VERTICAL_MENU_PAGE' => 'le menu vertical',
     'RIGHT_COLUMN_PAGE' => 'la colonne de droite',
-    // actions/yeswikiversion.php
     'RUNNING_WITH' => 'Galope sous',
     'TEMPLATE_ACTION_SECTION' => 'Action {{section ...}}',
     'TEMPLATE_ELEM_SECTION_NOT_CLOSED' => 'l\'action {{section ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="section"}}',
     'TEMPLATE_NO_THEME_FILES' => 'Fichiers du th&egrave;me manquants',
     'TEMPLATE_DEFAULT_THEME_USED' => 'Le th&egrave;me par défaut est donc utilisé',
-    // actions/end.php
     'TEMPLATE_ACTION_END' => 'Action {{end ...}}',
     'TEMPLATE_ELEM_PARAMETER_REQUIRED' => 'param&egrave;tre "elem" obligatoire',
-    // actions/col.php
     'TEMPLATE_ACTION_COL' => 'Action {{col ...}}',
     'TEMPLATE_SIZE_PARAMETER_REQUIRED' => 'param&egrave;tre "size" obligatoire',
     'TEMPLATE_SIZE_PARAMETER_MUST_BE_INTEGER_FROM_1_TO_12' => 'le param&egrave;tre "size" doit &ecirc;tre un entier compris entre 1 et 12',
     'TEMPLATE_ELEM_COL_NOT_CLOSED' => 'l\'action {{col ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="col"}}',
-    // actions/grid.php
     'TEMPLATE_ACTION_GRID' => 'Action {{grid ...}}',
     'TEMPLATE_ELEM_GRID_NOT_CLOSED' => 'l\'action {{grid ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="grid"}}',
-    // action/panel.php
     'TEMPLATE_ACTION_PANEL' => 'Action {{panel ...}}',
     'TEMPLATE_ELEM_PANEL_NOT_CLOSED' => 'l\'action {{panel ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="panel"}}',
     'TEMPLATE_TITLE_PARAMETER_REQUIRED' => 'Param&egrave;tre title obligatoire',
-    // action/accordion.php
     'TEMPLATE_ACTION_ACCORDION' => 'Action {{accordion ...}}',
     'TEMPLATE_ELEM_ACORDION_NOT_CLOSED' => 'l\'action {{accordion ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="accordion"}}',
-    // actions/buttondropdown.php
     'TEMPLATE_ACTION_BUTTONDROPDOWN' => 'Action {{buttondropdown ...}}',
     'TEMPLATE_ELEM_BUTTONDROPDOWN_NOT_CLOSED' => 'l\'action {{buttondropdown ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="buttondropdown"}}',
-    // actions/adminpages.php
     'TEMPLATE_ACTION_FOR_ADMINS_ONLY' => 'action réservée aux administrateurs',
     'TEMPLATE_CONFIRM_DELETE_PAGE' => 'Etes vous sûr(e) de vouloir supprimer définitivement cette page ?',
     'TEMPLATE_PAGE' => 'Page',
@@ -133,9 +115,7 @@ return [
     'TEMPLATE_OWNER' => 'Propriétaire',
     'TEMPLATE_ACTIONS' => 'Actions',
     'TEMPLATE_MODIFY' => 'Modifier',
-    // actions/setwikidefaultheme.php
     'TEMPLATE_FORCE_TEMPLATE' => 'Forcer le choix pour tout le wiki.',
-    // themeselector.tpl.html
     'TEMPLATE_PRIMARY_COLOR' => 'Couleur primaire',
     'TEMPLATE_SECONDARY_COLOR_1' => 'Couleur secondaire 1',
     'TEMPLATE_SECONDARY_COLOR_2' => 'Couleur secondaire 2',
@@ -159,7 +139,6 @@ return [
     'TEMPLATE_PRESETS' => 'Configurations graphiques',
     'TEMPLATE_CREATE_PRESET' => 'Créer une nouvelle configuration graphique',
     'TEMPLATE_CUSTOMIZE_PRESET' => 'Configuration graphique',
-    // actions-builder
     'AB_template_group_label' => 'Mise en forme',
     'AB_template_action_label_label' => 'Etiquette',
     'AB_template_action_label_example' => 'Texte de votre étiquette à changer par la suite',
@@ -292,27 +271,21 @@ return [
     'AB_templates_tabs_btncolor_secondary_2' => 'Secondaire 2',
     'AB_templates_tabs_selectedtab_label' => 'Onglet sélectionné',
     'AB_templates_tabs_wrappedcontentexample' => "{{tab}}\nContenu de l'onglet \"{tabName}\"\n{{end elem=\"tab\"}}",
-    // gererdroits
     'ACLS_SELECT_PAGES_FILTER' => 'Filtrer :',
     'ACLS_SELECT_PAGES_FILTER_ON_PAGES' => 'les pages uniquement',
     'ACLS_SELECT_PAGES_FILTER_ON_SPECIALPAGES' => 'les pages spéciales uniquement',
     'ACLS_SELECT_PAGES_FILTER_ON_LISTS' => 'les listes uniquement',
     'ACLS_SELECT_PAGES_FILTER_FORM' => 'les fiches du formulaire : {name} ({id})',
-    // actions/gererthemes.php
     'GERERTHEMES_ACTIONS' => 'Actions',
     'GERERTHEMES_HINT' => 'Cochez les pages que vous souhaitez modifier et choisissez une action en bas de page',
     'GERERTHEMES_INIT_THEME_FOR_SELECTED_PAGES' => 'Réinitialiser les pages selectionnées (elles utiliseront le thème par défault)',
     'GERERTHEMES_MODIFY_THEME_FOR_SELECTED_PAGES' => 'Modifier les valeurs pour les pages sélectionnées',
     'GERERTHEMES_PAGE' => 'Page',
-    // actions/progressbar.php
     'PROGRESSBAR_REQUIRED_VAL_PARAM' => 'param&egrave;tre "val" obligatoire.',
     'PROGRESSBAR_ERROR_VAL_PARAM' => 'le param&egrave;tre "val" doit étre un chiffre entre 0 et 100.',
-    // templates/setdefaulttheme.tpl.html
     'SETDEFAULTTHEME_HNIT' => 'Le thème par défault est utilisé pour les pages qui n\'ont aucun thème défini (les lignes vides dans le tableau ci dessus)',
-    // for edit config
     'EDIT_CONFIG_HINT_META_KEYWORDS' => 'Mots clés pour le référencement (séparés par des virgules, pas plus de 20-30)',
     'EDIT_CONFIG_HINT_META_DESCRIPTION' => 'Description du site en une phrase, pour le référencement (Attention : ne pas mettre de "." (point))',
     'EDIT_CONFIG_HINT_META[ROBOTS]' => 'Empêcher les robots à indexer le wiki (noindex,nofollow,max-image-preview:none,noarchive,noimageindex)',
-    // idéalement 'Mise en forme' mais templates est pour le moment uniquement utilisé pour meta
     'EDIT_CONFIG_GROUP_TEMPLATES' => 'Balises meta pour l\'indexation web',
 ];

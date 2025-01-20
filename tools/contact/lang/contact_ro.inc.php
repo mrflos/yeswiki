@@ -1,15 +1,10 @@
 <?php
 return [
-    // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'Acțiune {{subscripție ..}}',
     'CONTACT_MAIL_REQUIRED' => 'parametrul de mail, necesar, lipsește.',
-    // actions/contact.php
     'CONTACT_ACTION_CONTACT' => 'Acțiune {{contact ..}}',
-    // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'Acțiune {{unsubscribe ..}}',
-    // actions/listsubscription.php
     'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Acțiune {{listsubscription ..}}',
-    // actions/mailinglist.php
     'CONTACT_ACTION_MAILINGLIST' => 'Acțiune {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'parametrul "listă" necesar (aceasta este adresa de e-mail a listei de corespondență)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'Mesaje pentru a adăuga sau elimina din listă',
@@ -63,33 +58,21 @@ return [
     'CONTACT_FROM_WEBSITE' => 'site-ul',
     'CONTACT_REPLY' => 'Puteți trimite un mesaj la',
     'CONTACT_REPLY2' => 'răspunzând la acest e-mail',
-    // handlers/page/mail.php
     'CONTACT_TO_PLACEHOLDER' => 'Adresa de e-mail a destinatarului',
-    // handlers/page/sendmail.php
     'CONTACT_SENDMAIL_INFO' => 'Trimitem email-urile pentru perioada respectivă',
     'CONTACT_SENDMAIL_ERROR' => 'Perioada nu a fost completată sau nu are o valoare standard (month, week ou day).',
-    // libs/contact.functions.js
     'CONTACT_DAILY_REPORT' => 'raportul zilnic al',
     'CONTACT_WEEKLY_REPORT' => 'raportul săptămânal al',
     'CONTACT_MONTHLY_REPORT' => 'raportul lunar al',
-    // templates/notify-admins-email-subject.twig (no special chars)
     'CONTACT_ENTRY_ADDED' => 'nouă foaie adăugată',
     'CONTACT_ENTRY_CHANGED' => 'fișă modificată',
     'CONTACT_IN_FORM' => 'în formularul',
-    // templates/notify-admins-list-deleted-email-subject.twig (no special chars)
     'CONTACT_DELETED_LIST' => 'lista ştersă',
-    // templates/notify-admins-list-deleted-email-text.twig (no special chars)
     'CONTACT_USED_IP' => 'IP utilizat',
-    // templates/notify-email-html.twig and templates/notify-email-text.twig (no special chars)
     'CONTACT_WELCOME_ON' => 'bun venit pe',
-    // templates/notify-email-subject.twig (no special chars)
     'CONTACT_YOUR_ENTRY' => 'fișa',
-    // templates/notify-email-text.twig (no special chars)
     'CONTACT_HELP_IN_NOTIFICATION' => 'accesați site-ul pentru a vă gestiona înregistrarea',
-    // templates/notify-newuser-email-subject.twig (no special chars)
     'CONTACT_NEW_USER_SUBJECT' => 'Noile detalii de conectare pe site',
-    // templates/notify-newuser-email-text.twig (no special chars)
-    // action-builder Contact
     'AB_contact_group_label' => "Acțiuni pentru trimiterea de e-mailuri/liste",
     'AB_abonnement_action_mail_label' => 'E-mail din lista de corespondență',
     'AB_abonnement_action_label' => "Abonați-vă la o listă de corespondență",
@@ -109,7 +92,6 @@ return [
     'AB_mailperiod_action_hint' => 'Pentru ca această acțiune să funcționeze, trebuie să verificați unele setări de pe server. Vezi documentaţia despre https://yeswiki.net/?MailPeriod',
     'AB_mailinglist_action_label' => 'Abonează-te masiv la un newsletter',
     'AB_mailinglist_action_description' => "Acțiunea de abonare sau dezabonare a e-mailurilor la un buletin informativ",
-    // for edit config
     'EDIT_CONFIG_HINT_CONTACT_USE_LONG_WIKI_URLS_IN_EMAILS' => "Adăugați 'wiki=' la link-urile către acest wiki în e-mailuri",
     'EDIT_CONFIG_HINT_CONTACT_MAIL_FUNC' => 'Modul de trimitere a e-mailurilor ("smtp" o "mail")',
     'EDIT_CONFIG_HINT_CONTACT_SMTP_HOST' => 'Server SMTP (ex: "smtp.domeniulmeu.tld")',

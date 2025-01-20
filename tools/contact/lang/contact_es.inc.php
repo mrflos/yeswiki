@@ -1,16 +1,11 @@
 <?php
 
 return [
-    // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'Acción {{suscripción ...}}',
     'CONTACT_MAIL_REQUIRED' => 'el parámetro email es obligatorio.',
-    // actions/contact.php
     'CONTACT_ACTION_CONTACT' => 'Acción {{contacto ...}}',
-    // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'Acción {{desabono ...}}',
-    // actions/listsubscription.php
     'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Acción {{listsubscription ...}}',
-    // actions/mailinglist.php
     'CONTACT_ACTION_MAILINGLIST' => 'Acción {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'parámetro "list" obligatorio (es la dirección email de la lista de difusión)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'Direcciónes de correo electrónico para añadir o para suprimir de la lista',

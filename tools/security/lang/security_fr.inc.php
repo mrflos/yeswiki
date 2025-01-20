@@ -10,8 +10,6 @@ return [
     'CAPTCHA_ERROR_WRONG_WORD' => 'La page n\'a pas été enregistrée car le mot de vérification rentré n\'est pas correct.',
     'CAPTCHA_VERIFICATION' => 'V&eacute;rification pour sauver la page',
     'CAPTCHA_WRITE' => 'Ecrire ici le mot présent dans l\'image',
-
-    // actions/despam.php
     'DESPAM_PAGES_SELECTION' => 'S&eacute;lection des pages',
     'DESPAM_ALL_CHANGES_FROM' => 'Toutes les modifications depuis',
     'DESPAM_FOR_ONE_HOUR' => 'depuis 1 heure',
@@ -26,8 +24,6 @@ return [
     'DESPAM_DELETED_PAGES' => 'Pages supprimées',
     'DESPAM_BACK_TO_PREVIOUS_FORM' => 'Retour au formulaire de départ',
     'DESPAM_ONLY_FOR_ADMINS' => 'Action {{despam}} réservée aux administrateurs.',
-
-    // for edit config
     'EDIT_CONFIG_HINT_USE_CAPTCHA' => 'Activer l\'utilisation d\'un captcha avant la sauvegarde (true ou false)',
     'EDIT_CONFIG_HINT_USE_HASHCASH' => 'Activer l\'antispam hashcash du wiki (activé par défaut)',
     'EDIT_CONFIG_HINT_USE_ALERTE' => 'Prévenir si l\'on quitte la page sans sauvegarder (true ou false)',
@@ -37,7 +33,5 @@ return [
     'EDIT_CONFIG_HINT_ARCHIVE[CALL_ARCHIVE_ASYNC]' => 'Lancer les opérations de sauvegardes en arrière-plan (true/false)',
     'EDIT_CONFIG_HINT_ARCHIVE[MAX_NB_FILES]' => 'Nombre maximum de fichiers de sauvegarde à conserver (min. 3)',
     'EDIT_CONFIG_HINT_ARCHIVE[PREUPDATE_BACKUP_ACTIVATED]' => 'Faire une sauvegarde avant chaque mise à jour (true ou false)',
-
-    // security controller
     'WIKI_IN_HIBERNATION' => 'Action désactivée car ce wiki est en lecture seule. Veuillez contacter l\'administrateur pour le réactiver.',
 ];

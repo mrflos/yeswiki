@@ -1,17 +1,13 @@
 <?php
 return [
-    // fields/CalcField.php
     'BAZ_FORM_EDIT_CALC_LABEL' => 'Calculele',
     'BAZ_FORM_EDIT_DISPLAYTEXT_LABEL' => 'Afișează textul',
     'BAZ_FORM_EDIT_DISPLAYTEXT_HELP' => 'Adăugați dacă este necesar o unitate după {value}, (ex: ‘{value} €’)',
     'BAZ_FORM_EDIT_FORMULA_LABEL' => 'Formulă',
-    // fields/FileField.php
     'BAZ_FILEFIELD_FILE' => 'Datei: {filename}',
     'BAZ_FORM_EDIT_FILE_READLABEL_LABEL' => 'Eticheta la afișare',
     'FILEFIELD_TOO_LARGE_FILE' => 'Fișierul este prea mare, maxim {fileMaxSize} bytes',
-    // fields/ImageField.php
     'IMAGEFIELD_TOO_LARGE_IMAGE' => 'Imaginea este prea mare, maxim {imageMaxSize} bytes',
-    // fields/MapField.php
     'BAZ_FORM_EDIT_GEOLOCATE' => 'Geolocalizare din poziția mea',
     'BAZ_FORM_EDIT_MAP_AUTOCOMPLETE_COUNTY' => 'Regiune de teren/județ',
     'BAZ_FORM_EDIT_MAP_AUTOCOMPLETE_COUNTY_PLACEHOLDER' => 'bf_region',
@@ -41,7 +37,6 @@ return [
     'GEOLOCATER_GROUP_GEOLOCATIZATION' => 'Câmpuri care urmează să fie utilizate pentru geolocalizare',
     'GEOLOCATER_GROUP_GEOLOCATIZATION_HINT' => 'Completați cel puțin un câmp',
     'GEOLOCATER_NOT_FOUND' => 'Adresa "{addr}" nu a fost găsită',
-    // presentation/javascripts/bazar.js
     'BAZ_FORM_REQUIRED_FIELD' => 'Vă rugăm să introduceți toate câmpurile obligatorii (asterisc roșu)',
     'BAZ_FORM_INVALID_EMAIL' => 'E-mailul introdus nu este valid',
     'BAZ_FORM_INVALID_TEXT' => 'Textul nu este valid',
@@ -76,10 +71,8 @@ return [
     'BAZ_DATESHORT_NOVEMBER' => '',
     'BAZ_DATESHORT_DECEMBER' => '',
     'BAZ_SAVING' => '',
-    // presentation/javascripts/components/BazarMap.js
     'BAZ_FULLSCREEN' => '',
     'BAZ_BACK_TO_NORMAL_VIEW' => '',
-    // form-edit-template.js
     'MEMBER_OF_GROUP' => '',
     'BAZ_FORM_EDIT_HELP' => '',
     'BAZ_FORM_EDIT_HIDE' => '',
@@ -218,7 +211,6 @@ return [
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_LABEL' => '',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_HINT' => '',
     'BAZ_FORM_EDIT_ACL_ASK_IF_ACTIVATE_COMMENT_LABEL' => '',
-    // condition checking field
     'BAZ_FORM_EDIT_CONDITIONCHECKING_LABEL' => '',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_LABEL' => '',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_END' => '',
@@ -226,10 +218,8 @@ return [
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_CLEAN_OPTION' => '',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_NOCLEAN_OPTION' => '',
     'BAZ_FORM_CONDITIONSCHEKING_NOCLEAN_HINT' => '',
-    // jsvascripts/form-edit-templates/fields/file.js
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_LABEL' => '',
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_PLACEHOLDER' => '',
-    // reactions
     'BAZ_ACTIVATE_REACTIONS' => '',
     'BAZ_REACTIONS_FIELD' => '',
     'BAZ_REACTIONS_FIELD_ACTIVATE_HINT' => '',
@@ -243,9 +233,7 @@ return [
     'BAZ_REACTIONS_FIELD_LABELS_HINT' => '',
     'BAZ_REACTIONS_FIELD_LABELS_LABEL' => '',
     'BAZ_REACTIONS_FIELD_LABELS_PLACEHOLDER' => '',
-    // presentation/javascripts/map-field-leaflet.js
     'BAZ_ADJUST_MARKER_POSITION' => '',
-    // presentation/javascripts/form-edit-template/fields/url.js
     'BAZAR_VIDEO_MAXHEIGHT_LABEL' => '',
     'BAZAR_VIDEO_MAXWIDTH_LABEL' => '',
     'BAZAR_VIDEO_MAX_HINT' => '',
@@ -254,9 +242,7 @@ return [
     'BAZAR_VIDEO_POSITION_LEFT' => '',
     'BAZAR_VIDEO_POSITION_RIGHT' => '',
     'BAZAR_URL_DISPLAY_VIDEO' => '',
-    // templates/entries/index-dynamic-temapltes/BazarCalendar_ButtonICS.js
     'BAZ_CALENDAR_EXPORT_BUTTON_TITLE' => '',
-    // liste-node.js
     'LIST_DRAGDROP' => "",
     'LIST_KEY' => '',
     'LIST_TEXT' => '',

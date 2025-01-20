@@ -38,21 +38,13 @@ return [
     'TAGS_CONTAINING_TAG' => 'avec le mot cl&eacute;',
     'TAGS_ONE_PAGE' => 'Une page',
     'TAGS_PAGES' => 'pages',
-
-    // actions/admintag.php
     'TAGS_NO_TAG' => 'Aucun mot clé utilisé pour le moment',
-
-    // actions/listpagestag.php
     'TAGS_TOTAL_NB_PAGES' => 'Un total de %{nb_total} pages a &eacute;t&eacute; trouv&eacute;',
     'TAGS_ONE_PAGE_FOUND' => 'Une page a &eacute;t&eacute; trouv&eacute;e',
     'TAGS_NO_PAGE' => 'Aucune page trouv&eacute;e',
     'TAGS_WITH_KEYWORD' => 'avec le mot cl&eacute;',
     'TAGS_WITH_KEYWORD_SEPARATOR' => 'et',
-
-    // actions/rss.php
     'TAGS_RSS_FEED_FOR_NEW_PAGES_WITH_TAGS' => 'Flux RSS des nouvelles pages avec les tags',
-
-    // handler exportpages
     'TAGS_YOUR_EBOOK' => 'Votre Ebook',
     'TAGS_SPAM_RISK' => 'Il faut activer javascript pour ne pas &ecirc;tre consid&eacute;r&eacute; comme du spam.',
     'TAGS_GENERATE_EBOOK' => 'G&eacute;n&eacute;rer l\'Ebook',
@@ -92,11 +84,7 @@ return [
     'TAGS_CONTENT_VISIBLE_ONLINE_FROM_PAGE' => 'Contenu en ligne sur la page',
     'TAGS_NO_EBOOK_METADATAS' => 'Cette page ne poss&egrave;de pas les m&eacute;tadonn&eacute;es n&eacute;cessaires pour cr&eacute;er l\'ebook.',
     'TAGS_NO_EBOOK_FOUND' => 'Pas d\'ebook trouv&eacute;.',
-
-    // handler/tagrss.php
     'TAGS_HIDDEN_CONTENT' => 'Contenu masqué',
-
-    // action builder tags group
     'AB_tags_group_label' => 'Gestion des tags',
     'AB_tags_admintag_label' => 'Gestion des tags',
     'AB_tags_listpagestag_label' => 'Liste des pages par tag',
@@ -119,8 +107,6 @@ return [
     'AB_tags_listpagestag_rss_label' => 'lien rss vers la liste pour des tags donnés',
     'AB_tags_listpagestag_nbclasses_label' => 'nombre de classes CSS disponibles pour le nuage',
     'AB_tags_nuagetag_tri_shuffle' => 'aléatoire',
-
-    // for edit config
     'EDIT_CONFIG_HINT_HIDE_KEYWORDS' => 'Cacher les mots-clés en bas des pages (true ou false)',
     'EDIT_CONFIG_GROUP_TAGS' => 'Mots-clés (tags)',
 ];

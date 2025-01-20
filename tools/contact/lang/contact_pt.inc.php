@@ -1,16 +1,11 @@
 <?php
 
 return [
-    // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'Ação {{abonnement ...}}',
     'CONTACT_MAIL_REQUIRED' => 'o parâmetro mail, obrigatório está faltando.',
-    // actions/contact.php
     'CONTACT_ACTION_CONTACT' => 'Ação {{contact ...}}',
-    // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'Ação {{desabonnement ...}}',
-    // actions/listsubscription.php
     'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Ação {{listsubscription ...}}',
-    // actions/mailinglist.php
     'CONTACT_ACTION_MAILINGLIST' => 'Ação {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'parâmetro "list" obrigatório (este é o endereço de e-mail da lista de discussão)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'Mails para adicionar ou remover da lista',

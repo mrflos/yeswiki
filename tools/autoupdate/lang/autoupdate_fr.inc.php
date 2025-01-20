@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Fichier de traduction en francais de l'extension AutoUpdate.
- *
- *@author        Florestan Bredow <florestan.bredow@supagro.fr>
- */
-
 return [
     'AU_ACL' => 'Vérification des droits sur les fichiers',
     'AU_REPO_ERROR' => 'Dépots inaccessibles.',

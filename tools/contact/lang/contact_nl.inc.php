@@ -1,16 +1,11 @@
 <?php
 
 return [
-    // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'Actie {{inschrijven...}}',
     'CONTACT_MAIL_REQUIRED' => 'de verplichte parameter e-mail ontbreekt.',
-    // actions/contact.php
     'CONTACT_ACTION_CONTACT' => 'Actie {{contact ...}}',
-    // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'Actie {{uitschrijven...}}',
-    // actions/listsubscription.php
     'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Actie {{listsubscription ...}}',
-    // actions/mailinglist.php
     'CONTACT_ACTION_MAILINGLIST' => 'Actie {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'parameter "list" is verplicht (dit is het e-mailadres van de mailinglist)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'Mails toevoegen aan of wissen van de lijst',

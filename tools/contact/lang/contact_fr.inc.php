@@ -1,20 +1,11 @@
 <?php
 
 return [
-    // actions/abonnement.php
     'CONTACT_ACTION_ABONNEMENT' => 'Action {{abonnement ...}}',
     'CONTACT_MAIL_REQUIRED' => 'le param&egrave;tre mail, obligatoire, est manquant.',
-
-    // actions/contact.php
     'CONTACT_ACTION_CONTACT' => 'Action {{contact ...}}',
-
-    // actions/desabonnement.php
     'CONTACT_ACTION_DESABONNEMENT' => 'Action {{desabonnement ...}}',
-
-    // actions/listsubscription.php
     'CONTACT_ACTION_LISTSUBSCRIPTION' => 'Action {{listsubscription ...}}',
-
-    // actions/mailinglist.php
     'CONTACT_ACTION_MAILINGLIST' => 'Action {{mailinglist ...}}',
     'CONTACT_PARAMETER_LIST_REQUIRED' => 'param&egrave;tre "list" obligatoire (il s\'agit de l\'adresse mail de la liste de diffusion)',
     'CONTACT_MAILS_TO_ADD_OR_REMOVE' => 'Mails &agrave; ajouter ou &agrave; supprimer de la liste',
@@ -76,43 +67,21 @@ return [
     'CONTACT_FROM_WEBSITE' => 'du site',
     'CONTACT_REPLY' => 'Vous pouvez lui écrire un message à',
     'CONTACT_REPLY2' => 'en répondant à ce mail',
-
-    // handlers/page/mail.php
     'CONTACT_TO_PLACEHOLDER' => 'Adresse mail du destinataire',
-
-    // handlers/page/sendmail.php
     'CONTACT_SENDMAIL_INFO' => 'On envoie les mails pour la période',
     'CONTACT_SENDMAIL_ERROR' => 'La période n\'a pas été renseignée ou n\'a pas de valeur standard (month, week ou day).',
-
-    // libs/contact.functions.js
     'CONTACT_DAILY_REPORT' => 'rapport journalier du',
     'CONTACT_WEEKLY_REPORT' => 'rapport hebdomadaire du',
     'CONTACT_MONTHLY_REPORT' => 'rapport mensuel du',
-
-    // templates/notify-admins-email-subject.twig (no special chars)
     'CONTACT_ENTRY_ADDED' => 'nouvelle fiche ajoutee',
     'CONTACT_ENTRY_CHANGED' => 'fiche modifiee',
     'CONTACT_IN_FORM' => 'dans le formulaire',
-
-    // templates/notify-admins-list-deleted-email-subject.twig (no special chars)
     'CONTACT_DELETED_LIST' => 'liste supprimee',
-
-    // templates/notify-admins-list-deleted-email-text.twig (no special chars)
     'CONTACT_USED_IP' => 'IP utilisee',
-
-    // templates/notify-email-html.twig and templates/notify-email-text.twig (no special chars)
     'CONTACT_WELCOME_ON' => 'Bienvenue sur',
-
-    // templates/notify-email-subject.twig (no special chars)
     'CONTACT_YOUR_ENTRY' => 'Votre fiche',
-
-    // templates/notify-email-text.twig (no special chars)
     'CONTACT_HELP_IN_NOTIFICATION' => 'allez sur le site pour gérer votre inscription',
-
-    // templates/notify-newuser-email-subject.twig (no special chars)
     'CONTACT_NEW_USER_SUBJECT' => 'Vos nouveaux identifiants sur le site',
-
-    // templates/notify-newuser-email-text.twig (no special chars)
     'CONTACT_NEW_USER_MESSAGE' => "Bonjour!\n\n" .
         "Votre inscription sur le site a ete finalisee, dorenavant vous pouvez vous identifier avec les informations suivantes :\n\n" .
         "Url : {{ baseUrl }}\n\n" .
@@ -121,8 +90,6 @@ return [
         "Votre mot de passe : (le mot de passe que vous avez choisi)\n\n" .
         "Pour reinitialiser votre mot de passe : {{ urlForPasswordRenewal }}\n\n" .
         'A tres bientot ! ',
-
-    // action-builder Contact
     'AB_contact_group_label' => "Actions d'envoi d'e-mail/listes",
     'AB_abonnement_action_mail_label' => 'E-mail de la liste de discussion',
     'AB_abonnement_action_label' => "S'abonner à une liste de discussion",
@@ -142,8 +109,6 @@ return [
     'AB_mailperiod_action_hint' => 'Pour que cette action fonctionne vous devez vérifier certains paramètres sur votre serveur. Voir la documentation sur https://yeswiki.net/?MailPeriod',
     'AB_mailinglist_action_label' => 'Inscrire massivement des mails à une newsletter',
     'AB_mailinglist_action_description' => "Action permettant d'inscrire ou désinscrire massivement des mails à une newsletter",
-
-    // for edit config
     'EDIT_CONFIG_HINT_CONTACT_USE_LONG_WIKI_URLS_IN_EMAILS' => "Ajouter 'wiki=' aux liens vers ce wiki dans les e-mails",
     'EDIT_CONFIG_HINT_CONTACT_MAIL_FUNC' => 'Mode d\'envoi des mails ("smtp" ou "mail")',
     'EDIT_CONFIG_HINT_CONTACT_SMTP_HOST' => 'Serveur SMTP (ex: "smtp.mondomaine.ext")',

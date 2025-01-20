@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // 'TAGS_TAGS' => 'Mots clés',
     'TAGS_ACTION_ADMINTAGS' => 'Acción {{admintags ...}}',
     'TAGS_ACTION_ADMINTAGS_ONLY_FOR_ADMINS' => 'la acción está reservada al grupo de administradores',
     'TAGS_NO_WRITE_ACCESS' => 'No tienes los derechos de acceso para escribir en esta página',
@@ -36,17 +35,7 @@ return [
     'TAGS_CONTAINING_TAG' => 'con la palabra clave',
     'TAGS_ONE_PAGE' => 'Una página',
     'TAGS_PAGES' => 'páginas',
-    // actions/admintag.php
-    // 'TAGS_NO_TAG' => 'Aucun mot clé utilisé pour le moment',
-    // actions/listpagestag.php
-    // 'TAGS_TOTAL_NB_PAGES' => 'Un total de %{nb_total} pages a &eacute;t&eacute; trouv&eacute;',
-    // 'TAGS_ONE_PAGE_FOUND' => 'Une page a &eacute;t&eacute; trouv&eacute;e',
-    // 'TAGS_NO_PAGE' => 'Aucune page trouv&eacute;e',
-    // 'TAGS_WITH_KEYWORD' => 'avec le mot cl&eacute;',
-    // 'TAGS_WITH_KEYWORD_SEPARATOR' => 'et',
-    // actions/rss.php
     'TAGS_RSS_FEED_FOR_NEW_PAGES_WITH_TAGS' => 'Flujo RSS de las nuevas páginas con las palabras clave',
-    // handler exportpages
     'TAGS_YOUR_EBOOK' => 'Tu Ebook',
     'TAGS_SPAM_RISK' => 'Hay que activar javascript para no ser considerado como spam.',
     'TAGS_GENERATE_EBOOK' => 'Generar el Ebook',
@@ -86,32 +75,6 @@ return [
     'TAGS_CONTENT_VISIBLE_ONLINE_FROM_PAGE' => 'Contenido web en la página',
     'TAGS_NO_EBOOK_METADATAS' => 'Esta página no tiene los meta datos necesarios para crear el ebook.',
     'TAGS_NO_EBOOK_FOUND' => 'Ningun ebook encontrado.',
-    // handler/tagrss.php
-    // 'TAGS_HIDDEN_CONTENT' => 'Contenu masqué',
-    // action builder tags group
-    // 'AB_tags_group_label' => 'Gestion des tags',
-    // 'AB_tags_admintag_label' => 'Gestion des tags',
-    // 'AB_tags_listpagestag_label' => 'Liste des pages par tag',
-    // 'AB_tags_listpagestag_type_label' => 'Type',
-    // 'AB_tags_listpagestag_type_all' => 'toutes les pages et les fiches du wiki',
-    // 'AB_tags_listpagestag_type_wiki' => 'uniquement les pages du wiki',
-    // 'AB_tags_listpagestag_type_bazar'=> 'uniquement les fiches des formulaires',
-    // 'AB_tags_listpagestag_tags_label'=> 'Tags',
-    // 'AB_tags_listpagestag_tags_hint'=> 'séparés par des virgules',
-    // 'AB_tags_listpagestag_nb_label'=> 'Nombre de pages',
-    // 'AB_tags_listpagestag_tri_label'=> 'Tri',
-    // 'AB_tags_listpagestag_tri_date'=> 'tri par date décroissante',
-    // 'AB_tags_listpagestag_tri_alpha'=> 'tri par ordre alphabétique',
-    // 'AB_tags_listpagestag_template_label'=> 'template',
-    // 'AB_tags_listpagestag_template_list'=> 'liste',
-    // 'AB_tags_listpagestag_template_list_panel'=> 'liste avec encadré',
-    // 'AB_tags_listpagestag_template_list_num'=> 'liste avec puces',
-    // 'AB_tags_listpagestag_shownumberinfo_label'=> 'afficher le nombre de pages',
-    // 'AB_tags_listpagestag_nuagetag_label'=> 'nuage de tags',
-    // 'AB_tags_listpagestag_rss_label'=> 'lien rss vers la liste pour des tags donnés',
-    // 'AB_tags_listpagestag_nbclasses_label' => 'nombre de classes CSS disponibles pour le nuage',
-    // 'AB_tags_nuagetag_tri_shuffle' => 'aléatoire',
-    // for edit config
     'EDIT_CONFIG_HINT_HIDE_KEYWORDS' => 'Ocultar palabras clave en la parte inferior de las páginas (true o false)',
     'EDIT_CONFIG_GROUP_TAGS' => 'Palabras clave (tags)',
     'TAGS_TAGS' => 'Palabras clave',

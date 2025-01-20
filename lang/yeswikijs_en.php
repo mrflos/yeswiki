@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // commons
     'APRIL' => 'April',
     'AUGUST' => 'August',
     'CANCEL' => 'Cancel',
@@ -37,7 +36,6 @@ return [
     'TUESDAY' => 'Tuesday',
     'WEDNESDAY' => 'Wednesday',
     'YES' => 'Yes',
-    // /javascripts/actions/admin-backups.js
     'ADMIN_BACKUPS_LOADING_LIST' => 'Loading list of backups',
     'ADMIN_BACKUPS_NOT_POSSIBLE_TO_LOAD_LIST' => 'Not possible to update list of backups',
     'ADMIN_BACKUPS_DELETE_ARCHIVE' => 'Delete {filename}',
@@ -62,59 +60,44 @@ return [
     'ADMIN_BACKUPS_STOP_BACKUP_ERROR' => 'Error : not possible to stop backup',
     'ADMIN_BACKUPS_STOPPING_ARCHIVE' => 'Backup stopping',
     'ADMIN_BACKUPS_UID_STATUS_FINISHED_THEN_UPDATING' => 'Update started (please wait)',
-    // /javascripts/handlers/revisions.js
     'REVISIONS_COMMIT_DIFF' => 'Changes done by this revision',
     'REVISIONS_DIFF' => 'Comparison to the current revision',
     'REVISIONS_PREVIEW' => 'Preview of this revision',
-    // javascripts/documentation.js
     'DOCUMENTATION_TITLE' => 'YesWiki documentation',
-    // javascripts/favorites.js
     'FAVORITES_ADD' => 'Add to favorites',
     'FAVORITES_ALL_DELETED' => 'Favorites deleted',
     'FAVORITES_ERROR' => 'An error occurred : {error}',
     'FAVORITES_REMOVE' => 'Remove from favorites',
     'FAVORITES_ADDED' => 'Favorite added',
     'FAVORITES_REMOVED' => 'Favorite deleted',
-    // javascripts/list-form-id-attribute.js
     'LIST_CREATE_TITLE' => 'New List',
     'LIST_UPDATE_TITLE' => 'Update the List',
     'LIST_CREATED' => 'List successfully created',
     'LIST_UPDATED' => 'List successfully updated',
-    // javascripts/multidelete.js
     'MULTIDELETE_END' => 'Deletions finished',
     'MULTIDELETE_ERROR' => 'Item {itemId} has not been deleted! {error}',
-    // javascripts/users-table.js
     'LINK_TO_CHANGE_PASSWORD' => 'Link to change password',
     'USERSTABLE_USER_CREATED' => "User '{name}' created",
     'USERSTABLE_USER_NOT_CREATED' => "User '{name}' not created : {error}",
     'USERSTABLE_USER_DELETED' => 'The user "{username}" was deleted.',
     'USERSTABLE_USER_NOT_DELETED' => 'The user "{username}" was not deleted.',
-    // /javascripts/yeswiki-base.js
     'DATATABLES_PROCESSING' => 'Processing...',
     'DATATABLES_SEARCH' => 'Search&nbsp;:',
     'DATATABLES_LENGTHMENU' => 'Display _MENU_ elements',
     'DATATABLES_INFO' => 'Display from element _START_ to _END_ on _TOTAL_ elements',
-    // "DATATABLES_INFOEMPTY" => "Affichage de l'&eacute;l&eacute;ment 0 &agrave; 0 sur 0 &eacute;l&eacute;ment",
-    // "DATATABLES_INFOFILTERED" => "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
     'DATATABLES_LOADINGRECORDS' => 'Loading...',
-    // "DATATABLES_ZERORECORD" => "Aucun &eacute;l&eacute;ment &agrave; afficher",
-    // "DATATABLES_EMPTYTABLE" => "Aucune donn&eacute;e disponible dans le tableau",
-    // "DATATABLES_SORTASCENDING" => ": activer pour trier la colonne par ordre croissant",
-    // "DATATABLES_SORTDESCENDING" => ": activer pour trier la colonne par ordre d&eacute;croissant",
     'DATATABLES_COLS_TO_DISPLAY' => 'Columns to display',
     'NAVBAR_EDIT_MESSAGE' => 'Edit an area of the horizntal menu',
     'YESWIKIMODAL_EDIT_MSG' => 'Edit the page',
     'EDIT_OUPS_MSG' => 'INdeed, I would not double-click...',
     'COMMENT_NOT_DELETED' => 'Comment {comment} was not deleted.',
     'COMMENT_DELETED' => 'Comment deleted.',
-    // Doc
     'DOC_EDIT_THIS_PAGE_ON_GITHUB' => 'Edit this page on Github',
     'DATATABLES_EMPTYTABLE' => 'No data available in table',
     'ADMIN_BACKUPS_FORCED_UPDATE_NOT_POSSIBLE' => 'Forced update not possible',
     'DATATABLES_SORTDESCENDING' => ': activate to sort the column in descendant order',
     'DELETE_COMMENT_AND_ANSWERS' => 'Delete this comment and associated answers ?',
     'REACTION_CONFIRM_DELETE_ALL' => 'Are you sure you want to delete all the reactions from this vote ?',
-    // reactions
     'REACTION_NOT_POSSIBLE_TO_ADD_REACTION' => 'Impossible to add the reaction because of following error : {error}!',
     'DATATABLES_INFOEMPTY' => 'Showing 0 element',
     'REACTION_NOT_POSSIBLE_TO_DELETE_REACTION' => 'Impossible to delete the reaction because of following error : {error}!',

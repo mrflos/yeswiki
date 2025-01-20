@@ -1,11 +1,8 @@
 <?php
 return [
-    // AB stands for ActionsBuilder
-    // Commons
     'AB_LEFT' => 'Stânga',
     'AB_RIGHT' => 'Dreapta',
     'AB_advanced' => 'Avansat',
-    // BAZAR
     'AB_bazar_label' => "Afișează datele dintr-un formular",
     'AB_bazar_commons_colorfield_label' => 'Câmp pentru culoare',
     'AB_bazar_commons_colormapping_color_label' => 'Culoare',
@@ -59,7 +56,6 @@ return [
     'AB_bazar_sort' => 'Sortează datele',
     'AB_bazar_sort_dynamique' => "Sortare dinamică",
     'AB_bazar_sort_add_field' => 'Adăugați sortare dinamică',
-    // Bazarcarto
     'AB_bazarcarto_label' => 'Cartografiere',
     'AB_bazarcarto_description' => 'Cărțile vor fi sub forma unui marker.',
     'AB_bazarcarto_hint' => 'Câmpul de geolocalizare trebuie să fie prezent în forma dvs',
@@ -89,12 +85,10 @@ return [
     'AB_bazarcarto_barregestion_label' => 'Bara de gestionare a înregistrărilor',
     'AB_bazarcarto_navigation_label' => 'Butoane de control zoom',
     'AB_bazarcarto_zoommolette_label' => 'Zoom cu roata mouse-ului',
-    // BazarAgenda
     'AB_bazaragenda_label' => 'Agendă',
     'AB_bazaragenda_description' => "Cardurile vor fi sub forma unui eveniment într-un calendar.",
     'AB_bazaragenda_nbcol_label' => 'Numărul de coloane',
     'AB_bazaragenda_modal_label' => "Afișarea unei ferestre modale atunci când faceți clic",
-    // BazarCalendar
     'AB_bazarcalendar' => 'Calendar',
     'AB_bazarcalendar_description' => "Cardurile vor fi sub forma unui eveniment într-un calendar.",
     'AB_bazarcalendar_showlist_label' => "Afișați butonul 'planning'",
@@ -107,7 +101,6 @@ return [
     'AB_bazarcalendar_initialview_day' => 'Ziuă',
     'AB_bazarcalendar_initialview_list' => 'Program',
     'AB_bazarcarto_showicalbutton_label' => "Afișați butonul de export ical",
-    // BazarListe
     'AB_bazarliste_label' => 'Listă',
     'AB_bazarliste_description' => "Cărțile vor fi în formă de acordeon",
     'AB_bazarliste_displayfields_title' => 'Alegerea câmpurilor care să includă',
@@ -116,7 +109,6 @@ return [
     'AB_bazarliste_displayfields_text_label' => 'Caseta de text',
     'AB_bazarliste_displayfields_floating_label' => 'Zona plutitoare',
     'AB_bazarliste_displayfields_visual_label' => 'Zona vizuală',
-    // BazarCard
     'AB_bazarcard_label' => 'Blocuri (agenda, știri, trombinoscop, tablă de șah...)',
     'AB_bazarcard_description' => 'Cărțile vor fi sub formă de cărți',
     'AB_bazarliste_displayfields_footer_label' => 'Zona de subsol',
@@ -128,17 +120,14 @@ return [
     'AB_bazarcard_imgstyle_contain' => 'Întreaga imagine',
     'AB_bazarcard_imgstyle_cover' => 'Zona de acoperire / Cultură',
     'AB_bazarcard_nblines_label' => 'Numărul de linii pentru subtitrare',
-    // BazarTable
     'AB_BAZAR_MAP_AND_TABLE_LABEL' => 'Hartă și tabel',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_LABEL' => 'Tabel care conține toate cărțile',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ALL' => 'cu sau fără geolocalizare',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_ONLY_GEOLOC' => 'numai cu geolocalizare',
     'AB_BAZAR_MAP_AND_TABLE_TABLEWITH_NO_GEOLOC' => 'fără geolocalizare',
-    // BazarTrombi
     'AB_bazartrombi_label' => 'Albumul',
     'AB_bazartrombi_description' => 'Cardurile vor fi sub forma unui trombinoscop.',
     'AB_bazartrombi_hint' => 'Este necesar un câmp bf_image.',
-    // BazarMaterialCard
     'AB_bazarmaterialcard_label' => 'Material card',
     'AB_bazarmaterialcard_description' => 'Cardurile vor fi sub forma unei cutii modale.',
     'AB_bazarmaterialcard_hint' => 'Este necesar un câmp bf_image',
@@ -146,10 +135,8 @@ return [
     'AB_bazarmaterialcard_type_label' => 'Afişare fără efect',
     'AB_bazarmaterialcard_modal_label' => "Afișarea unei ferestre modale atunci când faceți clic",
     'AB_bazarmaterialcard_bf_baseline_label' => 'Câmp pentru subtitrare',
-    // BazarAnnuaire
     'AB_bazarannuaire_label' => 'Anuar',
     'AB_bazarannuaire_description' => "Afișează foile ca un director alfabetic",
-    // BazarDamier
     'AB_bazardamier_label' => 'Tablă de șah',
     'AB_bazardamier_description' => 'Afișează cărțile ca un set de carouri',
     'AB_bazardamier_hint' => 'Se utilizează un câmp de tip bf_debut, bf_fin, bf_lieu, bf_image, bf_lien, bf_fichier, bf_bouton',
@@ -157,11 +144,9 @@ return [
     'AB_bazardamier_couleur_label' => 'Culoarea tablei de șah',
     'AB_bazardamier_correpondance_hint' => 'Acest șablon este foarte personalizabil',
     'AB_bazardamier_bf_description_label' => 'Câmp de descriere',
-    // BazarTimeLine
     'AB_bazartimeline_label' => 'Linia de timp',
     'AB_bazartimeline_description' => 'Afișează cărțile într-o linie de timp.',
     'AB_bazartimeline_hint' => 'Este necesar un câmp bf_image.',
-    // BazarCarousel
     'AB_bazarcarousel_label' => 'Carusel',
     'AB_bazarcarousel_description' => 'Afișează imaginile cardului ca un carusel',
     'AB_bazarcarousel_hint' => 'Este necesar un câmp bf_image.',
@@ -170,29 +155,22 @@ return [
     'AB_bazarcarousel_avecpage_hint' => 'Pagina afișată va fi numită PageDessusSlider',
     'AB_bazarcarousel_showlinkinsteadofurl_label' => 'Afișați linkul bf_lien în locul celui din foaie',
     'AB_bazarcarousel_bf_titre_label' => 'Câmp pentru textul afișat',
-    // bazargaleriephoto
     'AB_bazargaleriephoto_label' => 'Galerie foto',
     'AB_bazargaleriephoto_description' => 'Afișează imaginile cărților ca o galerie foto.',
     'AB_bazargaleriephoto_hint' => 'Este necesar un câmp bf_image.',
-    // bazarlistegalerie
     'AB_bazarlistegalerie_label' => 'Lista galeriilor foto',
     'AB_bazarlistegalerie_description' => 'Afișează imaginile cărților ca o galerie foto.',
     'AB_bazarlistegalerie_hint' => 'Este necesar un câmp bf_image.',
-    // bazarlistephotobox
     'AB_bazarlistephotobox_label' => 'PhotoBox',
     'AB_bazarlistephotobox_description' => 'Afișează imaginile cărților ca o galerie foto.',
     'AB_bazarlistephotobox_hint' => 'Este necesar un câmp bf_image.',
-    // bazarlisteliens
     'AB_bazarlisteliens_label' => 'Lista de link-uri',
     'AB_bazarlisteliens_description' => 'Afișează link-uri către foi ca o listă cu marcatori.',
-    // bazarlisteliensdates
     'AB_bazarlisteliensdates_label' => 'Lista de link-uri cu date',
     'AB_bazarlisteliensdates_description' => 'Afișează linkurile către foi ca o listă cu datele de creare.',
-    // bazarmail
     'AB_bazarmail_label' => 'Scrie tuturor',
     'AB_bazarmail_description' => 'Afișează numai lista de e-mailuri găsite în formular',
     'AB_bazarmail_hint' => 'Este necesar un câmp de tip bf_mail.',
-    // bazarblog
     'AB_bazarblog_label' => 'blog',
     'AB_bazarblog_description' => 'Cărțile vor fi sub forma unui blog.',
     'AB_bazarblog_hint' => 'Este posibil un câmp de tip bf_image',
@@ -200,16 +178,13 @@ return [
     'AB_bazarblog_show_author_label' => "Arată autor",
     'AB_bazarblog_show_date_label' => 'Afișează data creării',
     'AB_bazarblog_date_creation_fiche_label' => 'Câmpul pentru data publicării',
-    // bazargogocarto
     'AB_bazargogocarto_label' => 'Cartografie 2 - GoGocarto',
     'AB_bazargogocarto_description' => 'Cărțile vor fi sub forma unui marker.',
     'AB_bazargogocarto_height_label' => "Înălțimea hărții",
     'AB_bazargogocarto_width_label' => 'Lățimea hărții',
-    // BazarAction
     'AB_bazar_action_label' => 'Afișarea unui formular pentru a crea o foaie',
     'AB_bazar_action_description' => "Afișează formularul pentru a crea o foaie nouă.",
     'AB_bazar_action_redirecturl_label' => "Numele paginii acestui wiki sau URL-ul complet de afișat după crearea unui fișier",
-    // attach
     'AB_attach_commons_title' => 'Pentru imagini',
     'AB_attach_link_label' => 'Link web asociat cu clicul',
     'AB_attach_caption_label' => 'Textul afișat la hover',
@@ -251,7 +226,6 @@ return [
     'AB_attach_file_hint' => "Pentru a vizualiza fişierul din altă pagină, tastaţi \"NameDePage/NameFichier.ext\"",
     'AB_attach_desc_label' => 'Descriere',
     'AB_attach_displaypdf_label' => 'Vizualizați PDF-ul',
-    //video
     'AB_attach_video_label' => 'Video integrat',
     'AB_attach_video_description' => "Integrarea unui youtube video, vimeo sau peertube.",
     'AB_attach_video_hint' => "ID-ul video corespunde numerelor sau literelor de la sfârșitul adresei URL",
@@ -263,7 +237,6 @@ return [
     'AB_attach_video_position_label' => 'Poziția videoclipului',
     'AB_attach_video_largeur_max_label' => 'Lățimea maximă',
     'AB_attach_video_hauteur_max_label' => 'Înălțimea maximă',
-    //pdf
     'AB_attach_pdf_label' => 'Fișier pdf încorporat',
     'AB_attach_pdf_description' => "Integrarea unui fișier pdf de pe acest site.",
     'AB_attach_pdf_hint' => "Pentru a vizualiza PDF-ul, mai întâi încărcați-l într-o pagină din acest wiki și copiați link-ul aici.",
@@ -275,7 +248,6 @@ return [
     'AB_attach_pdf_position_label' => 'Poziția pdf',
     'AB_attach_pdf_largeur_max_label' => 'Lățimea maximă',
     'AB_attach_pdf_hauteur_max_label' => 'Înălțimea maximă',
-    // management
     'AB_management_label' => 'Managementul YesWiki',
     'AB_management_editactionsacls_label' => "Editarea drepturilor de acces la acțiuni",
     'AB_management_edithandlersacls_label' => "Editați drepturile de acces la manipulatori",
@@ -293,7 +265,6 @@ return [
     'AB_management_adminbackups_label' => 'Managementul backup-urilor',
     'AB_management_commentstable_label' => 'Tabelul de comentarii',
     'AB_management_usercomments_label' => 'Comentariile mele',
-    // advanced actions
     'AB_advanced_actions_label' => 'Acțiuni avansate',
     'AB_advanced_action_backlinks_label' => 'Afișează paginile care au un link către pagina curentă',
     'AB_advanced_action_backlinks_page_label' => 'Pagina de bază',
@@ -369,9 +340,7 @@ return [
     'AB_advanced_action_login_loggedinurl_hint' => "Pagina wiki sau url (utilizați 'incomingurl' dacă apare gol sau eroare)",
     'AB_advanced_action_login_loggedouturl_label' => 'Redirecționați URL-ul după deconectare',
     'AB_advanced_action_login_loggedouturl_hint' => "Pagina wiki sau url (utilizează 'incomingurl' dacă este gol)",
-    // col
     'AB_template_col_size_hint' => 'Atenție, suma lățimilor tuturor coloanelor nu trebuie să depășească 12!',
-    // button
     'AB_buttons_label' => 'Butoane',
     'AB_buttons_action_button_label' => 'Buton',
     'AB_buttons_action_button_description' => 'Creați un buton clickable',
@@ -408,7 +377,6 @@ return [
     'AB_buttons_action_button_new_window_yes' => 'da',
     'AB_buttons_action_button_hideifnoaccess_label' => "Ascundeți dacă utilizatorul nu are acces la pagina legată",
     'AB_buttons_action_button_nobtn_label' => 'Afișează ca un link',
-    // reactions
     'AB_REACTION_GROUP_LABEL' => 'Reacţii /Voturi',
     'AB_REACTION_TITLE_LABEL' => 'Titlul votului',
     'AB_REACTION_LABEL' => 'Reacții și voturi',
@@ -427,7 +395,6 @@ return [
     'AB_MYFAVORITES_TEMPLATE_LINKS_WITH_TITLES' => 'Links cu valori mobiliare',
     'AB_MYFAVORITES_TEMPLATE_TILES' => 'Miniaturi',
     'AB_MYFAVORITES_TEMPLATE_TABLE' => 'Tabel',
-    // syndication
     'AB_syndication_main_label' => 'Sindicalizare /Flux RSS',
     'AB_syndication_action_label' => 'Sindicalizare',
     'AB_syndication_action_description' => "Sincronizarea fluxului RSS al unui site terț",
@@ -447,7 +414,6 @@ return [
     'AB_syndication_action_formatdate_option_jma' => 'Ziua Luna an',
     'AB_syndication_action_formatdate_option_jmh' => 'Ziua oră lună',
     'AB_syndication_action_formatdate_option_jmah' => 'Ziua lună an oră',
-    // tableau
     'AB_bazartableau_label' => 'Tabel',
     'AB_bazartableau_description' => 'Afișează ca tabel',
     'AB_bazartableau_columnfieldsids_label' => 'Câmpuri de afișat',

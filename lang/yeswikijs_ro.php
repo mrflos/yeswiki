@@ -1,6 +1,5 @@
 <?php
 return [
-    // commons
     'APRIL' => 'Aprilie',
     'AUGUST' => 'August',
     'CANCEL' => 'Anula',
@@ -37,7 +36,6 @@ return [
     'TUESDAY' => 'Marți',
     'WEDNESDAY' => 'Miercuri',
     'YES' => 'Da',
-    // /javascripts/actions/admin-backups.js
     'ADMIN_BACKUPS_LOADING_LIST' => 'Încărcarea listei de copii de rezervă',
     'ADMIN_BACKUPS_NOT_POSSIBLE_TO_LOAD_LIST' => 'Imposibil de actualizat lista de backup',
     'ADMIN_BACKUPS_DELETE_ARCHIVE' => 'Ștergeți {filename}',
@@ -63,34 +61,27 @@ return [
     'ADMIN_BACKUPS_STOPPING_ARCHIVE' => 'În prezent, economisirea este oprită',
     'ADMIN_BACKUPS_FORCED_UPDATE_NOT_POSSIBLE' => "Actualizarea forțată nu este posibilă",
     'ADMIN_BACKUPS_UID_STATUS_FINISHED_THEN_UPDATING' => 'Actualizarea se execută (vă rugăm să așteptați)',
-    // /javascripts/handlers/revisions.js
     'REVISIONS_COMMIT_DIFF' => "Modificări aduse de această versiune",
     'REVISIONS_DIFF' => 'Comparație cu versiunea curentă',
     'REVISIONS_PREVIEW' => 'Prezentare generală a acestei versiuni',
-    // javascripts/documentation.js
     'DOCUMENTATION_TITLE' => 'Documentație YesWiki',
-    // javascripts/favorites.js
     'FAVORITES_ADD' => 'Adauga la favorite',
     'FAVORITES_ALL_DELETED' => 'Favorite Șterse',
     'FAVORITES_ERROR' => 'A apărut o eroare: {error}',
     'FAVORITES_REMOVE' => 'Eliminați din favorite',
     'FAVORITES_ADDED' => 'Adăugat Favorit',
     'FAVORITES_REMOVED' => 'Șters Favorit',
-    // javascripts/list-form-id-attribute.js
     'LIST_CREATE_TITLE' => 'Nouă listă',
     'LIST_UPDATE_TITLE' => 'Modifica lista',
     'LIST_CREATED' => 'Lista a fost creată',
     'LIST_UPDATED' => 'Lista a fost actualizată cu succes',
-    // javascripts/multidelete.js
     'MULTIDELETE_END' => 'Ștergeri făcute',
     'MULTIDELETE_ERROR' => "Articolul {itemId} nu a fost șters! {error}",
-    // javascripts/users-table.js
     'LINK_TO_CHANGE_PASSWORD' => "Link pentru a schimba parola",
     'USERSTABLE_USER_CREATED' => "Utilizator '{name}' creat",
     'USERSTABLE_USER_NOT_CREATED' => "Utilizatorul '{name}' nu a fost creat: {error}",
     'USERSTABLE_USER_DELETED' => 'Utilizatorul "{username}" a fost șters.',
     'USERSTABLE_USER_NOT_DELETED' => 'Utilizatorul "{username}" nu a fost șters.',
-    // /javascripts/yeswiki-base.js
     'DATATABLES_PROCESSING' => 'Procesare în curs...',
     'DATATABLES_SEARCH' => 'Cercetător&nbsp;:',
     'DATATABLES_LENGTHMENU' => 'Afișează _MENU_ elemente',
@@ -109,12 +100,10 @@ return [
     'EDIT_OUPS_MSG' => 'De fapt, am vrut să fac dublu clic...',
     'COMMENT_NOT_DELETED' => 'Comentariul {comment} nu a fost șters.',
     'COMMENT_DELETED' => 'Comentariu șters.',
-    // reactions
     'REACTION_NOT_POSSIBLE_TO_ADD_REACTION' => "Nu se poate adăuga reacție din cauza erorii: {error}!",
     'REACTION_NOT_POSSIBLE_TO_DELETE_REACTION' => "Imposibil de șters reacția din cauza următoarei erori: {error}!",
     'REACTION_CONFIRM_DELETE' => 'Sunteți sigur că doriți să eliminați această reacție?',
     'REACTION_CONFIRM_DELETE_ALL' => 'Sunteţi sigur că doriţi să ştergeţi toate reacţiile din acest vot?',
-    // Doc
     'DOC_EDIT_THIS_PAGE_ON_GITHUB' => 'Editează această pagină pe Github',
     'NOT_VALID_URL' => 'Url nevalid: {url}',
     'PAGE_AVAILABLE' => 'Pagina {tag} este disponibilă pe destinația YesWiki',

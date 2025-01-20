@@ -1,8 +1,6 @@
 <?php
 return [
     'TEMPLATE_ACTION' => 'Acció',
-    // 'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
-    // actions/button.php
     'TEMPLATE_ACTION_BUTTON' => 'Acció {{button ...}}',
     'TEMPLATE_LINK_PARAMETER_REQUIRED' => 'El paràmetre "link" és obligatori',
     'TEMPLATE_RSS_LAST_CHANGES' => 'Flux RSS de les darreres pàgines modificades',
@@ -11,21 +9,16 @@ return [
     'TEMPLATE_CUSTOM_GRAPHICS' => 'Aparença de la pàgina',
     'TEMPLATE_SAVE' => 'Desa',
     'TEMPLATE_APPLY' => 'Aplica',
-    // 'TEMPLATE_APPLY_ALL' => 'Appliquer pour tout le site',
     'TEMPLATE_CANCEL' => 'Descarta',
     'TEMPLATE_THEME' => 'TTema',
     'TEMPLATE_SQUELETTE' => 'Esquelet',
     'TEMPLATE_STYLE' => 'Estil',
-    // 'TEMPLATE_PRESET' => 'Preset',
-    // 'TEMPLATE_DEFAULT_PRESET' => 'Preset par défaut',
     'TEMPLATE_BG_IMAGE' => 'Imatge de fons',
     'TEMPLATE_ERROR_NO_DATA' => 'ERROR: no hi ha res que es pugui afegir a les metadades.',
     'TEMPLATE_ERROR_NO_ACCESS' => 'ERROR: no teniu drets d\'accés.',
-    // barre de redaction
     'TEMPLATE_VIEW_PAGE' => 'Mostra la pàgina',
     'TEMPLATE_EDIT' => 'Edita',
     'TEMPLATE_EDIT_THIS_PAGE' => 'Edita aquesta pàgina',
-    // 'TEMPLATE_WIKINAME_IS_NOT_A_PAGE' => 'Ce ChatMot n\'est pas une page',
     'TEMPLATE_CLICK_TO_SEE_REVISIONS' => 'Darreres modificacions de la pàgina.',
     'TEMPLATE_LAST_UPDATE' => 'Darrera actualització',
     'TEMPLATE_OWNER' => 'Propietari',
@@ -40,24 +33,15 @@ return [
     'TEMPLATE_REFERENCES' => 'Referències',
     'TEMPLATE_SLIDESHOW_MODE' => 'Mostra aquesta pàgina en mode presentació de diapositives.',
     'TEMPLATE_SLIDESHOW' => 'Presentació de diapositives',
-    // 'TEMPLATE_DYNAMIC_SLIDESHOW' => 'Diaporama dynamique',
-    // 'TEMPLATE_CLASSIC_SLIDESHOW' => 'Diaporama classique',
     'TEMPLATE_SEE_SHARING_OPTIONS' => 'Comparteix la pàgina',
     'TEMPLATE_SHARE' => 'Comparteix',
-    // action/diaporama
-    // 'DIAPORAMA_PAGE_PARAM_MISSING' => 'Action diaporama : param&ecirc;tre "page" obligatoire.',
-    // 'DIAPORAMA_TEMPLATE_PARAM_ERROR' => 'Action diaporama : le param&ecirc;tre "template" pointe sur un fichier inexistant ou illisible. Le template par d&eacute;faut sera utilis&eacute;.',
-    // formatage des dates
     'TEMPLATE_DATE_FORMAT' => 'd M Y',
-    // recherche
     'TEMPLATE_SEARCH_INPUT_TITLE' => 'Cerca a YesWiki [alt-shift-C]',
     'TEMPLATE_SEARCH_BUTTON_TITLE' => 'Cerca les pàgines que contenen aquest text.',
     'TEMPLATE_SEARCH_PLACEHOLDER' => 'Cerca...',
     'TEMPLATE_SEARCH' => 'Cerca',
-    // handler widget
     'TEMPLATE_WIDGET_TITLE' => 'Giny: integra el contingut d\'aquesta pàgina en una altra',
     'TEMPLATE_WIDGET_COPY_PASTE' => 'Copieu i enganxeu el codi HTML següent per integrar el contingut tal i com apareix.',
-    // handler share
     'TEMPLATE_SHARE_INCLUDE_CODE' => 'Codi d\'integració de contingut en una pàgina HTML',
     'TEMPLATE_SHARE_MUST_READ' => 'Per llegir: ',
     'TEMPLATE_SHARE_FACEBOOK' => 'Comparteix a Facebook',
@@ -68,11 +52,9 @@ return [
     'TEMPLATE_SHARE_MAIL' => 'Envia el contingut d\'aquesta pàgina per mail',
     'TEMPLATE_ADD_SHARE_BUTTON' => 'Afegeix a la part superior dreta un botó per compartir la pàgina',
     'TEMPLATE_ADD_EDIT_BAR' => 'Afegeix la barra d\'edició al peu de la pàgina',
-    // handler diaporama
     'TEMPLATE_NO_ACCESS_TO_PAGE' => 'No teniu drets per accedir a aquesta pàgina.',
     'TEMPLATE_PAGE_DOESNT_EXIST' => 'Aquesta pàgina no existeix',
     'PAGE_CANNOT_BE_SLIDESHOW' => 'La pàgina no es pot distribuir en diapositives (no hi ha títols de nivell 2)',
-    // handler edit
     'TEMPLATE_CUSTOM_PAGE' => 'Preferències per la pàgina',
     'TEMPLATE_PAGE_PREFERENCES' => 'Preferències de la pàgina',
     'PAGE_LANGUAGE' => 'Llengua de la pàgina',
@@ -84,42 +66,8 @@ return [
     'FOR_2_OR_3_COLUMN_THEMES' => 'Per a temes amb 2 o 3 columnes',
     'VERTICAL_MENU_PAGE' => 'El menú vertical',
     'RIGHT_COLUMN_PAGE' => 'La columna dreta',
-    // actions/yeswikiversion.php
-    // 'RUNNING_WITH' => 'Galope sous',
-    // 'TEMPLATE_ACTION_SECTION' => 'Action {{section ...}}',
-    // 'TEMPLATE_ELEM_SECTION_NOT_CLOSED' => 'l\'action {{section ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="section"}}',
     'TEMPLATE_NO_THEME_FILES' => 'Alguns dels fitxers (o tots) del patró s\'han perdut',
     'TEMPLATE_DEFAULT_THEME_USED' => 'S\'està utilitzant el patró per defecte.',
-    // actions/end.php
-    // 'TEMPLATE_ACTION_END' => 'Action {{end ...}}',
-    // 'TEMPLATE_ELEM_PARAMETER_REQUIRED' => 'param&egrave;tre "elem" obligatoire',
-    // actions/col.php
-    // 'TEMPLATE_ACTION_COL' => 'Action {{col ...}}',
-    // 'TEMPLATE_SIZE_PARAMETER_REQUIRED' => 'param&egrave;tre "size" obligatoire',
-    // 'TEMPLATE_SIZE_PARAMETER_MUST_BE_INTEGER_FROM_1_TO_12' => 'le param&egrave;tre "size" doit &ecirc;tre un entier compris entre 1 et 12',
-    // 'TEMPLATE_ELEM_COL_NOT_CLOSED' => 'l\'action {{col ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="col"}}',
-    // actions/grid.php
-    // 'TEMPLATE_ACTION_GRID' => 'Action {{grid ...}}',
-    // 'TEMPLATE_ELEM_GRID_NOT_CLOSED' => 'l\'action {{grid ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="grid"}}',
-    // action/panel.php
-    // 'TEMPLATE_ACTION_PANEL' => 'Action {{panel ...}}',
-    // 'TEMPLATE_ELEM_PANEL_NOT_CLOSED' => 'l\'action {{panel ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="panel"}}',
-    // 'TEMPLATE_TITLE_PARAMETER_REQUIRED' => "Param&egrave;tre title obligatoire",
-    // action/accordion.php
-    // 'TEMPLATE_ACTION_ACCORDION' => 'Action {{accordion ...}}',
-    // 'TEMPLATE_ELEM_ACORDION_NOT_CLOSED' => 'l\'action {{accordion ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="accordion"}}',
-    // actions/buttondropdown.php
-    // 'TEMPLATE_ACTION_BUTTONDROPDOWN' => 'Action {{buttondropdown ...}}',
-    // 'TEMPLATE_ELEM_BUTTONDROPDOWN_NOT_CLOSED' => 'l\'action {{buttondropdown ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="buttondropdown"}}',
-    // actions/adminpages.php
-    // 'TEMPLATE_ACTION_FOR_ADMINS_ONLY' => 'action réservée aux administrateurs',
-    // 'TEMPLATE_CONFIRM_DELETE_PAGE' => 'Etes vous sûr(e) de vouloir supprimer définitivement cette page ?',
-    // 'TEMPLATE_PAGE' => 'Page',
-    // 'TEMPLATE_LAST_MODIFIED' => 'Dernière modification',
-    // 'TEMPLATE_OWNER' => 'Propriétaire',
-    // 'TEMPLATE_ACTIONS' => 'Actions',
-    // 'TEMPLATE_MODIFY' => 'Modifier',
-    // actions/setwikidefaultheme.php
     'TEMPLATE_FORCE_TEMPLATE' => 'Força per a tot el wiki',
     'TEMPLATE_PAGE' => 'Pàgina',
     'TEMPLATE_MODIFY' => 'Modifica',

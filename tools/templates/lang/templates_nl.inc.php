@@ -1,8 +1,6 @@
 <?php
 return [
     'TEMPLATE_ACTION' => 'Actie',
-    // 'TEMPLATE_FILE_NOT_FOUND' => 'Template non trouvé',
-    // actions/button.php
     'TEMPLATE_ACTION_BUTTON' => 'Actie {{button ...}}',
     'TEMPLATE_LINK_PARAMETER_REQUIRED' => 'parameter "link" verplicht',
     'TEMPLATE_RSS_LAST_CHANGES' => 'RSS-feed van laatst gewijzigde pagina’s',
@@ -11,21 +9,16 @@ return [
     'TEMPLATE_CUSTOM_GRAPHICS' => 'Uitzicht van de pagina',
     'TEMPLATE_SAVE' => 'Opslaan',
     'TEMPLATE_APPLY' => 'Toepassen',
-    // 'TEMPLATE_APPLY_ALL' => 'Appliquer pour tout le site',
     'TEMPLATE_CANCEL' => 'Annuleren',
     'TEMPLATE_THEME' => 'Thema',
     'TEMPLATE_SQUELETTE' => 'Skelet',
     'TEMPLATE_STYLE' => 'Stijl',
-    // 'TEMPLATE_PRESET' => 'Preset',
-    // 'TEMPLATE_DEFAULT_PRESET' => 'Preset par défaut',
     'TEMPLATE_BG_IMAGE' => 'Achtergrondafbeelding',
     'TEMPLATE_ERROR_NO_DATA' => 'FOUT: niets toe te voegen aan metagegevens.',
     'TEMPLATE_ERROR_NO_ACCESS' => 'FOUT: geen toegangsrechten.',
-    // barre de redaction
     'TEMPLATE_VIEW_PAGE' => 'De pagina bekijken',
     'TEMPLATE_EDIT' => 'bewerken',
     'TEMPLATE_EDIT_THIS_PAGE' => 'de pagina bewerken',
-    // 'TEMPLATE_WIKINAME_IS_NOT_A_PAGE' => 'Ce ChatMot n\'est pas une page',
     'TEMPLATE_CLICK_TO_SEE_REVISIONS' => 'De jongste wijzigingen op de pagina',
     'TEMPLATE_LAST_UPDATE' => 'Gewijzigd op',
     'TEMPLATE_OWNER' => 'Eigenaar',
@@ -40,24 +33,15 @@ return [
     'TEMPLATE_REFERENCES' => 'Verwijzingen',
     'TEMPLATE_SLIDESHOW_MODE' => 'Deze pagina in de diamodus starten.',
     'TEMPLATE_SLIDESHOW' => 'Dia',
-    // 'TEMPLATE_DYNAMIC_SLIDESHOW' => 'Diaporama dynamique',
-    // 'TEMPLATE_CLASSIC_SLIDESHOW' => 'Diaporama classique',
     'TEMPLATE_SEE_SHARING_OPTIONS' => 'De pagina delen',
     'TEMPLATE_SHARE' => 'Delen',
-    // action/diaporama
-    // 'DIAPORAMA_PAGE_PARAM_MISSING' => 'Action diaporama : param&ecirc;tre "page" obligatoire.',
-    // 'DIAPORAMA_TEMPLATE_PARAM_ERROR' => 'Action diaporama : le param&ecirc;tre "template" pointe sur un fichier inexistant ou illisible. Le template par d&eacute;faut sera utilis&eacute;.',
-    // formatage des dates
     'TEMPLATE_DATE_FORMAT' => 'd M Y',
-    // recherche
     'TEMPLATE_SEARCH_INPUT_TITLE' => 'Opzoeken in YesWiki [alt-shift-C]',
     'TEMPLATE_SEARCH_BUTTON_TITLE' => 'Pagina’s met deze tekst opzoeken.',
     'TEMPLATE_SEARCH_PLACEHOLDER' => 'Opzoeken...',
     'TEMPLATE_SEARCH' => 'Opzoeken',
-    // handler widget
     'TEMPLATE_WIDGET_TITLE' => 'Widget: de inhoud van deze pagina elders integreren',
     'TEMPLATE_WIDGET_COPY_PASTE' => 'De HTML-code hierboven kopiëren/plakken om de inhoud te integreren zoals hij hieronder verschijnt.',
-    // handler share
     'TEMPLATE_SHARE_INCLUDE_CODE' => 'Code om inhoud te integreren in een HTML-pagina',
     'TEMPLATE_SHARE_MUST_READ' => 'Te lezen: ',
     'TEMPLATE_SHARE_FACEBOOK' => 'Delen op Facebook',
@@ -68,11 +52,9 @@ return [
     'TEMPLATE_SHARE_MAIL' => 'De inhoud van deze pagina verzenden via e-mail',
     'TEMPLATE_ADD_SHARE_BUTTON' => 'Rechts bovenaan de pagina een deeltoets toevoegen',
     'TEMPLATE_ADD_EDIT_BAR' => 'De bewerkingsbalk onderaan de pagina toevoegen',
-    // handler diaporama
     'TEMPLATE_NO_ACCESS_TO_PAGE' => 'U hebt geen toegangsrecht tot deze pagina.',
     'TEMPLATE_PAGE_DOESNT_EXIST' => 'Pagina bestaat niet',
     'PAGE_CANNOT_BE_SLIDESHOW' => 'De pagina kan niet worden opgesplitst in dia’s (geen titels op niveau 2)',
-    // handler edit
     'TEMPLATE_CUSTOM_PAGE' => 'Paginavoorkeuren',
     'TEMPLATE_PAGE_PREFERENCES' => 'Parameters van de pagina',
     'PAGE_LANGUAGE' => 'Paginataal',
@@ -84,42 +66,9 @@ return [
     'FOR_2_OR_3_COLUMN_THEMES' => 'Voor de thema’s met 2 of 3 kolommen',
     'VERTICAL_MENU_PAGE' => 'het verticale menu',
     'RIGHT_COLUMN_PAGE' => 'de rechter kolom',
-    // actions/yeswikiversion.php
     'RUNNING_WITH' => 'Lopen met',
-    // 'TEMPLATE_ACTION_SECTION' => 'Action {{section ...}}',
-    // 'TEMPLATE_ELEM_SECTION_NOT_CLOSED' => 'l\'action {{section ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="section"}}',
     'TEMPLATE_NO_THEME_FILES' => 'Sommige (of alle) bestanden van het sjabloon zijn verdwenen',
     'TEMPLATE_DEFAULT_THEME_USED' => 'Het standaardsjabloon werd dus gebruikt',
-    // actions/end.php
-    // 'TEMPLATE_ACTION_END' => 'Action {{end ...}}',
-    // 'TEMPLATE_ELEM_PARAMETER_REQUIRED' => 'param&egrave;tre "elem" obligatoire',
-    // actions/col.php
-    // 'TEMPLATE_ACTION_COL' => 'Action {{col ...}}',
-    // 'TEMPLATE_SIZE_PARAMETER_REQUIRED' => 'param&egrave;tre "size" obligatoire',
-    // 'TEMPLATE_SIZE_PARAMETER_MUST_BE_INTEGER_FROM_1_TO_12' => 'le param&egrave;tre "size" doit &ecirc;tre un entier compris entre 1 et 12',
-    // 'TEMPLATE_ELEM_COL_NOT_CLOSED' => 'l\'action {{col ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="col"}}',
-    // actions/grid.php
-    // 'TEMPLATE_ACTION_GRID' => 'Action {{grid ...}}',
-    // 'TEMPLATE_ELEM_GRID_NOT_CLOSED' => 'l\'action {{grid ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="grid"}}',
-    // action/panel.php
-    // 'TEMPLATE_ACTION_PANEL' => 'Action {{panel ...}}',
-    // 'TEMPLATE_ELEM_PANEL_NOT_CLOSED' => 'l\'action {{panel ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="panel"}}',
-    // 'TEMPLATE_TITLE_PARAMETER_REQUIRED' => "Param&egrave;tre title obligatoire",
-    // action/accordion.php
-    // 'TEMPLATE_ACTION_ACCORDION' => 'Action {{accordion ...}}',
-    // 'TEMPLATE_ELEM_ACORDION_NOT_CLOSED' => 'l\'action {{accordion ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="accordion"}}',
-    // actions/buttondropdown.php
-    // 'TEMPLATE_ACTION_BUTTONDROPDOWN' => 'Action {{buttondropdown ...}}',
-    // 'TEMPLATE_ELEM_BUTTONDROPDOWN_NOT_CLOSED' => 'l\'action {{buttondropdown ...}} doit &ecirc;tre ferm&eacute;e par une action {{end elem="buttondropdown"}}',
-    // actions/adminpages.php
-    // 'TEMPLATE_ACTION_FOR_ADMINS_ONLY' => 'action réservée aux administrateurs',
-    // 'TEMPLATE_CONFIRM_DELETE_PAGE' => 'Etes vous sûr(e) de vouloir supprimer définitivement cette page ?',
-    // 'TEMPLATE_PAGE' => 'Page',
-    // 'TEMPLATE_LAST_MODIFIED' => 'Dernière modification',
-    // 'TEMPLATE_OWNER' => 'Propriétaire',
-    // 'TEMPLATE_ACTIONS' => 'Actions',
-    // 'TEMPLATE_MODIFY' => 'Modifier',
-    // actions/setwikidefaultheme.php
     'TEMPLATE_FORCE_TEMPLATE' => 'Force voor het hele wiki',
     'TEMPLATE_PAGE' => 'Bladzijde',
     'TEMPLATE_MODIFY' => 'Wijzigen',

@@ -1,18 +1,14 @@
 <?php
 
 return [
-    // fields/CalcField.php
     'BAZ_FORM_EDIT_CALC_LABEL' => 'Calculs',
     'BAZ_FORM_EDIT_DISPLAYTEXT_LABEL' => 'Texte d\'affichage',
     'BAZ_FORM_EDIT_DISPLAYTEXT_HELP' => 'Ajouter si besoin une unité après {value}, (ex: `{value} €`)',
     'BAZ_FORM_EDIT_FORMULA_LABEL' => 'Formule',
-    // fields/FileField.php
     'BAZ_FILEFIELD_FILE' => 'Fichier : {filename}',
     'BAZ_FORM_EDIT_FILE_READLABEL_LABEL' => 'Label à l\'affichage',
     'FILEFIELD_TOO_LARGE_FILE' => 'Le fichier est trop volumineux, maximum {fileMaxSize} octets',
-    // fields/ImageField.php
     'IMAGEFIELD_TOO_LARGE_IMAGE' => 'L\'image est trop volumineuse, maximum {imageMaxSize} octets',
-    // fields/MapField.php
     'BAZ_FORM_EDIT_GEOLOCATE' => 'Géolocaliser depuis ma position',
     'BAZ_FORM_EDIT_MAP_AUTOCOMPLETE_COUNTY' => 'Champ région/comté',
     'BAZ_FORM_EDIT_MAP_AUTOCOMPLETE_COUNTY_PLACEHOLDER' => 'bf_region',
@@ -42,7 +38,6 @@ return [
     'GEOLOCATER_GROUP_GEOLOCATIZATION' => 'Champs à utiliser pour la géolocalisation',
     'GEOLOCATER_GROUP_GEOLOCATIZATION_HINT' => 'Renseignez au moins un champ',
     'GEOLOCATER_NOT_FOUND' => 'Adresse "{addr}" introuvable',
-    // presentation/javascripts/bazar.js
     'BAZ_FORM_REQUIRED_FIELD' => 'Veuillez saisir tous les champs obligatoires (asterisque rouge)',
     'BAZ_FORM_INVALID_EMAIL' => 'L\'email saisi n\'est pas valide',
     'BAZ_FORM_INVALID_TEXT' => 'Le texte n\'est pas valide',
@@ -77,10 +72,8 @@ return [
     'BAZ_DATESHORT_NOVEMBER' => 'Nov',
     'BAZ_DATESHORT_DECEMBER' => 'Déc',
     'BAZ_SAVING' => 'En cours d\'enregistrement',
-    // presentation/javascripts/components/BazarMap.js
     'BAZ_FULLSCREEN' => 'Mode plein écran',
     'BAZ_BACK_TO_NORMAL_VIEW' => 'Retour à la vue normale',
-    // form-edit-template.js
     'MEMBER_OF_GROUP' => 'Membre du groupe {groupName}',
     'BAZ_FORM_EDIT_HELP' => 'Texte d\'aide',
     'BAZ_FORM_EDIT_HIDE' => 'Editer/Masquer',
@@ -219,7 +212,6 @@ return [
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_LABEL' => 'Texte pour édition',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_HINT' => 'Laisser vide pour utiliser le texte par défaut',
     'BAZ_FORM_EDIT_ACL_ASK_IF_ACTIVATE_COMMENT_LABEL' => 'Demander d\'activer les commentaires ?',
-    // condition checking field
     'BAZ_FORM_EDIT_CONDITIONCHECKING_LABEL' => 'Affichage conditionnel',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_LABEL' => 'Condition',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_END' => 'Fin de condition',
@@ -227,10 +219,8 @@ return [
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_CLEAN_OPTION' => 'Effacer',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_NOCLEAN_OPTION' => 'Ne pas effacer',
     'BAZ_FORM_CONDITIONSCHEKING_NOCLEAN_HINT' => 'Pour effacer ou non le contenu de ce qui est masqué',
-    // jsvascripts/form-edit-templates/fields/file.js
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_LABEL' => 'Extensions présélectionnées (avec le point, séparées par des virgules)',
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_PLACEHOLDER' => 'ex: .pdf,.png',
-    // reactions
     'BAZ_ACTIVATE_REACTIONS' => 'Activer les réactions sur cette fiche ?',
     'BAZ_REACTIONS_FIELD' => 'Réactions',
     'BAZ_REACTIONS_FIELD_ACTIVATE_HINT' => 'Laisser vide pour utiliser le texte par défaut',
@@ -244,9 +234,7 @@ return [
     'BAZ_REACTIONS_FIELD_LABELS_HINT' => 'Laisser vide ou séparés par des virgules',
     'BAZ_REACTIONS_FIELD_LABELS_LABEL' => 'Noms des réactions',
     'BAZ_REACTIONS_FIELD_LABELS_PLACEHOLDER' => 'Gratitude,J\'aime,J\'ai appris quelque chose,J\'ai pas compris,Je ne suis pas d\'accord,Ca me perturbe',
-    // presentation/javascripts/map-field-leaflet.js
     'BAZ_ADJUST_MARKER_POSITION' => 'Déplacez moi si besoin',
-    // presentation/javascripts/form-edit-template/fields/url.js
     'BAZAR_VIDEO_MAXHEIGHT_LABEL' => 'Hauteur maximal de la vidéo',
     'BAZAR_VIDEO_MAXWIDTH_LABEL' => 'Largeur maximal de la vidéo',
     'BAZAR_VIDEO_MAX_HINT' => 'Uniquement un nombre positif de pixels sans l\'unité ; ex: 200',
@@ -255,9 +243,7 @@ return [
     'BAZAR_VIDEO_POSITION_LEFT' => 'Alignée à gauche',
     'BAZAR_VIDEO_POSITION_RIGHT' => 'Alignée à droite',
     'BAZAR_URL_DISPLAY_VIDEO' => 'Afficher le lecteur si le lien est une vidéo ?',
-    // templates/entries/index-dynamic-temapltes/BazarCalendar_ButtonICS.js
     'BAZ_CALENDAR_EXPORT_BUTTON_TITLE' => 'Ajouter à votre calendrier',
-    // liste-node.js
     'LIST_DRAGDROP' => "Déplacer l'élément",
     'LIST_KEY' => 'Clé',
     'LIST_TEXT' => 'Texte',
