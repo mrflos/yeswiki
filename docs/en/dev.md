@@ -62,7 +62,7 @@ Create a file inside `custom/templates/bazar`, either a `.twig` file or a `.tpl.
 ```
 
 ```php
-<!-- custom/templates/bazar/my-template.tpl.html -->
+/* custom/templates/bazar/my-template.tpl.html */
 <?php foreach($fiches as $fiche): ?>
   <h2><?php echo $fiche['bf_titre'];?></h2>
 <?php endforeach; ?>
@@ -102,6 +102,9 @@ Have also a look to [existing templates](https://github.com/YesWiki/yeswiki/tree
 The content inside block display_entries is a `VueJs` template, check Vue documentation.
 
 Because the syntax `{{ }}` is used by both `twig` and `vuejs`, when you need to display content in VueJs should do either `<span v-html="entry.bf_titre"></span>` or `{{ "{{ entry.bf_titre }}" }}`
+
+Also, because twig downcase all the html, when using vue syntax you cannot use PascalCase, you should use dash-case instead
+Example: `<DemoComponent :myPop="test" />` should be written `<Demo-Component :my-prop="test" />`
 
 You should istall VueJS browser extensions (the legacy version because we are using Vue 2), it will help you for debugging
 
@@ -204,16 +207,17 @@ Vue.component('DemoComponent', {
   computed: {
     title() {
       // this.$root will let you access all properties from index-dynamic-templates.js
-      if (this.$root.params.greeting = "yes") return `Hello ${this.entry.given_name}`
-      return this.entry.bf_titre
-    }
-  }
+      if ((this.$root.params.greeting = 'yes'))
+        return `Hello ${this.entry.given_name}`;
+      return this.entry.bf_titre;
+    },
+  },
   template: `
     <div>
       {{ title }}
     </div>
-  `
-})
+  `,
+});
 ```
 
 ### Customize any templates from the codebase
