@@ -1,7 +1,3 @@
-.timeline {
-  --entry-color: red;
-}
-
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -106,11 +102,14 @@
 
 /* The actual content */
 .timeline-content {
-  padding: 20px 30px;
   background-color: white;
   position: relative;
   border-radius: 6px;
   border: 5px solid var(--entry-color);
+}
+
+.bazar-card .timeline-content .content {
+  position: relative;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */

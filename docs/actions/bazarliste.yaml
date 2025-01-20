@@ -73,6 +73,7 @@ actions:
           - bazarcalendar
           - bazartableau
           - bazarcard
+          - bazartimeline
         advanced: true
       colormapping:
         type: color-mapping
@@ -83,6 +84,7 @@ actions:
           - bazargogocarto
           - bazarliste
           - bazarcalendar
+          - bazartimeline
           - bazartableau
           - bazarcard
         advanced: true
@@ -107,6 +109,7 @@ actions:
           - bazargogocarto
           - bazarliste
           - bazarcalendar
+          - bazartimeline
           - bazartableau
           - bazarcard
       iconmapping:
@@ -120,6 +123,7 @@ actions:
           - bazarliste
           - bazarcalendar
           - bazartableau
+          - bazartimeline
           - bazarcard
         subproperties:
           id:
@@ -259,7 +263,6 @@ actions:
         showExceptFor:
           - bazarcarto
           - bazargogocarto
-          - bazartimeline
           - bazarannuaire
           - bazarcalendar
           - bazarcarousel
@@ -274,7 +277,6 @@ actions:
         showExceptFor:
           - bazarcarto
           - bazargogocarto
-          - bazartimeline
           - bazarannuaire
           - bazarcalendar
       sortfields:
@@ -295,7 +297,6 @@ actions:
         showExceptFor:
           - bazarcarto
           - bazargogocarto
-          - bazartimeline
           - bazarannuaire
           - bazarcalendar
           - bazarcarousel
