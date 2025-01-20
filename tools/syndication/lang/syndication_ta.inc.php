@@ -1,5 +1,4 @@
 <?php
-
 return [
     'SYNDICATION_ACTION_SYNDICATION' => 'செயல் {{syndication ...}}',
     'SYNDICATION_PARAM_URL_REQUIRED' => 'il faut entrer willigatoirement le param & egrave; tre "முகவரி" ஊற்றப்பட்ட சிண்டிகர் அன் ஃப்ளக்ச் RSS',
