@@ -588,4 +588,5 @@ return [
     'TO_ANOTHER_YESWIKI' => 'în alt YesWiki',
     'VERIFY_PAGE_AVAILABILITY' => 'Verifica disponibilitatea paginii',
     'DISTANT_LOGIN' => 'Conectați-vă la telecomanda YesWiki',
+    'USER_CANNOT_REMOVE_THEIRSELF_FROM_ADMIN' => 'Puteți să vă îndepărtați din grupul de administrare',
 ];
