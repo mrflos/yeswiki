@@ -26,7 +26,7 @@ return [
     'CONTACT_SUBJECT' => 'Subiectul mesajului',
     'CONTACT_YOUR_MESSAGE' => 'Mesajul tău',
     'CONTACT_SEND_MESSAGE' => 'Trimite mesajul',
-    'CONTACT_LISTSUBSCRIBE_REQUIRED' => 'parametrul "list", care conține adresa de e-mail a listei, de tip nomelys@domaine.ext, este necesar',
+    'CONTACT_LISTSUBSCRIBE_REQUIRED' => 'parametrul "list", care conține adresa de e-mail a listei, de tip nomelys@domaine.tld, este necesar',
     'CONTACT_USER_NOT_LOGGED_IN' => 'Trebuie să fiți identificat pentru a accesa acțiunile posibile.',
     'CONTACT_USER_NO_EMAIL' => 'Trebuie să fiți identificat pentru a accesa acțiunile posibile.',
     'CONTACT_ENTER_NAME' => 'Trebuie să introduceți un nume.',
