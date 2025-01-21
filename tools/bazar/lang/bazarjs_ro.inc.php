@@ -1,5 +1,4 @@
 <?php
-
 return [
     'BAZ_FORM_EDIT_CALC_LABEL' => 'Calculele',
     'BAZ_FORM_EDIT_DISPLAYTEXT_LABEL' => 'Afișează textul',
@@ -205,7 +204,7 @@ return [
     'BAZ_FORM_EDIT_BOOKMARKLET_HINT_DEFAULT_VALUE' => '',
     'BAZ_FORM_EDIT_BOOKMARKLET_TEXT_LABEL' => '',
     'BAZ_FORM_EDIT_BOOKMARKLET_TEXT_VALUE' => '',
-    'BAZ_ACTIVATE_COMMENTS' => '',
+    'BAZ_ACTIVATE_COMMENTS' => 'Activați comentariile pe acest formular?',
     'BAZ_ACTIVATE_COMMENTS_HINT' => '',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_DEFAULT_ACTIVATION_LABEL' => '',
     'BAZ_FORM_EDIT_COMMENTS_FIELD' => '',
