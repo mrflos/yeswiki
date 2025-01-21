@@ -205,7 +205,7 @@ return [
     'BAZ_FORM_EDIT_BOOKMARKLET_TEXT_LABEL' => '',
     'BAZ_FORM_EDIT_BOOKMARKLET_TEXT_VALUE' => '',
     'BAZ_ACTIVATE_COMMENTS' => 'Activați comentariile pe acest formular?',
-    'BAZ_ACTIVATE_COMMENTS_HINT' => '',
+    'BAZ_ACTIVATE_COMMENTS_HINT' => 'Drepturile sunt actualizate atunci când înregistrarea este salvată',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_DEFAULT_ACTIVATION_LABEL' => '',
     'BAZ_FORM_EDIT_COMMENTS_FIELD' => '',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_LABEL' => '',
