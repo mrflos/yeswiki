@@ -1,12 +1,12 @@
 <?php
 return [
-    'RSS_CHANGE_OF' => '',
-    'RSS_HISTORY' => '',
-    'RSS_HIDDEN_CONTENT' => '',
-    'RSS_ON_DATE' => '',
-    'RSS_COMPARISON_OF' => '',
-    'RSS_TO' => '',
-    'RSS_ADDS' => '',
-    'RSS_DELETIONS' => '',
-    'RSS_NO_DIFF' => '',
+    'RSS_CHANGE_OF' => 'Modificare a',
+    'RSS_HISTORY' => 'istoric',
+    'RSS_HIDDEN_CONTENT' => 'Conținut ascuns',
+    'RSS_ON_DATE' => 'a',
+    'RSS_COMPARISON_OF' => 'Comparație a',
+    'RSS_TO' => 'a',
+    'RSS_ADDS' => 'Adăugiri',
+    'RSS_DELETIONS' => 'Eliminări',
+    'RSS_NO_DIFF' => 'Nici o diferență',
 ];
