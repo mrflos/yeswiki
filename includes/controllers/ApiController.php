@@ -15,6 +15,7 @@ use YesWiki\Core\Exception\GroupNameAlreadyUsedException;
 use YesWiki\Core\Exception\GroupNameDoesNotExistException;
 use YesWiki\Core\Exception\InvalidGroupNameException;
 use YesWiki\Core\Exception\UserEmailAlreadyUsedException;
+use YesWiki\Core\Exception\UserNameAlreadyUsedException;
 use YesWiki\Core\Exception\UserNameDoesNotExistException;
 use YesWiki\Core\Service\AclService;
 use YesWiki\Core\Service\ArchiveService;
@@ -188,6 +189,7 @@ class ApiController extends YesWikiController
     {
         $this->denyAccessUnlessAdmin();
         $userController = $this->getService(UserController::class);
+        $userManager = $this->getService(UserManager::class);
 
         if (empty($_POST['name'])) {
             $code = Response::HTTP_BAD_REQUEST;
@@ -206,11 +208,7 @@ class ApiController extends YesWikiController
                     'email' => strval($_POST['email']),
                     'password' => $this->wiki->generateRandomString(30),
                 ]);
-                if (!boolval($this->wiki->config['contact_disable_email_for_password']) && !empty($user)) {
-                    $link = $userController->sendPasswordRecoveryEmail($user);
-                } else {
-                    $link = '';
-                }
+                $link = $userManager->sendPasswordRecoveryEmail($user);
                 $code = Response::HTTP_OK;
                 $result = [
                     'created' => [$user['name']],
@@ -341,7 +339,7 @@ class ApiController extends YesWikiController
                     'name' => $group_name,
                     'error' => $th->getMessage(),
                 ];
-            } catch (UserNameDoesNotExistException|GroupNameDoesNotExistException $th) {
+            } catch (UserNameDoesNotExistException | GroupNameDoesNotExistException $th) {
                 $code = Response::HTTP_UNPROCESSABLE_ENTITY;
                 $result = [
                     'name' => $group_name,
@@ -386,7 +384,7 @@ class ApiController extends YesWikiController
                 'name' => $group_name,
                 'error' => $th->getMessage(),
             ];
-        } catch (UserNameDoesNotExistException|GroupNameDoesNotExistException $th) {
+        } catch (UserNameDoesNotExistException | GroupNameDoesNotExistException $th) {
             $code = Response::HTTP_UNPROCESSABLE_ENTITY;
             $result = [
                 'name' => $group_name,

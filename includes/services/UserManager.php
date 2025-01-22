@@ -35,7 +35,6 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     protected $securityController;
     protected $params;
     protected $tripleStore;
-    protected $userlink;
 
     private $getOneByNameCacheResults;
 
@@ -56,24 +55,6 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
         $this->params = $params;
         $this->tripleStore = $tripleStore;
         $this->getOneByNameCacheResults = [];
-        $this->userlink = '';
-    }
-
-    private function arrayToUser(?array $userAsArray = null, bool $fillEmpty = false): ?User
-    {
-        if (empty($userAsArray)) {
-            return null;
-        }
-        if ($fillEmpty) {
-            foreach (User::PROPS_LIST as $key) {
-                if (!array_key_exists($key, $userAsArray)) {
-                    $userAsArray[$key] = null;
-                }
-            }
-        }
-
-        // be carefull the User::__construct is really strict about list of properties that should set
-        return new User($userAsArray);
     }
 
     public function userExist($name): bool
@@ -128,9 +109,8 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
      */
     public function create($wikiNameOrUser, string $email = '', string $plainPassword = '')
     {
-        $this->userlink = '';
         if ($this->securityController->isWikiHibernated()) {
-            throw new \Exception(_t('WIKI_IN_HIBERNATION'));
+            throw new Exception(_t('WIKI_IN_HIBERNATION'));
         }
 
         if (is_array($wikiNameOrUser)) {
@@ -161,23 +141,23 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
                 'signuptime' => '',
             ];
         } else {
-            throw new \Exception('First parameter of UserManager->create should be string or array!');
+            throw new Exception('First parameter of UserManager->create should be string or array!');
         }
 
         if (empty($wikiName)) {
-            throw new \Exception("'Name' parameter of UserManager->create should not be empty!");
+            throw new Exception("'Name' parameter of UserManager->create should not be empty!");
         }
         if (!empty($this->getOneByName($wikiName))) {
             throw new UserNameAlreadyUsedException();
         }
         if (empty($email)) {
-            throw new \Exception("'email' parameter of UserManager->create should not be empty!");
+            throw new Exception("'email' parameter of UserManager->create should not be empty!");
         }
         if (!empty($this->getOneByEmail($email))) {
             throw new UserEmailAlreadyUsedException();
         }
         if (empty($plainPassword)) {
-            throw new \Exception("'password' parameter of UserManager->create should not be empty!");
+            throw new Exception("'password' parameter of UserManager->create should not be empty!");
         }
 
         unset($this->getOneByNameCacheResults[$wikiName]);
@@ -199,93 +179,52 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
         );
     }
 
-    /*
-     * Password recovery process (AKA reset password)
-     * 1. A key is generated using name, email alongside with other stuff.
-     * 2. The triple (user's name, specific key "vocabulary",key) is stored in triples table.
-     * 3. In order to update h·er·is password, the user must provided that key.
-     * 4. The new password is accepted only if the key matches with the value in triples table.
-     * 5. The corresponding row is removed from triples table.
-     */
-
-    protected function generateUserLink($user)
-    {
-        // Generate the password recovery key
-        $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
-        $plainKey = $user['name'] . '_' . $user['email'] . random_bytes(16) . date('Y-m-d H:i:s');
-        $hashedKey = $passwordHasher->hash($plainKey);
-        $tripleStore = $this->wiki->services->get(TripleStore::class);
-        // Erase the previous triples in the trible table
-        $tripleStore->delete($user['name'], self::KEY_VOCABULARY, null, '', '');
-        // Store the (name, vocabulary, key) triple in triples table
-        $tripleStore->create($user['name'], self::KEY_VOCABULARY, $hashedKey, '', '');
-
-        // Generate the recovery email
-        $this->userlink = $this->wiki->Href('', 'MotDePassePerdu', [
-            'a' => 'recover',
-            'email' => $hashedKey,
-            'u' => base64_encode($user['name']),
-        ], false);
-    }
-
-    /**
-     * Part of the Password recovery process: Handles the password recovery email process.
+    /** Part of the Password recovery process: Handles the password recovery email process
      *
      * Generates the password recovery key
      * Stores the (name, vocabulary, key) triple in triples table
      * Generates the recovery email
      * Sends it
      *
-     * @return bool True if OK or false if any problems
+     * @param User $user
+     * @return string The link sent to the user
      */
-    public function sendPasswordRecoveryEmail(User $user, string $title): bool
+    public function sendPasswordRecoveryEmail(User $user)
     {
-        $this->generateUserLink($user);
-        $pieces = parse_url($this->params->get('base_url'));
-        $domain = isset($pieces['host']) ? $pieces['host'] : '';
-
-        $message = _t('LOGIN_DEAR') . ' ' . $user['name'] . ",\n";
-        $message .= _t('LOGIN_CLICK_FOLLOWING_LINK') . ' :' . "\n";
-        $message .= '-----------------------' . "\n";
-        $message .= $this->userlink . "\n";
-        $message .= '-----------------------' . "\n";
-        $message .= _t('LOGIN_THE_TEAM') . ' ' . $domain . "\n";
-
-        $subject = $title . ' ' . $domain;
-
-        // Send the email
-        return send_mail($this->params->get('BAZ_ADRESSE_MAIL_ADMIN'), $this->params->get('BAZ_ADRESSE_MAIL_ADMIN'), $user['email'], $subject, $message);
-    }
-
-    /**
-     * Assessor for userlink field.
-     */
-    public function getUserLink(): string
-    {
-        return $this->userlink;
-    }
-
-    /**
-     * Assessor for userlink field.
-     */
-    public function getLastUserLink(User $user): string
-    {
+        // Generate the password recovery key
         $passwordHasher = $this->passwordHasherFactory->getPasswordHasher($user);
         $plainKey = $user['name'] . '_' . $user['email'] . random_bytes(16) . date('Y-m-d H:i:s');
         $hashedKey = $passwordHasher->hash($plainKey);
-        $tripleStore = $this->wiki->services->get(TripleStore::class);
-        $key = $tripleStore->getOne($user['name'], self::KEY_VOCABULARY, '', '');
-        if ($key != null) {
-            $this->userlink = $this->wiki->Href('', 'MotDePassePerdu', [
-                'a' => 'recover',
-                'email' => $key,
-                'u' => base64_encode($user['name']),
-            ], false);
-        } else {
-            $this->generateUserLink($user);
+        // Erase the previous triples in the trible table
+        $this->tripleStore->delete($user['name'], self::KEY_VOCABULARY, null, '', '');
+        // Store the (name, vocabulary, key) triple in triples table
+        $this->tripleStore->create($user['name'], self::KEY_VOCABULARY, $hashedKey, '', '');
+
+        // Generate the recovery link
+        $link = $this->wiki->Href('', 'MotDePassePerdu', [
+            'a' => 'recover',
+            'email' => $hashedKey,
+            'u' => base64_encode($user['name']),
+        ], false);
+
+        // Send the email
+        if (!boolval($this->wiki->config['contact_disable_email_for_password'])) {
+            $pieces = parse_url($this->params->get('base_url'));
+            $domain = isset($pieces['host']) ? $pieces['host'] : '';
+
+            $message = _t('LOGIN_DEAR') . ' ' . $user['name'] . ",\n";
+            $message .= _t('LOGIN_CLICK_FOLLOWING_LINK') . ' :' . "\n";
+            $message .= '-----------------------' . "\n";
+            $message .= $link . "\n";
+            $message .= '-----------------------' . "\n";
+            $message .= _t('LOGIN_THE_TEAM') . ' ' . $domain . "\n";
+
+            $subject = _t('LOGIN_PASSWORD_LOST_FOR') . ' ' . $domain;
+
+            send_mail($this->params->get('BAZ_ADRESSE_MAIL_ADMIN'), $this->params->get('BAZ_ADRESSE_MAIL_ADMIN'), $user['email'], $subject, $message);
         }
 
-        return $this->userlink;
+        return $link;
     }
 
     /**
@@ -300,7 +239,7 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     public function update(User $user, array $newValues): bool
     {
         if ($this->securityController->isWikiHibernated()) {
-            throw new \Exception(_t('WIKI_IN_HIBERNATION'));
+            throw new Exception(_t('WIKI_IN_HIBERNATION'));
         }
         $newKeys = array_keys($newValues);
         $authorizedKeys = array_filter($newKeys, function ($key) {
@@ -378,10 +317,10 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
      */
     public function groupsWhereIsMember(User $user, bool $adminCheck = true)
     {
-        $group_list = $this->tripleStore->getMatching(GROUP_PREFIX . '%', null, '%'.$user['name'].'%', 'LIKE', '=', 'LIKE');
+        $group_list = $this->tripleStore->getMatching(GROUP_PREFIX . '%', null, '%' . $user['name'] . '%', 'LIKE', '=', 'LIKE');
         $prefix_len = strlen(GROUP_PREFIX);
         $list = array();
-        foreach($group_list as $group) {
+        foreach ($group_list as $group) {
             $list[] = substr($group['resource'], $prefix_len);
         }
         return $list;
@@ -541,5 +480,22 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     public function logout()
     {
         $this->wiki->services->get(AuthController::class)->logout();
+    }
+
+    private function arrayToUser(?array $userAsArray = null, bool $fillEmpty = false): ?User
+    {
+        if (empty($userAsArray)) {
+            return null;
+        }
+        if ($fillEmpty) {
+            foreach (User::PROPS_LIST as $key) {
+                if (!array_key_exists($key, $userAsArray)) {
+                    $userAsArray[$key] = null;
+                }
+            }
+        }
+
+        // be carefull the User::__construct is really strict about list of properties that should set
+        return new User($userAsArray);
     }
 }
