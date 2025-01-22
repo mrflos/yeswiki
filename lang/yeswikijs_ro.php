@@ -84,7 +84,7 @@ return [
     'DATATABLES_PROCESSING' => 'Procesare în curs...',
     'DATATABLES_SEARCH' => 'Cercetător&nbsp;:',
     'DATATABLES_LENGTHMENU' => 'Afișează _MENU_ elemente',
-    'DATATABLES_INFO' => "Afișarea elementului _START_ la _END_ pe elementele _TOTAL_",
+    'DATATABLES_INFO' => "Afișarea elementului _START_ la _END_ sur _TOTAL_ elementele",
     'DATATABLES_INFOEMPTY' => "Se afișează 0 la 0 pe 0 element",
     'DATATABLES_INFOFILTERED' => '(filtrat de _MAX_ elemente totale)',
     'DATATABLES_LOADINGRECORDS' => 'Încărcare în curs...',
@@ -114,4 +114,7 @@ return [
     'CONNECTED_BUT_NOT_ADMIN' => 'Utilizatorul este {user} bine conectat.e pe destinația YesWiki, dar nu are drepturi de administrare. Vă rugăm să vă conectați cu un cont de administrator.',
     'FORM_ID_IS_COMPATIBLE' => 'Un formular cu același identificator ({id}) există pe url-ul dat și pare să aibă cel puțin aceleași câmpuri obligatorii. Acesta va fi utilizat pentru duplicare.',
     'NOT_CONNECTED' => 'Trebuie să vă conectați la destinație YesWiki cu un cont care are drepturi administrative.',
+    'ADMIN_BACKUPS_CONFIRMATION_TO_DELETE' => "Următoarele fişiere vor fi şterse de backup.
+Vă rugăm să confirmaţi eliminarea acestora bifând caseta de mai jos.
+<pre>{files}</pre>",
 ];
