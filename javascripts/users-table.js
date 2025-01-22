@@ -31,7 +31,6 @@ const usersTableService = {
             '',
             userEmail,
             signuptime,
-            '',
             ''
           ]).draw()
           if (userLink !== '') {
