@@ -294,9 +294,10 @@ class UserSettingsAction extends YesWikiAction
     {
         $link = $this->userManager->sendPasswordRecoveryEmail($user);
         if (!boolval($this->wiki->config['contact_disable_email_for_password'])) {
-            flash("Reset email have been sent to {$user['email']}", 'success');
+            flash(str_replace("{email}", $user['email'], _t('RECOVERY_MESSAGE_SENT')), 'success');
         }
-        flash("<a href=\"$link\">Reset link</a>", 'success');
+        $resetText = _t('RECOVERY_LINK');
+        flash("<a href='$link' target='_blank'>$resetText</a>", 'success');
     }
 
     private function retrieveUsernameAndEmailFromPost(array $post)

@@ -44,6 +44,8 @@ return [
     'LOGIN_MY_CONTENTS' => 'Mes contenus',
     'LINK_TO_CHANGE_PASSWORD' => 'Lien pour changer le mot de passe',
     'LOGIN_COOKIES_ERROR' => 'Vous devez accepter les cookies pour pouvoir vous connecter.',
+    'RECOVERY_MESSAGE_SENT' => 'Un message a été envoyé à {email} avec les instructions pour ré-initialiser le mot de passe',
+    'RECOVERY_LINK' => 'Lien pour réinitialiser le mot de passe',
     'USERSETTINGS_EMAIL_NOT_CHANGED' => 'E-mail non modifié.',
     'USERSETTINGS_PASSWORD_NOT_CHANGED' => 'Mot de passe non modifié.',
     'USERSETTINGS_USER_NOT_DELETED' => 'Utilisateur non supprimé.',
