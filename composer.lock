@@ -77,16 +77,16 @@
         },
         {
             "name": "caxy/php-htmldiff",
-            "version": "v0.1.15",
+            "version": "v0.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caxy/php-htmldiff.git",
-                "reference": "6342b02ddb86fd36093ad7e2db2efc21f01ab7cd"
+                "reference": "5c580b4f09285c078f0c5cb261573412a736a8cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/6342b02ddb86fd36093ad7e2db2efc21f01ab7cd",
-                "reference": "6342b02ddb86fd36093ad7e2db2efc21f01ab7cd",
+                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/5c580b4f09285c078f0c5cb261573412a736a8cb",
+                "reference": "5c580b4f09285c078f0c5cb261573412a736a8cb",
                 "shasum": ""
             },
             "require": {
@@ -132,9 +132,9 @@
             ],
             "support": {
                 "issues": "https://github.com/caxy/php-htmldiff/issues",
-                "source": "https://github.com/caxy/php-htmldiff/tree/v0.1.15"
+                "source": "https://github.com/caxy/php-htmldiff/tree/v0.1.16"
             },
-            "time": "2023-11-05T23:49:04+00:00"
+            "time": "2025-01-22T17:03:45+00:00"
         },
         {
             "name": "composer/installers",
@@ -2319,8 +2319,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -4188,16 +4188,16 @@
         },
         {
             "name": "yeswiki/theme-margot",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/YesWiki/yeswiki-theme-margot.git",
-                "reference": "cff7edbee68bbe67e37f67dd661c34f2bc74c563"
+                "reference": "6e2aa6497dfb08462bf3bafd3a7a8db61122a55e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/YesWiki/yeswiki-theme-margot/zipball/cff7edbee68bbe67e37f67dd661c34f2bc74c563",
-                "reference": "cff7edbee68bbe67e37f67dd661c34f2bc74c563",
+                "url": "https://api.github.com/repos/YesWiki/yeswiki-theme-margot/zipball/6e2aa6497dfb08462bf3bafd3a7a8db61122a55e",
+                "reference": "6e2aa6497dfb08462bf3bafd3a7a8db61122a55e",
                 "shasum": ""
             },
             "require": {
@@ -4213,9 +4213,9 @@
             ],
             "support": {
                 "issues": "https://github.com/YesWiki/yeswiki-theme-margot/issues",
-                "source": "https://github.com/YesWiki/yeswiki-theme-margot/tree/v1.1.4"
+                "source": "https://github.com/YesWiki/yeswiki-theme-margot/tree/v1.1.5"
             },
-            "time": "2024-06-24T17:16:22+00:00"
+            "time": "2025-01-27T08:54:12+00:00"
         }
     ],
     "packages-dev": [
@@ -6515,7 +6515,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -6532,9 +6532,9 @@
         "ext-pcre": "*",
         "ext-zip": "^1.0"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "7.3.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
