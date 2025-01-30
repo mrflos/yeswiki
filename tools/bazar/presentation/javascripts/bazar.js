@@ -132,29 +132,57 @@ $(document).ready(() => {
   })
 
   //= ===========longueur maximale d'un champs textarea
-  const $textareas = $('textarea[maxlength].form-control')
+  const $textareas = $('textarea[maxlength]')
 
   // si les textarea contiennent déja quelque chose, on calcule les caractères restants
   $textareas.each(function() {
     const $this = $(this)
     const max = $this.attr('maxlength')
-    const { length } = $this.val()
+    if ($this.hasClass('aceditor-textarea')) {
+      const { length } = window[`aceditor-${$this.attr('id')}`].editor.getValue()
+    } else {
+      const { length } = $this.val()
+    }
     if (length > max) {
-      $this.val($this.val().substr(0, max))
+      if ($this.hasClass('aceditor-textarea')) {
+        const aceId = `aceditor-${$this.attr('id')}`
+        window[aceId].editor.setValue(
+          window[aceId].editor.getValue().substr(0, max)
+        )
+      } else {
+        $this.val($this.val().substr(0, max))
+      }
     }
 
-    $this.parents('.control-group').find('.charsRemaining').html((max - length))
-  })
+    if ($this.hasClass('aceditor-textarea')) {
+      const aceId = `aceditor-${$this.attr('id')}`
+      window[aceId].editor.on('input', () => {
+        const $this = $(this)
+        const max = $this.attr('maxlength')
+        const { length } = $this.val()
+        if (length > max) {
+          window[aceId].editor.setValue(
+            window[aceId].editor.getValue().substr(0, max)
+          )
+        }
 
-  // on empeche d'aller au dela de la limite du nombre de caracteres
-  $textareas.on('keyup', function() {
-    const $this = $(this)
-    const max = $this.attr('maxlength')
-    const { length } = $this.val()
-    if (length > max) {
-      $this.val($this.val().substr(0, max))
+        $this.parents('.control-group').find('.charsRemaining').html((max - length))
+      })
+    } else {
+      // on empeche d'aller au dela de la limite du nombre de caracteres
+      $textareas.on('keyup', function() {
+        const $this = $(this)
+        const max = $this.attr('maxlength')
+        const { length } = $this.val()
+        if (length > max) {
+          $this.val($this.val().substr(0, max))
+        }
+
+        $this.parents('.control-group').find('.charsRemaining').html((max - length))
+      })
     }
 
+    // initial remaining value update
     $this.parents('.control-group').find('.charsRemaining').html((max - length))
   })
 
