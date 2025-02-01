@@ -47,12 +47,7 @@ class EditGroupsAction extends YesWikiAction
                         $type = 'success';
                         $message = str_replace('{group}', $selectedGroupName, _t('GROUP_CREATED'));
                     } elseif (!empty($_POST['action-update'])) {
-                        $members = [];
-                        foreach ($_POST as $key => $value) {
-                            if ($value == '1') {
-                                $members[] = $key;
-                            }
-                        }
+                        $members = $_POST['members'];
                         $groupController->update($selectedGroupName, $members);
                         $message = str_replace('{group}', $selectedGroupName, _t('GROUP_SAVED'));
                         $type = 'success';
