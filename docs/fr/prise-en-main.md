@@ -501,6 +501,7 @@ Un handler est une URL spéciale qui permet de modifier la façon d'afficher une
 - **/deletepage** : si vous êtes propriétaire de la page, vous pouvez la supprimer
 - **/claim** : si la page n'a pas de propriétaire, vous pouvez vous l'approprier
 - **/acls** : si vous êtes propriétaire de la page, vous pouvez gérer les droits
-- **/share** : pour afficher des possibilités de partage sur les réseaux sociaux, et pour générer un code embed (iframe) qui permettra d'afficher la page sur un site externe.
-- **&amp;debug** : permet d'afficher en bas de page toutes les actions effectuées au niveau informatique, permet de repérer les bugs, causes de plantage...
+- **/share** : pour afficher des possibilités de partage sur les réseaux sociaux, et pour générer un code embed (iframe) qui permettra d'afficher la page sur un site externe
+- **/debug** : permet d'afficher en bas de page toutes les actions effectuées au niveau informatique, permet de repérer les bugs, causes de plantage...
 - **/editiframe** : permet d'ouvrir la page en mode édition mais en cachant les autres pages du squelette (utile quand une image ou un spam sur le bandeau empêche de voir le contenu de la page à modifier ou dans le cas d'un wiki intégré en iframe)
+- **/referrers** : affiche la liste des pages qui font référence à la page en question (les rétroliens)
