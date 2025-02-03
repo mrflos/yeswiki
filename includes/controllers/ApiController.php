@@ -129,7 +129,7 @@ class ApiController extends YesWikiController
     {
         $this->denyAccessUnlessAdmin();
 
-        return new ApiResponse($this->getService(UserManager::class)->getOne($userId));
+        return new ApiResponse($this->getService(UserManager::class)->getOneByName($userId));
     }
 
     /**
@@ -339,7 +339,7 @@ class ApiController extends YesWikiController
                     'name' => $group_name,
                     'error' => $th->getMessage(),
                 ];
-            } catch (UserNameDoesNotExistException | GroupNameDoesNotExistException $th) {
+            } catch (UserNameDoesNotExistException|GroupNameDoesNotExistException $th) {
                 $code = Response::HTTP_UNPROCESSABLE_ENTITY;
                 $result = [
                     'name' => $group_name,
@@ -384,7 +384,7 @@ class ApiController extends YesWikiController
                 'name' => $group_name,
                 'error' => $th->getMessage(),
             ];
-        } catch (UserNameDoesNotExistException | GroupNameDoesNotExistException $th) {
+        } catch (UserNameDoesNotExistException|GroupNameDoesNotExistException $th) {
             $code = Response::HTTP_UNPROCESSABLE_ENTITY;
             $result = [
                 'name' => $group_name,
