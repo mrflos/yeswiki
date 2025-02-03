@@ -5,6 +5,11 @@ return [
     'BAZ_FORM_EDIT_DISPLAYTEXT_LABEL' => 'Texte d\'affichage',
     'BAZ_FORM_EDIT_DISPLAYTEXT_HELP' => 'Ajouter si besoin une unité après {value}, (ex: `{value} €`)',
     'BAZ_FORM_EDIT_FORMULA_LABEL' => 'Formule',
+    'BAZ_FORM_CALC_HINT' => 'CALCUL{br}
+La formule doit être une formule mathématique.{br}
+Il est possible de faire référence à la valeur d\'un champ en tapant son nom (ex: `+ sin(bf_number)*2` ),{br}
+ou de tester la valeur d\'un champ énuméré (liste, checkbox,..) (ex: `test(bf_type,premiere_cle)`{br}
+qui rend 1 si bf_type == premiere_cle sinon 0).',
     'BAZ_FILEFIELD_FILE' => 'Fichier : {filename}',
     'BAZ_FORM_EDIT_FILE_READLABEL_LABEL' => 'Label à l\'affichage',
     'FILEFIELD_TOO_LARGE_FILE' => 'Le fichier est trop volumineux, maximum {fileMaxSize} octets',
@@ -162,6 +167,9 @@ return [
     'SMALL_F' => 'Petite',
     'PRIMARY' => 'Primaire',
     'SECONDARY' => 'Secondaire',
+    'BAZ_FORM_TABS_HINT' => 'Pour utiliser les onglets, il vous faut deux champs : {br}'.
+      ' - le champ "{tabs-field-label}" dans lequel spécifier le nom des onglets séparés par des "," {br}'.
+      ' - le champ "{tabchange-field-label}" à intégrer à la fin de chaque onglet ainsi qu\'à la fin de votre formulaire',
     'BAZ_FORM_EDIT_ADD_TO_GROUP_LABEL' => 'Groupes où ajouter l\'utilisateur',
     'BAZ_FORM_EDIT_ADD_TO_GROUP_DESCRIPTION' => 'Groupes où ajouter l\'utilisateur, séparés par \',\'',
     'BAZ_FORM_EDIT_ADD_TO_GROUP_HELP' => 'Groupes où ajouter l\'utilisateur, séparés par \',\', peut être le nom d\'un champ. Ex: @groupName,bf_name,@groupName2',
@@ -201,6 +209,9 @@ return [
     'BAZ_FORM_EDIT_COMMENTS_CLOSED' => 'Commentaires fermés',
     'BAZ_FORM_EDIT_BOOKMARKLET_URLFIELD_LABEL' => 'Champ url associé',
     'BAZ_FORM_EDIT_BOOKMARKLET_DESCRIPTIONFIELD_LABEL' => 'Champ texte long associé',
+    'BAZ_BOOKMARKLET_HINT' => 'Ce champ nécessite deux autres champs pour fonctionner :{br}
+  - un champ url (par défaut "bf_url"){br}
+  - un champ texte long (par défaut "bf_description")',
     'BAZ_FORM_EDIT_BOOKMARKLET_HINT_DEFAULT_VALUE' => 'Glisser-déposer le bouton dans votre barre de navigateur',
     'BAZ_FORM_EDIT_BOOKMARKLET_TEXT_LABEL' => 'Texte affiché',
     'BAZ_FORM_EDIT_BOOKMARKLET_TEXT_VALUE' => 'Glisser-déposer le bouton dans votre barre de favoris',
@@ -211,13 +222,28 @@ return [
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_LABEL' => 'Texte pour édition',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_HINT' => 'Laisser vide pour utiliser le texte par défaut',
     'BAZ_FORM_EDIT_ACL_ASK_IF_ACTIVATE_COMMENT_LABEL' => 'Demander d\'activer les commentaires ?',
-    'BAZ_FORM_EDIT_CONDITIONCHECKING_LABEL' => 'Affichage conditionnel',
+    'BAZ_FORM_EDIT_CONDITIONS_CHECKING_HINT' => 'La condition doit respecter le format suivant (sans les `):{br}
+ - ` and ` : donne ET{br}
+ - ` or ` : donne OU{br}
+ - `==` : donne EST ÉGALE À{br}
+ - `!=` : donne EST DIFFÉRENT DE {br}
+ - ` in [value1,value2]` : FAIT PARTIE DE liste d\'éléments séparés par des virgules et entouré de crochets{br}
+ - `|length > 6` : vérifie si le nombre d\'éléments cochés est supérieur à 6 (fonctionne avec ">=","<","<="){br}
+ - ` == [value1,value2]` : VAUT EXACTEMENT la liste d\'éléments séparés par des virgules et entouré de crochets (uniquement pour checkbox){br}
+ - `(  )` permet de grouper des conditions sinon priorité de gauche à droite{br}
+ - `!(  )` ou `not (  )` négation de la condition{br}
+ - indiquer à gauche d\'un `==` ou `!=` le label du champ ex:`bf_thematique`{br}
+ - ` is empty ` : permet de vérifier si la valeur est vide{br}
+ - ` is not empty ` : permet de vérifier si la valeur n\'est pas vide{br}
+ - les espaces en trop sont retirés automatiquement{br}
+ - les opérations sont insensibles à la casse',
+    'BAZ_FORM_EDIT_CONDITIONS_CHECKING_MAIN_LABEL' => 'Affichage conditionnel',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_LABEL' => 'Condition',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_END' => 'Fin de condition',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_CLEAN_LABEL' => 'Effacer au masquage',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_CLEAN_OPTION' => 'Effacer',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_NOCLEAN_OPTION' => 'Ne pas effacer',
-    'BAZ_FORM_CONDITIONSCHEKING_NOCLEAN_HINT' => 'Pour effacer ou non le contenu de ce qui est masqué',
+    'BAZ_FORM_EDIT_CONDITIONS_CHECKING_NOCLEAN_HINT' => 'Pour effacer ou non le contenu de ce qui est masqué',
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_LABEL' => 'Extensions présélectionnées (avec le point, séparées par des virgules)',
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_PLACEHOLDER' => 'ex: .pdf,.png',
     'BAZ_ACTIVATE_REACTIONS' => 'Activer les réactions sur cette fiche ?',

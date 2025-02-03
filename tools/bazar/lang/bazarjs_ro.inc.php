@@ -1,4 +1,5 @@
 <?php
+
 return [
     'BAZ_FORM_EDIT_CALC_LABEL' => 'Calculele',
     'BAZ_FORM_EDIT_DISPLAYTEXT_LABEL' => 'Afișează textul',
@@ -211,13 +212,13 @@ return [
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_LABEL' => 'Text pentru editare',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_HINT' => 'Lăsați necompletat pentru a utiliza textul implicit',
     'BAZ_FORM_EDIT_ACL_ASK_IF_ACTIVATE_COMMENT_LABEL' => 'Cereți să activați comentariile?',
-    'BAZ_FORM_EDIT_CONDITIONCHECKING_LABEL' => 'Afișare condiționată',
+    'BAZ_FORM_EDIT_CONDITIONS_CHECKING_MAIN_LABEL' => 'Afișare condiționată',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_LABEL' => 'Condiție',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_END' => 'Sfârșitul stării',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_CLEAN_LABEL' => 'Clar pentru a masca',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_CLEAN_OPTION' => 'Șterge',
     'BAZ_FORM_EDIT_CONDITIONS_CHECKING_NOCLEAN_OPTION' => 'Nu ștergeți',
-    'BAZ_FORM_CONDITIONSCHEKING_NOCLEAN_HINT' => 'Pentru a șterge sau nu conținutul a ceea ce este ascuns',
+    'BAZ_FORM_EDIT_CONDITIONS_CHECKING_NOCLEAN_HINT' => 'Pentru a șterge sau nu conținutul a ceea ce este ascuns',
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_LABEL' => 'Extensii preselectate (cu punctul, separate prin virgule)',
     'BAZ_FORM_EDIT_FILE_AUTHEXTS_PLACEHOLDER' => 'ex: . pdf, png',
     'BAZ_ACTIVATE_REACTIONS' => 'Activați reacțiile de pe această foaie?',
