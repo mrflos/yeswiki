@@ -71,7 +71,7 @@ class Plugins
         return $res;
     }
 
-    public function getPluginInfo($p): array|bool
+    public function getPluginInfo($p)
     {
         if (file_exists($p)) {
             $xml = simplexml_load_file($p);
