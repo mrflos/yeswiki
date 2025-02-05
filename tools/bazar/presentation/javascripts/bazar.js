@@ -132,7 +132,7 @@ $(document).ready(() => {
   })
 
   //= ===========longueur maximale d'un champs textarea
-  const $textareas = $('textarea[maxlength]')
+  const $textareas = $('textarea[maxlength!=\'\']')
 
   // si les textarea contiennent déja quelque chose, on calcule les caractères restants
   $textareas.each(function() {
