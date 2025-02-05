@@ -131,7 +131,7 @@ $(document).ready(() => {
     }
   })
 
-  //= ===========longueur maximale d'un champs textarea
+  //= ===========longueur maximale d'un champ textarea
   const $textareas = $('textarea[maxlength!=\'\']')
 
   // si les textarea contiennent déja quelque chose, on calcule les caractères restants
@@ -140,8 +140,10 @@ $(document).ready(() => {
     const max = $this.attr('maxlength')
     if ($this.hasClass('aceditor-textarea')) {
       const { length } = window[`aceditor-${$this.attr('id')}`].editor.getValue()
-    } else {
+      $this.parents('.control-group').find('.charsRemaining').text(max - length)
+    } else if (!$this.hasClass('ace_text-input')) {
       const { length } = $this.val()
+      $this.parents('.control-group').find('.charsRemaining').text(max - length)
     }
     if (length > max) {
       if ($this.hasClass('aceditor-textarea')) {
@@ -149,41 +151,38 @@ $(document).ready(() => {
         window[aceId].editor.setValue(
           window[aceId].editor.getValue().substr(0, max)
         )
-      } else {
+      } else if (!$this.hasClass('ace_text-input')) {
         $this.val($this.val().substr(0, max))
       }
     }
 
+    // when a char is typed, we check the max length limit
     if ($this.hasClass('aceditor-textarea')) {
       const aceId = `aceditor-${$this.attr('id')}`
       window[aceId].editor.on('input', () => {
-        const $this = $(this)
-        const max = $this.attr('maxlength')
-        const { length } = $this.val()
+        const $ed = $(this)
+        const max = $ed.attr('maxlength')
+        const { length } = $ed.val()
         if (length > max) {
           window[aceId].editor.setValue(
             window[aceId].editor.getValue().substr(0, max)
           )
         }
-
-        $this.parents('.control-group').find('.charsRemaining').html((max - length))
+        $this.parents('.control-group').find('.charsRemaining').text(max - length)
       })
-    } else {
+    } else if (!$this.hasClass('ace_text-input')) {
       // on empeche d'aller au dela de la limite du nombre de caracteres
-      $textareas.on('keyup', function() {
-        const $this = $(this)
-        const max = $this.attr('maxlength')
-        const { length } = $this.val()
+      $this.on('keyup', function() {
+        const $ed = $(this)
+        const max = $ed.attr('maxlength')
+        const { length } = $ed.val()
         if (length > max) {
-          $this.val($this.val().substr(0, max))
+          $ed.val($ed.val().substr(0, max))
         }
 
-        $this.parents('.control-group').find('.charsRemaining').html((max - length))
+        $this.parents('.control-group').find('.charsRemaining').text(max - length)
       })
     }
-
-    // initial remaining value update
-    $this.parents('.control-group').find('.charsRemaining').html((max - length))
   })
 
   // éviter la validation du formulaire en pressant la touche Entrée
