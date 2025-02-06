@@ -1,0 +1,23 @@
+meta {
+  name: User List (no auth)
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/?api/users
+  body: none
+  auth: none
+}
+
+params:query {
+  api/users: 
+}
+
+assert {
+  res.status: eq 403
+}
+
+docs {
+  Get the user list, with no auth
+}

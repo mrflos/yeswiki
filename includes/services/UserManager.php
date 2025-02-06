@@ -17,9 +17,6 @@ use YesWiki\Core\Exception\DeleteUserException;
 use YesWiki\Core\Exception\GroupNameDoesNotExistException;
 use YesWiki\Core\Exception\UserEmailAlreadyUsedException;
 use YesWiki\Core\Exception\UserNameAlreadyUsedException;
-use YesWiki\Core\Service\AclService;
-use YesWiki\Core\Service\PasswordHasherFactory;
-use YesWiki\Core\Service\TripleStore;
 use YesWiki\Security\Controller\SecurityController;
 use YesWiki\Wiki;
 
@@ -179,14 +176,13 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
         );
     }
 
-    /** Part of the Password recovery process: Handles the password recovery email process
+    /** Part of the Password recovery process: Handles the password recovery email process.
      *
      * Generates the password recovery key
      * Stores the (name, vocabulary, key) triple in triples table
      * Generates the recovery email
      * Sends it
      *
-     * @param User $user
      * @return string The link sent to the user
      */
     public function sendPasswordRecoveryEmail(User $user)
@@ -319,10 +315,11 @@ class UserManager implements UserProviderInterface, PasswordUpgraderInterface
     {
         $group_list = $this->tripleStore->getMatching(GROUP_PREFIX . '%', null, '%' . $user['name'] . '%', 'LIKE', '=', 'LIKE');
         $prefix_len = strlen(GROUP_PREFIX);
-        $list = array();
+        $list = [];
         foreach ($group_list as $group) {
             $list[] = substr($group['resource'], $prefix_len);
         }
+
         return $list;
     }
 

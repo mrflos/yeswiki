@@ -1,0 +1,27 @@
+meta {
+  name: User List by userId (no auth)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/?api/users/{{userId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  api/users/{{userId}}: 
+}
+
+vars:pre-request {
+  userId: mrflos
+}
+
+assert {
+  res.status: eq 401
+}
+
+docs {
+  Get the user with id `userID`, with no auth
+}

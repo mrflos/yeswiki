@@ -1,0 +1,23 @@
+meta {
+  name: User List by userId not existing (admin)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/?api/users/userThatDoesntExists
+  body: none
+  auth: inherit
+}
+
+params:query {
+  api/users/userThatDoesntExists: 
+}
+
+assert {
+  res.status: eq 404
+}
+
+docs {
+  Get the user with id `userID`, with no auth
+}

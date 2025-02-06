@@ -1,0 +1,23 @@
+meta {
+  name: User List (admin)
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/?api/users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  api/users: 
+}
+
+assert {
+  res.status: eq 200
+}
+
+docs {
+  Get the user list, as a user in @admins group.
+}

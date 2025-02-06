@@ -128,8 +128,12 @@ class ApiController extends YesWikiController
     public function getUser($userId)
     {
         $this->denyAccessUnlessAdmin();
-
-        return new ApiResponse($this->getService(UserManager::class)->getOneByName($userId));
+        $user = $this->getService(UserManager::class)->getOneByName($userId);
+        if ($user) {
+            return new ApiResponse($user->getArrayCopy());
+        } else {
+            return new ApiResponse(null, Response::HTTP_NOT_FOUND);
+        }
     }
 
     /**

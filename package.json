@@ -43,6 +43,7 @@
     "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
+    "@usebruno/cli": "^1.38.3",
     "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
