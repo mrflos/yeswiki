@@ -1217,7 +1217,6 @@ class Wiki
                 $_POST = json_decode(file_get_contents('php://input'), true) ?? [];
             }
         }
-
         $context = new RequestContext();
         $context->fromRequest($this->request);
 
@@ -1248,7 +1247,6 @@ class Wiki
 
         $controllerResolver = new YesWikiControllerResolver($this);
         $argumentResolver = new ArgumentResolver();
-
         // start buffer to prevent bad formatting response
         ob_start();
         try {
@@ -1262,7 +1260,7 @@ class Wiki
 
                 $response = call_user_func_array($controller, $arguments);
             } else {
-                $response = new Response('', Response::HTTP_UNAUTHORIZED);
+                $response = new Response('Not enough access rights', Response::HTTP_UNAUTHORIZED);
             }
         } catch (ResourceNotFoundException $exception) {
             $response = new Response('', Response::HTTP_NOT_FOUND);

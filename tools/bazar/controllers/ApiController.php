@@ -191,7 +191,7 @@ class ApiController extends YesWikiController
     }
 
     /**
-     * @Route("/api/entries/{formId}", methods={"POST"})
+     * @Route("/api/entries/{formId}", methods={"POST"}, options={"acl":{"+"}})
      */
     public function createEntry($formId)
     {
@@ -200,7 +200,7 @@ class ApiController extends YesWikiController
         }
 
         $_POST['antispam'] = 1;
-        $entry = $this->getService(EntryManager::class)->create($formId, $_POST, false, $_SERVER['HTTP_SOURCE_URL']);
+        $entry = $this->getService(EntryManager::class)->create($formId, $_POST, false, $_SERVER['HTTP_SOURCE_URL']?? null);
 
         if (!$entry) {
             throw new BadRequestHttpException();
@@ -213,7 +213,7 @@ class ApiController extends YesWikiController
     }
 
     /**
-     * @Route("/api/entries/{formId}/json-ld", methods={"POST"})
+     * @Route("/api/entries/{formId}/json-ld", methods={"POST"}, options={"acl":{"+"}})
      */
     public function createSemanticEntry($formId)
     {

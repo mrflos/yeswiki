@@ -75,7 +75,6 @@ class Init
         $uri = explode('&', $uri);
         $uri = explode('?', $uri[0]);
         $args = explode('/', $uri[0]);
-
         if (!empty($args[0]) or !empty($_REQUEST['wiki'])) {
             // if old school wiki url
             if ($args[0] == 'index.php' or $args[0] == 'wakka.php' or !empty($_REQUEST['wiki'])) {
@@ -87,6 +86,11 @@ class Init
             }
             if (empty($wiki)) {
                 // this will be redirected to install or to homepage later
+            } elseif (preg_match('`^api`', $wiki)) {
+                // for api split into api/end of route, checking wiki name & method name (XSS proof)
+                $this->page = 'api';
+                array_shift($args); // remove api from the args
+                $this->method = implode('/', $args);
             } elseif (preg_match('`^' . WN_TAG_HANDLER_CAPTURE . '$`u', $wiki, $matches)) {
                 // split into page/method, checking wiki name & method name (XSS proof)
                 list(, $this->page, $this->method) = $matches;
@@ -99,10 +103,6 @@ class Init
                         $this->method = $args[1];
                     }
                 }
-            } elseif (preg_match('`^api/(' . WN_CHAR2 . '+(?:' . WN_CHAR2 . '|/| )*)$`u', $wiki, $matches)) {
-                // for api split into api/end of route, checking wiki name & method name (XSS proof)
-                $this->page = 'api';
-                list(, $this->method) = $matches;
             } else {
                 // invalid WikiPageName
                 echo '<p>', _t('INCORRECT_PAGENAME'), '</p>';

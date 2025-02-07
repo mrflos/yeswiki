@@ -802,6 +802,9 @@ class EntryManager
     {
         // not possible to init the formManager in the constructor because of circular reference problem
         $form = $this->wiki->services->get(FormManager::class)->getOne($data['id_typeannonce']);
+        if (empty($form)) {
+            throw new Exception('No form with id: '.$data['id_typeannonce']);
+        }
 
         // If there is a title field, compute the entry's title
         if (is_array($form['prepared'])) {
@@ -827,7 +830,7 @@ class EntryManager
         $data['id_typeannonce'] = isset($data['id_typeannonce']) ? $data['id_typeannonce'] : $_REQUEST['id_typeannonce'];
 
         // Get creation date if it exists, initialize it otherwise
-        $result = $this->dbService->loadSingle('SELECT MIN(time) as firsttime FROM ' . $this->dbService->prefixTable('pages') . "WHERE tag='" . $data['id_fiche'] . "'");
+        $result = $this->dbService->loadSingle('SELECT MIN(time) as firsttime FROM '.$this->dbService->prefixTable('pages')."WHERE tag='".$data['id_fiche']."'");
         $data['date_creation_fiche'] = $data['date_creation_fiche'] ?? $result['firsttime'] ?? date('Y-m-d H:i:s', time());
 
         // Entry status
