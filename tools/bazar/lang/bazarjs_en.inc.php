@@ -1,5 +1,4 @@
 <?php
-
 return [
     'BAZ_FORM_EDIT_CALC_LABEL' => 'Calculations',
     'BAZ_FORM_EDIT_DISPLAYTEXT_LABEL' => 'Display text',
@@ -179,7 +178,7 @@ return [
     'BAZ_REACTIONS_FIELD_IMAGES_LABEL' => 'Icons',
     'LIST_ADD_NODE' => 'Add a value',
     'BAZ_FORM_EDIT_FILLING_MODE_TAGS' => 'Tags',
-    'BAZ_FORM_EDIT_INSCRIPTIONLISTE_EMAIL_FIELDID' => 'Field of form providing email to inscire',
+    'BAZ_FORM_EDIT_INSCRIPTIONLISTE_EMAIL_FIELDID' => 'Form field providing the email address to be entered',
     'BAZ_FORM_EDIT_INSCRIPTIONLISTE_MAILINGLIST' => 'Type of broadcasting service',
     'BAZ_FORM_EDIT_EDIT_CONTENT_LABEL' => 'Content when filling in',
     'BAZ_FORM_EDIT_VIEW_CONTENT_LABEL' => 'Content when displaying an entry',
@@ -187,7 +186,7 @@ return [
     'BAZ_FORM_EDIT_LISTEFICHES_NUMBER_LABEL' => 'Number of entry to display',
     'BAZ_ACTIVATE_COMMENTS' => 'Activate comments on this entry ?',
     'BAZ_ACTIVATE_COMMENTS_HINT' => 'Updated rights when registering the entry',
-    'BAZ_FORM_EDIT_COMMENTS_FIELD_DEFAULT_ACTIVATION_LABEL' => 'Default choice for comment activation',
+    'BAZ_FORM_EDIT_COMMENTS_FIELD_DEFAULT_ACTIVATION_LABEL' => 'Default choice for comments activation',
     'BAZ_FORM_EDIT_COMMENTS_FIELD_ACTIVATE_LABEL' => 'Text for editing',
     'BAZ_FORM_EDIT_SHOW_MAP_IN_ENTRY_VIEW' => 'Display the map in the data sheet when viewed',
     'BAZ_FORM_REQUIRED_FIELD' => 'Please enter all required fields (red asterisk)',
@@ -207,7 +206,7 @@ return [
     'BAZ_FORM_EDIT_FILE_MAXSIZE_LABEL' => 'Max size (ex: 2097152, 2048k, 2m)',
     'BAZ_FORM_EDIT_INSCRIPTIONLISTE_EMAIL_LABEL' => 'Email to register',
     'BAZ_FORM_EDIT_LISTEFICHES_FORMID_LABEL' => 'id of the linked form',
-    'BAZ_FORM_EDIT_LISTEFICHES_TEMPLATE_LABEL' => 'Return temperature',
+    'BAZ_FORM_EDIT_LISTEFICHES_TEMPLATE_LABEL' => 'Return template',
     'BAZ_FORM_EDIT_LISTEFICHES_LISTTYPE_LABEL' => 'Type of linked entry (or field label)',
     'BAZ_FORM_EDIT_CHECKBOX_LABEL' => 'Checkbox',
     'BAZ_REACTIONS_FIELD_LABELS_LABEL' => 'Reaction names',
@@ -226,7 +225,7 @@ return [
     'BAZ_REACTIONS_FIELD_IDS_LABEL' => 'Reaction identifiers',
     'BAZ_REACTIONS_FIELD_IMAGES_HINT' => 'Leave empty or separated by commas (Icon, File Name or FontAwesome Class)',
     'BAZ_REACTIONS_FIELD_LABELS_HINT' => 'Leave empty or separated by commas',
-    'BAZ_REACTIONS_FIELD_IMAGES_PLACEHOLDER' => 'mikone-top-gratitude.svg,j-aime,j-ai-appris,pas-compris,pas-d-accord,idee-noire',
+    'BAZ_REACTIONS_FIELD_IMAGES_PLACEHOLDER' => 'mikone-top-gratitude.svg,i-like,i-learned,not-understood,not-agree,black-idea',
     'LIST_ADD_CHILD_NODE' => 'Add a sub-value',
     'LIST_ERROR_MISSING_IDS' => 'Some values have no associated key',
     'LIST_ERROR_DUPLICATES_IDS' => 'Each key must be unique. These keys are used several times: ',
@@ -250,4 +249,7 @@ return [
     'BAZ_FORM_EMPTY_GEOLOC' => 'You need to geolocate the address',
     'BAZ_FORM_EDIT_SELECT_LIST_FORM_ID' => 'List / form selection',
     'BAZ_FORM_EDIT_EMAIL_SEND_CONTENT' => 'Send entry content to this email address',
+    'BAZ_BOOKMARKLET_HINT' => 'This field requires two other fields to function  :{br}
+  - a url field ( by defaut "bf_url"){br}
+  - a long text field ( by defaut "bf_description")',
 ];
