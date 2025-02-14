@@ -306,7 +306,7 @@ _[Original documentation on the yeswiki.net site (fr)](https://yeswiki.net/?Tuto
 2. Copy it to the `custom/fields` folder
    - keep your name if you want to replace the original field
    - rename it if you do not want to replace the original field (please rename the name of the class in the file by replacing `class DateField` with `class FileName`)
-3. Replace `YesWiki\Bazar\Field;` namespace in the file with `YesWiki\Custom\Field namespace;`
+3. Replace `YesWiki\Bazar\Field;` namespace in the file with `YesWiki\Custom\Field` namespace;
 4. Set up inheritance:
    - if we keep `extends BazarField`, make sure that there is `use YesWiki\Bazar\Field\BazarField;` in the file
    - if you want to inherit from another class write `extends OtherField` and make sure that the file has this: `use YesWiki\Bazar\Field\OtherField;`
