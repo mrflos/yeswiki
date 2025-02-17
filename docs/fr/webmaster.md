@@ -157,6 +157,7 @@ Une fois le YesWiki créé / installé, on peut aller éditer le fichier **wakka
       'default_comment_acl' => '*', // droits des commentaires
       'preview_before_save' => '0',
       'allow_raw_html' => '1', // autorise le html
+      'disable_wiki_links' => true, // ne pas transformer automatiquement les mots avec 2 majuscules en lien
     );
 
 #### Changer les droits de lecture et d'écriture par défaut
